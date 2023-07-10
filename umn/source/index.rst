@@ -1,3 +1,12 @@
-================================================
-Welcome to the documentation of data-arts-studio
-================================================
+============================
+DataArts Studio - User Guide
+============================
+
+.. toctree::
+   :maxdepth: 1
+
+   service_overview/index
+   preparations/index
+   user_guide/index
+   faqs/index
+   change_history
