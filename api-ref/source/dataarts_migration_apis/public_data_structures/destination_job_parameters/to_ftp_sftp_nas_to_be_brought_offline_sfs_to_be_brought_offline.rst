@@ -1,0 +1,88 @@
+:original_name: dataartsstudio_02_0301.html
+
+.. _dataartsstudio_02_0301:
+
+To FTP/SFTP/NAS (to Be Brought Offline)/SFS (to Be Brought Offline)
+===================================================================
+
+Sample JSON File
+----------------
+
+.. code-block::
+
+   "to-config-values": {
+                   "configs": [
+                       {
+                           "inputs": [
+                             {
+                              "name": "toJobConfig.outputDirectory",
+                              "value": "/opt/data"
+                             },
+                             {
+                              "name": "toJobConfig.outputFormat",
+                              "value": "CSV_FILE"
+                             },
+                             {
+                              "name": "toJobConfig.fieldSeparator",
+                              "value": ","
+                             },
+                             {
+                              "name": "toJobConfig.duplicateFileOpType",
+                              "value": "REPLACE"
+                               }
+                           ],
+                           "name": "toJobConfig"
+                       }
+                   ]
+               }
+
+Parameter Description
+---------------------
+
++---------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Parameter                       | Mandatory       | Type            | Description                                                                                                                                                                                                                                                                      |
++=================================+=================+=================+==================================================================================================================================================================================================================================================================================+
+| toJobConfig.outputDirectory     | Yes             | String          | Path to which data is written. For example, **/data_dir**.                                                                                                                                                                                                                       |
++---------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| toJobConfig.outputFormat        | Yes             | Enumeration     | File format required for data writes (except the binary format). Currently, the following file formats are supported:                                                                                                                                                            |
+|                                 |                 |                 |                                                                                                                                                                                                                                                                                  |
+|                                 |                 |                 | -  **CSV_FILE**: Write data in CSV format.                                                                                                                                                                                                                                       |
+|                                 |                 |                 | -  **BINARY_FILE**: Files are directly transferred without resolving the content. CDM writes the file without changing the file format.                                                                                                                                          |
+|                                 |                 |                 |                                                                                                                                                                                                                                                                                  |
+|                                 |                 |                 | If you select **BINARY_FILE**, the migration source must also be a file system.                                                                                                                                                                                                  |
++---------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| toJobConfig.duplicateFileOpType | No              | Enumeration     | Method for processing duplicate files. If the name and size of a file are the same as those of another file, the file is regarded as a duplicate file. Duplicate files can be processed in the following ways:                                                                   |
+|                                 |                 |                 |                                                                                                                                                                                                                                                                                  |
+|                                 |                 |                 | -  **REPLACE**: Replace duplicate files.                                                                                                                                                                                                                                         |
+|                                 |                 |                 | -  **SKIP**: Skip duplicate files.                                                                                                                                                                                                                                               |
+|                                 |                 |                 | -  **ABANDON**: Stop the job when any duplicate file is found.                                                                                                                                                                                                                   |
++---------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| toJobConfig.lineSeparator       | No              | String          | Line feed character. This parameter is valid only when **toJobConfig.outputFormat** is **CSV_FILE**. The default value is **\\r\\n**.                                                                                                                                            |
++---------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| toJobConfig.fieldSeparator      | No              | String          | Column delimiter. This parameter is valid only when **toJobConfig.outputFormat** is **CSV_FILE**. The default value is **,**.                                                                                                                                                    |
++---------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| toJobConfig.encodeType          | No              | String          | Encoding type. For example, **UTF_8** or **GBK**.                                                                                                                                                                                                                                |
++---------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| toJobConfig.writeToTempFile     | No              | Boolean         | The binary file is written to a **.tmp** file first. After the migration is successful, run the **rename** or **move** command at the migration destination to restore the file.                                                                                                 |
++---------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| toJobConfig.recordMD5Result     | No              | Boolean         | This parameter is invalid when **File Format** is set to **Binary**. An MD5 hash value is generated for each transferred file, and the value is recorded in a new **.md5** file. You can specify the directory where the MD5 value is generated.                                 |
++---------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| toJobConfig.recordMD5Directory  | No              | String          | Directory for storing MD5 values                                                                                                                                                                                                                                                 |
++---------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| toJobConfig.markerFile          | No              | String          | Whether to generate a marker file with a custom name in the destination directory after a job is executed successfully. If you do not specify a file name, this function is disabled by default.                                                                                 |
++---------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| toJobConfig.firstRowAsHeader    | No              | Boolean         | This parameter is available only when **toJobConfig.outputFormat** is **CSV**. When a table is migrated to a CSV file, CDM does not migrate the heading line of the table by default. If this parameter is set to **Yes**, CDM writes the heading line of the table to the file. |
++---------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| toJobConfig.encryption          | No              | Enumeration     | Whether to encrypt the uploaded data and the encryption method. The options are as follows:                                                                                                                                                                                      |
+|                                 |                 |                 |                                                                                                                                                                                                                                                                                  |
+|                                 |                 |                 | -  **NONE**: Directly write data without encryption.                                                                                                                                                                                                                             |
+|                                 |                 |                 | -  **AES-256-GCM**: Use the AES 256-bit encryption algorithm to encrypt data. Currently, only the AES-256-GCM (NoPadding) encryption algorithm is supported.                                                                                                                     |
++---------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| toJobConfig.dek                 | No              | String          | Data encryption key. This parameter is available when **toJobConfig.encryption** is set to **AES-256-GCM**. The key is a string of 64-bit hexadecimal numbers.                                                                                                                   |
+|                                 |                 |                 |                                                                                                                                                                                                                                                                                  |
+|                                 |                 |                 | Remember the key configured here because the decryption key must be the same as that configured here. If the encryption and decryption keys are inconsistent, the system does not report an exception, but the decrypted data is incorrect.                                      |
++---------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| toJobConfig.iv                  | No              | String          | Initialization vector. This parameter is available when **toJobConfig.encryption** is set to **AES-256-GCM**. The initialization vector is a string of 32-bit hexadecimal numbers.                                                                                               |
+|                                 |                 |                 |                                                                                                                                                                                                                                                                                  |
+|                                 |                 |                 | Remember the initialization vector configured here because the initialization vector used for decryption must be the same as that configured here. If the initialization vectors are inconsistent, the system does not report an exception, but the decrypted data is incorrect. |
++---------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
