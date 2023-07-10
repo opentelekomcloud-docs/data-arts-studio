@@ -1,0 +1,46 @@
+:original_name: dataartsstudio_07_012.html
+
+.. _dataartsstudio_07_012:
+
+DataArts Studio Permissions Management
+======================================
+
+If you need to assign different permissions to employees in your enterprise to access your DataArts Studio resources, IAM is a good choice for fine-grained permissions management. IAM provides identity authentication, permissions management, and access control, helping you secure access to your resources.
+
+With IAM, you can use your account to create IAM users for your employees, and assign permissions to the users to control their access to specific resource types. For example, if you want to allow some software developers in your enterprise to use DataArts Studio resources but disallow them to delete workspaces or perform any high-risk operations, you can create IAM users for the software developers and grant them only the permissions required for using DataArts Studio resources.
+
+DataArts Studio Permissions
+---------------------------
+
+By default, new IAM users do not have any permissions. To assign permissions to a user, add the user to one or more groups and assign permissions policies or roles to these groups. The user then inherits permissions from the groups it is a member of After authorization, the users can perform specified operations.
+
+DataArts Studio is a project-level service deployed in specific physical regions. To assign ServiceStage permissions to a user group, specify the scope as region-specific projects and select projects for the permissions to take effect. If **All projects** is selected, the permissions will take effect for the user group in all region-specific projects. When accessing DataArts Studio, users need to switch to a region where they are authorized to use cloud services.
+
+-  **IAM Roles**: IAM initially provides a coarse-grained authorization mechanism to define permissions based on users' job responsibilities. This mechanism provides only a limited number of service-level roles for authorization. However, IAM roles are not an ideal choice for fine-grained authorization and secure access control.
+
+   Relying on IAM roles, DataArts Studio provides more flexible, fine-grained authorization based on workspace roles for specific operations.
+
+   The system-defined roles supported by DataArts Studio include **DAYU Administrator** and **DAYU User**. Workspace roles are based on the **DAYU User**. :ref:`DataArts Studio Permissions <dataartsstudio_07_013>` describes the common operations supported by DataArts Studio and the permissions granted to each role. You can select roles as required.
+
+   .. table:: **Table 1** DataArts Studio system-defined roles
+
+      +-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
+      | Role                  | Description                                                                                                                                                                                                                                                                                       | Category              |
+      +=======================+===================================================================================================================================================================================================================================================================================================+=======================+
+      | DAYU Administrator    | User who has all permissions of DataArts Studio and workspaces                                                                                                                                                                                                                                    | System-defined role   |
+      |                       |                                                                                                                                                                                                                                                                                                   |                       |
+      |                       | .. note::                                                                                                                                                                                                                                                                                         |                       |
+      |                       |                                                                                                                                                                                                                                                                                                   |                       |
+      |                       |    Users assigned the **Tenant Administrator** role have all permissions for all services except IAM. In other words, users with the **Tenant Administrator** role can perform all operations in DataArts Studio.                                                                                 |                       |
+      +-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
+      | DAYU User             | Common DataArts Studio user                                                                                                                                                                                                                                                                       | System-defined role   |
+      |                       |                                                                                                                                                                                                                                                                                                   |                       |
+      |                       | Users with the **DAYU User** role have the permissions of the role assigned to them in a workspace. Roles in a workspace can be admin, developer, operator, and viewer. For details about the operation permissions of each role, see :ref:`DataArts Studio Permissions <dataartsstudio_07_013>`. |                       |
+      |                       |                                                                                                                                                                                                                                                                                                   |                       |
+      |                       | -  Admin: Users with this role have the permissions to perform all operations in a workspace. You are advised to assign this role to the project owner, development owner, and O&M administrator.                                                                                                 |                       |
+      |                       | -  Developer: Users with this role have the permissions to create and manage work items, but cannot perform operations on workspaces, clusters, and reviewers. You are advised to assign this tole to users who develop and process tasks.                                                        |                       |
+      |                       | -  Operator: Users with this role have the permissions to perform operations such as O&M and scheduling, but cannot modify work items or configurations. You are advised to assign this role to users for O&M management and status monitoring.                                                   |                       |
+      |                       | -  Viewer: Users with this role can only read data from DataArts Studio, but cannot perform operations on workspaces or modify work items or configurations. You are advised to assign this role to users who only want to view information in the workspace but do not perform any operation.    |                       |
+      +-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------+
+
+After a role is granted to you, you have all the permissions of the role. For details about how to grant permissions of a DataArts Studio role, see **Preparations > Creating IAM Users and Granting DataArts Studio Permissions** in *DataArts Studio User Guide*.
