@@ -1,14 +1,14 @@
-:original_name: topic_300000002_2.html
+:original_name: topic_300000002_6.html
 
-.. _topic_300000002_2:
+.. _topic_300000002_6:
 
 Link Management
 ===============
 
--  :ref:`Creating a Link <createlink>`
--  :ref:`Querying a Link <showlink>`
--  :ref:`Deleting a Link <deletelink>`
--  :ref:`Modifying a Link <updatelink>`
+-  :ref:`Creating a Link <createlink_0>`
+-  :ref:`Querying a Link <showlink_0>`
+-  :ref:`Deleting a Link <deletelink_0>`
+-  :ref:`Modifying a Link <updatelink_0>`
 
 .. toctree::
    :maxdepth: 1

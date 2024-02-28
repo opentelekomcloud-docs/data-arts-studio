@@ -1,6 +1,6 @@
-:original_name: DeleteLink.html
+:original_name: DeleteLink_0.html
 
-.. _DeleteLink:
+.. _DeleteLink_0:
 
 Deleting a Link
 ===============

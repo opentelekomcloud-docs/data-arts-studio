@@ -8,7 +8,7 @@ Link to MongoDB
 Description
 -----------
 
-By creating a MongoDB link, you can extract data from or load data to MongoDB.
+By creating a Link to MongoDB, you can extract data from or load data to MongoDB.
 
 Sample Link
 -----------

@@ -5,7 +5,7 @@
 Calling APIs
 ============
 
--  :ref:`Making an API Request <dataartsstudio_02_0009>`
+-  :ref:`Making an API Request <making_request>`
 -  :ref:`Authentication <dataartsstudio_02_0010>`
 -  :ref:`Response <dataartsstudio_02_0011>`
 

@@ -8,7 +8,11 @@ Authentication
 Requests for calling an API can be authenticated using either of the following methods:
 
 -  Token-based authentication: Requests are authenticated using a token.
--  AK/SK-based authentication: Requests are authenticated by encrypting the request body using an AK/SK pair. AK/SK-based authentication is recommended because it is more secure than token-based authentication.
+-  AK/SK-based authentication: Requests are authenticated by encrypting the request body using an AK/SK pair.
+
+.. note::
+
+   An IAM user can pass the authentication and access DataArts Studio through an API or SDK only if **Programmatic access** is selected for **Access Type** during the creation of the IAM user.
 
 Token-based Authentication
 --------------------------
@@ -55,8 +59,6 @@ After a token is obtained, the X-Auth-Token header field must be added to reques
    Content-Type: application/json
    X-Auth-Token: ABCDEFJ....
 
-.. _dataartsstudio_02_0010__en-us_topic_0181281305_en-us_topic_0170647350_en-us_topic_0121671869_section5887143815518:
-
 AK/SK-based Authentication
 --------------------------
 
@@ -73,11 +75,11 @@ To obtain an access key, perform the following steps:
 
 #. Log in to the management console, move the cursor to the username in the upper right corner, and select **My Credentials** from the drop-down list.
 
-#. On the **My Credentials** page, choose **Access Keys**, and click **Create Access Key**. See :ref:`Figure 1 <dataartsstudio_02_0010__en-us_topic_0000001129241845_en-us_topic_0183643042_fig1552229194615>`.
+#. On the **My Credentials** page, choose **Access Keys**, and click **Create Access Key**. See :ref:`Figure 1 <dataartsstudio_02_0010__en-us_topic_0000001668118762_en-us_topic_0183643042_fig1552229194615>`.
 
-   .. _dataartsstudio_02_0010__en-us_topic_0000001129241845_en-us_topic_0183643042_fig1552229194615:
+   .. _dataartsstudio_02_0010__en-us_topic_0000001668118762_en-us_topic_0183643042_fig1552229194615:
 
-   .. figure:: /_static/images/en-us_image_0000001373408969.png
+   .. figure:: /_static/images/en-us_image_0000001668278494.png
       :alt: **Figure 1** Clicking Create Access Key
 
       **Figure 1** Clicking Create Access Key
@@ -89,7 +91,7 @@ To obtain an access key, perform the following steps:
       -  Only two access keys can be added for each user.
       -  To ensure access key security, the access key is automatically downloaded only when it is generated for the first time and cannot be obtained from the management console later. Keep them properly.
 
-In AK/SK-based authentication, you can use an AK/SK to sign requests based on the signature algorithm or use the signing SDK to sign requests. For details about how to sign requests and use the signing SDK, see *API Request Signing Guide*.
+In AK/SK-based authentication, you can use an AK/SK to sign requests based on the signature algorithm or use the signing SDK to sign requests. For details about how to sign requests and use the signature SDK, see API Request Signing Guide.
 
 .. important::
 

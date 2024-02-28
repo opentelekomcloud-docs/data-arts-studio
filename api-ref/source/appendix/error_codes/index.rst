@@ -5,12 +5,12 @@
 Error Codes
 ===========
 
--  :ref:`CDM Error Codes <dataartsstudio_02_0311>`
--  :ref:`DLF Error Codes <dataartsstudio_02_0313>`
+-  :ref:`DataArts Migration Error Codes <dataartsstudio_02_0311>`
+-  :ref:`DataArts Factory Error Codes <dataartsstudio_02_0313>`
 
 .. toctree::
    :maxdepth: 1
    :hidden: 
 
-   cdm_error_codes
-   dlf_error_codes
+   dataarts_migration_error_codes
+   dataarts_factory_error_codes

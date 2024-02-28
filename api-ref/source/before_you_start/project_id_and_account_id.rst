@@ -1,6 +1,6 @@
-:original_name: dataartsstudio_02_0314.html
+:original_name: projectid_accountid.html
 
-.. _dataartsstudio_02_0314:
+.. _projectid_accountid:
 
 Project ID and Account ID
 =========================
@@ -8,20 +8,16 @@ Project ID and Account ID
 Obtaining a Project ID and Account ID
 -------------------------------------
 
-You can obtain the project ID and account ID by performing the following steps:
+A project is a group of tenant resources, and an account ID corresponds to the current account. The IAM ID corresponds to the current user. You can view the project IDs, account IDs, and user IDs in different regions on the corresponding pages.
 
 #. Register with and log in to the management console.
 #. Hover the cursor on the username in the upper right corner and select **My Credentials** from the drop-down list.
-#. On the **My Credentials** page, obtain the account name and account ID, and obtain the project ID from the project list.
+#. On the **API Credentials** page, obtain the account name, account ID, IAM username, and IAM user ID, and obtain the project ID from the project list.
 
 Obtaining a Project ID by Calling an API
 ----------------------------------------
 
-You can obtain a project ID by calling the API used to query projects based on specified criteria.
-
-The API for obtaining a project ID is **GET https://**\ *{Endpoint}*\ **/v3/projects/**, where *{Endpoint}* indicates the endpoint of IAM.
-
-An endpoint is the **request address** for calling an API. Endpoints vary depending on services and regions. You can obtain endpoints from `Regions and Endpoints <https://docs.otc.t-systems.com/en-us/endpoint/index.html>`__.
+You can obtain the project ID by calling the API to query project information. The API is GET https://{Endpoint}/v3/projects, in which {Endpoint} is the IAM endpoint and can be obtained from IAM documentation.
 
 For details about API authentication, see :ref:`Authentication <dataartsstudio_02_0010>`.
 

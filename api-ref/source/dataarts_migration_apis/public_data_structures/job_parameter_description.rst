@@ -1,11 +1,11 @@
-:original_name: dataartsstudio_02_0308.html
+:original_name: job_parameter.html
 
-.. _dataartsstudio_02_0308:
+.. _job_parameter:
 
 Job Parameter Description
 =========================
 
-When :ref:`Creating a Job in a Specified Cluster <createjob>` or :ref:`Creating and Executing a Job in a Random Cluster <createandstartrandomclusterjob>`, the **driver-config-values** parameter specifies the job configuration, which includes the following functions:
+When you create a job in a specified cluster by following the instructions in :ref:`Creating a Job in a Specified Cluster <createjob_0>` or create and execute a job in a random cluster by following the instructions in :ref:`Creating and Executing a Job in a Random Cluster <createandstartrandomclusterjob_0>`, the **driver-config-values** parameter specifies the job configuration, which includes the following functions:
 
 -  **Retry upon Failure**: If a job fails to be executed, you can choose whether to automatically restart the job.
 -  **Job Group**: CDM allows you to group jobs. You can filter, delete, start, or export jobs by group.
