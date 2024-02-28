@@ -5,12 +5,12 @@
 Application Cases
 =================
 
--  :ref:`Application Example <dataartsstudio_02_0013>`
--  :ref:`Example of Using Data Development APIs <dataartsstudio_02_0015>`
+-  :ref:`Example of Using DataArts Migration APIs <dataartsstudio_02_0013>`
+-  :ref:`Example of Using DataArts Factory APIs <dataartsstudio_02_0015>`
 
 .. toctree::
    :maxdepth: 1
    :hidden: 
 
-   application_example
-   example_of_using_data_development_apis
+   example_of_using_dataarts_migration_apis
+   example_of_using_dataarts_factory_apis

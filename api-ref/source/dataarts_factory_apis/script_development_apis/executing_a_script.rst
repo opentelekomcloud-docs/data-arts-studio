@@ -21,16 +21,16 @@ URI
 
    .. table:: **Table 1** URI parameters
 
-      +-------------+-----------+--------+--------------------------------------------------------------------------------------------------------------------------+
-      | Parameter   | Mandatory | Type   | Description                                                                                                              |
-      +=============+===========+========+==========================================================================================================================+
-      | project_id  | Yes       | String | Project ID. For details about how to obtain a project ID, see :ref:`Project ID and Account ID <dataartsstudio_02_0314>`. |
-      +-------------+-----------+--------+--------------------------------------------------------------------------------------------------------------------------+
-      | script_name | Yes       | String | Script name.                                                                                                             |
-      +-------------+-----------+--------+--------------------------------------------------------------------------------------------------------------------------+
+      +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
+      | Parameter   | Mandatory | Type   | Description                                                                                                           |
+      +=============+===========+========+=======================================================================================================================+
+      | project_id  | Yes       | String | Project ID. For details about how to obtain a project ID, see :ref:`Project ID and Account ID <projectid_accountid>`. |
+      +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
+      | script_name | Yes       | String | Script name.                                                                                                          |
+      +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
 
-Request
--------
+Request Parameters
+------------------
 
 .. table:: **Table 2** Request header parameter
 
@@ -45,18 +45,18 @@ Request
 
 .. table:: **Table 3** Parameters
 
-   +-----------+-----------+--------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Parameter | Mandatory | Type   | Description                                                                                                                                                                        |
-   +===========+===========+========+====================================================================================================================================================================================+
-   | params    | No        | Object | Script parameters of the Map<String,String> type. If a parameter is defined in the script, the parameter value is carried in the params. By default, this parameter is left blank. |
-   +-----------+-----------+--------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   +-----------+-----------+--------+------------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter | Mandatory | Type   | Description                                                                                                                              |
+   +===========+===========+========+==========================================================================================================================================+
+   | params    | No        | Object | Script parameters of the Map<String,String> type. If a parameter is defined in the script, the parameter value is carried in the params. |
+   +-----------+-----------+--------+------------------------------------------------------------------------------------------------------------------------------------------+
 
 Script parameters refer to the parameters in the script content, as shown in the following figure.
 
 |image1|
 
-Response
---------
+Response Parameters
+-------------------
 
 .. table:: **Table 4** Response parameters
 
@@ -66,31 +66,27 @@ Response
    | instanceId | Yes       | String | ID of the instance that executes the script. You can obtain the execution result by using the instance ID in :ref:`Querying the Execution Result of a Script Instance <dataartsstudio_02_0101>`. |
    +------------+-----------+--------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-Example
--------
+Example Request
+---------------
 
--  Request
+Run the **dws_sql** script. In the script, the value of **tableVar** is **citys**, and the value of **time** is **2019-07-25**.
 
-   .. code-block:: text
+.. code-block:: text
 
-      POST /v1/b384b9e9ab9b4ee8994c8633aabc9505/scripts/dws_sql/execute
+   POST /v1/b384b9e9ab9b4ee8994c8633aabc9505/scripts/dws_sql/execute
+   {
+       "params": {
+           "tableVar": "citys",
+           "time": "2019-07-25"
+       }
+   }
 
-   .. code-block::
-
-      {
-      "params":{"tableVar":"citys",
-      "time":"2019-07-25"}
-      }
+Example Response
+----------------
 
 -  Success response
 
    HTTP status code 200
-
-   .. code-block::
-
-      {
-      "instanceId": "a1ad-448a-9d56-4154193d49c5"
-      }
 
 -  Failure response
 
@@ -108,4 +104,4 @@ Status Codes
 
 See :ref:`Status Codes <dataartsstudio_02_0310>`.
 
-.. |image1| image:: /_static/images/en-us_image_0000001373408961.png
+.. |image1| image:: /_static/images/en-us_image_0000001668210950.png

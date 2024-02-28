@@ -1,6 +1,6 @@
-:original_name: DeleteCluster.html
+:original_name: DeleteCluster_0.html
 
-.. _DeleteCluster:
+.. _DeleteCluster_0:
 
 Deleting a Cluster
 ==================

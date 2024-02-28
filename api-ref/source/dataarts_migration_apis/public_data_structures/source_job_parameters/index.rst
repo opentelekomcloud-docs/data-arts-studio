@@ -1,6 +1,6 @@
-:original_name: dataartsstudio_02_0281.html
+:original_name: source_job_parameters.html
 
-.. _dataartsstudio_02_0281:
+.. _source_job_parameters:
 
 Source Job Parameters
 =====================
@@ -10,14 +10,13 @@ Source Job Parameters
 -  :ref:`From HDFS <dataartsstudio_02_0284>`
 -  :ref:`From Hive <dataartsstudio_02_0285>`
 -  :ref:`From HBase/CloudTable <dataartsstudio_02_0286>`
--  :ref:`From FTP/SFTP/NAS (to Be Brought Offline)/SFS (to Be Brought Offline) <dataartsstudio_02_0287>`
+-  :ref:`From FTP/SFTP <dataartsstudio_02_0287>`
 -  :ref:`From HTTP/HTTPS <dataartsstudio_02_0288>`
 -  :ref:`From MongoDB/DDS <dataartsstudio_02_0289>`
--  :ref:`From Redis/DCS (to Be Brought Offline) <dataartsstudio_02_0290>`
+-  :ref:`From Redis <dataartsstudio_02_0290>`
 -  :ref:`From DIS <dataartsstudio_02_0291>`
 -  :ref:`From Kafka <dataartsstudio_02_0292>`
 -  :ref:`From Elasticsearch/Cloud Search Service <dataartsstudio_02_0293>`
--  :ref:`From OpenTSDB <dataartsstudio_02_0294>`
 
 .. toctree::
    :maxdepth: 1
@@ -28,11 +27,10 @@ Source Job Parameters
    from_hdfs
    from_hive
    from_hbase_cloudtable
-   from_ftp_sftp_nas_to_be_brought_offline_sfs_to_be_brought_offline
+   from_ftp_sftp
    from_http_https
    from_mongodb_dds
-   from_redis_dcs_to_be_brought_offline
+   from_redis
    from_dis
    from_kafka
    from_elasticsearch_cloud_search_service
-   from_opentsdb

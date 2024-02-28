@@ -12,4 +12,3 @@ DataArts Studio - API Reference
    dataarts_migration_apis/index
    dataarts_factory_apis/index
    appendix/index
-   change_history

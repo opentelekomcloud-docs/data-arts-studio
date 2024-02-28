@@ -21,14 +21,14 @@ URI
 
    .. table:: **Table 1** URI parameter
 
-      +------------+-----------+--------+--------------------------------------------------------------------------------------------------------------------------+
-      | Parameter  | Mandatory | Type   | Description                                                                                                              |
-      +============+===========+========+==========================================================================================================================+
-      | project_id | Yes       | String | Project ID. For details about how to obtain a project ID, see :ref:`Project ID and Account ID <dataartsstudio_02_0314>`. |
-      +------------+-----------+--------+--------------------------------------------------------------------------------------------------------------------------+
+      +------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
+      | Parameter  | Mandatory | Type   | Description                                                                                                           |
+      +============+===========+========+=======================================================================================================================+
+      | project_id | Yes       | String | Project ID. For details about how to obtain a project ID, see :ref:`Project ID and Account ID <projectid_accountid>`. |
+      +------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
 
-Request
--------
+Request Parameters
+------------------
 
 .. table:: **Table 2** Request parameters
 
@@ -38,8 +38,8 @@ Request
    | path      | No        | String | If OBS is deployed, the job definition file is stored on OBS, for example, obs://myBucket/jobs.zip. |
    +-----------+-----------+--------+-----------------------------------------------------------------------------------------------------+
 
-Response
---------
+Response Parameters
+-------------------
 
 .. table:: **Table 3** Response parameters
 
@@ -55,13 +55,13 @@ Response
 
 .. table:: **Table 4** job data structure description
 
-   ========= ========= ================== ================
+   ========= ========= ================== ===============
    Parameter Mandatory Type               Description
-   ========= ========= ================== ================
+   ========= ========= ================== ===============
    params    No        Map<String,String> Job parameter.
    name      Yes       String             Job name.
-   path      Yes       String             Path of the job.
-   ========= ========= ================== ================
+   path      Yes       String             Path of the job
+   ========= ========= ================== ===============
 
 .. _dataartsstudio_02_0063__en-us_topic_0181281317_table1996985891715:
 
@@ -74,19 +74,20 @@ Response
    path      Yes       String Path of the script.
    ========= ========= ====== ===================
 
-Example
--------
+Example Request
+---------------
 
-View the parameter definitions in the job file on OBS.
+Query the parameter definitions in the job file on OBS. The OBS path of the job definition file is **obs://aaaaa/DLF_myJob.zip**.
 
--  Request
+.. code-block:: text
 
-   .. code-block:: text
+   POST /v1/b384b9e9ab9b4ee8994c8633aabc9505/jobs/check-file
+   {
+   "path": "obs://aaaaa/DLF_myJob.zip"
+   }
 
-      POST /v1/b384b9e9ab9b4ee8994c8633aabc9505/jobs/check-file
-      {
-      "path": "obs://aaaaa/DLF_myJob.zip"
-      }
+Example Response
+----------------
 
 -  Success response
 

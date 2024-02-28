@@ -24,15 +24,15 @@ URI
       +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------+
       | Parameter       | Mandatory       | Type            | Description                                                                                                                 |
       +=================+=================+=================+=============================================================================================================================+
-      | project_id      | Yes             | String          | Project ID. For details about how to obtain a project ID, see :ref:`Project ID and Account ID <dataartsstudio_02_0314>`.    |
+      | project_id      | Yes             | String          | Project ID. For details about how to obtain a project ID, see :ref:`Project ID and Account ID <projectid_accountid>`.       |
       +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------+
       | resource_id     | Yes             | String          | Resource ID. For details about how to obtain the resource ID, see :ref:`Querying a Resource List <dataartsstudio_02_0105>`. |
       |                 |                 |                 |                                                                                                                             |
       |                 |                 |                 | The returned ID is **resource_id**.                                                                                         |
       +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------------------------------------+
 
-Request
--------
+Request Parameters
+------------------
 
 .. table:: **Table 2** Request header parameter
 
@@ -45,19 +45,20 @@ Request
    |                 |                 |                 | -  To query data in other workspaces, this header must be carried.                        |
    +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------+
 
-Response
---------
+Response Parameters
+-------------------
 
 None.
 
-Example
--------
+Example Request
+---------------
 
--  Request
+.. code-block:: text
 
-   .. code-block:: text
+   DELETE /v1/b384b9e9ab9b4ee8994c8633aabc9505/resources/3624d1c3-5df5-4f20-9af9-98eadad6c5f9
 
-      DELETE /v1/b384b9e9ab9b4ee8994c8633aabc9505/resources/3624d1c3-5df5-4f20-9af9-98eadad6c5f9
+Example Response
+----------------
 
 -  Success response
 
