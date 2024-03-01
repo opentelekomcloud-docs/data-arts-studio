@@ -21,9 +21,9 @@ After creating a CDM cluster, you can view its basic information and modify its 
    -  Notification: If a CDM migration job (only table/file migration) fails or the EIP is abnormal, CDM sends an SMS or email notification to the user.
    -  User isolation: determines whether other users can operate the migration jobs or links in the cluster.
 
-      -  If this function is enabled, migration jobs and links in the cluster are isolated. Other IAM users of the cloud platform account cannot operate the jobs and links.
+      -  If this function is enabled, migration jobs and links in the cluster are isolated. Other IAM users of the a cloud platform account cannot operate the jobs and links.
 
-      -  If this function is disabled, migration jobs and links in the cluster can be shared by users. All IAM users with the required permission in the cloud platform account can view and perform operations on the jobs and links in the cluster.
+      -  If this function is disabled, migration jobs and links in the cluster can be shared by users. All IAM users with the required permission in the a cloud platform account can view and perform operations on the jobs and links in the cluster.
 
          After disabling **User Isolation**, restart the cluster VM for the settings to take effect.
 

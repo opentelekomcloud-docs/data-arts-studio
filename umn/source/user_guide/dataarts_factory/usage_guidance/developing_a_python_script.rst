@@ -130,9 +130,12 @@ Developing a Python Script
 
          .. code-block::
 
-            template='No.:{:0>9s} \t CompanyName:{:s} \t Website:https://www.{:s}.com'
-            context1=template.format('1','CompanyXXX','companyxxx')
-            context2=template.format('2','CompanyYYY','companyyyy')
+            import sys
+            Company_Name1=sys.argv[1]
+            Company_Name2=sys.argv[2]
+            template='No.:{:0>9s} \t CompanyName: {:s} \t Website: https://www.{:s}.com'
+            context1=template.format('1',Company_Name1,Company_Name1.lower())
+            context2=template.format('2',Company_Name2,Company_Name2.lower())
             print(context1)
             print(context2)
 

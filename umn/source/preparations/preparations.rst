@@ -5,7 +5,7 @@
 Preparations
 ============
 
-To use DataArts Studio, create a cloud platform account, create a DataArts Studio instance, and authorize a user to use DataArts Studio.
+To use DataArts Studio, create a a cloud platform account, create a DataArts Studio instance, and authorize a user to use DataArts Studio.
 
 For details about the preparations and operations, see later sections.
 

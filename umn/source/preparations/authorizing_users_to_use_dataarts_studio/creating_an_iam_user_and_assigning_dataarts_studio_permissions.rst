@@ -9,7 +9,7 @@ Identity and Access Management (IAM) can be used for fine-grained permissions ma
 
 -  Create IAM users for employees based on your enterprise's organizational structure. Each IAM user will have their own security credentials for accessing DataArts Studio resources.
 -  Assign users only the permissions required to perform a task.
--  Entrust a cloud platform account or cloud service to perform efficient O&M on your DataArts Studio resources.
+-  Entrust a a cloud platform account or cloud service to perform efficient O&M on your DataArts Studio resources.
 
 If you do not require individual IAM users for permissions management, skip this section.
 
@@ -23,7 +23,7 @@ Procedure
 
 #. .. _dataartsstudio_01_0004__en-us_topic_0223009156_li1983016328204:
 
-   Create a user group and assign permissions to it. Log in to the IAM console using a cloud platform account, create a user group, and grant permissions of a common user (for example, **DAYU User**) to the group.
+   Create a user group and assign permissions to it. Log in to the IAM console using a a cloud platform account, create a user group, and grant permissions of a common user (for example, **DAYU User**) to the group.
 
    For details, see "User Groups and Authorization" > "Creating a User Group and Assigning Permissions" in *Identity and Access Management User Guide*.
 
