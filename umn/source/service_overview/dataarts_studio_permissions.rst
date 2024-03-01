@@ -14,7 +14,7 @@ A workspace member can be assigned the role of admin, developer, operator, or vi
 
 .. note::
 
-   Accounts and users with the **DAYU Administrator** or **Tenant Administrator** role have all the permissions on cloud platform account, including permissions to createDataArts Studio instances and DataArts Studio incremental packages. By default, other users do not have the permissions to create DataArts Studio instances. If they want to create DataArts Studio instances, they must obtain the required permissions.
+   Accounts and users with the **DAYU Administrator** or **Tenant Administrator** role have all the permissions on a cloud platform account, including permissions to createDataArts Studio instances and DataArts Studio incremental packages. By default, other users do not have the permissions to create DataArts Studio instances. If they want to create DataArts Studio instances, they must obtain the required permissions.
 
    Accounts and users with the **Tenant Administrator** role can perform all operations except IAM user management. For security purposes, you are not advised to assign this role to IAM users. Exercise caution when performing this operation.
 
