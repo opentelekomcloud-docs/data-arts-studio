@@ -8,7 +8,7 @@ Creating a DataArts Studio Basic Package
 Background
 ----------
 
-Only cloud platform account users with the **DAYU Administrator** or **Tenant Administrator** permissions can create DataArts Studio instances or DataArts Studio incremental packages.
+Only a cloud platform account users with the **DAYU Administrator** or **Tenant Administrator** permissions can create DataArts Studio instances or DataArts Studio incremental packages.
 
 .. note::
 

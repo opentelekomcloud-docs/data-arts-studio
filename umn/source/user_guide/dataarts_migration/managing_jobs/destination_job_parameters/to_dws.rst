@@ -94,7 +94,7 @@ Field Mapping in Automatic Table Creation on DWS
 
 .. _dataartsstudio_01_1251__en-us_topic_0000001270722628_fig662181513539:
 
-.. figure:: /_static/images/en-us_image_0000001322408176.png
+.. figure:: /_static/images/en-us_image_0000001694876605.png
    :alt: **Figure 1** Field mapping in automatic table creation
 
    **Figure 1** Field mapping in automatic table creation
