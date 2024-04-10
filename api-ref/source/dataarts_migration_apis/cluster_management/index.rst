@@ -1,17 +1,17 @@
-:original_name: topic_300000000_3.html
+:original_name: topic_300000000_8.html
 
-.. _topic_300000000_3:
+.. _topic_300000000_8:
 
 Cluster Management
 ==================
 
--  :ref:`Querying Cluster Details <showclusterdetail>`
--  :ref:`Deleting a Cluster <deletecluster>`
--  :ref:`Restarting a Cluster <restartcluster>`
--  :ref:`Starting a Cluster <startcluster>`
+-  :ref:`Querying Cluster Details <showclusterdetail_0>`
+-  :ref:`Deleting a Cluster <deletecluster_0>`
+-  :ref:`Restarting a Cluster <restartcluster_0>`
+-  :ref:`Starting a Cluster <startcluster_0>`
 -  :ref:`Stopping a Cluster <stopcluster>`
--  :ref:`Creating a Cluster <createcluster>`
--  :ref:`Querying the Cluster List <listclusters>`
+-  :ref:`Creating a Cluster <createcluster_0>`
+-  :ref:`Querying the Cluster List <listclusters_0>`
 
 .. toctree::
    :maxdepth: 1

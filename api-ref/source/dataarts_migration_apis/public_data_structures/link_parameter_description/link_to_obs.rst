@@ -13,6 +13,8 @@ By creating an OBS link, you can extract files from or load files to OBS. Files 
 Sample Link
 -----------
 
+The following is the message body of a sample link. You are advised to store the AK and SK in ciphertext in the configuration file or environment variables and decrypt them when needed to ensure security.
+
 .. code-block::
 
    {
@@ -36,11 +38,11 @@ Sample Link
                                },
                                {
                                    "name":"linkConfig.accessKey",
-                                   "value": "RSO6TTEZMJ6TTFBBAACE"
+                                   "value": "<YOUR AK>"
                                },
                                {
                                    "name":"linkConfig.securityKey",
-                                   "value":"Add password here"
+                                   "value":"<YOUR SK>"
                                }
                            ],
                            "name": "linkConfig"
@@ -56,16 +58,16 @@ Sample Link
 Link Parameters
 ---------------
 
-+------------------------+-----------+--------+--------------------------------------------------------------------------------------+
-| Parameter              | Mandatory | Type   | Description                                                                          |
-+========================+===========+========+======================================================================================+
-| linkConfig.storageType | Yes       | String | Storage class of an object                                                           |
-+------------------------+-----------+--------+--------------------------------------------------------------------------------------+
-| linkConfig.server      | Yes       | String | Endpoint of the OBS server. You can enter a bucket-level domain name.                |
-+------------------------+-----------+--------+--------------------------------------------------------------------------------------+
-| linkConfig.port        | Yes       | String | Data transmission port. The HTTPS port number is 443 and the HTTP port number is 80. |
-+------------------------+-----------+--------+--------------------------------------------------------------------------------------+
-| linkConfig.accessKey   | Yes       | String | AK                                                                                   |
-+------------------------+-----------+--------+--------------------------------------------------------------------------------------+
-| linkConfig.securityKey | Yes       | String | SK                                                                                   |
-+------------------------+-----------+--------+--------------------------------------------------------------------------------------+
++------------------------+-----------+--------+---------------------------------------------------------------------------------------------------------------------------------------------------+
+| Parameter              | Mandatory | Type   | Description                                                                                                                                       |
++========================+===========+========+===================================================================================================================================================+
+| linkConfig.storageType | Yes       | String | Storage class of an object                                                                                                                        |
++------------------------+-----------+--------+---------------------------------------------------------------------------------------------------------------------------------------------------+
+| linkConfig.server      | Yes       | String | Endpoint of the OBS server.                                                                                                                       |
++------------------------+-----------+--------+---------------------------------------------------------------------------------------------------------------------------------------------------+
+| linkConfig.port        | Yes       | String | Data transmission port. The HTTPS port number is 443 and the HTTP port number is 80.                                                              |
++------------------------+-----------+--------+---------------------------------------------------------------------------------------------------------------------------------------------------+
+| linkConfig.accessKey   | Yes       | String | AK. You are advised to store it in ciphertext in the configuration file or an environment variable and decrypt it when needed to ensure security. |
++------------------------+-----------+--------+---------------------------------------------------------------------------------------------------------------------------------------------------+
+| linkConfig.securityKey | Yes       | String | SK. You are advised to store it in ciphertext in the configuration file or an environment variable and decrypt it when needed to ensure security. |
++------------------------+-----------+--------+---------------------------------------------------------------------------------------------------------------------------------------------------+

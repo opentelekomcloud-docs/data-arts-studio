@@ -23,7 +23,7 @@ Similar to a request, a response also has a header, for example, **Content-Type*
 
 .. _dataartsstudio_02_0011__en-us_topic_0181281379_en-us_topic_0170647351_en-us_topic_0170155703_fig4865141011511:
 
-.. figure:: /_static/images/en-us_image_0000001322248848.png
+.. figure:: /_static/images/en-us_image_0000001716290189.png
    :alt: **Figure 1** Header fields of the response to the request for obtaining a user token
 
    **Figure 1** Header fields of the response to the request for obtaining a user token

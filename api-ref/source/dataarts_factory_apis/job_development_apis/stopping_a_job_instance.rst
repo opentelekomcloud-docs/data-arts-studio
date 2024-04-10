@@ -21,18 +21,18 @@ URI
 
    .. table:: **Table 1** URI parameters
 
-      +-------------+-----------+--------+--------------------------------------------------------------------------------------------------------------------------+
-      | Parameter   | Mandatory | Type   | Description                                                                                                              |
-      +=============+===========+========+==========================================================================================================================+
-      | project_id  | Yes       | String | Project ID. For details about how to obtain a project ID, see :ref:`Project ID and Account ID <dataartsstudio_02_0314>`. |
-      +-------------+-----------+--------+--------------------------------------------------------------------------------------------------------------------------+
-      | job_name    | Yes       | String | Job name.                                                                                                                |
-      +-------------+-----------+--------+--------------------------------------------------------------------------------------------------------------------------+
-      | instance_id | Yes       | Long   | Job instance ID. For details about how to obtain it, see :ref:`Viewing a Job Instance List <dataartsstudio_02_0094>`.    |
-      +-------------+-----------+--------+--------------------------------------------------------------------------------------------------------------------------+
+      +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
+      | Parameter   | Mandatory | Type   | Description                                                                                                           |
+      +=============+===========+========+=======================================================================================================================+
+      | project_id  | Yes       | String | Project ID. For details about how to obtain a project ID, see :ref:`Project ID and Account ID <projectid_accountid>`. |
+      +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
+      | job_name    | Yes       | String | Job name.                                                                                                             |
+      +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
+      | instance_id | Yes       | Long   | Job instance ID. For details about how to obtain it, see :ref:`Viewing a Job Instance List <dataartsstudio_02_0094>`. |
+      +-------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
 
-Request
--------
+Request Parameters
+------------------
 
 .. table:: **Table 2** Request header parameter
 
@@ -45,31 +45,32 @@ Request
    |                 |                 |                 | -  To query data in other workspaces, this header must be carried.                        |
    +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------+
 
-Response
---------
+Response Parameters
+-------------------
 
 None.
 
-Example
--------
+Example Request
+---------------
 
--  Request
+.. code-block:: text
 
-   .. code-block:: text
+   POST /v1/b384b9e9ab9b4ee8994c8633aabc9505/jobs/job_batch/instances/34765/stop
 
-      POST /v1/b384b9e9ab9b4ee8994c8633aabc9505/jobs/job_batch/instances/34765/stop
+Example Response
+----------------
 
 -  Success response
 
    HTTP status code 204
 
-   -  Failure response
+-  Failure response
 
-      HTTP status code 400
+   HTTP status code 400
 
-      .. code-block::
+   .. code-block::
 
-         {
-             "error_code":"DLF.0137",
-             "error_msg":"Job instance does not exist."
-         }
+      {
+          "error_code":"DLF.0137",
+          "error_msg":"Job instance does not exist."
+      }

@@ -1,6 +1,6 @@
-:original_name: StartJob.html
+:original_name: StartJob_0.html
 
-.. _StartJob:
+.. _StartJob_0:
 
 Starting a Job
 ==============
@@ -43,13 +43,13 @@ Response Parameters
 
 .. table:: **Table 3** Response body parameters
 
-   +-------------+------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+
-   | Parameter   | Type                                                                               | Description                                                                              |
-   +=============+====================================================================================+==========================================================================================+
-   | submissions | Array of :ref:`StartJobSubmission <startjob__response_startjobsubmission>` objects | Job running information. For details, see the descriptions of **submission** parameters. |
-   +-------------+------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+
+   +-------------+--------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+
+   | Parameter   | Type                                                                                 | Description                                                                              |
+   +=============+======================================================================================+==========================================================================================+
+   | submissions | Array of :ref:`StartJobSubmission <startjob_0__response_startjobsubmission>` objects | Job running information. For details, see the descriptions of **submission** parameters. |
+   +-------------+--------------------------------------------------------------------------------------+------------------------------------------------------------------------------------------+
 
-.. _startjob__response_startjobsubmission:
+.. _startjob_0__response_startjobsubmission:
 
 .. table:: **Table 4** StartJobSubmission
 

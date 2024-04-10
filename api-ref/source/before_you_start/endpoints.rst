@@ -1,6 +1,6 @@
-:original_name: dataartsstudio_02_0004.html
+:original_name: endpoint.html
 
-.. _dataartsstudio_02_0004:
+.. _endpoint:
 
 Endpoints
 =========

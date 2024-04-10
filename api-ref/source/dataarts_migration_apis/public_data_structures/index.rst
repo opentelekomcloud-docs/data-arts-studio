@@ -5,10 +5,10 @@
 Public Data Structures
 ======================
 
--  :ref:`Link Parameter Description <dataartsstudio_02_0261>`
--  :ref:`Source Job Parameters <dataartsstudio_02_0281>`
--  :ref:`Destination Job Parameters <dataartsstudio_02_0295>`
--  :ref:`Job Parameter Description <dataartsstudio_02_0308>`
+-  :ref:`Link Parameter Description <link_parameter>`
+-  :ref:`Source Job Parameters <source_job_parameters>`
+-  :ref:`Destination Job Parameters <destination_job_parameters>`
+-  :ref:`Job Parameter Description <job_parameter>`
 
 .. toctree::
    :maxdepth: 1

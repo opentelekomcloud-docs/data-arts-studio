@@ -1,6 +1,6 @@
-:original_name: DeleteJob.html
+:original_name: DeleteJob_0.html
 
-.. _DeleteJob:
+.. _DeleteJob_0:
 
 Deleting a Job
 ==============
