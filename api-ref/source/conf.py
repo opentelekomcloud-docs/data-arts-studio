@@ -110,7 +110,7 @@ html_copy_source = False
 latex_documents = [
     ('index',
      'dataarts_studio-api-ref.tex',
-     u'DataArts Studio - API Reference',
+    u'DataArts Studio - API Reference',
      u'OpenTelekomCloud', 'manual'),
 ]
 
