@@ -7,6 +7,7 @@ DataArts Studio is a one-stop data operations platform that drives digital trans
    :class: container-sbv
 
    .. service_card::
+      :environment: internal
       :service_type: dataarts_studio
       :umn: Understand the fundamentals, functions, and product architecture of DataArts Studio, so that you can make one-stop data development and operations simpler, more convenient, and better suit your business needs.
       :api-ref: Several APIs and calling examples help you perform operations on DataArts Studio components.
