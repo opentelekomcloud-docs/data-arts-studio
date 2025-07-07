@@ -7,50 +7,60 @@ Job Configuration Management
 
 On the **Settings** tab page, you can perform the following operations:
 
--  :ref:`Maximum Concurrent Extractors of Jobs <dataartsstudio_01_0083__en-us_topic_0173586861_section19611105617510>`
--  :ref:`Scheduled Backup and Restoration of CDM Jobs <dataartsstudio_01_0083__en-us_topic_0173586861_section11184152932110>`
--  :ref:`Environment Variables of CDM Job Parameters <dataartsstudio_01_0083__en-us_topic_0173586861_section10589151615203>`
+-  :ref:`Maximum Concurrent Extractors <dataartsstudio_01_0083__en-us_topic_0173586861_section19611105617510>`
+-  :ref:`Scheduled Backup/Restoration <dataartsstudio_01_0083__en-us_topic_0173586861_section11184152932110>`
+-  :ref:`Environment Variables of Job Parameters <dataartsstudio_01_0083__en-us_topic_0173586861_section10589151615203>`
 
 .. _dataartsstudio_01_0083__en-us_topic_0173586861_section19611105617510:
 
-Maximum Concurrent Extractors of Jobs
--------------------------------------
+Maximum Concurrent Extractors
+-----------------------------
 
-The value of this parameter ranges from 1 to 300. If the total number of extractors exceeds the value of this parameter, the excess extractors are queued. Determine the maximum number of concurrent extractors based on the number of concurrent extractors of each job.
+Maximum number of concurrent extraction tasks in a cluster
 
-Configure the number of concurrent extractors of a job based on the following rules:
+CDM migrates data through data migration jobs. It works in the following way:
 
-The number of concurrent extractors in a CDM migration job is related to the cluster specifications and table size. The value range is 1 to 300. If the value is too large, the extractors are queued.
+#. When data migration jobs are submitted, CDM splits each job into multiple tasks based on the **Concurrent Extractors** parameter in the job configuration.
 
-You are advised to set 4 concurrent extractors for each 1 CU (1 CU = 1 vCPU and 4 GB), as listed in :ref:`Table 1 <dataartsstudio_01_0083__en-us_topic_0173586861_en-us_topic_0000001225868959_table17343144375319>`. You can also adjust the value as needed. If each row of the table contains less than or equal to 1 MB data, you can extract data concurrently. If each row contains more than 1 MB data, you are advised to extract data in a single thread.
+   .. note::
 
-.. note::
+      Jobs for different data sources may be split based on different dimensions. Some jobs may not be split based on the **Concurrent Extractors** parameter.
 
-   -  When data is to be migrated to files, CDM does not support multiple concurrent tasks. In this case, set a single process to extract data.
-   -  The number of concurrent extractors of a job is affected by **Maximum Concurrent Extractors** configured on the **Settings** page. The **Maximum Concurrent Extractors** parameter specifies the total number of concurrent extractions.
+#. CDM submits the tasks to the running pool in sequence. Tasks (defined by **Maximum Concurrent Extractors**) run concurrently. Excess tasks are queued.
 
-.. _dataartsstudio_01_0083__en-us_topic_0173586861_en-us_topic_0000001225868959_table17343144375319:
+By setting an appropriate number of concurrent extractors for a job and the maximum number of concurrent extractors for the cluster, you can accelerate migration. You can configure the number of concurrent extractors as follows:
 
-.. table:: **Table 1** Reference configurations of concurrent extractors
+#. You are advised to set **Maximum Concurrent Extractors** to twice the number of vCPUs. For details, see :ref:`Table 1 <dataartsstudio_01_0083__en-us_topic_0173586861_en-us_topic_0000001287646722_table1992816477328>`.
 
-   ================== ================ =====================
-   CDM Cluster Flavor vCPUs/Memory     Concurrent Extractors
-   ================== ================ =====================
-   cdm.large          8 vCPUs, 16 GB   16
-   cdm.xlarge         16 vCPUs, 32 GB  32
-   cdm.4xlarge        64 vCPUs, 128 GB 128
-   ================== ================ =====================
+   .. _dataartsstudio_01_0083__en-us_topic_0173586861_en-us_topic_0000001287646722_table1992816477328:
+
+   .. table:: **Table 1** Recommended maximum number of concurrent extractors for a CDM cluster
+
+      =========== ================ =========================================
+      Flavor      vCPUs/Memory     Recommended Maximum Concurrent Extractors
+      =========== ================ =========================================
+      cdm.large   8 vCPUs, 16 GB   16
+      cdm.xlarge  16 vCPUs, 32 GB  32
+      cdm.4xlarge 64 vCPUs, 128 GB 128
+      =========== ================ =========================================
+
+#. Configure the number of concurrent extractors based on the following rules:
+
+   a. When data is to be migrated to files, CDM does not support multiple concurrent tasks. In this case, set a single process to extract data.
+   b. If each row of the table contains less than or equal to 1 MB data, data can be extracted concurrently. If each row contains more than 1 MB data, it is recommended that data be extracted in a single thread.
+   c. Set **Concurrent Extractors** for a job based on **Maximum Concurrent Extractors** for the cluster. It is recommended that **Concurrent Extractors** is less than **Maximum Concurrent Extractors**.
+   d. If the destination is DLI, you are advised to set the number of concurrent extractors to 1. Otherwise, data may fail to be written.
 
 .. _dataartsstudio_01_0083__en-us_topic_0173586861_section11184152932110:
 
-Scheduled Backup and Restoration of CDM Jobs
---------------------------------------------
+Scheduled Backup/Restoration
+----------------------------
 
 This function depends on the OBS service.
 
 -  Prerequisites
 
-   You have created the :ref:`Link to OBS <dataartsstudio_01_0045>`.
+   An OBS link has been created. For details, see :ref:`Link to OBS <dataartsstudio_01_0045>`.
 
 -  Scheduled backup
 
@@ -87,35 +97,7 @@ This function depends on the OBS service.
 
 .. _dataartsstudio_01_0083__en-us_topic_0173586861_section10589151615203:
 
-Environment Variables of CDM Job Parameters
--------------------------------------------
+Environment Variables of Job Parameters
+---------------------------------------
 
 When creating a migration job on CDM, the parameter (such as the OBS bucket name or file path) that can be manually configured, a field in a parameter, or a character in a field can be configured as a global variable, so that you can change parameter values in batches, or batch replace certain characters after jobs are exported or imported.
-
-The following describes how to batch replace the OBS bucket name in a migration job.
-
-#. On the **Job Management** page, click the **Configuration Management** tab and configure environment variables.
-
-   .. code-block::
-
-      bucket_1=A
-      bucket_2=B
-
-   Variable **bucket_1** indicates bucket A, and variable **bucket_2** indicates bucket B.
-
-#. On the page for creating a CDM migration job, migrate data from bucket A to bucket B.
-
-   Set the source bucket name to **${bucket_1}** and destination bucket name to **${bucket_2}**.
-
-
-   .. figure:: /_static/images/en-us_image_0000001373288793.png
-      :alt: **Figure 1** Setting the bucket names to environment variables
-
-      **Figure 1** Setting the bucket names to environment variables
-
-#. If you want to migrate data from bucket C to bucket D, you do not need to change the job parameters. You only need to change the environment variables on the **Configuration Management** tab page as follows:
-
-   .. code-block::
-
-      bucket_1=C
-      bucket_2=D

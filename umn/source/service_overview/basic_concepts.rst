@@ -8,7 +8,7 @@ Basic Concepts
 DataArts Studio Instance
 ------------------------
 
-A DataArts Studio instance is the minimum unit of compute resources provided for users. You can create, access, and manage multiple DataArts Studio instances at the same time. A DataArts Studio instance allows you to access seven modules: Management Center, DataArts Architecture, DataArts Migration, DataArts Factory, DataArts Quality, DataArts Catalog, and DataArts DataService. You can obtain DataArts Studio instances with specifications tailored to your service requirements.
+A DataArts Studio instance is the minimum unit of compute resources provided for users. You can create, access, and manage multiple DataArts Studio instances at the same time. A DataArts Studio instance allows you to access the following modules: Management Center, DataArts Architecture, DataArts Migration, DataArts Factory, DataArts Quality, and DataArts Catalog. You can obtain DataArts Studio instances with specifications tailored to your service requirements.
 
 Workspace
 ---------
@@ -22,14 +22,14 @@ You can access the Management Center, DataArts Factory, and DataArts Migration m
 Member and Role
 ---------------
 
-A member is a account that has been assigned the permissions required to access and use a workspace. As an admin, when you add a workspace member, you must set a role.
+A member is a a cloud platform account account that has been assigned the permissions required to access and use a workspace. As an admin, when you add a workspace member, you must set a role.
 
 A role is a predefined combination of permissions. Different roles have different permission sets. After a role is assigned to a member, the member has all the permissions of that role. Each member must have at least one role, and they can have multiple roles at the same time.
 
-DataArts Migration
-------------------
+CDM Cluster
+-----------
 
-A DataArts Migration cluster is the smallest resource unit provided to users. DataArts Migration clusters run on ECSs. You can create data migration tasks in a CDM cluster and migrate data between homogeneous or heterogeneous data sources in the cloud and on-premises.
+A CDM cluster run on an ECS. You can create data migration tasks in a CDM cluster and migrate data between homogeneous or heterogeneous data sources in the cloud and on-premises data center.
 
 Data Source
 -----------

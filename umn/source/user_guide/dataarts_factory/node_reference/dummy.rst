@@ -12,7 +12,7 @@ The Dummy node is empty and does not perform any operations. It is used to simpl
 
 .. _dataartsstudio_01_0469__en-us_topic_0121253876_fig16251257164711:
 
-.. figure:: /_static/images/en-us_image_0000001322408432.png
+.. figure:: /_static/images/en-us_image_0000002305407765.png
    :alt: **Figure 1** Connection modes
 
    **Figure 1** Connection modes

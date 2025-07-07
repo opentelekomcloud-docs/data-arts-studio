@@ -18,7 +18,7 @@ DataArts Studio uses Cloud Trace Service (CTS) to audit users' non-query operati
 ECS
 ---
 
-CDM and DataArts DataService clusters of DataArts Studio consist of Elastic Cloud Servers (ECSs). In addition, DataArts Studio can use host connections to connect to ECSs and run Shell or Python scripts.
+CDM clusters of DataArts Studio consist of Elastic Cloud Servers (ECSs). In addition, DataArts Studio can use host connections to connect to ECSs and run Shell or Python scripts.
 
 VPC
 ---
@@ -44,16 +44,6 @@ Direct Connect
 --------------
 
 Direct Connect enables DataArts Studio to communicate with third-party data centers.
-
-API Gateway
------------
-
-API Gateway (APIG) enables DataArts Studio to provision the APIs of its modules.
-
-DLI
----
-
-Data Lake Insight (DLI) can be used as the data lake for DataArts Studio and enables data integration, development, governance, and provisioning.
 
 MRS
 ---

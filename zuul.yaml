@@ -4,10 +4,6 @@
     default-branch: main
     templates:
       - helpcenter-base-jobs
-    vars:
-      sphinx_pdf_files:
-        - dataarts_studio-api-ref.pdf
-        - dataarts_studio-umn.pdf
     check:
       jobs:
         - noop

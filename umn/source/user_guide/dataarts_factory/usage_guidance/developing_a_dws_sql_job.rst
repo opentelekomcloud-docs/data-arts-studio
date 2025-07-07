@@ -5,7 +5,7 @@
 Developing a DWS SQL Job
 ========================
 
-This section describes how to use the DWS SQL operator to develop a job on DataArts Factory.
+This section describes how to use the DWS SQL node to develop a job in DataArts Factory.
 
 Scenario
 --------
@@ -17,7 +17,7 @@ Preparing the Environment
 
 -  Enable DWS and create a DWS cluster for running DWS SQL jobs.
 
--  Enable CDM incremental packages and create a CDM cluster.
+-  Enable a CDM incremental package. Create a CDM cluster.
 
    Ensure that the VPC, subnet, and security group of the CDM cluster are the same as those of the DWS cluster so that the two clusters can communicate with each other.
 
@@ -71,7 +71,7 @@ Choose **Development** > **Develop Script** and create a DWS SQL script named **
 
 .. _dataartsstudio_01_0524__en-us_topic_0127305016_fig693875618223:
 
-.. figure:: /_static/images/en-us_image_0000001373168993.png
+.. figure:: /_static/images/en-us_image_0000002305440405.png
    :alt: **Figure 1** Developing a script
 
    **Figure 1** Developing a script
@@ -87,21 +87,15 @@ Developing a DWS SQL Job
 
 After developing the DWS SQL script, create a job for periodically executing the DWS SQL script.
 
-#. Create an empty job named **job_dws_sql**.
-
-
-   .. figure:: /_static/images/en-us_image_0000001373408377.png
-      :alt: **Figure 2** Creating the job_dws_sql job
-
-      **Figure 2** Creating the job_dws_sql job
+#. Create a batch job named **job_dws_sql**.
 
 #. Go to the job development page, drag the DWS SQL node to the canvas, and click the node to configure its properties.
 
 
-   .. figure:: /_static/images/en-us_image_0000001373088181.png
-      :alt: **Figure 3** Configuring properties for the DWS SQL node
+   .. figure:: /_static/images/en-us_image_0000002305407345.png
+      :alt: **Figure 2** Configuring properties for the DWS SQL node
 
-      **Figure 3** Configuring properties for the DWS SQL node
+      **Figure 2** Configuring properties for the DWS SQL node
 
    Key properties:
 
@@ -124,10 +118,10 @@ After developing the DWS SQL script, create a job for periodically executing the
 #. If the test is successful, click the blank area on the canvas and then the **Scheduling Setup** tab on the right. On the displayed page, configure the scheduling policy.
 
 
-   .. figure:: /_static/images/en-us_image_0000001322088348.png
-      :alt: **Figure 4** Configuring the scheduling policy
+   .. figure:: /_static/images/en-us_image_0000002270790596.png
+      :alt: **Figure 3** Configuring the scheduling policy
 
-      **Figure 4** Configuring the scheduling policy
+      **Figure 3** Configuring the scheduling policy
 
    Parameter descriptions:
 
@@ -135,4 +129,4 @@ After developing the DWS SQL script, create a job for periodically executing the
 
 #. Click **Submit** and then **Execute**. The job will be executed automatically every day.
 
-.. |image1| image:: /_static/images/en-us_image_0000001322408244.png
+.. |image1| image:: /_static/images/en-us_image_0000002270847458.png

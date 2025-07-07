@@ -10,7 +10,7 @@ How Do I Create a Notification for All Jobs?
 #. Select the jobs to be configured and click **Configure Notification**.
 
 
-   .. figure:: /_static/images/en-us_image_0000001373289577.png
+   .. figure:: /_static/images/en-us_image_0000002305405845.png
       :alt: **Figure 1** Creating a notification
 
       **Figure 1** Creating a notification

@@ -2,7 +2,7 @@
 
 .. _dataartsstudio_03_0059:
 
-Why Does the GUI Display Only the Failure Result but Not the Specific Error Cause After Hive SQL and Spark SQL Scripts Fail to Be Executed?
+Why does the GUI display only the failure result but not the specific error cause after Hive SQL and Spark SQL scripts fail to be executed?
 ===========================================================================================================================================
 
 Check whether the data connection used by the Hive SQL and Spark SQL scripts is direct connection or proxy connection.

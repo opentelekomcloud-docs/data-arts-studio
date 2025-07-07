@@ -17,7 +17,6 @@ Tutorials
 -  :ref:`Migrating Data from OBS to DLI <dataartsstudio_01_0089>`
 -  :ref:`Migrating Data from MRS HDFS to OBS <dataartsstudio_01_0103>`
 -  :ref:`Migrating the Entire Elasticsearch Database to CSS <dataartsstudio_01_0099>`
--  :ref:`Migrating Data from DDS to DWS <dataartsstudio_01_0087>`
 
 .. toctree::
    :maxdepth: 1
@@ -35,4 +34,3 @@ Tutorials
    migrating_data_from_obs_to_dli
    migrating_data_from_mrs_hdfs_to_obs
    migrating_the_entire_elasticsearch_database_to_css
-   migrating_data_from_dds_to_dws

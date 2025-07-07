@@ -5,7 +5,7 @@
 Managing a Workspace
 ====================
 
--  :ref:`Creating and Managing a Workspace <dataartsstudio_01_0116_0>`
+-  :ref:`Creating and Managing a Workspace <dataartsstudio_01_0116>`
 -  :ref:`(Optional) Changing the Job Log Storage Path <dataartsstudio_01_0530>`
 
 .. toctree::

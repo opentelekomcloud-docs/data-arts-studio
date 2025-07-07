@@ -21,14 +21,14 @@ Prerequisites
 -  You have obtained a DWS cluster and the IP address, port number, database name, username, and password for connecting to the DWS database. In addition, you must have the read, write, and delete permissions on the DWS database.
 -  You have obtained the IP address, name, username, and password of the Oracle database.
 -  If the Oracle database is deployed on an on-premises data center or a third-party cloud, ensure that an IP address that can be accessed from the public network has been configured for the Oracle database, or the VPN or Direct Connect between the on-premises data center and cloud has been established.
--  You have uploaded an Oracle database driver by following the instructions provided in :ref:`Managing Drivers <dataartsstudio_01_0132>`.
+-  You have uploaded the Oracle database driver on the **Job Management** > **Links** > **Driver Management** page.
 
 .. _dataartsstudio_01_0133__en-us_topic_0000001193296031_section3548195211:
 
 Creating a CDM Cluster and Binding an EIP to the Cluster
 --------------------------------------------------------
 
-#. Create a CDM cluster by following the instructions in :ref:`Creating a Cluster <dataartsstudio_01_0576>`.
+#. Create a CDM cluster.
 
    The key configurations are as follows:
 
@@ -49,53 +49,47 @@ Creating an Oracle Link
 
 #. Click **Job Management** in the **Operation** column of the CDM cluster. On the displayed page, click the **Links** tab and then **Create Link**. The **Select Connector** page is displayed.
 
-
-   .. figure:: /_static/images/en-us_image_0000001373088237.png
-      :alt: **Figure 1** Selecting a connector type
-
-      **Figure 1** Selecting a connector type
-
 #. Select **Oracle** and click **Next** to configure parameters for the link.
 
 
-   .. figure:: /_static/images/en-us_image_0000001322408296.png
-      :alt: **Figure 2** Creating an Oracle link
+   .. figure:: /_static/images/en-us_image_0000002305441549.png
+      :alt: **Figure 1** Creating an Oracle link
 
-      **Figure 2** Creating an Oracle link
+      **Figure 1** Creating an Oracle link
 
    .. table:: **Table 1** Oracle link parameters
 
-      +-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+
-      | Parameter       | Description                                                                                                                                                                  | Example Value       |
-      +=================+==============================================================================================================================================================================+=====================+
-      | Name            | Enter a unique link name.                                                                                                                                                    | oracle_link         |
-      +-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+
-      | Database Server | Database server domain name or IP address                                                                                                                                    | 192.168.0.1         |
-      +-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+
-      | Port            | Oracle database port                                                                                                                                                         | 3306                |
-      +-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+
-      | Connection Type | Type of the Oracle database link                                                                                                                                             | Service Name        |
-      +-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+
-      | Database Name   | Name of the database to be connected                                                                                                                                         | db_user             |
-      +-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+
-      | Username        | User who has the read permission of the Oracle database                                                                                                                      | admin               |
-      +-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+
-      | Password        | Password used for logging in to the Oracle database                                                                                                                          | ``-``               |
-      +-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+
-      | Use Agent       | Whether to extract data from the data source through an agent                                                                                                                | Yes                 |
-      +-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+
-      | Agent           | Click **Select** and select the agent created in :ref:`Connecting to an Agent <dataartsstudio_01_0128__en-us_topic_0207402273_en-us_topic_0191978474_section1072083564713>`. | ``-``               |
-      +-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+
-      | Oracle Version  | The latest version is used by default. If the version is incompatible, select another version.                                                                               | Later than 12.1     |
-      +-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+
-      | Driver Version  | A driver version that adapts to the Oracle database                                                                                                                          | ``-``               |
-      +-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+
-      | Fetch Size      | Number of rows obtained by each request                                                                                                                                      | 1000                |
-      +-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+
-      | Link Attributes | Custom attributes of the link                                                                                                                                                | useCompression=true |
-      +-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+
-      | Reference Sign  | Delimiter used to separate referenced table names or column names This parameter is left blank by default.                                                                   | '                   |
-      +-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+
+      +-----------------+------------------------------------------------------------------------------------------------------------+---------------------+
+      | Parameter       | Description                                                                                                | Example Value       |
+      +=================+============================================================================================================+=====================+
+      | Name            | Enter a unique link name.                                                                                  | oracle_link         |
+      +-----------------+------------------------------------------------------------------------------------------------------------+---------------------+
+      | Database Server | Database server domain name or IP address                                                                  | 192.168.0.1         |
+      +-----------------+------------------------------------------------------------------------------------------------------------+---------------------+
+      | Port            | Oracle database port                                                                                       | 3306                |
+      +-----------------+------------------------------------------------------------------------------------------------------------+---------------------+
+      | Connection Type | Type of the Oracle database link                                                                           | Service Name        |
+      +-----------------+------------------------------------------------------------------------------------------------------------+---------------------+
+      | Database Name   | Name of the database to be connected                                                                       | db_user             |
+      +-----------------+------------------------------------------------------------------------------------------------------------+---------------------+
+      | Username        | User who has the read permission of the Oracle database                                                    | admin               |
+      +-----------------+------------------------------------------------------------------------------------------------------------+---------------------+
+      | Password        | Password used for logging in to the Oracle database                                                        | ``-``               |
+      +-----------------+------------------------------------------------------------------------------------------------------------+---------------------+
+      | Use Agent       | Whether to extract data from the data source through an agent                                              | Yes                 |
+      +-----------------+------------------------------------------------------------------------------------------------------------+---------------------+
+      | Agent           | Click **Select** and select the created agent.                                                             | ``-``               |
+      +-----------------+------------------------------------------------------------------------------------------------------------+---------------------+
+      | Oracle Version  | The latest version is used by default. If the version is incompatible, select another version.             | Later than 12.1     |
+      +-----------------+------------------------------------------------------------------------------------------------------------+---------------------+
+      | Driver Version  | A driver version that adapts to the Oracle database                                                        | ``-``               |
+      +-----------------+------------------------------------------------------------------------------------------------------------+---------------------+
+      | Fetch Size      | Number of rows obtained by each request                                                                    | 1000                |
+      +-----------------+------------------------------------------------------------------------------------------------------------+---------------------+
+      | Link Attributes | Custom attributes of the link                                                                              | useCompression=true |
+      +-----------------+------------------------------------------------------------------------------------------------------------+---------------------+
+      | Reference Sign  | Delimiter used to separate referenced table names or column names This parameter is left blank by default. | '                   |
+      +-----------------+------------------------------------------------------------------------------------------------------------+---------------------+
 
 #. Click **Save**. The **Links** page is displayed.
 
@@ -112,27 +106,27 @@ Creating a DWS Link
 
    .. table:: **Table 2** DWS link parameters
 
-      +-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+
-      | Parameter       | Description                                                                                                                                                                  | Example Value |
-      +=================+==============================================================================================================================================================================+===============+
-      | Name            | Enter a unique link name.                                                                                                                                                    | dwslink       |
-      +-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+
-      | Database Server | IP address or domain name of the DWS database                                                                                                                                | 192.168.0.3   |
-      +-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+
-      | Port            | DWS database port                                                                                                                                                            | 8000          |
-      +-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+
-      | Database Name   | Name of the DWS database                                                                                                                                                     | db_demo       |
-      +-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+
-      | Username        | User who has the read, write, and delete permissions on the DWS database                                                                                                     | dbadmin       |
-      +-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+
-      | Password        | Password of the user                                                                                                                                                         | ``-``         |
-      +-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+
-      | Use Agent       | Whether to extract data from the data source through an agent                                                                                                                | Yes           |
-      +-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+
-      | Agent           | Click **Select** and select the agent created in :ref:`Connecting to an Agent <dataartsstudio_01_0128__en-us_topic_0207402273_en-us_topic_0191978474_section1072083564713>`. | ``-``         |
-      +-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+
-      | Import Mode     | **COPY**: Migrate the source data to the DWS management node and then copy the data to DataNodes. To access DWS through the Internet, select **COPY**.                       | COPY          |
-      +-----------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+
+      +-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+
+      | Parameter       | Description                                                                                                                                            | Example Value |
+      +=================+========================================================================================================================================================+===============+
+      | Name            | Enter a unique link name.                                                                                                                              | dwslink       |
+      +-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+
+      | Database Server | IP address or domain name of the DWS database                                                                                                          | 192.168.0.3   |
+      +-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+
+      | Port            | DWS database port                                                                                                                                      | 8000          |
+      +-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+
+      | Database Name   | Name of the DWS database                                                                                                                               | db_demo       |
+      +-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+
+      | Username        | User who has the read, write, and delete permissions on the DWS database                                                                               | dbadmin       |
+      +-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+
+      | Password        | Password of the user                                                                                                                                   | ``-``         |
+      +-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+
+      | Use Agent       | Whether to extract data from the data source through an agent                                                                                          | Yes           |
+      +-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+
+      | Agent           | Click **Select** and select the created agent.                                                                                                         | ``-``         |
+      +-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+
+      | Import Mode     | **COPY**: Migrate the source data to the DWS management node and then copy the data to DataNodes. To access DWS through the Internet, select **COPY**. | COPY          |
+      +-----------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+---------------+
 
 #. Click **Save**.
 
@@ -144,10 +138,10 @@ Creating a Migration Job
 #. Choose **Table/File Migration** > **Create Job** to create a job for exporting data from the Oracle database to DWS.
 
 
-   .. figure:: /_static/images/en-us_image_0000001322248312.jpg
-      :alt: **Figure 3** Creating a job for migrating data from Oracle to DWS
+   .. figure:: /_static/images/en-us_image_0000002305408485.jpg
+      :alt: **Figure 2** Creating a job for migrating data from Oracle to DWS
 
-      **Figure 3** Creating a job for migrating data from Oracle to DWS
+      **Figure 2** Creating a job for migrating data from Oracle to DWS
 
    -  **Job Name**: Enter a unique name.
    -  **Source Job Configuration**
@@ -155,7 +149,7 @@ Creating a Migration Job
       -  **Source Link Name**: Select the **oracle_link** created in :ref:`Creating an Oracle Link <dataartsstudio_01_0133__en-us_topic_0000001193296031_section1136440015>`.
       -  **Schema/Tablespace**: Enter the name of the database whose data is to be migrated.
       -  **Table Name**: Enter the name of the table whose data is to be migrated.
-      -  Retain the default values of the optional parameters in **Show Advanced Attributes**. For details, see :ref:`From a Common Relational Database <dataartsstudio_01_0054>`.
+      -  Retain the default values of the optional parameters in **Show Advanced Attributes**.
 
    -  **Destination Job Configuration**
 
@@ -167,18 +161,17 @@ Creating a Migration Job
       -  **Extend char length**: If the data encoding formats of the migration source and destination are different, the character length of the automatic table creation may be insufficient. If you select **Yes** for this parameter, the character length will be increased by three times during automatic table creation.
       -  **Clear Data Before Import**: whether to clear data in the destination table before the migration task starts.
 
-#. Click **Next**. The **Map Field** page is displayed. CDM automatically matches the source and destination fields, as shown in :ref:`Figure 4 <dataartsstudio_01_0133__en-us_topic_0000001193296031_fig1534811262293>`.
+#. Click **Next**. The **Map Field** page is displayed. CDM automatically matches the source and destination fields, as shown in :ref:`Figure 3 <dataartsstudio_01_0133__en-us_topic_0000001193296031_fig1534811262293>`.
 
    -  If the field mapping is incorrect, you can drag the fields to adjust the mapping.
-   -  You can map fields in batches.
    -  The expressions in CDM support field conversion of common character strings, dates, and values.
 
    .. _dataartsstudio_01_0133__en-us_topic_0000001193296031_fig1534811262293:
 
-   .. figure:: /_static/images/en-us_image_0000001373408437.png
-      :alt: **Figure 4** Table-to-table field mapping
+   .. figure:: /_static/images/en-us_image_0000002270791748.png
+      :alt: **Figure 3** Table-to-table field mapping
 
-      **Figure 4** Table-to-table field mapping
+      **Figure 3** Table-to-table field mapping
 
 #. Click **Next** and set task parameters. Generally, retain the default values of all parameters.
 
@@ -186,7 +179,7 @@ Creating a Migration Job
 
    -  **Retry Upon Failure**: If the job fails to be executed, you can determine whether to automatically retry. Retain the default value **Never**.
    -  **Group**: Select the group to which the job belongs. The default group is **DEFAULT**. On the **Job Management** page, jobs can be displayed, started, or exported by group.
-   -  **Schedule Execution**: To configure scheduled jobs, see :ref:`Scheduling Job Execution <dataartsstudio_01_0082>`. Retain the default value **No**.
+   -  **Schedule Execution**: Enable it if you need to configure scheduled jobs. Retain the default value **No**.
    -  **Concurrent Extractors**: Enter the number of extractors to be concurrently executed. You can increase the value of this parameter to improve migration efficiency.
    -  **Write Dirty Data**: Dirty data may be generated during data migration between tables. You are advised to select **Yes**.
    -  **Delete Job After Completion**: Retain the default value **Do not delete**.

@@ -8,7 +8,7 @@ What Should I Do If the Connection Test Fails When I Enable the SSL Connection D
 The failure may be caused by the rights separation function of the DWS cluster. On the DWS console, click the corresponding cluster, choose **Security Settings**, and disable **Rights Separation**.
 
 
-.. figure:: /_static/images/en-us_image_0000001373169861.png
+.. figure:: /_static/images/en-us_image_0000002305438865.png
    :alt: **Figure 1** Disabling Rights Separation for the DWS cluster
 
    **Figure 1** Disabling Rights Separation for the DWS cluster

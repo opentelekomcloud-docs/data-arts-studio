@@ -77,11 +77,11 @@ This section uses the #{DateUtil.now()} expression as an example.
 
    |image8|
 
-.. |image1| image:: /_static/images/en-us_image_0000001373169101.png
-.. |image2| image:: /_static/images/en-us_image_0000001373288829.png
-.. |image3| image:: /_static/images/en-us_image_0000001322248392.png
-.. |image4| image:: /_static/images/en-us_image_0000001322408368.png
-.. |image5| image:: /_static/images/en-us_image_0000001322088460.png
-.. |image6| image:: /_static/images/en-us_image_0000001373169105.png
-.. |image7| image:: /_static/images/en-us_image_0000001321928776.png
-.. |image8| image:: /_static/images/en-us_image_0000001322088468.png
+.. |image1| image:: /_static/images/en-us_image_0000002270790816.png
+.. |image2| image:: /_static/images/en-us_image_0000002305407545.png
+.. |image3| image:: /_static/images/en-us_image_0000002305440621.png
+.. |image4| image:: /_static/images/en-us_image_0000002270790820.png
+.. |image5| image:: /_static/images/en-us_image_0000002270790808.png
+.. |image6| image:: /_static/images/en-us_image_0000002305407553.png
+.. |image7| image:: /_static/images/en-us_image_0000002305440613.png
+.. |image8| image:: /_static/images/en-us_image_0000002305440625.png

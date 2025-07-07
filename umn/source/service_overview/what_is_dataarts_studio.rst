@@ -20,7 +20,7 @@ Enterprises often face challenges in the following aspects when managing data:
 -  Operations
 
    -  Data analysts and decision makers require efficient data operations. There is no efficient data operations platform to address the growing and diversified demands for analytics and reporting.
-   -  Repeated development of the same data wastes time, slows down development, and results in too many data copies. Inconsistent data standards waste resources and drive up costs.
+   -  Repeated development of the same data wastes time, slows down development, and results in too much data replication. Inconsistent data standards waste resources and drive up costs.
 
 -  Innovation
 
@@ -31,24 +31,24 @@ Enterprises often face challenges in the following aspects when managing data:
 What Is DataArts Studio?
 ------------------------
 
-DataArts StudioDataArts Studio is a one-stop data operations platform that drives digital transformation. It allows you to perform many operations, such as integrating and developing data. Incorporating big data storage, computing and analytical engines, it can also construct industry knowledge bases and help your enterprise build an intelligent end-to-end data system. This system can eliminate data silos, unify data standards, accelerate data monetization, and accelerate your enterprise's digital transformation.
+DataArts Studio is a one-stop data operations platform that drives digital transformation. It allows you to perform many operations, such as integrating and developing data. Incorporating big data storage, computing and analytical engines, it can also construct industry knowledge bases and help your enterprise build an intelligent end-to-end data system. This system can eliminate data silos, unify data standards, accelerate data monetization, and accelerate your enterprise's digital transformation.
 
 :ref:`Figure 1 <dataartsstudio_07_001__fig156921728104018>` shows the architecture.
 
 .. _dataartsstudio_07_001__fig156921728104018:
 
-.. figure:: /_static/images/en-us_image_0000001322088784.png
+.. figure:: /_static/images/en-us_image_0000002305404701.png
    :alt: **Figure 1** Architecture
 
    **Figure 1** Architecture
 
-As shown in the figure, DataArts Studio is based on the data lake base and provides capabilities such as data integration, development, governance, and openness. DataArts Studio can connect to data lakes and cloud database services, such as Data Lake Insight (DLI), MRS Hive, and GaussDB(DWS). These data lakes and cloud database services are used as the data lake base. DataArts Studio can also connect to traditional enterprise data warehouses, such as Oracle and Greenplum.
+As shown in the figure, DataArts Studio is based on the data lake base and provides capabilities such as data integration, development, and governance. DataArts Studio can connect to data lakes and cloud database services, such as MRS Hive and GaussDB(DWS). These data lakes and cloud database services are used as the data lake base. DataArts Studio can also connect to traditional enterprise data warehouses, such as Oracle and MySQL.
 
 DataArts Studio consists of the following functional modules:
 
 -  **Management Center**
 
-   Management Center supports data connection management and connects to the data lake base for activities such as data development.
+   Management Center supports data connection management and connects to the data lake foundation for activities such as data development.
 
 -  **DataArts Migration**
 

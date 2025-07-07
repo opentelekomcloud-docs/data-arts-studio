@@ -20,7 +20,7 @@ Procedure
 #. In the navigation pane, choose **Cloud Service Monitoring** > **Cloud Data Migration**. In the right pane, locate a CDM cluster and click **Create Alarm Rule** in the **Operation** column.
 
 
-   .. figure:: /_static/images/en-us_image_0000001373169045.png
+   .. figure:: /_static/images/en-us_image_0000002305440837.png
       :alt: **Figure 1** Monitored CDM clusters
 
       **Figure 1** Monitored CDM clusters

@@ -13,20 +13,16 @@ With one data connection, you can run multiple jobs and develop multiple scripts
 Creating a Data Connection
 --------------------------
 
-The data connection of DataArts Factory is created based on the data connection of Management Center. For details about how to create a data connection, see :ref:`Creating Data Connections <dataartsstudio_01_0009>`.
+The data connection of DataArts Factory is created based on the data connection of Management Center. For details about how to create a data connection, see :ref:`Managing Data Connections <dataartsstudio_01_0009>`.
 
 Viewing Connection References
 -----------------------------
 
 To view the references of a connection, perform the following steps:
 
-#. Log in to the DataArts Studio console. Locate an instance and click **Access**. On the displayed page, locate a workspace and click **DataArts Factory**.
+#. Log in to the DataArts Studio console by following the instructions in :ref:`Accessing the DataArts Studio Instance Console <dataartsstudio_01_0001>`.
 
-
-   .. figure:: /_static/images/en-us_image_0000001321928320.png
-      :alt: **Figure 1** DataArts Factory
-
-      **Figure 1** DataArts Factory
+#. On the DataArts Studio console, locate a workspace and click **DataArts Factory**.
 
 #. In the left navigation pane of DataArts Factory, choose **Data Development** > **Develop Script**.
 
@@ -36,4 +32,10 @@ To view the references of a connection, perform the following steps:
 
 #. In the displayed **Reference List** dialog box, view the references of the connection.
 
-.. |image1| image:: /_static/images/en-us_image_0000001373087889.png
+
+   .. figure:: /_static/images/en-us_image_0000002270791148.png
+      :alt: **Figure 1** Reference List
+
+      **Figure 1** Reference List
+
+.. |image1| image:: /_static/images/en-us_image_0000002270848010.png

@@ -1,6 +1,6 @@
-:original_name: dataartsstudio_03_0150.html
+:original_name: dataartsstudio_03_0136.html
 
-.. _dataartsstudio_03_0150:
+.. _dataartsstudio_03_0136:
 
 What Are the Differences and Connections Among Environment Variables, Job Parameters, and Script Parameters?
 ============================================================================================================
@@ -15,7 +15,7 @@ Introduction and usage of environment variables, job parameters, and script para
    -  The value of a constant in different workspaces is the same. When importing a constant to another workspace, you do not need to reconfigure its value.
 
 
-   .. figure:: /_static/images/en-us_image_0000001373089037.png
+   .. figure:: /_static/images/en-us_image_0000002305405577.png
       :alt: **Figure 1** Environment variable
 
       **Figure 1** Environment variable
@@ -26,27 +26,27 @@ Introduction and usage of environment variables, job parameters, and script para
    -  The value of a constant in different jobs is the same. When importing a constant to another job, you do not need to reconfigure its value.
 
 
-   .. figure:: /_static/images/en-us_image_0000001373169853.png
+   .. figure:: /_static/images/en-us_image_0000002305438637.png
       :alt: **Figure 2** Job parameter.
 
       **Figure 2** Job parameter.
 
 -  Script parameters take effect in current script and it can be used in the following ways.
 
-   -  Enter SQL script parameters in the script editor (Flink SQL is not supported). If the script is executed independently, you can configure the parameters in the lower part of the editor, as shown in :ref:`Figure 3 <dataartsstudio_03_0150__fig35061784103>`. If the script is executed by job scheduling, you can assign values to the parameters based on node attributes, as shown in :ref:`Figure 4 <dataartsstudio_03_0150__fig164981819191515>`.
-   -  For Shell scripts, you can enter a parameter and an interactive parameter in the upper part of the editor to transfer the parameters.
-   -  Python scripts do not support parameter transfer.
+   -  Enter SQL script parameters in the script editor (Flink SQL is not supported). If the script is executed independently, you can configure the parameters in the lower part of the editor, as shown in :ref:`Figure 3 <dataartsstudio_03_0136__fig35061784103>`. If the script is executed by job scheduling, you can assign values to the parameters based on node attributes, as shown in :ref:`Figure 4 <dataartsstudio_03_0136__fig164981819191515>`.
+   -  For Shell scripts, you can enter a parameter and an interactive parameter to transfer the parameters.
+   -  For Python scripts, you can enter a parameter and an interactive parameter to transfer the parameters.
 
-   .. _dataartsstudio_03_0150__fig35061784103:
+   .. _dataartsstudio_03_0136__fig35061784103:
 
-   .. figure:: /_static/images/en-us_image_0000001322409092.png
+   .. figure:: /_static/images/en-us_image_0000002305405569.png
       :alt: **Figure 3** Configuring script parameters when the script is executed independently
 
       **Figure 3** Configuring script parameters when the script is executed independently
 
-   .. _dataartsstudio_03_0150__fig164981819191515:
+   .. _dataartsstudio_03_0136__fig164981819191515:
 
-   .. figure:: /_static/images/en-us_image_0000001321929516.png
+   .. figure:: /_static/images/en-us_image_0000002305438645.png
       :alt: **Figure 4** Configuring script parameters when the script is executed by job scheduling
 
       **Figure 4** Configuring script parameters when the script is executed by job scheduling

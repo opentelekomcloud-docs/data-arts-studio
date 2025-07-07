@@ -5,15 +5,21 @@
 CDM Metrics
 ===========
 
+Function
+--------
+
+Cloud Eye monitors the running status of cloud services and usage of each metric, and creates alarm rules for monitoring metrics.
+
+After you create a CDM cluster, Cloud Eye automatically associates with CDM monitoring metrics to help you understand the running status of the CDM cluster.
+
+-  This section describes the CDM metrics that can be monitored by Cloud Eye as well as their namespaces and dimensions.
+-  For details about CDM monitoring metrics, see :ref:`Querying Metrics <dataartsstudio_01_0124>`.
+-  For details about how to set alarm rules, see :ref:`Configuring Alarm Rules <dataartsstudio_01_0123>`.
+
 Prerequisites
 -------------
 
 You have obtained required Cloud Eye permissions.
-
-Function
---------
-
-This section describes metrics reported by CDM to Cloud Eye as well as their namespaces and dimensions. You can use APIs provided by Cloud Eye to query metric information generated for CDM.
 
 Namespace
 ---------
@@ -47,6 +53,14 @@ Metrics
    | mem_usage           | Memory Usage                  | Measures the memory usage of the monitored object.                                                                                                                                  | 0% to 100%         | Cloud Data Migration | 1 minute                     |
    |                     |                               |                                                                                                                                                                                     |                    |                      |                              |
    |                     |                               | Unit: %                                                                                                                                                                             |                    |                      |                              |
+   +---------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+----------------------+------------------------------+
+   | pg_pending_job      | Number of Queued Jobs         | Number of jobs in the PENDING state in the CDM instance.                                                                                                                            | >=0                | Cloud Data Migration | 1 minute                     |
+   |                     |                               |                                                                                                                                                                                     |                    |                      |                              |
+   |                     |                               | Unit: count                                                                                                                                                                         |                    |                      |                              |
+   +---------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+----------------------+------------------------------+
+   | pending_threads     | Maximum Concurrent Extractors | Number of concurrent extraction threads in the Waiting state in the CDM instance.                                                                                                   | >=0                | Cloud Data Migration | 1 minute                     |
+   |                     |                               |                                                                                                                                                                                     |                    |                      |                              |
+   |                     |                               | Unit: count                                                                                                                                                                         |                    |                      |                              |
    +---------------------+-------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+----------------------+------------------------------+
    | disk_usage          | Disk Usage                    | Measures the disk usage of the physical server accommodating the monitored ECS, which is not accurate as that obtained on the monitored ECS.                                        | 0.001% to 90%      | Cloud Data Migration | 1 minute                     |
    |                     |                               |                                                                                                                                                                                     |                    |                      |                              |

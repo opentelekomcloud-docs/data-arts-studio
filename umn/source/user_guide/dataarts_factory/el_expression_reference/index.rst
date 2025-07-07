@@ -15,7 +15,8 @@ EL Expression Reference
 -  :ref:`JSONUtil Embedded Objects <dataartsstudio_01_0501>`
 -  :ref:`Loop Embedded Objects <dataartsstudio_01_0534>`
 -  :ref:`OBSUtil Embedded Objects <dataartsstudio_01_0553>`
--  :ref:`Expression Use Example <dataartsstudio_01_0502>`
+-  :ref:`Examples of Common EL Expressions <dataartsstudio_01_4803>`
+-  :ref:`EL Expression Use Examples <dataartsstudio_01_0502>`
 
 .. toctree::
    :maxdepth: 1
@@ -31,4 +32,5 @@ EL Expression Reference
    jsonutil_embedded_objects
    loop_embedded_objects
    obsutil_embedded_objects
-   expression_use_example
+   examples_of_common_el_expressions
+   el_expression_use_examples

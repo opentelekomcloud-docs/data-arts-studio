@@ -10,18 +10,14 @@ You can move a script file from one directory to another or move a script direct
 Prerequisites
 -------------
 
-A script has been developed. For details about how to develop scripts, see :ref:`Developing Scripts <dataartsstudio_01_0406>`.
+A script has been developed based on :ref:`Developing Scripts <dataartsstudio_01_0406>`.
 
 Procedure
 ---------
 
-#. Log in to the DataArts Studio console. Locate an instance and click **Access**. On the displayed page, locate a workspace and click **DataArts Factory**.
+#. Log in to the DataArts Studio console by following the instructions in :ref:`Accessing the DataArts Studio Instance Console <dataartsstudio_01_0001>`.
 
-
-   .. figure:: /_static/images/en-us_image_0000001321928320.png
-      :alt: **Figure 1** DataArts Factory
-
-      **Figure 1** DataArts Factory
+#. On the DataArts Studio console, locate a workspace and click **DataArts Factory**.
 
 #. In the left navigation pane of DataArts Factory, choose **Data Development** > **Develop Script**.
 
@@ -31,7 +27,21 @@ Procedure
 
    a. In the script directory, right-click a script or script folder and select **Move**.
 
+      |image1|
+
    b. In the displayed dialog box, configure related parameters. :ref:`Table 1 <dataartsstudio_01_0427__en-us_topic_0171677202_table133101211151017>` describes the parameters.
+
+
+      .. figure:: /_static/images/en-us_image_0000002305406657.png
+         :alt: **Figure 1** Moving a script
+
+         **Figure 1** Moving a script
+
+
+      .. figure:: /_static/images/en-us_image_0000002270846782.png
+         :alt: **Figure 2** Move a directory
+
+         **Figure 2** Move a directory
 
       .. _dataartsstudio_01_0427__en-us_topic_0171677202_table133101211151017:
 
@@ -48,3 +58,5 @@ Procedure
    **Method 2: drag-and-drop**
 
    Select a script or script folder and drag and drop it to the target folder.
+
+.. |image1| image:: /_static/images/en-us_image_0000002305439725.png

@@ -8,7 +8,7 @@ Why Does a Job Scheduled by Month Start Running Before the Job Scheduled by Day 
 Jobs scheduled by month depend on jobs scheduled by day. Why does a job scheduled by month start running before the job scheduled by day is complete?
 
 
-.. figure:: /_static/images/en-us_image_0000001373289613.png
+.. figure:: /_static/images/en-us_image_0000002305438717.png
    :alt: **Figure 1** Viewing the job scheduling period and dependency attributes
 
    **Figure 1** Viewing the job scheduling period and dependency attributes

@@ -19,13 +19,7 @@ This function depends on OBS or MRS HDFS.
 
 If a directory exists, you do not need to create one.
 
-#. Log in to the DataArts Studio console. Locate an instance and click **Access**. On the displayed page, locate a workspace and click **DataArts Factory**.
-
-
-   .. figure:: /_static/images/en-us_image_0000001321928320.png
-      :alt: **Figure 1** DataArts Factory
-
-      **Figure 1** DataArts Factory
+#. On the DataArts Studio console, locate a workspace and click **DataArts Factory**.
 
 #. In the left navigation pane, choose **Configuration** > **Manage Resource**.
 
@@ -52,13 +46,7 @@ Creating a Resource
 
 You have enabled OBS before creating a resource.
 
-#. Log in to the DataArts Studio console. Locate an instance and click **Access**. On the displayed page, locate a workspace and click **DataArts Factory**.
-
-
-   .. figure:: /_static/images/en-us_image_0000001321928320.png
-      :alt: **Figure 2** DataArts Factory
-
-      **Figure 2** DataArts Factory
+#. On the DataArts Studio console, locate a workspace and click **DataArts Factory**.
 
 #. In the left navigation pane, choose **Configuration** > **Manage Resource**.
 
@@ -68,51 +56,41 @@ You have enabled OBS before creating a resource.
 
    .. table:: **Table 2** Resource management parameters
 
-      +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Parameter             | Mandatory             | Description                                                                                                                                                             |
-      +=======================+=======================+=========================================================================================================================================================================+
-      | Name                  | Yes                   | Name of the resource. The name must contain 1 to 32, including only letters, numbers, underscores (_), and hyphens (-).                                                 |
-      +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Type                  | Yes                   | File type of the resource. Possible values:                                                                                                                             |
-      |                       |                       |                                                                                                                                                                         |
-      |                       |                       | -  jar: JAR file                                                                                                                                                        |
-      |                       |                       | -  pyFile: User Python file                                                                                                                                             |
-      |                       |                       | -  file: User file                                                                                                                                                      |
-      |                       |                       | -  archive: User AI model file                                                                                                                                          |
-      +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Resource Location     | Yes                   | Location of the resource. OBS and HDFS are supported. HDFS supports only MRS Spark, MRS Flink Job and MRS MapReduce nodes.                                              |
-      +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Main JAR package      | Yes                   | -  If **Resource Location** is **OBS**, select the main JAR package that has been uploaded to OBS.                                                                      |
-      |                       |                       | -  If **Resource Location** is **HDFS**, select the main JAR package that has been uploaded to HDFS.                                                                    |
-      +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Depended JAR Package  | No                    | Depended JAR package that has been uploaded to OBS. This parameter is required when **Type** is set to **jar** and **Resource Location** is set to **OBS** or **HDFS**. |
-      +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Select Resource       | Yes                   | Specific resource file.                                                                                                                                                 |
-      +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Storage Path          | Yes                   | Path to a directory where the resource is stored. This parameter is required only when **Resource Location** is set to **Local**.                                       |
-      +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Description           | No                    | Descriptive information about the resource.                                                                                                                             |
-      +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Select Directory      | Yes                   | Directory to which the resource belongs. The root directory is selected by default.                                                                                     |
-      +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+      +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------+
+      | Parameter             | Mandatory             | Description                                                                                                                   |
+      +=======================+=======================+===============================================================================================================================+
+      | Name                  | Yes                   | Name of the resource. The name must contain 1 to 32, including only letters, numbers, underscores (_), and hyphens (-).       |
+      +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------+
+      | Type                  | Yes                   | File type of the resource. Possible values:                                                                                   |
+      |                       |                       |                                                                                                                               |
+      |                       |                       | -  jar: JAR file                                                                                                              |
+      |                       |                       | -  pyFile: User Python file                                                                                                   |
+      |                       |                       | -  file: User file                                                                                                            |
+      |                       |                       | -  archive: User AI model file The supported file name extensions are **zip**, **tgz**, **tar.gz**, **tar**, and **jar**.     |
+      +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------+
+      | Resource Location     | Yes                   | Location of the resource. OBS and HDFS are supported. HDFS supports only MRS Spark, MRS Flink Job and MRS MapReduce nodes.    |
+      +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------+
+      | File Path             | Yes                   | Select an OBS file path when **Resource Location** is set to **OBS**.                                                         |
+      |                       |                       |                                                                                                                               |
+      |                       |                       | Select an MRS cluster name when **Resource Location** is set to **HDFS**.                                                     |
+      +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------+
+      | Depended Package      | No                    | This parameter is available only for DLI Spark nodes.                                                                         |
+      |                       |                       |                                                                                                                               |
+      |                       |                       | Depended JAR package that has been uploaded to OBS. This parameter is required when **Type** is set to **jar** or **pyFile**. |
+      +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------+
+      | Select Directory      | Yes                   | Directory to which the resource belongs. The root directory is selected by default.                                           |
+      +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------+
+      | Description           | No                    | Descriptive information about the resource.                                                                                   |
+      +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------+
 
 Editing a Resource
 ------------------
 
 After a resource is created, you can modify resource parameters.
 
-#. Log in to the DataArts Studio console. Locate an instance and click **Access**. On the displayed page, locate a workspace and click **DataArts Factory**.
-
-
-   .. figure:: /_static/images/en-us_image_0000001321928320.png
-      :alt: **Figure 3** DataArts Factory
-
-      **Figure 3** DataArts Factory
-
+#. On the DataArts Studio console, locate a workspace and click **DataArts Factory**.
 #. In the left navigation pane, choose **Configuration** > **Manage Resource**.
-
 #. In the **Operation** column of the resource, click **Edit**. In the displayed dialog box, modify the resource parameters. For details, see :ref:`Table 2 <dataartsstudio_01_0519__en-us_topic_0165312432_table3484574617547>`.
-
 #. Click **OK**.
 
 Deleting a Resource
@@ -120,20 +98,15 @@ Deleting a Resource
 
 You can delete resources that are no longer needed.
 
-Before deleting a resource, ensure that it is not used by any jobs. When you delete a resource, the system checks the jobs that are referencing the resource. The **Version** column in the reference list indicates the job versions that are referencing the resource. After you click **Delete**, the job will be deleted as well as all version information about the job.
+Before deleting a resource, ensure that it is not used by any jobs.
 
-#. Log in to the DataArts Studio console. Locate an instance and click **Access**. On the displayed page, locate a workspace and click **DataArts Factory**.
+.. important::
 
+   If you are trying to delete a resource that is being used by jobs, the **Delete Resource** dialog box is displayed. When you click **OK**, the **Reference List** dialog box is displayed, in which you can view the jobs that are using the resource and click **View** in the **Operation** column to go to the job details page.
 
-   .. figure:: /_static/images/en-us_image_0000001321928320.png
-      :alt: **Figure 4** DataArts Factory
-
-      **Figure 4** DataArts Factory
-
+#. On the DataArts Studio console, locate a workspace and click **DataArts Factory**.
 #. In the left navigation pane, choose **Configuration** > **Manage Resource**.
-
 #. In the **Operation** column of the resource, click **Delete**. The **Delete Resource** dialog box is displayed.
-
 #. Click **Yes**.
 
 Importing a Resource
@@ -141,18 +114,9 @@ Importing a Resource
 
 To import a resource, perform the following operations:
 
-#. Log in to the DataArts Studio console. Locate an instance and click **Access**. On the displayed page, locate a workspace and click **DataArts Factory**.
-
-
-   .. figure:: /_static/images/en-us_image_0000001321928320.png
-      :alt: **Figure 5** DataArts Factory
-
-      **Figure 5** DataArts Factory
-
+#. On the DataArts Studio console, locate a workspace and click **DataArts Factory**.
 #. In the left navigation pane, choose **Configuration** > **Manage Resource**.
-
 #. In the resource directory, click |image2| and select **Import Resource**. The **Import Resource** dialog box is displayed.
-
 #. Select the resource file that has been uploaded to OBS and click **Next**. After the import is complete, click **Close**.
 
 Exporting a Resource
@@ -160,16 +124,8 @@ Exporting a Resource
 
 To export a resource, perform the following operations:
 
-#. Log in to the DataArts Studio console. Locate an instance and click **Access**. On the displayed page, locate a workspace and click **DataArts Factory**.
-
-
-   .. figure:: /_static/images/en-us_image_0000001321928320.png
-      :alt: **Figure 6** DataArts Factory
-
-      **Figure 6** DataArts Factory
-
+#. On the DataArts Studio console, locate a workspace and click **DataArts Factory**.
 #. In the left navigation pane, choose **Configuration** > **Manage Resource**.
-
 #. In the resource directory, select a resource, click |image3|, and select **Export Resource**. The system starts downloading the resource to the local PC.
 
 Viewing Resource References
@@ -177,20 +133,11 @@ Viewing Resource References
 
 To view the references of a resource, perform the following operations:
 
-#. Log in to the DataArts Studio console. Locate an instance and click **Access**. On the displayed page, locate a workspace and click **DataArts Factory**.
-
-
-   .. figure:: /_static/images/en-us_image_0000001321928320.png
-      :alt: **Figure 7** DataArts Factory
-
-      **Figure 7** DataArts Factory
-
+#. On the DataArts Studio console, locate a workspace and click **DataArts Factory**.
 #. In the left navigation pane, choose **Configuration** > **Manage Resource**.
-
 #. Right-click a resource in the list and select **View Reference**.
-
 #. In the displayed **Reference List** dialog box, view the references of the resource.
 
-.. |image1| image:: /_static/images/en-us_image_0000001373168665.png
-.. |image2| image:: /_static/images/en-us_image_0000001373408053.png
-.. |image3| image:: /_static/images/en-us_image_0000001322088028.png
+.. |image1| image:: /_static/images/en-us_image_0000002305440029.png
+.. |image2| image:: /_static/images/en-us_image_0000002305406205.png
+.. |image3| image:: /_static/images/en-us_image_0000002305406965.png

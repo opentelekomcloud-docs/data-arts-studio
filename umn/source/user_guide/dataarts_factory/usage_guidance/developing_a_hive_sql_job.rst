@@ -19,7 +19,7 @@ Preparations
 
    The MRS cluster must contain the Hive component.
 
--  Cloud Data Migration (CDM) has been enabled and a CDM cluster has been created for providing an agent for communication between DataArts Factory and MRS.
+-  Cloud Data Migration (CDM) has been enabled. A CDM cluster has been created for providing an agent for communication between DataArts Factory and MRS.
 
    Ensure that the VPC, subnet, and security group of the CDM cluster are the same as those of the MRS cluster so that the two clusters can communicate with each other.
 
@@ -44,7 +44,7 @@ Choose **Development** > **Develop Script** and create a Hive SQL script named *
 
 .. _dataartsstudio_01_0522__en-us_topic_0127305016_fig693875618223:
 
-.. figure:: /_static/images/en-us_image_0000001322247900.png
+.. figure:: /_static/images/en-us_image_0000002270791636.png
    :alt: **Figure 1** Developing a script
 
    **Figure 1** Developing a script
@@ -63,7 +63,7 @@ After the Hive SQL script is developed, build a periodically deducted job for th
 #. Create an empty DataArts Factory job named **job_hive_sql**.
 
 
-   .. figure:: /_static/images/en-us_image_0000001322407888.png
+   .. figure:: /_static/images/en-us_image_0000002305408377.png
       :alt: **Figure 2** Creating a job named job_hive_sql
 
       **Figure 2** Creating a job named job_hive_sql
@@ -71,7 +71,7 @@ After the Hive SQL script is developed, build a periodically deducted job for th
 #. Go to the job development page, drag the MRS Hive SQL node to the canvas, and click the node to configure node properties.
 
 
-   .. figure:: /_static/images/en-us_image_0000001322088000.png
+   .. figure:: /_static/images/en-us_image_0000002305441437.png
       :alt: **Figure 3** Configuring properties for an MRS Hive SQL node
 
       **Figure 3** Configuring properties for an MRS Hive SQL node
@@ -88,15 +88,15 @@ After the Hive SQL script is developed, build a periodically deducted job for th
 #. If the job runs successfully, click the blank area on the canvas and configure the job scheduling policy on the scheduling configuration page on the right.
 
 
-   .. figure:: /_static/images/en-us_image_0000001321928316.png
+   .. figure:: /_static/images/en-us_image_0000002305408373.png
       :alt: **Figure 4** Configuring the scheduling mode
 
       **Figure 4** Configuring the scheduling mode
 
-   Note:
+   .. note::
 
-   From Jan 1 to Jan 25 in 2021, the job was executed at 02:00 every day.
+      The job is executed at 02:00 every day from Jan 1, 2021 to Jan 25, 2021.
 
 #. Click **Submit** and **Execute**. The job will be automatically executed every day.
 
-.. |image1| image:: /_static/images/en-us_image_0000001373087837.png
+.. |image1| image:: /_static/images/en-us_image_0000002270848502.png

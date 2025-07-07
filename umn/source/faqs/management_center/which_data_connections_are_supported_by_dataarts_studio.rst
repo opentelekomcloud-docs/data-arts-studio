@@ -5,4 +5,4 @@
 Which Data Connections Are Supported by DataArts Studio?
 ========================================================
 
-For details about the data connections supported by DataArts Studio, see :ref:`Data Sources Supported by DataArts Studio <dataartsstudio_01_0005>`.
+For details about the data connections supported by DataArts Studio, see :ref:`Data Sources Supported by DataArts Studio <dataartsstudio_01_0005_0>`.

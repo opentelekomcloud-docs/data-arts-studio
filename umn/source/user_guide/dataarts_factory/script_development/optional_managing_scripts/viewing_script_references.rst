@@ -10,18 +10,14 @@ This section describes how to view the references of a script or all the scripts
 Prerequisites
 -------------
 
-A script has been developed. For details about how to develop scripts, see :ref:`Developing Scripts <dataartsstudio_01_0406>`.
+A script has been developed based on :ref:`Developing Scripts <dataartsstudio_01_0406>`.
 
 Procedure
 ---------
 
-#. Log in to the DataArts Studio console. Locate an instance and click **Access**. On the displayed page, locate a workspace and click **DataArts Factory**.
+#. Log in to the DataArts Studio console by following the instructions in :ref:`Accessing the DataArts Studio Instance Console <dataartsstudio_01_0001>`.
 
-
-   .. figure:: /_static/images/en-us_image_0000001321928320.png
-      :alt: **Figure 1** DataArts Factory
-
-      **Figure 1** DataArts Factory
+#. On the DataArts Studio console, locate a workspace and click **DataArts Factory**.
 
 #. In the left navigation pane of DataArts Factory, choose **Data Development** > **Develop Script**.
 
@@ -30,3 +26,9 @@ Procedure
    To view the references of all the scripts in a folder, right-click the folder and select **View Reference**.
 
 #. In the displayed dialog box, you can view the references of a script or all the scripts in the folder.
+
+
+   .. figure:: /_static/images/en-us_image_0000002270789664.png
+      :alt: **Figure 1** References of a script
+
+      **Figure 1** References of a script

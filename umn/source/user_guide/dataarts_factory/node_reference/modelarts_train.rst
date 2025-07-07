@@ -1,0 +1,72 @@
+:original_name: dataartsstudio_01_4500.html
+
+.. _dataartsstudio_01_4500:
+
+ModelArts Train
+===============
+
+Function
+--------
+
+You can orchestrate ModelArts Train operators to schedule the ModelArts workflow in DataArts Studio.
+
+Parameters
+----------
+
+:ref:`Table 1 <dataartsstudio_01_4500__table1761993514354>` and :ref:`Table 2 <dataartsstudio_01_4500__en-us_topic_0243410065_table1768155103511>` describe the parameters of the ModelArts Train node.
+
+.. _dataartsstudio_01_4500__table1761993514354:
+
+.. table:: **Table 1** Parameters of the ModelArts Train node
+
+   +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter             | Mandatory             | Description                                                                                                                                     |
+   +=======================+=======================+=================================================================================================================================================+
+   | ModelArts Workspace   | Yes                   | ModelArts workspace. The workspace must be in the same region as DataArts Studio.                                                               |
+   +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Workflow Version      | Yes                   | ModelArts workflow version                                                                                                                      |
+   |                       |                       |                                                                                                                                                 |
+   |                       |                       | -  V1                                                                                                                                           |
+   |                       |                       | -  V2                                                                                                                                           |
+   +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+   | ModelArts Workflow    | Yes                   | ModelArts workflow. The workflow must be in the same region as DataArts Studio.                                                                 |
+   +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Node Name             | Yes                   | Name of the node. The value must consist of 1 to 128 characters and contain only letters, digits, and the following special characters: \_-/<>. |
+   +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------+
+
+.. _dataartsstudio_01_4500__en-us_topic_0243410065_table1768155103511:
+
+.. table:: **Table 2** Advanced parameters
+
+   +----------------------------------------------------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter                                                      | Mandatory             | Description                                                                                                                                                                                                              |
+   +================================================================+=======================+==========================================================================================================================================================================================================================+
+   | Max. Node Execution Duration                                   | Yes                   | Execution timeout interval for the node. If retry is configured and the execution is not complete within the timeout interval, the node will be executed again.                                                          |
+   +----------------------------------------------------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Retry upon Failure                                             | Yes                   | Whether to re-execute a node if it fails to be executed. Possible values:                                                                                                                                                |
+   |                                                                |                       |                                                                                                                                                                                                                          |
+   |                                                                |                       | -  **Yes**: The node will be re-executed, and the following parameters must be configured:                                                                                                                               |
+   |                                                                |                       |                                                                                                                                                                                                                          |
+   |                                                                |                       |    -  **Retry upon Timeout**                                                                                                                                                                                             |
+   |                                                                |                       |    -  **Maximum Retries**                                                                                                                                                                                                |
+   |                                                                |                       |    -  **Retry Interval (seconds)**                                                                                                                                                                                       |
+   |                                                                |                       |                                                                                                                                                                                                                          |
+   |                                                                |                       | -  **No**: The node will not be re-executed. This is the default setting.                                                                                                                                                |
+   |                                                                |                       |                                                                                                                                                                                                                          |
+   |                                                                |                       |    .. note::                                                                                                                                                                                                             |
+   |                                                                |                       |                                                                                                                                                                                                                          |
+   |                                                                |                       |       If retry is configured for a job node and the timeout duration is configured, the system allows you to retry a node when the node execution times out.                                                             |
+   |                                                                |                       |                                                                                                                                                                                                                          |
+   |                                                                |                       |       If a node is not re-executed when it fails upon timeout, you can go to the **Default Configuration** page to modify this policy.                                                                                   |
+   |                                                                |                       |                                                                                                                                                                                                                          |
+   |                                                                |                       |       **Retry upon Timeout** is displayed only when **Retry upon Failure** is set to **Yes**.                                                                                                                            |
+   +----------------------------------------------------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Policy for Handling Subsequent Nodes If the Current Node Fails | Yes                   | Operation that will be performed if the node fails to be executed. Possible values:                                                                                                                                      |
+   |                                                                |                       |                                                                                                                                                                                                                          |
+   |                                                                |                       | -  **Suspend execution plans of the subsequent nodes**: stops running subsequent nodes. The job instance status is **Failed**.                                                                                           |
+   |                                                                |                       | -  **End the current job execution plan**: stops running the current job. The job instance status is **Failed**.                                                                                                         |
+   |                                                                |                       | -  **Go to the next node**: ignores the execution failure of the current node. The job instance status is **Failure ignored**.                                                                                           |
+   |                                                                |                       | -  **Suspend the current job execution plan**: If the current job instance is in abnormal state, the subsequent nodes of this node and the subsequent job instances that depend on the current job are in waiting state. |
+   +----------------------------------------------------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Enable Dry Run                                                 | No                    | If you select this option, the node will not be executed, and a success message will be returned.                                                                                                                        |
+   +----------------------------------------------------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+

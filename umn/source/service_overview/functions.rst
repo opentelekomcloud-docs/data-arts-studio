@@ -8,9 +8,15 @@ Functions
 DataArts Migration: Efficient Ingestion of Multiple Heterogeneous Data Sources
 ------------------------------------------------------------------------------
 
-DataArts Migration can help you seamlessly migrate batch data between 20+ homogeneous or heterogeneous data sources. You can use it to ingest data from both on-premises and cloud-based data sources, including file systems, relational databases, data warehouses, NoSQL databases, big data services, and object storage.
+DataArts Migration can help you seamlessly migrate batch data between 30+ homogeneous or heterogeneous data sources. You can use it to ingest data from both on-premises and cloud-based data sources, including file systems, relational databases, data warehouses, NoSQL databases, big data services, and object storage.
 
 DataArts Migration uses a distributed compute framework and concurrent processing techniques to help you migrate enterprise data in batches without any downtime and rapidly build desired data structures.
+
+
+.. figure:: /_static/images/en-us_image_0000002270788044.png
+   :alt: **Figure 1** DataArts Migration
+
+   **Figure 1** DataArts Migration
 
 You can manage data on the wizard-based task management page. You can easily create data migration tasks that meet your requirements. DataArts Migration provides the following functions:
 
@@ -48,10 +54,10 @@ DataArts Factory: One-stop Collaborative Development
 DataArts Factory provides an intuitive UI and built-in development methods for script and job development. DataArts Factory also supports fully hosted job scheduling, O&M, and monitoring, and incorporates industry data processing pipelines. You can create data development jobs in a few steps, and the entire process is visual. Online jobs can be jointly developed by multiple users. You can use DataArts Factory to manage big data cloud services and quickly build a big data processing center.
 
 
-.. figure:: /_static/images/en-us_image_0000001373169413.png
-   :alt: **Figure 1** DataArts Factory architecture
+.. figure:: /_static/images/en-us_image_0000002270844914.png
+   :alt: **Figure 2** DataArts Factory architecture
 
-   **Figure 1** DataArts Factory architecture
+   **Figure 2** DataArts Factory architecture
 
 DataArts Factory allows you to manage data, develop scripts, and schedule and monitor jobs. Data analysis and processing are easier than ever before.
 

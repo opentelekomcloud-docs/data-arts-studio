@@ -5,37 +5,41 @@
 (Optional) Changing the Job Log Storage Path
 ============================================
 
-By default, job logs and Data Lake Insight (DLI) dirty data are stored in an Object Storage Service (OBS) bucket named **dlf-log-**\ {*Project ID*}. You can customize a log storage path. DataArts Factory allows you to configure an OBS bucket globally based on the workspace.
+By default, job logs and DLI dirty data are stored in an OBS bucket named **dlf-log-**\ {*project ID*}. You can customize a log storage path. You can configure an OBS bucket globally based on the workspace.
 
 Constraints
 -----------
 
-This function depends on the OBS service.
+-  This function depends on the OBS service.
+-  The OBS path is only supported for OBS buckets and not for parallel file systems.
 
 Prerequisites
 -------------
 
-To change the job log storage path, either of the following conditions must be met:
+You have changed your account to either of the following:
 
--  You have administrator rights.
--  You have been assigned the **DAYU User** policy and you are the admin of the current workspace.
+-  **DARTS** **Administrator** or **Tenant Administrator**
+-  **DARTS User**, which is the workspace administrator
 
 Procedure
 ---------
 
-#. Log in to the DataArts Studio console using the **DAYU** **Administrator** or administrator account.
-#. Click the **Workspaces** tab.
+#. Log in to the DataArts Studio console by following the instructions in :ref:`Accessing the DataArts Studio Instance Console <dataartsstudio_01_0001>`.
 
-3. Click **Edit** in the **Operation** column.
-
-4. On the **Workspace Information** page displayed, click **Edit** next to the workspace information.
-
-   Click the **Select** button next to **OBS Bucket for Job Logs** to reselect a path.
+#. On the **Workspaces** page, locate the target workspace and click **Edit** in the **Operation** column.
 
 
-   .. figure:: /_static/images/en-us_image_0000001373288913.png
-      :alt: **Figure 1** Changing the log path
+   .. figure:: /_static/images/en-us_image_0000002305437605.png
+      :alt: **Figure 1** Workspace Information dialog box
 
-      **Figure 1** Changing the log path
+      **Figure 1** Workspace Information dialog box
 
-5. Click **Save**.
+#. In the **Workspace Information** dialog box, click **Select** next to **Job Log Path** and **Dirty Data Path** to select the path for storing logs and DLI dirty data. You can select a specific directory.
+
+
+   .. figure:: /_static/images/en-us_image_0000002305404553.png
+      :alt: **Figure 2** Changing the path for storing logs and DLI dirty data
+
+      **Figure 2** Changing the path for storing logs and DLI dirty data
+
+#. Click **OK**.

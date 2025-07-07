@@ -6,11 +6,11 @@ Managing Clusters
 =================
 
 -  :ref:`Creating a CDM Cluster <dataartsstudio_01_0576>`
--  :ref:`Binding or Unbinding an EIP <dataartsstudio_01_0020>`
+-  :ref:`Binding or Unbinding an EIP <dataartsstudio_01_0020_0>`
 -  :ref:`Restarting a Cluster <dataartsstudio_01_0578>`
 -  :ref:`Deleting a Cluster <dataartsstudio_01_0579>`
 -  :ref:`Downloading Cluster Logs <dataartsstudio_01_0022>`
--  :ref:`Viewing Basic Cluster Information and Modifying Cluster Configurations <dataartsstudio_01_0021>`
+-  :ref:`Viewing Basic Cluster Information and Modifying Cluster Configurations <dataartsstudio_01_0021_0>`
 -  :ref:`Viewing Metrics <dataartsstudio_01_0121>`
 
 .. toctree::

@@ -9,6 +9,7 @@ Managing Jobs
 -  :ref:`Creating an Entire Database Migration Job <dataartsstudio_01_0075>`
 -  :ref:`Source Job Parameters <dataartsstudio_01_0047>`
 -  :ref:`Destination Job Parameters <dataartsstudio_01_0061>`
+-  :ref:`Configuring Field Mapping <dataartsstudio_01_0261>`
 -  :ref:`Scheduling Job Execution <dataartsstudio_01_0082>`
 -  :ref:`Job Configuration Management <dataartsstudio_01_0083>`
 -  :ref:`Managing a Single Job <dataartsstudio_01_0084>`
@@ -22,6 +23,7 @@ Managing Jobs
    creating_an_entire_database_migration_job
    source_job_parameters/index
    destination_job_parameters/index
+   configuring_field_mapping
    scheduling_job_execution
    job_configuration_management
    managing_a_single_job

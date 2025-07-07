@@ -14,6 +14,8 @@ Constraints
 
 #. CDM does not support the function of controlling the data migration speed. Therefore, do not perform data migration during peak hours.
 
+#. During data migration, CDM imposes pressure on the data source. You are advised to create a database account for data migration and configure an account policy to reduce the resource consumption of the data source. For example, you can configure a policy to delete the connections of the account when the CPU usage exceeds 30% to prevent impact on services.
+
 #. The baseline and maximum bandwidths of the NIC of the cdm.large CDM instance is 0.8 Gbit/s and 3 Gbit/s, respectively. The theoretical maximum volume of data that can be transmitted per instance per day is about 8 TB. Similarly, the baseline and maximum bandwidths of the NIC of the cdm.xlarge instance are 4 Gbit/s and 10 Gbit/s, respectively, and the theoretical maximum volume of data that can be transmitted per instance per day is about 40 TB. The baseline and maximum bandwidths of the NIC of the cdm.4xlarge instance is 36 Gbit/s and 40 Gbit/s, respectively, and the theoretical maximum volume of data that can be transmitted per instance per day is about 360 TB. You can use multiple CDM instances if you want faster data transfer.
 
    The actual amount of data that can be migrated in a day depends on the data source type, the read and write performance of the source and destination, and the actual available bandwidth. Typically you can migrate as much as 8 TB per day (large file migration to OBS) using the cdm.large instance. It is recommended that you test the speed with a small amount of data before migration.
@@ -36,6 +38,10 @@ Constraints
 
 #. When performing a CDM job, ensure that the JSON file formats of the two clusters are the same so that jobs can be imported from the source cluster to the destination cluster.
 
+#. If a running job is interrupted unexpectedly, the data that has been written to the destination will not be deleted. You must manually delete the data if needed.
+
+#. The size of a file to be transferred cannot exceed 1 TB.
+
 **General Constraints on Database Migration**
 ---------------------------------------------
 
@@ -47,7 +53,7 @@ Constraints
 
 #. If CDM fails to migrate an entire database or table, the data that has been imported to the target table will not be rolled back automatically. If you want to perform migration in transaction mode, configure the **Import to Staging Table** parameter to enable a rollback upon a migration failure.
 
-   In extreme cases, the created stage table or temporary table cannot be automatically deleted. You need to manually clear the table (the table name of the stage table ends with **\_cdm_stage**), for example, **cdmtet_cdm_stage**).
+   In extreme cases, the created stage table or temporary table cannot be automatically deleted. You need to manually clear the table (the name of the stage table ends with **\_cdm_stage**), for example, **cdmtet_cdm_stage**).
 
 #. If CDM needs to access data sources in the on-premises data center (for example, the on-premises MySQL database), the data sources must support Internet access and the CDM instances must be bound with elastic IP addresses. In this case, the security practice is to configure the firewall or security policies to allow only the EIPs of the CDM instances to access the local data sources.
 
@@ -55,7 +61,9 @@ Constraints
 
 #. Only the GBK and UTF-8 character sets are supported.
 
-#. A field name cannot contain & and %.
+#. A field name cannot contain & or %.
+
+#. jdbc2hive and hive2jdbc entire DB migration is implemented by field name mapping, and is unavailable if the source and destination field names are inconsistent.
 
 **Permissions Configuration for Relational Database Migration**
 ---------------------------------------------------------------
@@ -83,6 +91,10 @@ If the FusionInsight HD and Apache Hadoop data sources are deployed in the on-pr
    -  CHARACTER TYPES: CHAR, BPCHAR, VARCHAR, VARCHAR2, NVARCHAR2, TEXT
    -  DATA/TIME TYPES: DATE, TIME, TIMETZ, TIMESTAMP, TIMESTAMPTZ, INTERVAL, SMALLDATETIME
 
+   .. note::
+
+      For clusters of version 2.9.1.200 or earlier, the NVARCHAR2 data type is not supported for DWS.
+
 #. In DWS, the character string **''** is null. A null character string cannot be inserted into a field with non-null constraints. This is inconsistent with the MySQL behavior. MySQL does not consider that **''** is null. Migration from MySQL to DWS may fail due to the preceding reason.
 #. When the Gauss Data Service (GDS) mode is used to quickly import data to DWS, you need to configure a security group or firewall policy to allow DataNodes of DWS or FusionInsight LibrA to access port 25000 of the CDM IP address.
 #. When data is imported to DWS in GDS mode, CDM automatically creates a foreign table for data import. The table name ends with a universally unique identifier (UUID), for example, **cdmtest_aecf3f8n0z73dsl72d0d1dk4lcir8cd**. If a job fails, it will be automatically deleted. In extreme cases, you may need to manually delete it.
@@ -92,13 +104,19 @@ If the FusionInsight HD and Apache Hadoop data sources are deployed in the on-pr
 
 #. During file migration, the system automatically transfers the files concurrently. In this case, **Concurrent Extractors** in the task configuration is invalid.
 
-#. Resumable transfer is not supported. If CDM fails to transfer files, OBS fragments are generated. You need to clear fragments on the OBS console to prevent space occupation.
+#. Resumable transmission is not supported. If CDM fails to transfer files, OBS fragments are generated. You need to clear fragments on the OBS console to prevent space occupation.
 
 #. CDM does not support the versioning control function of OBS.
 
 #. During incremental migration, the number of files or objects in the source directory of a single job depends on the CDM cluster flavor. A cdm.large cluster supports a maximum of 300,000 files; a cdm.medium cluster supports a maximum of 200,000 files; and a cdm.small cluster supports a maximum of 100,000 files.
 
    If the number of files or objects in a single directory exceeds the upper limit, split the files or objects into multiple migration jobs based on subdirectories.
+
+**Constraints on DLI**
+----------------------
+
+-  To use CDM to migrate data to DLI, you must have the read permissions of OBS.
+-  If the destination is DLI, you are advised to set the number of concurrent extractors to 1. Otherwise, data may fail to be written.
 
 **Constraints on Oracle**
 -------------------------
@@ -108,7 +126,7 @@ Real-time incremental data synchronization is not supported for Oracle databases
 **Constraints on DCS and Redis**
 --------------------------------
 
-#. Because DCS restricts the commands for obtaining keys, it cannot serve as the migration source but can be the migration destination. The Redis service of the third-party cloud cannot serve as the migration source. However, the Redis set up in the on-premises data center or on the ECS can be the migration source and destination.
+#. The Redis service of the third-party cloud cannot serve as the migration source. However, the Redis set up in the on-premises data center or on the ECS can be the migration source and destination.
 #. Only the hash and string data formats are supported.
 
 **Constraints on DDS and MongoDB**
@@ -132,7 +150,9 @@ When you migrate MongoDB or DDS data, CDM reads the first row of the collection 
 **Constraints on Kafka**
 ------------------------
 
-#. The data in the message body is a record in CSV format that supports multiple delimiters. Messages cannot be parsed in binary or other formats.
+-  The data in the message body is a record in CSV format that supports multiple delimiters. Messages cannot be parsed in binary or other formats.
+-  If the source is MRS Kafka, custom fields are not supported in field mapping.
+-  If the source is DMS Kafka, custom fields are supported in field mapping.
 
 **Constraints on CloudTable and HBase**
 ---------------------------------------
@@ -143,34 +163,36 @@ When you migrate MongoDB or DDS data, CDM reads the first row of the collection 
 **Constraints on Hive**
 -----------------------
 
-When Hive serves as the migration destination, if the storage format is TEXTFILE, delimiters must be explicitly specified in the statement for creating Hive tables. The following gives an example:
+-  If Hive stores timestamp data in Parquet format, timestamps are accurate to the nanosecond, for example, 2023-03-27 00:00:00.000. If the source data precision is higher than the nanosecond, the data will be truncated during field mapping. For example, if the source data is **2023-03-27 00:00:00.12345**, it will be truncated to **2023-03-27 00:00:00.123** at the destination.
 
-.. code-block::
+-  If Hive serves as the migration destination and the storage format is Textfile, delimiters must be explicitly specified in the statement for creating Hive tables. The following is an example:
 
-   CREATE TABLE csv_tbl(
-   smallint_value smallint,
-   tinyint_value tinyint,
-   int_value int,
-   bigint_value bigint,
-   float_value float,
-   double_value double,
-   decimal_value decimal(9, 7),
-   timestmamp_value timestamp,
-   date_value date,
-   varchar_value varchar(100),
-   string_value string,
-   char_value char(20),
-   boolean_value boolean,
-   binary_value binary,
-   varchar_null varchar(100),
-   string_null string,
-   char_null char(20),
-   int_null int
-   )
-   ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'
-   WITH SERDEPROPERTIES (
-   "separatorChar" = "\t",
-   "quoteChar"     = "'",
-   "escapeChar"    = "\\"
-   )
-   STORED AS TEXTFILE;
+   .. code-block::
+
+      CREATE TABLE csv_tbl(
+      smallint_value smallint,
+      tinyint_value tinyint,
+      int_value int,
+      bigint_value bigint,
+      float_value float,
+      double_value double,
+      decimal_value decimal(9, 7),
+      timestmamp_value timestamp,
+      date_value date,
+      varchar_value varchar(100),
+      string_value string,
+      char_value char(20),
+      boolean_value boolean,
+      binary_value binary,
+      varchar_null varchar(100),
+      string_null string,
+      char_null char(20),
+      int_null int
+      )
+      ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'
+      WITH SERDEPROPERTIES (
+      "separatorChar" = "\t",
+      "quoteChar"     = "'",
+      "escapeChar"    = "\\"
+      )
+      STORED AS TEXTFILE;

@@ -5,7 +5,7 @@
 Managing Backups
 ================
 
-You can back up all jobs, scripts, resources, and environment variables on a daily basis.
+You can back up all jobs, scripts, resources, and environment variables at a specified interval.
 
 You can also restore assets that have been backed up, including jobs, scripts, resources, and environment variables.
 
@@ -24,16 +24,8 @@ OBS has been enabled and a folder has been created in OBS.
 Backing Up Assets
 -----------------
 
-#. Log in to the DataArts Studio console. Locate an instance and click **Access**. On the displayed page, locate a workspace and click **DataArts Factory**.
-
-
-   .. figure:: /_static/images/en-us_image_0000001321928320.png
-      :alt: **Figure 1** DataArts Factory
-
-      **Figure 1** DataArts Factory
-
+#. On the DataArts Studio console, locate a workspace and click **DataArts Factory**.
 #. In the navigation tree on the left, choose **Manage Backup**.
-
 #. Click **Start Daily Backup**. In the **Browse OBS File** dialog box, select an OBS folder.
 
    .. note::
@@ -46,13 +38,7 @@ Backing Up Assets
 Restoring Assets
 ----------------
 
-#. Log in to the DataArts Studio console. Locate an instance and click **Access**. On the displayed page, locate a workspace and click **DataArts Factory**.
-
-
-   .. figure:: /_static/images/en-us_image_0000001321928320.png
-      :alt: **Figure 2** DataArts Factory
-
-      **Figure 2** DataArts Factory
+#. On the DataArts Studio console, locate a workspace and click **DataArts Factory**.
 
 #. In the navigation tree of the DataArts Factory console, choose **Manage Backup**.
 
@@ -66,9 +52,9 @@ Restoring Assets
       -  Before restoring assets, you can modify the **backup.json** file in the backup path. You can change the connection name (connectionName), database name (database), and cluster name (clusterName).
 
 
-   .. figure:: /_static/images/en-us_image_0000001322408416.jpg
-      :alt: **Figure 3** Restoring assets
+   .. figure:: /_static/images/en-us_image_0000002270790304.png
+      :alt: **Figure 1** Restoring assets
 
-      **Figure 3** Restoring assets
+      **Figure 1** Restoring assets
 
 #. Click **OK**.

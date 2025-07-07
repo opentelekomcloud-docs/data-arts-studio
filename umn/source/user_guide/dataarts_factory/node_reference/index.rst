@@ -28,11 +28,12 @@ Node Reference
 -  :ref:`RDS SQL <dataartsstudio_01_0460>`
 -  :ref:`ETL Job <dataartsstudio_01_0461>`
 -  :ref:`Python <dataartsstudio_01_4504>`
+-  :ref:`ModelArts Train <dataartsstudio_01_4500>`
+-  :ref:`Http Trigger <dataartsstudio_01_0489>`
 -  :ref:`Create OBS <dataartsstudio_01_0462>`
 -  :ref:`Delete OBS <dataartsstudio_01_0463>`
 -  :ref:`OBS Manager <dataartsstudio_01_0464>`
 -  :ref:`Open/Close Resource <dataartsstudio_01_0465>`
--  :ref:`Data Quality Monitor <dataartsstudio_01_0472>`
 -  :ref:`Subjob <dataartsstudio_01_0467>`
 -  :ref:`For Each <dataartsstudio_01_0535>`
 -  :ref:`SMN <dataartsstudio_01_0468>`
@@ -65,11 +66,12 @@ Node Reference
    rds_sql
    etl_job
    python
+   modelarts_train
+   http_trigger
    create_obs
    delete_obs
    obs_manager
    open_close_resource
-   data_quality_monitor
    subjob
    for_each
    smn

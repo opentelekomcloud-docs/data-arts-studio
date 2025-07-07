@@ -8,7 +8,7 @@ Why Is There No Job Running Scheduling Log on the Monitor Instance Page After Pe
 #. On the Data Development page, choose **Monitoring** > **Monitor Job** to check whether the target job is being scheduled. A job can be scheduled only within the scheduling period.
 
 
-   .. figure:: /_static/images/en-us_image_0000001322249144.png
+   .. figure:: /_static/images/en-us_image_0000002270789076.png
       :alt: **Figure 1** Viewing the job scheduling status
 
       **Figure 1** Viewing the job scheduling status

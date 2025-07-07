@@ -9,28 +9,16 @@ DataArts Migration is an efficient and easy-to-use data integration service. Bas
 
 In this document, DataArts Migration refers to Cloud Data Migration (CDM).
 
-You can access the CDM console using either of the following methods:
-
--  Log in to the CDM console and choose **Cluster Management** in the navigation pane.
-
--  Log in to the DataArts Studio console. Locate a workspace and click **DataArts Migration**.
-
-
-   .. figure:: /_static/images/en-us_image_0000001373087921.png
-      :alt: **Figure 1** DataArts Migration
-
-      **Figure 1** DataArts Migration
-
 Introduction to CDM
 -------------------
 
 CDM uses a distributed compute framework and concurrent processing techniques to help you migrate enterprise data in batches without any downtime and rapidly build desired data structures.
 
 
-.. figure:: /_static/images/en-us_image_0000001322407976.png
-   :alt: **Figure 2** CDM
+.. figure:: /_static/images/en-us_image_0000002270791492.png
+   :alt: **Figure 1** CDM
 
-   **Figure 2** CDM
+   **Figure 1** CDM
 
 Functions
 ---------
@@ -71,7 +59,7 @@ When a tenant uses CDM, the CDM system provisions a fully-managed CDM instance i
 CDM works in push-pull mode. CDM pulls data from the migration source and pushes the data to the migration destination. Data access operations are initiated by CDM. SSL will be used if the data source (such as RDS) supports it. During the migration, the usernames and passwords of the migration source and destination are required. Such information is stored in the database of the CDM instance. Protecting such information is critical to ensure CDM security.
 
 
-.. figure:: /_static/images/en-us_image_0000001322247992.png
-   :alt: **Figure 3** Migration principles
+.. figure:: /_static/images/en-us_image_0000002270791496.png
+   :alt: **Figure 2** Migration principles
 
-   **Figure 3** Migration principles
+   **Figure 2** Migration principles

@@ -5,10 +5,10 @@
 Will Subsequent Jobs Be Affected If a Job Fails to Be Executed During Scheduling of Dependent Jobs? What Should I Do?
 =====================================================================================================================
 
-The subsequent jobs may be suspended, continued, or terminated, depending on the configuration.
+The subsequent jobs may be suspended, continued, or canceled, depending on the configuration.
 
 
-.. figure:: /_static/images/en-us_image_0000001322249176.png
+.. figure:: /_static/images/en-us_image_0000002305438813.png
    :alt: **Figure 1** Job dependencies
 
    **Figure 1** Job dependencies

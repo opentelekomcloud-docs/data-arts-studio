@@ -16,7 +16,8 @@ You can delete a CDM cluster that you no longer use.
 
 Before deleting a cluster, note the following:
 
--  Ensure that the cluster to be deleted is no longer used and that the link and job data in the cluster has been backed up through the job export function described in :ref:`Managing Jobs in Batches <dataartsstudio_01_0085>`.
+-  Ensure that the cluster is not in use.
+-  Ensure that the links and jobs in the cluster have been backed up through the job export function described in :ref:`Managing Jobs in Batches <dataartsstudio_01_0085>`.
 
 Prerequisites
 -------------
@@ -27,24 +28,17 @@ You have created a CDM cluster.
 Deleting a Cluster
 ------------------
 
-#. Access the CDM console and choose **Cluster Management** in the left navigation pane.
+#. Log in to the DataArts Studio console by following the instructions in :ref:`Accessing the DataArts Studio Instance Console <dataartsstudio_01_0001>`. On the DataArts Studio console, locate a workspace and click **DataArts Migration** to access the CDM console.
+
+2. Delete a cluster using either of the following methods:
+
+   -  Locate a cluster, click **More** in the **Operation** column, and select **Delete**.
+   -  Select a cluster and click **Delete** above the cluster list.
+
+3. Enter **DELETE** and click **Yes**.
 
 
-   .. figure:: /_static/images/en-us_image_0000001322088024.png
-      :alt: **Figure 1** Cluster list
+   .. figure:: /_static/images/en-us_image_0000002305408269.png
+      :alt: **Figure 1** Deleting a cluster
 
-      **Figure 1** Cluster list
-
-   .. note::
-
-      The **Source** column is displayed only when you access the **DataArts Migration** page from the DataArts Studio console.
-
-2. Locate the row that contains the target cluster, click **More** in the **Operation** column, and select **Delete** from the drop-down list.
-
-
-   .. figure:: /_static/images/en-us_image_0000001373288597.png
-      :alt: **Figure 2** Deleting a cluster
-
-      **Figure 2** Deleting a cluster
-
-3. Click **OK** to start deleting the CDM cluster.
+      **Figure 1** Deleting a cluster
