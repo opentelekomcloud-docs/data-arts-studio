@@ -16,17 +16,13 @@ Prerequisites
 Creating a Database Schema
 --------------------------
 
-#. Log in to the DataArts Studio console. Locate an instance and click **Access**. On the displayed page, locate a workspace and click **DataArts Factory**.
+#. Log in to the DataArts Studio console by following the instructions in :ref:`Accessing the DataArts Studio Instance Console <dataartsstudio_01_0001>`.
 
+#. On the DataArts Studio console, locate a workspace and click **DataArts Factory**.
 
-   .. figure:: /_static/images/en-us_image_0000001321928320.png
-      :alt: **Figure 1** DataArts Factory
+#. In the left navigation pane of DataArts Factory, choose **Data Development** > **Develop Script**.
 
-      **Figure 1** DataArts Factory
-
-#. In the left navigation pane of DataArts Factory, choose **Development** > **Develop Script** or **Development** > **Develop Job**.
-
-#. In the menu on the left, click |image1|. Click a DWS data connection name, select the database to be configured, and expand the directory level to **schemas**. Then right-click **schemas**, and choose **Create Schema** from the shortcut menu.
+#. In the script development menu, click |image1|. Expand a DWS data connection, select the database to be configured, and expand the directory level to **schemas**. Then right-click **schemas** and select **Create Schema** from the shortcut menu.
 
 #. In the displayed dialog box, set the schema parameters based on :ref:`Table 1 <dataartsstudio_01_0412__en-us_topic_0125929051_table152579468513>`.
 
@@ -43,26 +39,17 @@ Creating a Database Schema
 
 #. Click **OK**.
 
-Modifying a Database Schema
----------------------------
+Related Operations
+------------------
 
-#. In the left navigation pane of DataArts Factory, choose **Development** > **Develop Script** or **Development** > **Develop Job**.
-#. Choose |image2| from the menu on the left, click the data connection name, select a database, and expand the directory level to the database schema you want to modify. Right-click the database schema name and choose **Modify** from the shortcut menu.
-#. In the displayed dialog box, modify the description of the database schema.
-#. Click **OK**.
+-  Modify a database schema: In the script development menu, click |image2|. Expand a data connection to the target database schema, right-click the database schema name, select **Edit**, and modify the database schema information.
+-  Delete a database schema: In the script development menu, click |image3|. Expand a data connection to the target database schema, right-click the database schema name, select **Delete**, and click **OK** in the displayed dialog box.
 
-Deleting a Database Schema
---------------------------
+   .. note::
 
-.. note::
+      -  The default database schema cannot be deleted.
+      -  Deleted database schemas cannot be recovered. Exercise caution when performing this operation.
 
-   -  The default database schema cannot be deleted.
-   -  Deleted database schemas cannot be recovered. Exercise caution when performing this operation.
-
-#. In the left navigation pane of DataArts Factory, choose **Development** > **Develop Script** or **Development** > **Develop Job**.
-#. Choose |image3| from the menu on the left, click the data connection name, select a database, and expand the directory level to the database schema you want to delete. Right-click the database schema name and choose **Delete** from the shortcut menu.
-#. In the displayed dialog box, click **OK**.
-
-.. |image1| image:: /_static/images/en-us_image_0000001322247912.png
-.. |image2| image:: /_static/images/en-us_image_0000001322407912.png
-.. |image3| image:: /_static/images/en-us_image_0000001373168661.png
+.. |image1| image:: /_static/images/en-us_image_0000002270791372.png
+.. |image2| image:: /_static/images/en-us_image_0000002270791376.png
+.. |image3| image:: /_static/images/en-us_image_0000002305441177.png

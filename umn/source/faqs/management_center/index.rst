@@ -13,7 +13,6 @@ Management Center
 -  :ref:`Can I Create Multiple Data Connections in a Workspace in Proxy Mode? <dataartsstudio_03_0089>`
 -  :ref:`Should I Choose a Direct or a Proxy Connection When Creating a DWS Connection? <dataartsstudio_03_0137>`
 -  :ref:`How Do I Migrate the Data Development Jobs and Data Connections from One Workspace to Another? <dataartsstudio_03_0153>`
--  :ref:`Can I Delete Workspaces? <dataartsstudio_03_0154>`
 
 .. toctree::
    :maxdepth: 1
@@ -27,4 +26,3 @@ Management Center
    can_i_create_multiple_data_connections_in_a_workspace_in_proxy_mode
    should_i_choose_a_direct_or_a_proxy_connection_when_creating_a_dws_connection
    how_do_i_migrate_the_data_development_jobs_and_data_connections_from_one_workspace_to_another
-   can_i_delete_workspaces

@@ -47,7 +47,7 @@ Procedure
       Click **Export**.
 
 
-      .. figure:: /_static/images/en-us_image_0000001373288565.png
+      .. figure:: /_static/images/en-us_image_0000002270847586.png
          :alt: **Figure 1** Export
 
          **Figure 1** Export
@@ -70,3 +70,7 @@ Procedure
 
       -  **By JSON string**: Job files to be imported must be in JSON format and the file size cannot exceed 1 MB. If the job files to be imported are exported from CDM, edit the JSON files before importing them to CDM. Replace *Add password here* with the correct link passwords.
       -  **By text file**: This mode can be used when the local JSON files cannot be uploaded properly. Paste the JSON strings for the jobs into the text box.
+
+      .. note::
+
+         Existing jobs cannot be overwritten during the import.

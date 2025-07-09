@@ -5,6 +5,10 @@
 Link to Cassandra
 =================
 
+.. note::
+
+   Do not change the password or user when the job is running. If you do so, the password will not take effect immediately and the job will fail.
+
 .. table:: **Table 1** Parameter description
 
    +-----------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------------+

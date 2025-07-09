@@ -14,13 +14,13 @@ You can use a For Each node to execute a subjob in a loop and use a dataset to r
 
 -  **Subjob in a Loop**: Select the subjob to be executed in a loop.
 -  **Dataset**: Enter a set of parameter values of the subjobs. The value can be a specified dataset such as **[['1'],['3'],['2']]** or an EL expression such as **#{Job.getNodeOutput('preNodeName')}**, which is the output value of the previous node.
--  **Job Running Parameter**: The parameter name is the variable defined in the subjob. The parameter value is usually set to a group of data in the dataset. Each time the job is run, the parameter value is transferred to the subjob for use. For example, parameter value **#{Loop.current[0]}** indicates that the first value of each group of data in the dataset is traversed and transferred to the subjob.
+-  **Subjob Parameter Name**: The parameter name is the variable defined in the subjob. The parameter value is usually set to a group of data in the dataset. Each time the job is run, the parameter value is transferred to the subjob for use. For example, parameter value **#{Loop.current[0]}** indicates that the first value of each row of data in the dataset is traversed and transferred to the subjob.
 
 :ref:`Figure 1 <dataartsstudio_01_0582__en-us_topic_0000001115624138_fig2814057154712>` shows an example For Each node. As shown in the figure, the parameter name of the **foreach** subjob is **result**, and the parameter value is the traversal of the one-dimensional array dataset **[['1'],['3'],['2']]** (that is, the value is **1**, **3**, and **2** in the first, second, and third loop, respectively).
 
 .. _dataartsstudio_01_0582__en-us_topic_0000001115624138_fig2814057154712:
 
-.. figure:: /_static/images/en-us_image_0000001373088089.png
+.. figure:: /_static/images/en-us_image_0000002305407333.png
    :alt: **Figure 1** For Each node
 
    **Figure 1** For Each node
@@ -59,7 +59,7 @@ To meet data normalization requirements, you need to periodically import data fr
    b_1          f
    ============ =================
 
-If you use SQL nodes to execute import scripts, a large number of scripts and nodes need to be developed, resulting in repeated work. In this case, you can use the For Each operator to perform cyclic jobs to reduce the development workload.
+If you use SQL nodes to execute import scripts, a large number of scripts and nodes need to be developed, resulting in repeated work. In this case, you can use the For Each node to perform cyclic jobs to reduce the development workload.
 
 **Configuration Method**
 
@@ -101,7 +101,7 @@ If you use SQL nodes to execute import scripts, a large number of scripts and no
 
    a. Import the data in :ref:`Table 1 <dataartsstudio_01_0582__en-us_topic_0000001115624138_table8435848461>` into the DLI table and use the result read by the SQL script as the dataset.
    b. You can save the data in :ref:`Table 1 <dataartsstudio_01_0582__en-us_topic_0000001115624138_table8435848461>` to a CSV file in the OBS bucket. Then use a DLI SQL or DWS SQL statement to create an OBS foreign table, associate it with the CSV file, and use the query result of the OBS foreign table as the dataset. For details about how to create a foreign table on DLI, see . For details about how to create a foreign table on DWS, see .
-   c. You can save the data in :ref:`Table 1 <dataartsstudio_01_0582__en-us_topic_0000001115624138_table8435848461>` to a CSV file in the HDFS. Then use a Hive SQL statement to create a Hive foreign table, associate it with the CSV file, and use the query result of the Hive foreign table as the dataset. For details about how to create a DLI foreign table, see .
+   c. You can save the data in :ref:`Table 1 <dataartsstudio_01_0582__en-us_topic_0000001115624138_table8435848461>` to a CSV file in the HDFS. Then use a Hive SQL statement to create a Hive foreign table, associate it with the CSV file, and use the query result of the Hive foreign table as the dataset. For details about how to create an MRS foreign table, see .
 
    This section uses method 1 as an example to describe how to import data from :ref:`Table 1 <dataartsstudio_01_0582__en-us_topic_0000001115624138_table8435848461>` to the DLI table (**Table_List**). You can create a DLI SQL script on the **DataArts Factory** page and run the following commands to import data into the table. You can also run the following SQL commands in the SQL editor on the DLI console.
 
@@ -115,7 +115,7 @@ If you use SQL nodes to execute import scripts, a large number of scripts and no
    The generated data in the **Table_List** table is as follows:
 
 
-   .. figure:: /_static/images/en-us_image_0000001322248160.png
+   .. figure:: /_static/images/en-us_image_0000002305407325.png
       :alt: **Figure 2** Data in the Table_List table
 
       **Figure 2** Data in the Table_List table
@@ -140,7 +140,7 @@ If you use SQL nodes to execute import scripts, a large number of scripts and no
 
       .. _dataartsstudio_01_0582__en-us_topic_0000001115624138_en-us_topic_0284272823_fig15465132918479:
 
-      .. figure:: /_static/images/en-us_image_0000001322408144.png
+      .. figure:: /_static/images/en-us_image_0000002270847462.png
          :alt: **Figure 3** Cyclically executing a subjob
 
          **Figure 3** Cyclically executing a subjob
@@ -148,20 +148,20 @@ If you use SQL nodes to execute import scripts, a large number of scripts and no
    b. After configuring the SQL statement, configure parameters for the subjob. You only need to set the parameter names, which are used by the For Each operator of the **ForeachDemo_master** job to identify subjob parameters.
 
 
-      .. figure:: /_static/images/en-us_image_0000001322088252.png
+      .. figure:: /_static/images/en-us_image_0000002305440377.png
          :alt: **Figure 4** Configuring subjob parameters
 
          **Figure 4** Configuring subjob parameters
 
    c. Save the job.
 
-#. Create a master job named **ForeachDemo_master** where the For Each operator is located.
+#. Create a master job named **ForeachDemo_master** where the For Each node is located.
 
    a. Access the DataArts Studio **DataArts Studio** page and choose **Develop Job**. Create a data development master job named **ForeachDemo_master**. Select the DLI SQL and For Each nodes and click and drag |image1| to compile the job shown in :ref:`Figure 5 <dataartsstudio_01_0582__en-us_topic_0000001115624138_fig144616386493>`.
 
       .. _dataartsstudio_01_0582__en-us_topic_0000001115624138_fig144616386493:
 
-      .. figure:: /_static/images/en-us_image_0000001321928568.png
+      .. figure:: /_static/images/en-us_image_0000002270790600.png
          :alt: **Figure 5** Compiling a job
 
          **Figure 5** Compiling a job
@@ -173,7 +173,7 @@ If you use SQL nodes to execute import scripts, a large number of scripts and no
          SELECT * FROM Table_List;
 
 
-      .. figure:: /_static/images/en-us_image_0000001373168897.png
+      .. figure:: /_static/images/en-us_image_0000002305407329.png
          :alt: **Figure 6** DLI SQL node configuration
 
          **Figure 6** DLI SQL node configuration
@@ -182,24 +182,24 @@ If you use SQL nodes to execute import scripts, a large number of scripts and no
 
       -  **Subjob in a Loop**: Select **ForeachDemo**, which is the subjob that has been developed in :ref:`step 2 <dataartsstudio_01_0582__en-us_topic_0000001115624138_li10800121873710>`.
       -  **Dataset**: Enter the execution result of the select statement on the DLI SQL node. Use the **#{Job.getNodeOutput('preDLI')}** expression, where **preDLI** is the name of the previous node.
-      -  **Job Running Parameters**: used to transfer data in the dataset to the subjob **Source** corresponds to the first column in the **Table_List** table of the dataset, and **Destination** corresponds to the second column. Therefore, enter EL expression **#{Loop.current[0]}** for **Source** and **#{Loop.current[1]}** for **Destination**.
+      -  **Subjob Parameter Name**: used to transfer data in the dataset to the subjob **Source** corresponds to the first column in the **Table_List** table of the dataset, and **Destination** corresponds to the second column. Therefore, enter EL expression **#{Loop.current[0]}** for **Source** and **#{Loop.current[1]}** for **Destination**.
 
 
-      .. figure:: /_static/images/en-us_image_0000001322408152.png
-         :alt: **Figure 7** Configuring the For Each node
+      .. figure:: /_static/images/en-us_image_0000002270847446.png
+         :alt: **Figure 7** Configuring properties for the For Each node
 
-         **Figure 7** Configuring the For Each node
+         **Figure 7** Configuring properties for the For Each node
 
    d. Save the job.
 
 #. Test the main job.
 
-   a. Click **Test** above the main job canvas to test the job. After the main job is executed, the subjob is automatically invoked through the For Each node and executed.
+   a. Click **Test** above the canvas to test the main job. After the main job is executed, the subjob is automatically invoked through the For Each node and executed.
 
    b. In the navigation pane on the left, choose **Monitor Instance** to view the job execution status. After the job is successfully executed, you can view the subjob instances generated on the For Each node. Because the dataset contains six rows of data, six subjob instances are generated.
 
 
-      .. figure:: /_static/images/en-us_image_0000001322088256.png
+      .. figure:: /_static/images/en-us_image_0000002305407317.png
          :alt: **Figure 8** Viewing job instances
 
          **Figure 8** Viewing job instances
@@ -214,7 +214,7 @@ If you use SQL nodes to execute import scripts, a large number of scripts and no
       Compare the obtained data with the data in :ref:`Insert data into the source data table <dataartsstudio_01_0582__en-us_topic_0000001115624138_li53232042350>`. The inserted data meets the expectation.
 
 
-      .. figure:: /_static/images/en-us_image_0000001373408281.png
+      .. figure:: /_static/images/en-us_image_0000002271461758.png
          :alt: **Figure 9** Destination table data
 
          **Figure 9** Destination table data
@@ -226,4 +226,4 @@ For Each nodes can work with other nodes to implement more functions. You can re
 
 -  :ref:`Determining the IF Statement Branch to Be Executed Based on the Execution Result of the Previous Node <dataartsstudio_01_0583__en-us_topic_0000001162343901_section191402715452>`
 
-.. |image1| image:: /_static/images/en-us_image_0000001373408285.png
+.. |image1| image:: /_static/images/en-us_image_0000002305440373.png

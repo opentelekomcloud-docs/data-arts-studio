@@ -13,7 +13,7 @@ Two jobs are created, but the dependency relationship cannot be established.
 Cause Analysis
 --------------
 
-Check whether the two jobs' recurrence are both every week or every month. Currently, if the two jobs' recurrence are both every week or every month, the dependency relationship cannot be established..
+Check whether the two jobs' recurrence are both every week or every month. Currently, if the two jobs' recurrence are both every week or every month, the dependency relationship cannot be established.
 
 Solutions
 ---------

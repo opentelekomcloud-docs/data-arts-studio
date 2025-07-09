@@ -31,7 +31,7 @@ Procedure
 #. On the CDM monitoring page, you can view the graphs of all monitoring metrics.
 
 
-   .. figure:: /_static/images/en-us_image_0000001373288777.png
+   .. figure:: /_static/images/en-us_image_0000002305406281.png
       :alt: **Figure 1** Querying Metrics
 
       **Figure 1** Querying Metrics
@@ -40,4 +40,4 @@ Procedure
 
 #. You can select a time period in the upper left corner to view metric changes in this time period.
 
-.. |image1| image:: /_static/images/en-us_image_0000001321928732.png
+.. |image1| image:: /_static/images/en-us_image_0000002270789552.png

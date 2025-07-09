@@ -13,8 +13,11 @@ DataArts Factory
 -  :ref:`Execution History <dataartsstudio_01_1105>`
 -  :ref:`O&M and Scheduling <dataartsstudio_01_0505>`
 -  :ref:`Configuration and Management <dataartsstudio_01_0517>`
+-  :ref:`Review Center <dataartsstudio_01_1820>`
+-  :ref:`Download Center <dataartsstudio_01_1821>`
 -  :ref:`Node Reference <dataartsstudio_01_0441>`
 -  :ref:`EL Expression Reference <dataartsstudio_01_0493>`
+-  :ref:`Simple Variable Set <dataartsstudio_01_0556>`
 -  :ref:`Usage Guidance <dataartsstudio_01_0520>`
 
 .. toctree::
@@ -29,6 +32,9 @@ DataArts Factory
    execution_history
    o_and_m_and_scheduling/index
    configuration_and_management/index
+   review_center
+   download_center
    node_reference/index
    el_expression_reference/index
+   simple_variable_set
    usage_guidance/index

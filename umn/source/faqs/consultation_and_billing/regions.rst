@@ -25,4 +25,4 @@ Changing the Region of an Instance
 Regions and Endpoints
 ---------------------
 
-An endpoint is the **request address** for calling an API. Endpoints vary depending on services and regions. You can obtain endpoints from `Regions and Endpoints <https://docs.otc.t-systems.com/en-us/endpoint/index.html>`__.
+An endpoint is the **request address** for calling an API. Endpoints vary depending on services and regions. You can obtain endpoints of the service from `Regions and Endpoints <https://docs.otc.t-systems.com/en-us/endpoint/index.html>`__.

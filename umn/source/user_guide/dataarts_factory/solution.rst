@@ -26,13 +26,9 @@ Creating a Solution
 
 On the development page of DLF, create a solution, set the solution name, and select business-related jobs.
 
-#. Log in to the DataArts Studio console. Locate an instance and click **Access**. On the displayed page, locate a workspace and click **DataArts Factory**.
+#. Log in to the DataArts Studio console by following the instructions in :ref:`Accessing the DataArts Studio Instance Console <dataartsstudio_01_0001>`.
 
-
-   .. figure:: /_static/images/en-us_image_0000001321928320.png
-      :alt: **Figure 1** DataArts Factory
-
-      **Figure 1** DataArts Factory
+#. On the DataArts Studio console, locate a workspace and click **DataArts Factory**.
 
 #. In the navigation tree on the left of the data development page, choose **Development** > **Develop Script** or **Data Development** > **Develop Job**.
 
@@ -74,7 +70,7 @@ Importing a Solution
 
 This solution is available only if the OBS service is available. If OBS is unavailable, data can be imported from the local PC.
 
-In the solution directory, right-click a solution and choose **Import Solution** from the shortcut menu to import the solution file that has been uploaded to OBS or local directory.
+In the solution directory, right-click a solution and choose **Import Solution** from the shortcut menu to import the solution file that has been uploaded to OBS or from a local directory.
 
 .. note::
 
@@ -94,5 +90,5 @@ Deleting a Solution
 
 In the solution directory, right-click the solution name and choose **Delete** from the shortcut menu. A deleted solution cannot be restored. Exercise caution when performing this operation.
 
-.. |image1| image:: /_static/images/en-us_image_0000001373169133.png
-.. |image2| image:: /_static/images/en-us_image_0000001322408400.png
+.. |image1| image:: /_static/images/en-us_image_0000002305407289.png
+.. |image2| image:: /_static/images/en-us_image_0000002270847406.png

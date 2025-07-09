@@ -5,30 +5,34 @@
 Loop Embedded Objects
 =====================
 
-You can use Loop embedded objects to obtain data from the For Each dataset.
+You can use Loop embedded objects to obtain data from the For Each node.
 
 Property
 --------
 
 .. table:: **Table 1** Property description
 
-   +-----------------------+-----------------------+-------------------------------------------------------------------------+
-   | Property              | Type                  | Description                                                             |
-   +=======================+=======================+=========================================================================+
-   | dataArray             | String                | Dataset input by the For Each node. It is a two-dimensional array.      |
-   +-----------------------+-----------------------+-------------------------------------------------------------------------+
-   | current               | String                | Data row traversed by the For Each node. It is a one-dimensional array. |
-   +-----------------------+-----------------------+-------------------------------------------------------------------------+
-   | offset                | Int                   | Current offset of the For Each node, starting from 0.                   |
-   |                       |                       |                                                                         |
-   |                       |                       | Loop.dataArray[Loop.offset] = Loop.current.                             |
-   +-----------------------+-----------------------+-------------------------------------------------------------------------+
+   +-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Property        | Type            | Description                                                                                                                                                                                                                     | Example                                                                                                                                                                                                             |
+   +=================+=================+=================================================================================================================================================================================================================================+=====================================================================================================================================================================================================================+
+   | dataArray       | String          | **Loop.dataArray** indicates the two-dimensional array defined in the dataset of the For Each node.                                                                                                                             | The value of **Subjob Parameter** for the For Each node indicates that the first value in the second row of the two-dimensional array in the dataset is always used in the For Each loop.                           |
+   |                 |                 |                                                                                                                                                                                                                                 |                                                                                                                                                                                                                     |
+   |                 |                 | Generally, the format is **#{Loop.dataArray[0][0]}** or **#{Loop.dataArray[0][1]}**. **[0][0]** indicates the first value in the first row of the array, and **[0][1]** indicates the second value in the first row, and so on. | #{Loop.dataArray[1][0]}                                                                                                                                                                                             |
+   +-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | current         | String          | For Each nodes process data in a dataset by row. **Loop.current** indicates a row of a two-dimensional array defined in the dataset of the For Each node. This row is a one-dimensional array.                                  | The value of **Subjob Parameter** for the For Each node indicates that the second value in the traversed row of the two-dimensional array in the dataset is always used in the loop traversal of the For Each node. |
+   |                 |                 |                                                                                                                                                                                                                                 |                                                                                                                                                                                                                     |
+   |                 |                 | Generally, the format is similar to **#{Loop.current[0]}**, **#{Loop.current[1]}**, or others. **[0]** indicates the first value in the current row, **[1]** indicates the second value in the current row, and so on.          | #{Loop.current[1]}                                                                                                                                                                                                  |
+   +-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | offset          | Int             | Current offset of the For Each node, starting from 0.                                                                                                                                                                           | Obtain the current offset of the For Each loop, that is, the number of traversals, starting from 0.                                                                                                                 |
+   |                 |                 |                                                                                                                                                                                                                                 |                                                                                                                                                                                                                     |
+   |                 |                 | Loop.dataArray[Loop.offset] = Loop.current.                                                                                                                                                                                     | #{Loop.offset}                                                                                                                                                                                                      |
+   +-----------------+-----------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Example
 -------
 
-The EL expression for the Foreach operator to cyclically obtain the first column of the output (a two-dimensional array) of the previous node is as follows:
+To obtain the second value of a row that is being processed, use the following EL expression:
 
 .. code-block::
 
-   #{Loop.current[0]}
+   #{Loop.current[1]}

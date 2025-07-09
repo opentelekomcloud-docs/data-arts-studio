@@ -24,14 +24,14 @@ Prerequisites
 
 -  You have obtained the IP address, port number, username, and password of the on-premises Elasticsearch database server.
 
-   If the Elasticsearch server is deployed on an on-premises data center or a third-party cloud, ensure that an IP address that can be accessed from the public network has been configured for the Elasticsearch server, or the VPN or Direct Connect between the on-premises data center and has been established.
+   If the Elasticsearch server is deployed on an on-premises data center or a third-party cloud, ensure that an IP address that can be accessed from the public network has been configured for the Elasticsearch server, or the VPN or Direct Connect between the on-premises data center and cloud has been established.
 
 .. _dataartsstudio_01_0099__en-us_topic_0123220230_section286612269318:
 
 Creating a CDM Cluster and Binding an EIP to the Cluster
 --------------------------------------------------------
 
-#. Create a CDM cluster by following the instructions in :ref:`Creating a Cluster <dataartsstudio_01_0576>`.
+#. Create a CDM cluster.
 
    The key configurations are as follows:
 
@@ -80,7 +80,7 @@ Creating an Entire DB Migration Job
 #. Choose **Entire DB Migration** > **Create Job** to create an entire DB migration job.
 
 
-   .. figure:: /_static/images/en-us_image_0000001373288729.png
+   .. figure:: /_static/images/en-us_image_0000002305440337.png
       :alt: **Figure 1** Creating an entire DB migration job
 
       **Figure 1** Creating an entire DB migration job
@@ -104,7 +104,7 @@ Creating an Entire DB Migration Job
 3. After the job is successfully executed, in the **Operation** column of the job, click **Historical Record** to view the job's historical execution records, read/write statistics, and job logs (only the sub-jobs have job logs).
 
 
-   .. figure:: /_static/images/en-us_image_0000001373088213.png
+   .. figure:: /_static/images/en-us_image_0000002305440333.png
       :alt: **Figure 2** Historical Record
 
       **Figure 2** Historical Record

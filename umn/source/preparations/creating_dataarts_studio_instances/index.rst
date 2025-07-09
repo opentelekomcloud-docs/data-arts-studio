@@ -5,7 +5,7 @@
 Creating DataArts Studio Instances
 ==================================
 
--  :ref:`Creating a DataArts Studio Basic Package <dataartsstudio_01_0115_0>`
+-  :ref:`Creating a DataArts Studio Basic Package <dataartsstudio_01_0115>`
 -  :ref:`(Optional) Creating a DataArts Studio Incremental Package <dataartsstudio_01_0119>`
 
 .. toctree::

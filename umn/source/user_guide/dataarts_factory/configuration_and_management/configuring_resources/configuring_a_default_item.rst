@@ -5,7 +5,7 @@
 Configuring a Default Item
 ==========================
 
-This section describes how to configure a default item.
+This section describes how to configure a default item. You can perform the operations in this section only if you have the permissions of **DARTS** **Administrator** or **Tenant Administrator**.
 
 Scenario
 --------
@@ -22,13 +22,13 @@ To configure the default action on the current job when the job it depends on fa
 
    .. note::
 
-      Three options are available. The default value is **Terminate**.
+      Three options are available. The default value is **Suspend**.
 
       -  **Suspend**: The current job is suspended.
       -  **Continue**: The current job continues to be executed.
-      -  **Terminate**: The current job is terminated.
+      -  **Cancel**: The current job is canceled.
 
-#. Click **Save** to save the settings.
+#. Click **Save** to save the settings. This parameter takes effect only for new jobs.
 
 Configuring the Multi-IF Policy
 -------------------------------
@@ -66,6 +66,437 @@ You can configure the hard/soft policy based on your needs.
       The default policy is **Soft Lock**.
 
       -  **Soft lock**: You can lock or unlock jobs or scripts, regardless of whether they are locked by others.
-      -  **Hard Lock**: You can lock jobs or scripts only after they have been unlocked by other users. The space administrator and the **DAYU Administrator** user can lock and unlock jobs or scripts without any limitations.
+      -  **Hard Lock**: You can lock jobs or scripts only after they have been unlocked by other users. The space administrator and the DARTS Administrator can lock and unlock jobs or scripts without any limitations.
 
 #. Click **Save** to save the settings.
+
+.. _dataartsstudio_01_04501__section310213518565:
+
+Configuring Script Variables
+----------------------------
+
+Variables of an SQL script can be in ${} or ${dlf.} format. You can configure either type as needed. The configured variable format applies to SQL scripts, SQL statements in jobs, single-node jobs, and environment variables.
+
+#. In the navigation pane, choose **Configuration** > **Configure**.
+#. Click **Default Configuration** and set **Script Variable Definition**.
+
+   .. note::
+
+      The default variable format is **${}**.
+
+      -  **${}**: Identify the definition of the ${} format in the script and parse the field as the variable name. For example, variable name *xxx* is identified from **${**\ *xxx*\ **}**.
+      -  **${dlf.}**: Identify the definition of the ${dlf.} format in the script and parse the **dlf.** field as the variable name. Other ${} format definitions are not recognized as variables. For example, variable name **dlf.**\ *xxx* is identified from **${dlf.**\ *xxx*\ **}**.
+
+#. Click **Save** to save the settings.
+
+.. _dataartsstudio_01_04501__section1970845152011:
+
+Configuring a Data Export Policy
+--------------------------------
+
+By default, all users can download and dump the execution results of SQL scripts. If you do not want all users to have this permission, perform the following steps to configure a data export policy:
+
+#. In the navigation pane, choose **Configuration** > **Configure**.
+#. Choose **Default Configuration** and set **Data Export Policy**.
+
+   .. note::
+
+      The default data export policy is **All User Can**.
+
+      -  **All User Can**: All users can download and dump SQL execution results.
+      -  **All User Cannot**: No user can download or dump SQL execution results.
+      -  **Only Workspace Manager Can**: Only workspace administrators can download and dump SQL execution results.
+
+#. Click **Save**.
+
+.. _dataartsstudio_01_04501__section67661828112219:
+
+Disabling Auto Node Name Change
+-------------------------------
+
+On the **Develop Job** page, when you select a script for a node or associate a node with the function of another cloud service, the node name will be automatically changed to the script name or function name. You can disable this function.
+
+#. In the navigation pane, choose **Configuration** > **Specifications**.
+#. Choose **Default Configuration**. Find **Disable Auto Node Name Change** and select job nodes.
+
+   .. note::
+
+      -  You can disable automatic name change for the following nodes: CDM Job, DIS Stream, DLI SQL, DWS SQL, MRS Spark SQL, MRS Hive SQL, MRS Presto SQL, MRS HetuEngine, MRS ClickHouse, Shell, RDS SQL, Subjob, For Each, or Python.
+      -  No job nodes are selected by default.
+      -  Names of the selected nodes will not be automatically changed when a script is selected or a function is associated with them.
+
+#. Click **Save**.
+
+.. _dataartsstudio_01_04501__section12475339019:
+
+Use Simple Variable Set
+-----------------------
+
+The simple variable set provides a series of customized variables to dynamically replace parameters during task scheduling.
+
+#. In the navigation pane on the **Data Development** page, choose **Configuration** > **Configure**.
+#. Choose **Default Configuration** and set **Use Simple Variable Set**.
+
+   .. note::
+
+      -  **Yes**: Simple variable sets are supported. A series of customized variables provided by the simple variable set. Customized parameters are automatically replaced with specific values based on the service date, plan time, and parameter value format of task scheduling. In this way, parameters can be dynamically replaced during task scheduling.
+      -  **No**: Simple variable sets are not supported.
+
+#. Click **Save** to save the settings.
+
+Setting the Notification Policy for Jobs in Failure Ignored Status
+------------------------------------------------------------------
+
+To configure the notification type for jobs whose status is failure ignored, perform the following steps:
+
+#. In the navigation pane on the **Data Development** page, choose **Configuration** > **Configure**.
+#. Choose **Default Configuration** and set **Notification Policy for Jobs in Failure Ignored Status**.
+#. Select a notification type for jobs whose status is failure ignored.
+
+   .. note::
+
+      -  Jobs whose status is failure ignored are those whose **Policy for Handling Subsequent Nodes If the Current Node Fails** is set to **Go to the next node**. By default, such jobs are deemed successful by the system.
+
+      -  You can configure either of the following notification types for such jobs:
+
+         **Abnormal**
+
+         **Successful** (default)
+
+#. Click **Save**.
+
+Setting Retry Node upon Timeout
+-------------------------------
+
+You can set this parameter to specify whether a node will be re-executed if it fails upon timeout.
+
+#. In the navigation pane on the **Data Development** page, choose **Configuration** > **Configure**.
+#. Choose **Default Configuration**.
+#. Set **Retry Node upon Timeout**.
+
+   .. note::
+
+      -  **No**: A node will not be re-executed if it fails upon timeout.
+      -  **Yes**: A node will be re-executed if it fails upon timeout.
+
+#. Click **Save** to save the settings.
+
+.. _dataartsstudio_01_04501__section14959925164217:
+
+Exclude Waiting Time from Instance Timeout Duration
+---------------------------------------------------
+
+You can specify whether to exclude waiting time from instance timeout duration.
+
+#. In the navigation pane, choose **Configuration** > **Specifications**.
+#. Choose **Default Configuration** and set **Exclude Waiting Time from Instance Timeout Duration**.
+#. Select **Yes** or **No**.
+
+   .. note::
+
+      **Yes**: The waiting time before an instance starts running is excluded from the instance timeout duration.
+
+      **No**: The waiting time before an instance starts running is included in the instance timeout duration.
+
+#. Click **Save** to save the settings.
+
+Rules for Splitting MRS JAR Package Parameters
+----------------------------------------------
+
+You can set the rule for splitting the string parameters (enclosed by "") in the JAR package parameters of MRS MapReduce and MRS Spark operators.
+
+#. In the navigation pane, choose **Configuration** > **Specifications**.
+#. Choose **Default Configuration** and set **Rules for Splitting MRS JAR Package Parameters**.
+#. Select a rule.
+
+   .. note::
+
+      **Split String Arguments by Space**: For example, **"select \* from table"** is split into four parameters by space: **select**, **\***, **from**, and **table**.
+
+      **Do not split string arguments**: For example, **"select \* from table"** is regarded as one parameter and is not split.
+
+#. Click **Save** to save the settings.
+
+Synchronization of Job Version by Waiting Instance
+--------------------------------------------------
+
+You can specify whether a waiting instance can synchronize the latest job version.
+
+#. In the navigation pane, choose **Configuration** > **Specifications**.
+#. Choose **Default Configuration** and set **Synchronization of Job Version by Waiting Instance**.
+#. Select **Yes** or **No**.
+
+   .. note::
+
+      **Yes**: The waiting instance uses the latest job version.
+
+      **No**: The waiting instance still uses the existing job version.
+
+#. Click **Save** to save the settings.
+
+Execution Mode for Hive SQL and Spark SQL Statements
+----------------------------------------------------
+
+When Hive SQL and Spark SQL statements are executed, DGCDataArts Studio can place SQL statements in OBS or in the request body.
+
+#. In the navigation pane, choose **Configuration** > **Configure**.
+#. Choose **Default Configuration**.
+#. Set **Execution Mode for Hive SQL and Spark SQL Statements**.
+
+   .. note::
+
+      **In OBS**: Hive SQL and Spark SQL statements are put in OBS, and the OBS is returned to MRS.
+
+      **In the request message body**: Hive SQL and Spark SQL statements are put in the request message body, and the script content is returned to MRS.
+
+#. Click **Save** to save the settings.
+
+   .. note::
+
+      This configuration supports Hive SQL and Spark SQL scripts, and pipeline and single-task jobs.
+
+.. _dataartsstudio_01_04501__section1149418391843:
+
+Setting PatchData Priority
+--------------------------
+
+You can set the priority of a PatchData job. When system resources are insufficient, computing resources are preferentially allocated to jobs with higher priorities. A larger number indicates a higher priority. Currently, only the priorities of DLI SQL operators can be set.
+
+#. In the left navigation pane on the DataArts Factory console, choose **Configuration** > **Configure**.
+#. Choose **Default Configuration** and set **PatchData Job Priority**.
+#. Set the patch data priority policy.
+#. Click **Save** to save the settings.
+
+   .. note::
+
+      The mapping between the **PatchData Job Priority** and **spark.sql.dli.job.priority** of DLI is as follows:
+
+      If **PatchData Job Priority** is set to **1**, **spark.sql.dli.job.priority** of DLI is **1**.
+
+      If **PatchData Job Priority** is set to **2**, **spark.sql.dli.job.priority** of DLI is **3**.
+
+      If **PatchData Job Priority** is set to **3**, **spark.sql.dli.job.priority** of DLI is **5**.
+
+      If **PatchData Job Priority** is set to **4**, **spark.sql.dli.job.priority** of DLI is **8**.
+
+      If **PatchData Job Priority** is set to **5**, **spark.sql.dli.job.priority** of DLI is **10**.
+
+Historical Job Instance Cancellation Policy
+-------------------------------------------
+
+You can set the number of retention days for waiting job instances. If the waiting time of a job instance exceeds the configured retention days, the job instance is canceled. The minimum number of retention days is 2, that is, a job instance which is not executed can be canceled after at least two days. The default number of retention days is 60.
+
+#. In the left navigation pane on the DataArts Factory console, choose **Configuration** > **Configure**.
+#. Choose **Default Configuration**.
+#. Set the number of retention days for waiting job instances.
+#. Click **Save** to save the settings.
+
+Historical Job Instance Alarm Policy
+------------------------------------
+
+You can set the number of days during which alarms can be generated for monitored job instances. The default value is seven days. Alarms cannot be sent for job instances beyond the seven-day period.
+
+For example, if you set the value of this parameter to **2**, alarms can be generated for the job instances of yesterday and today, but cannot be generated for the job instances of the day before yesterday and of an earlier time even if the triggering conditions are met.
+
+#. In the navigation pane, choose **Configuration** > **Configure**.
+#. Choose **Default Configuration** and locate **Historical Job Instance Alarm Policy**.
+#. Set the number of days during which alarms can be generated for monitored job instances.
+
+   .. note::
+
+      The default value is **7**. Set a value from 1 to 270.
+
+      After you set this parameter, alarms are generated only for the job instances which are created after this parameter is set and not for historical instances.
+
+#. Click **Save** to save the settings.
+
+.. _dataartsstudio_01_04501__section81976461047:
+
+Job Alarm Notification Topic
+----------------------------
+
+You can set the topic used to send notifications by owner.
+
+#. In the navigation pane, choose **Configuration** > **Configure**.
+#. Choose **Default Configuration**.
+#. Set **Job Alarm Notification Topic**. Click **View Topic** to go to the SMN console to view available topics.
+
+   .. note::
+
+      You can only select a topic that you created on the SMN console (to prevent conflict with any existing topic). Only the workspace administrator can configure topic.
+
+#. Click **Save** to save the settings.
+
+Default Retry Policy upon Job Operator Failure
+----------------------------------------------
+
+This policy takes effect only for new job operators in the current workspace. The default policy for the operators in historical jobs is not affected. The default value is **No**.
+
+#. In the left navigation pane on the DataArts Factory console, choose **Configuration** > **Configure**.
+#. Choose **Default Configuration**.
+#. Set **Default Retry Policy upon Job Operator Failure**.
+
+   .. note::
+
+      If this parameter is set to **Yes**, new job operators can be retried once, and the retry interval is 120 seconds by default.
+
+#. Click **Save** to save the settings.
+
+Alarm Upon First Job Operator Failure
+-------------------------------------
+
+If you select **Yes** for this parameter, an alarm is generated when a job operator fails for the first time.
+
+#. In the left navigation pane on the DataArts Factory console, choose **Configuration** > **Configure**.
+#. Choose **Default Configuration**.
+#. Set **Alarm Upon First Job Operator Failure**.
+
+   .. note::
+
+      -  **Yes**: An alarm is generated when a job operator fails for the first time.
+      -  **No**: An alarm is generated when the maximum number of retries for a job operator is reached. For example, if the maximum number of retries for a job operator is 3, an alarm is generated if the operator has been retried three times but still fails.
+
+#. Click **Save** to save the settings.
+
+Automatic Script Name Transfer During Job Execution
+---------------------------------------------------
+
+If this function is enabled, **set mapreduce.job.name="Script name"** of the Hive SQL script is automatically transferred to MRS during job execution in the current workspace.
+
+.. note::
+
+   This function takes effect only if the preceding parameter value has not been set for the script. If the parameter value has been set for the script, the value set is preferentially read and transferred to MRS. This function is unavailable for MRS clusters in security mode. To enable this function for such clusters, set them to non-security mode.
+
+#. In the navigation pane, choose **Configuration** > **Specifications**.
+#. Choose **Default Configuration**.
+#. Set **Automatic Script Name Transfer During Job Execution**.
+
+   .. note::
+
+      -  **Yes**: The system automatically transfers the Hive SQL script name to MRS during job execution.
+      -  No: The system does not automatically transfer the Hive SQL script name to MRS during job execution.
+
+#. Click **Save** to save the settings.
+
+.. _dataartsstudio_01_04501__section45021415123915:
+
+Job Dependency Rule
+-------------------
+
+Jobs can be depended on by jobs in other workspaces (requires the permission to query the job list in the workspace). All default roles in the workspace have this permission. Custom roles must have the job query permission in DataArts Factory.
+
+#. In the left navigation pane on the DataArts Factory console, choose **Configuration** > **Configure**.
+#. Choose **Default Configuration**.
+#. Configure **Job Dependency Rule**.
+
+   .. note::
+
+      -  **Jobs cannot be depended on by jobs in other workspaces**: Jobs in this workspace cannot be depended on by jobs in other workspaces.
+      -  **Jobs can be depended on by jobs in other workspaces**: Jobs in this workspace can be depended on by jobs in other workspaces, without requiring the permissions of this workspace.
+      -  **Jobs can be depended on by jobs in other workspaces (requires the permission to query the job list in the workspace)**: Jobs in this workspace can be depended on by jobs in other workspaces, requiring the permissions of this workspace. If you do not have the permissions, the system displays a message indicating that you do not have the permission to obtain the job list in workspace *xxx* when you configure job dependencies across workspaces.
+
+#. Click **Save** to save the settings.
+
+Script Execution History
+------------------------
+
+You can set this parameter to control the permissions to view the script execution history.
+
+#. In the left navigation pane on the DataArts Factory console, choose **Configuration** > **Configure**.
+#. Choose **Default Configuration**.
+#. Set **Script Execution History**.
+
+   .. note::
+
+      -  **Myself**: The script execution history for only myself is displayed.
+      -  **All users**: The script execution history for all users is displayed.
+
+#. Click **Save** to save the settings.
+
+Identity for Job Tests
+----------------------
+
+After configuring this parameter, you can specify the identity used to test jobs.
+
+#. In the left navigation pane on the DataArts Factory console, choose **Configuration** > **Configure**.
+#. Choose **Default Configuration**.
+#. Set **Identity for Job Tests**.
+
+   .. note::
+
+      -  **Public agency or IAM account**: A public agency or IAM account is used to execute jobs.
+
+      -  **Personal account**: The user who clicks **Test** is used to execute jobs.
+
+         If no workspace agency or IAM account is available, a personal account is used for job tests.
+
+         If you are using a federated account, you must set this parameter to **Public agency or IAM account**.
+
+#. Click **Save** to save the settings.
+
+Spark SQL Job/Script Default Template Configuration
+---------------------------------------------------
+
+You can set this parameter to determine whether parameters can be set to overwrite the default parameters of the template.
+
+In the MRS API connection mode, default parameters can be configured for Spark SQL scripts. For proxy connections, this function is not supported.
+
+#. In the navigation pane, choose **Configuration** > **Specifications**.
+#. Choose **Default Configuration**.
+#. Set **SparkSqlJob/Script Default Template Configuration**.
+
+   .. note::
+
+      -  **Yes**: You can set parameters to overwrite the default parameters in the template.
+
+      -  **No**: You cannot set parameters to overwrite the default parameters in the template. If you select **No**, select a default parameter template that has been configured.
+
+         Then go to the **basic information page of the Spark SQL job or Spark SQL script page and click** |image1| **in the upper right corner** to view the configured default program parameters. The preset default parameters are unavailable and cannot be modified.
+
+         You can also customize program parameters. When a Spark SQL job or script is executed, the unavailable parameters in the template prevail.
+
+Hive SQL Job/Script Default Template Configuration
+--------------------------------------------------
+
+You can set this parameter to determine whether parameters can be set to overwrite the default parameters of the template.
+
+In the MRS API connection mode, default parameters can be configured for Hive SQL scripts. For proxy connections, this function is not supported.
+
+#. In the navigation pane, choose **Configuration** > **Specifications**.
+#. Choose **Default Configuration**.
+#. Set **HiveSqlJob/Script Default Template Configuration**.
+
+   .. note::
+
+      -  **Yes**: You can set parameters to overwrite the default parameters in the template.
+
+      -  **No**: You cannot set parameters to overwrite the default parameters in the template. If you select **No**, select a default parameter template that has been configured.
+
+         Then go to the **basic information page of the Hive SQL job or Hive SQL script page and click** |image2| **in the upper right corner** to view the configured default program parameters. The preset default parameters are unavailable and cannot be modified.
+
+         You can also customize program parameters. When a Hive SQL job or script is executed, the unavailable parameters in the template prevail.
+
+#. Click **Save** to save the settings.
+
+Job/Script Change Management
+----------------------------
+
+If you enable this function, you can export job/script changes (addition, modification, and deletion) in a workspace to a .zip file, and import the file to another workspace.
+
+#. In the left navigation pane on the DataArts Factory console, choose **Configuration** > **Configure**.
+#. Click **Default Configuration**.
+#. Set **Job/Script Change Management**.
+
+   .. note::
+
+      -  **Yes**: Events are recorded for job and script changes. All the changed jobs and scripts can be incrementally exported and imported by time.
+      -  **No**: No events are recorded for job and script changes. Only selected jobs and scripts can be exported and imported.
+
+#. Click **Save** to save the settings.
+
+   .. note::
+
+      You can export and import jobs and scripts in the workspace only if you have set **Job/Script Change Management** to **Yes**.
+
+.. |image1| image:: /_static/images/en-us_image_0000002270846766.png
+.. |image2| image:: /_static/images/en-us_image_0000002270846770.png

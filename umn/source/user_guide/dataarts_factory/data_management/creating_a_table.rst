@@ -16,25 +16,21 @@ This section describes how to create a table on the DataArts Factory console and
 Prerequisites
 -------------
 
--  A database has been created in the cloud service.
+-  You have created a database and a DWS database schema. For details, see :ref:`Creating a Database <dataartsstudio_01_0405>` and :ref:`(Optional) Creating a Database Schema <dataartsstudio_01_0412>`.
 -  A data connection that matches the table type has been created in DataArts Factory. For details, see :ref:`Creating a Data Connection <dataartsstudio_01_0404>`.
 
 Creating a Table (GUI Mode)
 ---------------------------
 
-#. Log in to the DataArts Studio console. Locate an instance and click **Access**. On the displayed page, locate a workspace and click **DataArts Factory**.
+#. Log in to the DataArts Studio console by following the instructions in :ref:`Accessing the DataArts Studio Instance Console <dataartsstudio_01_0001>`.
 
+#. On the DataArts Studio console, locate a workspace and click **DataArts Factory**.
 
-   .. figure:: /_static/images/en-us_image_0000001321928320.png
-      :alt: **Figure 1** DataArts Factory
+#. In the left navigation pane of DataArts Factory, choose **Data Development** > **Develop Script**.
 
-      **Figure 1** DataArts Factory
+#. In the script development menu, click |image1|, expand the data connection to **tables**, and right-click **Create Table** or click |image2| to create a table.
 
-#. In the left navigation pane of DataArts Factory, choose **Development** > **Develop Script** or **Development** > **Develop Job**.
-
-#. Choose |image1| from the menu on the left and expand the directory of a data connection to **tables** under **Data Connections**. Right-click **tables** and choose **Create Data Table** from the shortcut menu.
-
-#. In the displayed dialog box, configure basic properties. Specific settings vary depending on the data connection type you select. :ref:`Table 1 <dataartsstudio_01_0416__en-us_topic_0125513554_table168445103311>` lists the links for viewing property parameters of each type of data connection.
+#. In the displayed dialog box, configure parameters based on :ref:`Table 1 <dataartsstudio_01_0416__en-us_topic_0125513554_table168445103311>` on the **Basic property configuration** tab page.
 
    .. _dataartsstudio_01_0416__en-us_topic_0125513554_table168445103311:
 
@@ -71,46 +67,44 @@ Creating a Table (GUI Mode)
 Creating a Table (DDL Mode)
 ---------------------------
 
-#. Log in to the DataArts Studio console. Locate an instance and click **Access**. On the displayed page, locate a workspace and click **DataArts Factory**.
+#. Log in to the DataArts Studio console by following the instructions in :ref:`Accessing the DataArts Studio Instance Console <dataartsstudio_01_0001>`.
 
+#. On the DataArts Studio console, locate a workspace and click **DataArts Factory**.
 
-   .. figure:: /_static/images/en-us_image_0000001321928320.png
-      :alt: **Figure 2** DataArts Factory
+#. In the left navigation pane of DataArts Factory, choose **Data Development** > **Develop Script**.
 
-      **Figure 2** DataArts Factory
+#. In the script development menu, click |image3|, expand the data connection to **tables**, and right-click **Create Table** or click |image4| to create a table.
 
-#. In the left navigation pane of DataArts Factory, choose **Development** > **Develop Script** or **Development** > **Develop Job**.
+#. Click **DDL-based Table Creation** and enter SQL statements in the displayed editor. (Default values are set for the parameters listed in :ref:`Table 3 <dataartsstudio_01_0416__en-us_topic_0125513555_table1129115213117>`.) The following is an example:
 
-#. Choose |image2| from the menu on the left and expand the directory of a data connection to **tables** under **Data Connections**. Right-click **tables** and choose **Create Data Table** from the shortcut menu.
+   .. code-block::
 
-#. Click **DDL-based Table Creation**, configure the parameters based on :ref:`Table 3 <dataartsstudio_01_0416__en-us_topic_0125513555_table1129115213117>`, and enter SQL statements in the editor in the lower part.
+      CREATE TABLE userinfo ( id INT, name STRING);
+
+   .. note::
+
+      The SQL syntax varies depending on the data source. Before developing an SQL statement, learn about the syntax of the data source from its documentation.
 
    .. _dataartsstudio_01_0416__en-us_topic_0125513555_table1129115213117:
 
    .. table:: **Table 3** Data table parameters
 
-      +-----------------------------------+-----------------------------------------------------+
-      | Parameter                         | Description                                         |
-      +===================================+=====================================================+
-      | Data Connection Type              | Type of data connection to which the table belongs. |
-      |                                   |                                                     |
-      |                                   | -  DLI                                              |
-      |                                   | -  DWS                                              |
-      |                                   | -  HIVE                                             |
-      +-----------------------------------+-----------------------------------------------------+
-      | Data Connection                   | Data connection to which the table belongs.         |
-      +-----------------------------------+-----------------------------------------------------+
-      | Database                          | Database to which the table belongs.                |
-      +-----------------------------------+-----------------------------------------------------+
+      ==================== ==================================================
+      Parameter            Description
+      ==================== ==================================================
+      Data Connection Type Type of data connection to which the table belongs
+      Data Connection      Data connection to which the table belongs
+      Database             Database where the data table is located
+      ==================== ==================================================
 
-#. Click **OK**.
+#. Click **Save**.
 
-Viewing Table Details
----------------------
+Related Operations
+------------------
 
-#. In the left navigation pane of DataArts Factory, choose **Development** > **Develop Script** or **Development** > **Develop Job**.
-#. Choose |image3| from the menu on the left and expand the directory of a data connection to a table name under **Data Connections**. Right-click the table name and choose **View Details** from the shortcut menu.
-#. In the displayed dialog box, view the table information listed in |image4|.
+-  View table details: In the script development menu, click |image5|. Expand the data connection to the data table level, right-click a table name, and select **View Details** from the shortcut menu to view the table details shown in :ref:`Table 4 <dataartsstudio_01_0416__en-us_topic_0125513556_table2952161015324>`.
+
+   .. _dataartsstudio_01_0416__en-us_topic_0125513556_table2952161015324:
 
    .. table:: **Table 4** Table details
 
@@ -126,18 +120,11 @@ Viewing Table Details
       | DDL               | Displays the DDL of the DWS, DLI, or MRS Hive data table.               |
       +-------------------+-------------------------------------------------------------------------+
 
-Viewing Table Column Details
-----------------------------
+-  Delete a table: In the script development menu, click |image6|. Expand a data connection, right-click a table name, select **Delete**, and click **OK** in the displayed dialog box.
 
-#. In the left navigation pane of DataArts Factory, choose **Development** > **Develop Script** or **Development** > **Develop Job**.
-#. Choose |image5| from the menu on the left and expand the data connection directory to view column information under a desired table.
+   .. note::
 
-Deleting a Table
-----------------
-
-#. In the left navigation pane of DataArts Factory, choose **Development** > **Develop Script** or **Development** > **Develop Job**.
-#. Choose |image6| from the menu on the left and expand the directory of a data connection to a table name under **Data Connections**. Right-click the table name and choose **Delete** from the shortcut menu.
-#. In the **Delete Data Table** dialog box, click **OK**.
+      Deleted tables cannot be recovered. Exercise caution when performing this operation.
 
 Parameter Description
 ---------------------
@@ -146,45 +133,57 @@ Parameter Description
 
 .. table:: **Table 5** DLI data table
 
-   +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Parameter             | Mandatory             | Description                                                                                                                                                                            |
-   +=======================+=======================+========================================================================================================================================================================================+
-   | **Basic Property**    |                       |                                                                                                                                                                                        |
-   +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Table Name            | Yes                   | Name of a table. The name must contain 1 to 63 characters, including only lowercase letters, numbers, and underscores (_). It cannot contain only numbers or start with an underscore. |
-   +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Alias                 | No                    | Alias of a table. The alias must contain 1 to 63 characters, including only letters, numbers, and underscores (_). It cannot contain only numbers or start with an underscore.         |
-   +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Data Connection       | Yes                   | Data connection to which the table belongs.                                                                                                                                            |
-   +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Database              | Yes                   | Database to which the table belongs.                                                                                                                                                   |
-   +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Data Location         | Yes                   | Location to save data. Possible values:                                                                                                                                                |
-   |                       |                       |                                                                                                                                                                                        |
-   |                       |                       | -  OBS                                                                                                                                                                                 |
-   |                       |                       | -  DLI                                                                                                                                                                                 |
-   +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Data Format           | Yes                   | Format of data. This parameter is available only when **Data Location** is set to **OBS**. Possible values:                                                                            |
-   |                       |                       |                                                                                                                                                                                        |
-   |                       |                       | -  **parquet**: DLF can read non-compressed parquet data and parquet data compressed using Snappy or gzip.                                                                             |
-   |                       |                       | -  **csv**: DLF can read non-compressed CSV data and CSV data compressed using gzip.                                                                                                   |
-   |                       |                       | -  **orc**: DLF can read non-compressed ORC data and ORC data compressed using Snappy.                                                                                                 |
-   |                       |                       | -  **json**: DLF can read non-compressed JSON data and JSON data compressed using gzip.                                                                                                |
-   +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Path                  | Yes                   | OBS path where the data is stored. This parameter is available only when **Data Location** is set to **OBS**.                                                                          |
-   +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Table Description     | No                    | Descriptive information about the table.                                                                                                                                               |
-   +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | **Table Structure**   |                       |                                                                                                                                                                                        |
-   +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Column Name           | Yes                   | Name of the column. The name must be unique.                                                                                                                                           |
-   +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Type                  | Yes                   | Type of data.                                                                                                                                                                          |
-   +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Column Description    | No                    | Descriptive information about the column.                                                                                                                                              |
-   +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Operation             | No                    | To add a column, click |image7|.                                                                                                                                                       |
-   +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter             | Mandatory             | Description                                                                                                                                                                                                                                                                |
+   +=======================+=======================+============================================================================================================================================================================================================================================================================+
+   | **Basic Property**    |                       |                                                                                                                                                                                                                                                                            |
+   +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Table Name            | Yes                   | Name of a table. The name must contain 1 to 63 characters, including only lowercase letters, numbers, and underscores (_). It cannot contain only numbers or start with an underscore.                                                                                     |
+   +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Alias                 | No                    | Alias of a table. The alias must contain 1 to 63 characters, including only letters, numbers, and underscores (_). It cannot contain only numbers or start with an underscore.                                                                                             |
+   +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Data Connection Type  | Yes                   | Type of the data connection to which the table belongs. The default value is used and cannot be changed.                                                                                                                                                                   |
+   +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Data Connection       | Yes                   | Data connection to which the table belongs. The default value is used and cannot be changed.                                                                                                                                                                               |
+   +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Database              | Yes                   | Database where the data table is located. The default value is used and cannot be changed.                                                                                                                                                                                 |
+   +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Data Location         | Yes                   | Location to save data. Possible values:                                                                                                                                                                                                                                    |
+   |                       |                       |                                                                                                                                                                                                                                                                            |
+   |                       |                       | -  OBS                                                                                                                                                                                                                                                                     |
+   |                       |                       | -  DLI                                                                                                                                                                                                                                                                     |
+   +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Data Format           | Yes                   | Format of data. This parameter is available only when **Data Location** is set to **OBS**. Possible values:                                                                                                                                                                |
+   |                       |                       |                                                                                                                                                                                                                                                                            |
+   |                       |                       | -  **parquet**: DataArts Factory can read non-compressed parquet data and parquet data compressed using Snappy or gzip.                                                                                                                                                    |
+   |                       |                       | -  **csv**: DataArts Factory can read non-compressed CSV data and CSV data compressed using gzip.                                                                                                                                                                          |
+   |                       |                       | -  **orc**: DataArts Factory can read non-compressed ORC data and ORC data compressed using Snappy.                                                                                                                                                                        |
+   |                       |                       | -  **json**: DataArts Factory can read non-compressed JSON data and JSON data compressed using gzip.                                                                                                                                                                       |
+   +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Path                  | Yes                   | OBS path where the data is stored. This parameter is available only when **Data Location** is set to **OBS**.                                                                                                                                                              |
+   |                       |                       |                                                                                                                                                                                                                                                                            |
+   |                       |                       | If no OBS path or OBS bucket is available, the system automatically creates an OBS directory.                                                                                                                                                                              |
+   |                       |                       |                                                                                                                                                                                                                                                                            |
+   |                       |                       | .. note::                                                                                                                                                                                                                                                                  |
+   |                       |                       |                                                                                                                                                                                                                                                                            |
+   |                       |                       |    If the number of OBS buckets has reached the upper limit, the system automatically displays the following message: "Failed to create the OBS directory. Error cause: [Create OBS Bucket failed:TooManyBuckets:You have attempted to create more buckets than allowed]". |
+   +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Table Description     | No                    | Descriptive information about the table.                                                                                                                                                                                                                                   |
+   +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | **Table Structure**   |                       |                                                                                                                                                                                                                                                                            |
+   +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Column Type           | Yes                   | Type of the column. Available options include **Partition Column** and **Common Column**. The default value is **Common Column**.                                                                                                                                          |
+   +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Column Name           | Yes                   | Name of the column. The name must be unique.                                                                                                                                                                                                                               |
+   +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Type                  | Yes                   | Type of data.                                                                                                                                                                                                                                                              |
+   +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Column Description    | No                    | Descriptive information about the column.                                                                                                                                                                                                                                  |
+   +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Operation             | No                    | To add a column, click |image7|.                                                                                                                                                                                                                                           |
+   |                       |                       |                                                                                                                                                                                                                                                                            |
+   |                       |                       | To delete a column, click |image8|.                                                                                                                                                                                                                                        |
+   +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 .. _dataartsstudio_01_0416__en-us_topic_0125513554_table1834312173120:
 
@@ -199,9 +198,11 @@ Parameter Description
    +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Alias                 | No                    | Alias of a table. The alias must contain 1 to 63 characters, including only letters, numbers, and underscores (_). It cannot contain only numbers or start with an underscore.                                                                                                                                   |
    +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Data Connection       | Yes                   | Data connection to which the table belongs.                                                                                                                                                                                                                                                                      |
+   | Data Connection Type  | Yes                   | Type of the data connection to which the table belongs. The default value is used and cannot be changed.                                                                                                                                                                                                         |
    +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Database              | Yes                   | Database to which the table belongs.                                                                                                                                                                                                                                                                             |
+   | Data Connection       | Yes                   | Data connection to which the table belongs. The default value is used and cannot be changed.                                                                                                                                                                                                                     |
+   +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Database              | Yes                   | Database where the data table is located. The default value is used and cannot be changed.                                                                                                                                                                                                                       |
    +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Schema                | Yes                   | Schema of the database.                                                                                                                                                                                                                                                                                          |
    +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -258,12 +259,14 @@ Parameter Description
    |                       |                       | -  boolean                                                                                                                                                                                                                                                                                                       |
    |                       |                       | -  binary                                                                                                                                                                                                                                                                                                        |
    +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Operation             | No                    | To add a column, click |image8|.                                                                                                                                                                                                                                                                                 |
+   | Operation             | No                    | To add a column, click |image9|.                                                                                                                                                                                                                                                                                 |
+   |                       |                       |                                                                                                                                                                                                                                                                                                                  |
+   |                       |                       | To delete a column, click |image10|.                                                                                                                                                                                                                                                                             |
    +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 .. _dataartsstudio_01_0416__en-us_topic_0125513554_table122615115615:
 
-.. table:: **Table 7** Basic property parameters of an MRS Hive data table
+.. table:: **Table 7** MRS Hive data table
 
    +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Parameter             | Mandatory             | Description                                                                                                                                                                            |
@@ -274,9 +277,11 @@ Parameter Description
    +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Alias                 | No                    | Alias of a table. The alias must contain 1 to 63 characters, including only letters, numbers, and underscores (_). It cannot contain only numbers or start with an underscore.         |
    +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Data Connection       | Yes                   | Data connection to which the table belongs.                                                                                                                                            |
+   | Data Connection Type  | Yes                   | Type of the data connection to which the table belongs. The default value is used and cannot be changed.                                                                               |
    +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Database              | Yes                   | Database to which the table belongs.                                                                                                                                                   |
+   | Data Connection       | Yes                   | Data connection to which the table belongs. The default value is used and cannot be changed.                                                                                           |
+   +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Database              | Yes                   | Database to which the table belongs. The default value is used and cannot be changed.                                                                                                  |
    +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Table Description     | No                    | Descriptive information about the table.                                                                                                                                               |
    +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -296,15 +301,20 @@ Parameter Description
    +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | Column Description    | No                    | Descriptive information about the column.                                                                                                                                              |
    +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Operation             | No                    | To add a column, click |image9|.                                                                                                                                                       |
+   | Operation             | No                    | To add a column, click |image11|.                                                                                                                                                      |
+   |                       |                       |                                                                                                                                                                                        |
+   |                       |                       | To delete a column, click |image12|.                                                                                                                                                   |
    +-----------------------+-----------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-.. |image1| image:: /_static/images/en-us_image_0000001322247912.png
-.. |image2| image:: /_static/images/en-us_image_0000001373288385.png
-.. |image3| image:: /_static/images/en-us_image_0000001322247940.png
-.. |image4| image:: /_static/images/en-us_image_0000001322247940.png
-.. |image5| image:: /_static/images/en-us_image_0000001373168681.png
-.. |image6| image:: /_static/images/en-us_image_0000001322407932.png
-.. |image7| image:: /_static/images/en-us_image_0000001373408073.png
-.. |image8| image:: /_static/images/en-us_image_0000001373408073.png
-.. |image9| image:: /_static/images/en-us_image_0000001373408073.png
+.. |image1| image:: /_static/images/en-us_image_0000002305439541.png
+.. |image2| image:: /_static/images/en-us_image_0000002270846606.png
+.. |image3| image:: /_static/images/en-us_image_0000002305406469.png
+.. |image4| image:: /_static/images/en-us_image_0000002270789744.png
+.. |image5| image:: /_static/images/en-us_image_0000002270789740.png
+.. |image6| image:: /_static/images/en-us_image_0000002270789756.png
+.. |image7| image:: /_static/images/en-us_image_0000002305439549.png
+.. |image8| image:: /_static/images/en-us_image_0000002270846618.png
+.. |image9| image:: /_static/images/en-us_image_0000002305439549.png
+.. |image10| image:: /_static/images/en-us_image_0000002305439561.png
+.. |image11| image:: /_static/images/en-us_image_0000002305439549.png
+.. |image12| image:: /_static/images/en-us_image_0000002270846598.png

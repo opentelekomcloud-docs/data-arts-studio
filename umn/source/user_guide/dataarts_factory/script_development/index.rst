@@ -8,7 +8,8 @@ Script Development
 -  :ref:`Script Development Process <dataartsstudio_01_0422>`
 -  :ref:`Creating a Script <dataartsstudio_01_0423>`
 -  :ref:`Developing Scripts <dataartsstudio_01_0406>`
--  :ref:`Submitting a Version and Unlocking the Script <dataartsstudio_01_0901>`
+-  :ref:`Submitting a Version <dataartsstudio_01_0901>`
+-  :ref:`Releasing a Script Task <dataartsstudio_01_1902>`
 -  :ref:`(Optional) Managing Scripts <dataartsstudio_01_0407>`
 
 .. toctree::
@@ -18,5 +19,6 @@ Script Development
    script_development_process
    creating_a_script
    developing_scripts/index
-   submitting_a_version_and_unlocking_the_script
+   submitting_a_version
+   releasing_a_script_task
    optional_managing_scripts/index

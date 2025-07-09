@@ -21,191 +21,147 @@ Parameters
 
 .. table:: **Table 1** Parameters of MRS Spark Python nodes
 
-   +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Parameter             | Mandatory             | Description                                                                                                                                                                             |
-   +=======================+=======================+=========================================================================================================================================================================================+
-   | Node Name             | Yes                   | Name of a node. The name must contain 1 to 128 characters, including only letters, numbers, underscores (_), hyphens (-), slashes (/), less-than signs (<), and greater-than signs (>). |
-   +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | MRS Cluster Name      | Yes                   | Select an MRS cluster that supports Spark Python. Only a specific version of MRS supports Spark Python. Test the cluster first to ensure that it supports Spark Python.                 |
-   |                       |                       |                                                                                                                                                                                         |
-   |                       |                       | To create an MRS cluster, use either of the following methods:                                                                                                                          |
-   |                       |                       |                                                                                                                                                                                         |
-   |                       |                       | -  Click |image1|. On the **Clusters** page, create an MRS cluster.                                                                                                                     |
-   |                       |                       | -  Go to the MRS console to create an MRS cluster.                                                                                                                                      |
-   |                       |                       |                                                                                                                                                                                         |
-   |                       |                       | For details about how to create a cluster, see section "Custom Purchase of a Cluster" in *MapReduce Service (MRS)* *Usage Guide* .                                                      |
-   +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Job Name              | Yes                   | Name of an MRS job. The name contains 1 to 64 characters, including only letters, digits, and underscores (_).                                                                          |
-   |                       |                       |                                                                                                                                                                                         |
-   |                       |                       | .. note::                                                                                                                                                                               |
-   |                       |                       |                                                                                                                                                                                         |
-   |                       |                       |    The job name cannot contain Chinese characters or more than 64 characters. If the job name does not meet requirements, the MRS job will fail to be submitted.                        |
-   +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Parameter             | Yes                   | Enter the parameters of the executable program of MRS. Use **Enter** to separate multiple parameters.                                                                                   |
-   +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Attribute             | No                    | Enter parameters in the key=value format. Use **Enter** to separate multiple parameters.                                                                                                |
-   +-----------------------+-----------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   +-----------------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter                   | Mandatory             | Description                                                                                                                                                                                     |
+   +=============================+=======================+=================================================================================================================================================================================================+
+   | Node Name                   | Yes                   | Name of a node. The name must contain 1 to 128 characters, including only letters, numbers, underscores (_), hyphens (-), slashes (/), less-than signs (<), and greater-than signs (>).         |
+   +-----------------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Job Name                    | Yes                   | Name of an MRS job. The name contains 1 to 64 characters, including only letters, digits, and underscores (_).                                                                                  |
+   |                             |                       |                                                                                                                                                                                                 |
+   |                             |                       | .. note::                                                                                                                                                                                       |
+   |                             |                       |                                                                                                                                                                                                 |
+   |                             |                       |    The job name cannot contain Chinese characters or more than 64 characters. If the job name does not meet requirements, the MRS job will fail to be submitted.                                |
+   +-----------------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Script Type                 | Yes                   | -  Offline                                                                                                                                                                                      |
+   |                             |                       | -  Online                                                                                                                                                                                       |
+   +-----------------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | MRS Cluster Name            | Yes                   | Select an MRS cluster that supports Spark Python. Only a specific version of MRS supports Spark Python. Test the cluster first to ensure that it supports Spark Python.                         |
+   |                             |                       |                                                                                                                                                                                                 |
+   |                             |                       | To create an MRS cluster, use either of the following methods:                                                                                                                                  |
+   |                             |                       |                                                                                                                                                                                                 |
+   |                             |                       | -  Click |image1|. On the **Clusters** page, create an MRS cluster.                                                                                                                             |
+   |                             |                       | -  Go to the MRS console to create an MRS cluster.                                                                                                                                              |
+   |                             |                       |                                                                                                                                                                                                 |
+   |                             |                       | For details about how to create a cluster, see section "Buying a Custom Cluster" in *MapReduce Service (MRS) Usage Guide*.                                                                      |
+   +-----------------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | MRS Resource Queue          | No                    | Select a created MRS resource queue.                                                                                                                                                            |
+   |                             |                       |                                                                                                                                                                                                 |
+   |                             |                       | .. note::                                                                                                                                                                                       |
+   |                             |                       |                                                                                                                                                                                                 |
+   |                             |                       |    Select a queue you configured in the queue permissions of DataArts Security. If you set multiple resource queues for this node, the resource queue you select here has the highest priority. |
+   +-----------------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | SQL Script                  | Yes                   | This parameter is available only when **Script Type** is set to **Online**.                                                                                                                     |
+   |                             |                       |                                                                                                                                                                                                 |
+   |                             |                       | Select a Spark Python script.                                                                                                                                                                   |
+   +-----------------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Script Parameter            | No                    | This parameter is available only when **Script Type** is set to **Online**.                                                                                                                     |
+   |                             |                       |                                                                                                                                                                                                 |
+   |                             |                       | If the associated Spark Python script uses a parameter, the parameter name is displayed. Set the parameter value in the text box next to the parameter name.                                    |
+   +-----------------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Program Parameter           | No                    | This parameter is available only when **Script Type** is set to **Online**.                                                                                                                     |
+   |                             |                       |                                                                                                                                                                                                 |
+   |                             |                       | Configure optimization parameters such as threads, memory, and vCPUs for the job to optimize resource usage and improve job execution performance.                                              |
+   |                             |                       |                                                                                                                                                                                                 |
+   |                             |                       | .. note::                                                                                                                                                                                       |
+   |                             |                       |                                                                                                                                                                                                 |
+   |                             |                       |    This parameter is mandatory if the cluster version is MRS 1.8.7 or later than MRS 2.0.1.                                                                                                     |
+   |                             |                       |                                                                                                                                                                                                 |
+   |                             |                       | For details about the parameters of MRS Spark jobs, see **Managing an Existing Cluster** > **Job Management** > **Running a Spark Job** in *MapReduce Service (MRS) User Guide*.                |
+   +-----------------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter                   | Yes                   | This parameter is available only when **Script Type** is set to **Offline**.                                                                                                                    |
+   |                             |                       |                                                                                                                                                                                                 |
+   |                             |                       | Enter parameters. Press **Enter** between parameters.                                                                                                                                           |
+   +-----------------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Execution Program Parameter | No                    | Enter parameters of the MRS execution program.                                                                                                                                                  |
+   |                             |                       |                                                                                                                                                                                                 |
+   |                             |                       | Use spaces to separate parameters. To prevent parameters from being saved as plaintext, add an at sign (@) before parameters.                                                                   |
+   +-----------------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Attribute                   | No                    | Enter parameters in the key=value format. Use **Enter** to separate multiple parameters.                                                                                                        |
+   +-----------------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 .. _dataartsstudio_01_0456__en-us_topic_0177038589_table7463135744918:
 
 .. table:: **Table 2** Advanced parameters
 
-   +------------------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Parameter                    | Mandatory             | Description                                                                                                                                                                                 |
-   +==============================+=======================+=============================================================================================================================================================================================+
-   | Max. Node Execution Duration | Yes                   | Execution timeout interval for the node. If retry is configured and the execution is not complete within the timeout interval, the node will not be retried and is set to the failed state. |
-   +------------------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Retry upon Failure           | Yes                   | Indicates whether to re-execute a node task if its execution fails. Possible values:                                                                                                        |
-   |                              |                       |                                                                                                                                                                                             |
-   |                              |                       | -  **Yes**: The node task will be re-executed, and the following parameters must be configured:                                                                                             |
-   |                              |                       |                                                                                                                                                                                             |
-   |                              |                       |    -  **Maximum Retries**                                                                                                                                                                   |
-   |                              |                       |    -  **Retry Interval (seconds)**                                                                                                                                                          |
-   |                              |                       |                                                                                                                                                                                             |
-   |                              |                       | -  **No**: The node task will not be re-executed. This is the default setting.                                                                                                              |
-   |                              |                       |                                                                                                                                                                                             |
-   |                              |                       | .. note::                                                                                                                                                                                   |
-   |                              |                       |                                                                                                                                                                                             |
-   |                              |                       |    If **Timeout Interval** is configured for the node, the node will not be executed again after the execution times out. Instead, the node is set to the failure state.                    |
-   +------------------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Failure Policy               | Yes                   | Operation that will be performed if the node task fails to be executed. Possible values:                                                                                                    |
-   |                              |                       |                                                                                                                                                                                             |
-   |                              |                       | -  **End the current job execution plan**: stops running the current job. The job instance status is **Failed**.                                                                            |
-   |                              |                       | -  **Go to the next node**: ignores the execution failure of the current node. The job instance status is **Failure ignored**.                                                              |
-   |                              |                       | -  **Suspend current job execution plan**: suspends running the current job. The job instance status is **Waiting**.                                                                        |
-   |                              |                       | -  **Suspend execution plans of the subsequent nodes**: stops running subsequent nodes. The job instance status is **Failed**.                                                              |
-   +------------------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   +----------------------------------------------------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter                                                      | Mandatory             | Description                                                                                                                                                                                                              |
+   +================================================================+=======================+==========================================================================================================================================================================================================================+
+   | Max. Node Execution Duration                                   | Yes                   | Execution timeout interval for the node. If retry is configured and the execution is not complete within the timeout interval, the node will be executed again.                                                          |
+   +----------------------------------------------------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Retry upon Failure                                             | Yes                   | Whether to re-execute a node if it fails to be executed. Possible values:                                                                                                                                                |
+   |                                                                |                       |                                                                                                                                                                                                                          |
+   |                                                                |                       | -  **Yes**: The node will be re-executed, and the following parameters must be configured:                                                                                                                               |
+   |                                                                |                       |                                                                                                                                                                                                                          |
+   |                                                                |                       |    -  **Retry upon Timeout**                                                                                                                                                                                             |
+   |                                                                |                       |    -  **Maximum Retries**                                                                                                                                                                                                |
+   |                                                                |                       |    -  **Retry Interval (seconds)**                                                                                                                                                                                       |
+   |                                                                |                       |                                                                                                                                                                                                                          |
+   |                                                                |                       | -  **No**: The node will not be re-executed. This is the default setting.                                                                                                                                                |
+   |                                                                |                       |                                                                                                                                                                                                                          |
+   |                                                                |                       |    .. note::                                                                                                                                                                                                             |
+   |                                                                |                       |                                                                                                                                                                                                                          |
+   |                                                                |                       |       If retry is configured for a job node and the timeout duration is configured, the system allows you to retry a node when the node execution times out.                                                             |
+   |                                                                |                       |                                                                                                                                                                                                                          |
+   |                                                                |                       |       If a node is not re-executed when it fails upon timeout, you can go to the **Default Configuration** page to modify this policy.                                                                                   |
+   |                                                                |                       |                                                                                                                                                                                                                          |
+   |                                                                |                       |       **Retry upon Timeout** is displayed only when **Retry upon Failure** is set to **Yes**.                                                                                                                            |
+   +----------------------------------------------------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Policy for Handling Subsequent Nodes If the Current Node Fails | Yes                   | Operation that will be performed if the node fails to be executed. Possible values:                                                                                                                                      |
+   |                                                                |                       |                                                                                                                                                                                                                          |
+   |                                                                |                       | -  **Suspend execution plans of the subsequent nodes**: stops running subsequent nodes. The job instance status is **Failed**.                                                                                           |
+   |                                                                |                       | -  **End the current job execution plan**: stops running the current job. The job instance status is **Failed**.                                                                                                         |
+   |                                                                |                       | -  **Go to the next node**: ignores the execution failure of the current node. The job instance status is **Failure ignored**.                                                                                           |
+   |                                                                |                       | -  **Suspend the current job execution plan**: If the current job instance is in abnormal state, the subsequent nodes of this node and the subsequent job instances that depend on the current job are in waiting state. |
+   +----------------------------------------------------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Enable Dry Run                                                 | No                    | If you select this option, the node will not be executed, and a success message will be returned.                                                                                                                        |
+   +----------------------------------------------------------------+-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 .. _dataartsstudio_01_0456__en-us_topic_0114569494_table987664914213:
 
 .. table:: **Table 3** Lineage
 
-   +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Parameter                         | Description                                                                                                                                                 |
-   +===================================+=============================================================================================================================================================+
-   | **Input**                         |                                                                                                                                                             |
-   +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Add                               | Click **Add**. In the **Type** drop-down list, select the type to be created. The value can be **DWS**, **OBS**, **CSS**, **HIVE**, **DLI**, or **CUSTOM**. |
-   |                                   |                                                                                                                                                             |
-   |                                   | -  DWS                                                                                                                                                      |
-   |                                   |                                                                                                                                                             |
-   |                                   |    -  **Connection Name**: Click |image2|. In the displayed dialog box, select a DWS data connection.                                                       |
-   |                                   |    -  **Database**: Click |image3|. In the displayed dialog box, select a DWS database.                                                                     |
-   |                                   |    -  **Schema**: Click |image4|. In the displayed dialog box, select a DWS schema.                                                                         |
-   |                                   |    -  **Table Name**: Click |image5|. In the displayed dialog box, select a DWS table.                                                                      |
-   |                                   |                                                                                                                                                             |
-   |                                   | -  OBS                                                                                                                                                      |
-   |                                   |                                                                                                                                                             |
-   |                                   |    -  **Path**: Click |image6|. In the displayed dialog box, select an OBS path.                                                                            |
-   |                                   |                                                                                                                                                             |
-   |                                   | -  CSS                                                                                                                                                      |
-   |                                   |                                                                                                                                                             |
-   |                                   |    -  **Cluster Name**: Click |image7|. In the displayed dialog box, select a CSS cluster.                                                                  |
-   |                                   |    -  **Index**: Enter a CSS index name.                                                                                                                    |
-   |                                   |                                                                                                                                                             |
-   |                                   | -  HIVE                                                                                                                                                     |
-   |                                   |                                                                                                                                                             |
-   |                                   |    -  **Connection Name**: Click |image8|. In the displayed dialog box, select a HIVE data connection.                                                      |
-   |                                   |    -  **Database**: Click |image9|. In the displayed dialog box, select a HIVE database.                                                                    |
-   |                                   |    -  **Table Name**: Click |image10|. In the displayed dialog box, select a HIVE table.                                                                    |
-   |                                   |                                                                                                                                                             |
-   |                                   | -  CUSTOM                                                                                                                                                   |
-   |                                   |                                                                                                                                                             |
-   |                                   |    -  **Name**: Enter a name of the CUSTOM type.                                                                                                            |
-   |                                   |    -  **Attribute**: Enter an attribute of the CUSTOM type. You can add more than one attribute.                                                            |
-   |                                   |                                                                                                                                                             |
-   |                                   | -  DLI                                                                                                                                                      |
-   |                                   |                                                                                                                                                             |
-   |                                   |    -  **Connection Name**: Click |image11|. In the displayed dialog box, select a DLI data connection.                                                      |
-   |                                   |    -  **Database**: Click |image12|. In the displayed dialog box, select a DLI database.                                                                    |
-   |                                   |    -  **Table Name**: Click |image13|. In the displayed dialog box, select a DLI table.                                                                     |
-   +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | OK                                | Click **OK** to save the parameter settings.                                                                                                                |
-   +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Cancel                            | Click **Cancel** to cancel the parameter settings.                                                                                                          |
-   +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Modify                            | Click |image14| to modify the parameter settings. After the modification, save the settings.                                                                |
-   +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Delete                            | Click |image15| to delete the parameter settings.                                                                                                           |
-   +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | View Details                      | Click |image16| to view details about the table created based on the input lineage.                                                                         |
-   +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | **Output**                        |                                                                                                                                                             |
-   +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Add                               | Click **Add**. In the **Type** drop-down list, select the type to be created. The value can be **DWS**, **OBS**, **CSS**, **HIVE**, **DLI**, or **CUSTOM**. |
-   |                                   |                                                                                                                                                             |
-   |                                   | -  DWS                                                                                                                                                      |
-   |                                   |                                                                                                                                                             |
-   |                                   |    -  **Connection Name**: Click |image17|. In the displayed dialog box, select a DWS data connection.                                                      |
-   |                                   |    -  **Database**: Click |image18|. In the displayed dialog box, select a DWS database.                                                                    |
-   |                                   |    -  **Schema**: Click |image19|. In the displayed dialog box, select a DWS schema.                                                                        |
-   |                                   |    -  **Table Name**: Click |image20|. In the displayed dialog box, select a DWS table.                                                                     |
-   |                                   |                                                                                                                                                             |
-   |                                   | -  OBS                                                                                                                                                      |
-   |                                   |                                                                                                                                                             |
-   |                                   |    -  **Path**: Click |image21|. In the displayed dialog box, select an OBS path.                                                                           |
-   |                                   |                                                                                                                                                             |
-   |                                   | -  CSS                                                                                                                                                      |
-   |                                   |                                                                                                                                                             |
-   |                                   |    -  **Cluster Name**: Click |image22|. In the displayed dialog box, select a CSS cluster.                                                                 |
-   |                                   |    -  **Index**: Enter a CSS index name.                                                                                                                    |
-   |                                   |                                                                                                                                                             |
-   |                                   | -  HIVE                                                                                                                                                     |
-   |                                   |                                                                                                                                                             |
-   |                                   |    -  **Connection Name**: Click |image23|. In the displayed dialog box, select a HIVE data connection.                                                     |
-   |                                   |    -  **Database**: Click |image24|. In the displayed dialog box, select a HIVE database.                                                                   |
-   |                                   |    -  **Table Name**: Click |image25|. In the displayed dialog box, select a HIVE table.                                                                    |
-   |                                   |                                                                                                                                                             |
-   |                                   | -  CUSTOM                                                                                                                                                   |
-   |                                   |                                                                                                                                                             |
-   |                                   |    -  **Name**: Enter a name of the CUSTOM type.                                                                                                            |
-   |                                   |    -  **Attribute**: Enter an attribute of the CUSTOM type. You can add more than one attribute.                                                            |
-   |                                   |                                                                                                                                                             |
-   |                                   | -  DLI                                                                                                                                                      |
-   |                                   |                                                                                                                                                             |
-   |                                   |    -  **Connection Name**: Click |image26|. In the displayed dialog box, select a DLI data connection.                                                      |
-   |                                   |    -  **Database**: Click |image27|. In the displayed dialog box, select a DLI database.                                                                    |
-   |                                   |    -  **Table Name**: Click |image28|. In the displayed dialog box, select a DLI table.                                                                     |
-   +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | OK                                | Click **OK** to save the parameter settings.                                                                                                                |
-   +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Cancel                            | Click **Cancel** to cancel the parameter settings.                                                                                                          |
-   +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Modify                            | Click |image29| to modify the parameter settings. After the modification, save the settings.                                                                |
-   +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | Delete                            | Click |image30| to delete the parameter settings.                                                                                                           |
-   +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | View Details                      | Click |image31| to view details about the table created based on the output lineage.                                                                        |
-   +-----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   +--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter    | Description                                                                                                                                                 |
+   +==============+=============================================================================================================================================================+
+   | **Input**    |                                                                                                                                                             |
+   +--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Add          | Click **Add**. In the **Type** drop-down list, select the type to be created. The value can be **DWS**, **OBS**, **CSS**, **HIVE**, **DLI**, or **CUSTOM**. |
+   +--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | OK           | Click **OK** to save the parameter settings.                                                                                                                |
+   +--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Cancel       | Click **Cancel** to cancel the parameter settings.                                                                                                          |
+   +--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Modify       | Click |image8| to modify the parameter settings. After the modification, save the settings.                                                                 |
+   +--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Delete       | Click |image9| to delete the parameter settings.                                                                                                            |
+   +--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | View Details | Click |image10| to view details about the table created based on the input lineage.                                                                         |
+   +--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | **Output**   |                                                                                                                                                             |
+   +--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Add          | Click **Add**. In the **Type** drop-down list, select the type to be created. The value can be **DWS**, **OBS**, **CSS**, **HIVE**, **DLI**, or **CUSTOM**. |
+   +--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | OK           | Click **OK** to save the parameter settings.                                                                                                                |
+   +--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Cancel       | Click **Cancel** to cancel the parameter settings.                                                                                                          |
+   +--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Modify       | Click |image11| to modify the parameter settings. After the modification, save the settings.                                                                |
+   +--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Delete       | Click |image12| to delete the parameter settings.                                                                                                           |
+   +--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | View Details | Click |image13| to view details about the table created based on the output lineage.                                                                        |
+   +--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-.. |image1| image:: /_static/images/en-us_image_0000001373169093.png
-.. |image2| image:: /_static/images/en-us_image_0000001373288685.png
-.. |image3| image:: /_static/images/en-us_image_0000001322088340.png
-.. |image4| image:: /_static/images/en-us_image_0000001373168981.png
-.. |image5| image:: /_static/images/en-us_image_0000001373088173.png
-.. |image6| image:: /_static/images/en-us_image_0000001322088336.png
-.. |image7| image:: /_static/images/en-us_image_0000001322088332.png
-.. |image8| image:: /_static/images/en-us_image_0000001322408220.png
-.. |image9| image:: /_static/images/en-us_image_0000001322248236.png
-.. |image10| image:: /_static/images/en-us_image_0000001373168965.png
-.. |image11| image:: /_static/images/en-us_image_0000001373168969.png
-.. |image12| image:: /_static/images/en-us_image_0000001373288673.png
-.. |image13| image:: /_static/images/en-us_image_0000001321928640.png
-.. |image14| image:: /_static/images/en-us_image_0000001373408357.png
-.. |image15| image:: /_static/images/en-us_image_0000001322088324.png
-.. |image16| image:: /_static/images/en-us_image_0000001373288669.png
-.. |image17| image:: /_static/images/en-us_image_0000001322408216.png
-.. |image18| image:: /_static/images/en-us_image_0000001322248228.png
-.. |image19| image:: /_static/images/en-us_image_0000001373408349.png
-.. |image20| image:: /_static/images/en-us_image_0000001322408212.png
-.. |image21| image:: /_static/images/en-us_image_0000001322088320.png
-.. |image22| image:: /_static/images/en-us_image_0000001373408373.png
-.. |image23| image:: /_static/images/en-us_image_0000001373088169.png
-.. |image24| image:: /_static/images/en-us_image_0000001373288689.png
-.. |image25| image:: /_static/images/en-us_image_0000001373168973.png
-.. |image26| image:: /_static/images/en-us_image_0000001373408369.png
-.. |image27| image:: /_static/images/en-us_image_0000001322408228.png
-.. |image28| image:: /_static/images/en-us_image_0000001322248244.png
-.. |image29| image:: /_static/images/en-us_image_0000001322248240.png
-.. |image30| image:: /_static/images/en-us_image_0000001373168977.png
-.. |image31| image:: /_static/images/en-us_image_0000001373288677.png
+.. |image1| image:: /_static/images/en-us_image_0000002270790396.png
+.. |image2| image:: /_static/images/en-us_image_0000002305406273.png
+.. |image3| image:: /_static/images/en-us_image_0000002270846402.png
+.. |image4| image:: /_static/images/en-us_image_0000002305439325.png
+.. |image5| image:: /_static/images/en-us_image_0000002270846374.png
+.. |image6| image:: /_static/images/en-us_image_0000002305439377.png
+.. |image7| image:: /_static/images/en-us_image_0000002270846370.png
+.. |image8| image:: /_static/images/en-us_image_0000002305406273.png
+.. |image9| image:: /_static/images/en-us_image_0000002270846402.png
+.. |image10| image:: /_static/images/en-us_image_0000002305439325.png
+.. |image11| image:: /_static/images/en-us_image_0000002270846374.png
+.. |image12| image:: /_static/images/en-us_image_0000002305439377.png
+.. |image13| image:: /_static/images/en-us_image_0000002270846370.png

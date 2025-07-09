@@ -17,7 +17,7 @@ You can create a custom policy (query the agency list based on specified conditi
 
 #. On the management console, hover the mouse pointer over the username in the upper right corner, and choose **Identity and Access Management** from the drop-down list.
 
-#. In the navigation pane, choose **Permissions**. Then, click **Create Custom Policy**.
+#. In the navigation pane, choose **Permissions** > **Roles**. Then, click **Create Custom Policy**.
 
 #. Enter a policy name.
 
@@ -39,6 +39,8 @@ You can create a custom policy (query the agency list based on specified conditi
 
 #. Add the policy defined in :ref:`7 <dataartsstudio_03_0051__li11144122232119>` to the group to which the current user belongs. For details, see "Creating a User Group and Granting Permissions" in the *Identity and Access Management User Guide*.
 
+#. In the navigation pane on the left, choose **Agencies**. Locate the target agency, click **Authorize** in the **Operation** column, add the created custom policy to the agency, and click **OK**.
+
    The current user can log out of the system and then log in again to obtain the agency list.
 
-.. |image1| image:: /_static/images/en-us_image_0000001373409249.png
+.. |image1| image:: /_static/images/en-us_image_0000002305405713.png

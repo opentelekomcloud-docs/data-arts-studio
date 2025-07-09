@@ -22,7 +22,7 @@ Solutions
 #. Step 2: Schedule the job.
 
 
-.. figure:: /_static/images/en-us_image_0000001321929564.png
+.. figure:: /_static/images/en-us_image_0000002270845810.png
    :alt: **Figure 1** Submitting a version
 
    **Figure 1** Submitting a version

@@ -13,7 +13,7 @@ DataArts Studio is a one-stop data operations platform that allows you to perfor
 Diverse Data Development Types
 ------------------------------
 
-DataArts Studio has a wide range of scheduling configuration policies and powerful job scheduling. It supports online collaborative development among multiple users, online editing and real-time query of SQL and shell scripts, and job development via data processing nodes such as CDM, SQL, MRS, Shell, MLS, and Spark.
+DataArts Studio has a wide range of scheduling configuration policies and powerful job scheduling. It supports online collaborative development among multiple users, online editing and real-time query of SQL and shell scripts, and job development via data processing nodes such as CDM, SQL, MRS, Shell, and Spark.
 
 Unified Scheduling and O&M
 --------------------------

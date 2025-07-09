@@ -25,17 +25,17 @@ Prerequisites
 Creating a Notification
 -----------------------
 
-#. Log in to the DataArts Studio console. Locate an instance and click **Access**. On the displayed page, locate a workspace and click **DataArts Factory**.
-
-
-   .. figure:: /_static/images/en-us_image_0000001321928320.png
-      :alt: **Figure 1** DataArts Factory
-
-      **Figure 1** DataArts Factory
+#. On the DataArts Studio console, locate a workspace and click **DataArts Factory**.
 
 #. In the navigation pane on the DataArts Factory page, choose **Monitoring** > **Manage Notification**.
 
 #. On the **Cycles** tab page, click **Create Notification**. In the displayed dialog box, configure parameters. :ref:`Table 1 <dataartsstudio_01_0515__en-us_topic_0169701967_table63861718143217>` describes the notification parameters.
+
+
+   .. figure:: /_static/images/en-us_image_0000002305439957.png
+      :alt: **Figure 1** Create a notification
+
+      **Figure 1** Create a notification
 
    .. _dataartsstudio_01_0515__en-us_topic_0169701967_table63861718143217:
 
@@ -52,18 +52,20 @@ Creating a Notification
       |                       |                       |                                                                                                                                                                                                                                 |
       |                       |                       |    When **Cycle** is set to **Daily**, **Weekly**, or **Monthly**, a notification is sent every day, week, or month, and the notification content comes from the data generated from the last 24 hours, seven days, or 30 days. |
       +-----------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Select Time           | Yes                   | Time when the notification is sent.                                                                                                                                                                                             |
+      | Select Time           | Yes                   | This parameter is mandatory when **Cycle** is set to **Weekly** or **Monthly**.                                                                                                                                                 |
+      |                       |                       |                                                                                                                                                                                                                                 |
+      |                       |                       | Time when the notification is sent.                                                                                                                                                                                             |
       |                       |                       |                                                                                                                                                                                                                                 |
       |                       |                       | -  If **Cycle** is set to **Weekly**, the value can be any day or any several days from Monday to Sunday in a week.                                                                                                             |
       |                       |                       | -  If **Cycle** is set to **Monthly**, the value can be any day or any several days from 1st to 31st in a month.                                                                                                                |
       +-----------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | Start Time            | Yes                   | Point in time when the notification is sent. The value can be accurate to hour or minute.                                                                                                                                       |
       +-----------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Topic                 | Yes                   | Select a notification topic from the drop-down list box.                                                                                                                                                                        |
+      | Topic Name            | Yes                   | Notification topic                                                                                                                                                                                                              |
       +-----------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | OBS Bucket            | Yes                   | Enter an OBS bucket in the text box or click **OBS** and select one from the displayed dialog box.                                                                                                                              |
+      | OBS Bucket            | Yes                   | OBS bucket for storing notification records                                                                                                                                                                                     |
       +-----------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-      | Notification          | Yes                   | Specifies whether to enable the notification function. The function is enabled by default.                                                                                                                                      |
+      | Notification          | Yes                   | Whether to enable the notification function. The function is enabled by default.                                                                                                                                                |
       +-----------------------+-----------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 #. Click **OK**.

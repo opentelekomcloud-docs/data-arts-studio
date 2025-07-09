@@ -20,15 +20,15 @@ Prerequisites
 
 -  You have subscribed to Cloud Search Service and obtained the IP address and port number of the Cloud Search Service cluster.
 -  You have obtained the IP address, name, username, and password of the Oracle database.
--  If the Oracle database is deployed on an on-premises data center or a third-party cloud, ensure that an IP address that can be accessed from the public network has been configured for the Oracle database, or the VPN or Direct Connect between the on-premises data center and has been established.
--  You have uploaded an Oracle database driver by following the instructions provided in :ref:`Managing Drivers <dataartsstudio_01_0132>`.
+-  If the Oracle database is deployed on an on-premises data center or a third-party cloud, ensure that an IP address that can be accessed from the public network has been configured for the Oracle database, or the VPN or Direct Connect between the on-premises data center and cloud has been established.
+-  You have uploaded the Oracle database driver on the **Job Management** > **Links** > **Driver Management** page.
 
 .. _dataartsstudio_01_0091__en-us_topic_0108275437_section2178135115010:
 
 Creating a CDM Cluster and Binding an EIP to the Cluster
 --------------------------------------------------------
 
-#. Create a CDM cluster by following the instructions in :ref:`Creating a Cluster <dataartsstudio_01_0576>`.
+#. Create a CDM cluster.
 
    The key configurations are as follows:
 
@@ -79,7 +79,7 @@ Creating a Migration Job
 #. Choose **Table/File Migration** > **Create Job** to create a job for exporting data from the Oracle database to Cloud Search Service.
 
 
-   .. figure:: /_static/images/en-us_image_0000001373087853.png
+   .. figure:: /_static/images/en-us_image_0000002270848166.png
       :alt: **Figure 1** Creating a job for migrating data from Oracle to Cloud Search Service
 
       **Figure 1** Creating a job for migrating data from Oracle to Cloud Search Service
@@ -90,16 +90,16 @@ Creating a Migration Job
       -  **Source Link Name**: Select the **oracle_link** link created in :ref:`Creating an Oracle Link <dataartsstudio_01_0091__en-us_topic_0108275437_section1667801135017>`.
       -  **Schema/Tablespace**: Enter the name of the database whose data is to be migrated.
       -  **Table Name**: Enter the name of the table to be migrated.
-      -  Retain the default values of the optional parameters in **Show Advanced Attributes**. For details, see :ref:`From a Common Relational Database <dataartsstudio_01_0054>`.
+      -  Retain the default values of the optional parameters in **Show Advanced Attributes**.
 
    -  **Destination Job Configuration**
 
       -  **Destination Link Name**: Select the **csslink** link created in :ref:`Creating a Cloud Search Service Link <dataartsstudio_01_0091__en-us_topic_0108275437_section13928112795019>`.
       -  **Index**: Select the Elasticsearch index of the data to be written. You can also enter a new index. CDM automatically creates the index on Cloud Search Service.
       -  **Type**: Select the Elasticsearch type of the data to be written. You can enter a new type. CDM automatically creates a type at the migration destination.
-      -  Retain the default values of the optional parameters in **Show Advanced Attributes**. For details, see :ref:`To CSS <dataartsstudio_01_0071>`.
+      -  Retain the default values of the optional parameters in **Show Advanced Attributes**.
 
-#. Click **Next**. The **Map Field** page is displayed. CDM automatically matches the source and destination fields. See :ref:`Figure 2 <dataartsstudio_01_0091__en-us_topic_0108275437_fig68696231445>`.
+#. Click **Next**. The **Map Field** page is displayed. CDM automatically matches the source and destination fields, as shown in :ref:`Figure 2 <dataartsstudio_01_0091__en-us_topic_0108275437_fig68696231445>`.
 
    -  If the field mapping is incorrect, you can drag the fields to adjust the mapping.
    -  If the type is automatically created at the migration destination, you need to configure the type and name of each field.
@@ -107,7 +107,7 @@ Creating a Migration Job
 
    .. _dataartsstudio_01_0091__en-us_topic_0108275437_fig68696231445:
 
-   .. figure:: /_static/images/en-us_image_0000001373408045.png
+   .. figure:: /_static/images/en-us_image_0000002270848170.png
       :alt: **Figure 2** Field mapping of Cloud Search Service
 
       **Figure 2** Field mapping of Cloud Search Service
@@ -116,12 +116,17 @@ Creating a Migration Job
 
    In this step, you can configure the following optional functions:
 
-   -  **Retry Upon Failure**: If the job fails to be executed, you can determine whether to automatically retry. Retain the default value **Never**.
+   -  **Retry If Failed**: Determine whether to automatically retry the job if it fails. Retain the default value **Never**.
    -  **Group**: Select the group to which the job belongs. The default group is **DEFAULT**. On the **Job Management** page, jobs can be displayed, started, or exported by group.
-   -  **Schedule Execution**: To configure scheduled jobs, see :ref:`Scheduling Job Execution <dataartsstudio_01_0082>`. Retain the default value **No**.
-   -  **Concurrent Extractors**: Enter the number of extractors to be concurrently executed. Retain the default value **1**.
-   -  **Write Dirty Data**: Specify this parameter if data that fails to be processed or filtered out during job execution needs to be written to OBS for future viewing. Before writing dirty data, create an OBS link. Retain the default value **No** so that dirty data is not recorded.
-   -  **Delete Job After Completion**: Retain the default value **Do not delete**.
+   -  **Schedule Execution**: Determine whether to automatically execute the job at a scheduled time. Retain the default value **No** in this example.
+   -  **Concurrent Extractors**: Enter the number of concurrent extractors. An appropriate value improves migration efficiency. Retain the default value **1**.
+   -  **Write Dirty Data**: Specify this parameter if data that fails to be processed or filtered out during job execution needs to be written to OBS for future viewing. Before writing dirty data, create an OBS link on the CDM console. Retain the default value **No** so that dirty data is not recorded.
+
+
+   .. figure:: /_static/images/en-us_image_0000002270846470.png
+      :alt: **Figure 3** Configuring the task
+
+      **Figure 3** Configuring the task
 
 #. Click **Save and Run**. The **Job Management** page is displayed, on which you can view the job execution progress and result.
 

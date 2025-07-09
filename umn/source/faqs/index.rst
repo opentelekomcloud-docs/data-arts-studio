@@ -1,11 +1,11 @@
-:original_name: dataartsstudio_12_0005.html
+:original_name: dataartsstudio_12_0007.html
 
-.. _dataartsstudio_12_0005:
+.. _dataartsstudio_12_0007:
 
 FAQs
 ====
 
--  :ref:`Consultation and Billing <dataartsstudio_03_0002>`
+-  :ref:`Consultation and Billing <dataartsstudio_03_0001>`
 -  :ref:`Management Center <dataartsstudio_03_0022>`
 -  :ref:`DataArts Migration <dataartsstudio_03_0027>`
 -  :ref:`DataArts Factory <dataartsstudio_03_0035>`

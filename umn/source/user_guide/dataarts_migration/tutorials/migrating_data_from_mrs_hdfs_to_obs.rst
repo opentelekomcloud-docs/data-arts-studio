@@ -19,7 +19,7 @@ Prerequisites
 -------------
 
 -  You have obtained the domain name, port number, AK, and SK for accessing OBS.
--  MRS is available.
+-  You have created an MRS cluster.
 -  Your EIP quota is sufficient.
 
 .. _dataartsstudio_01_0103__en-us_topic_0284710797_section1596917553011:
@@ -27,7 +27,7 @@ Prerequisites
 Creating a CDM Cluster and Binding an EIP to the Cluster
 --------------------------------------------------------
 
-#. Create a CDM cluster by following the instructions in :ref:`Creating a Cluster <dataartsstudio_01_0576>`.
+#. Create a CDM cluster.
 
    The key configurations are as follows:
 
@@ -46,6 +46,13 @@ Creating an MRS HDFS Link
 -------------------------
 
 #. On the **Cluster Management** page, locate a cluster and click **Job Management** in the **Operation** column. On the displayed page, click the **Links** tab and then **Create Link**.
+
+
+   .. figure:: /_static/images/en-us_image_0000002305440037.png
+      :alt: **Figure 1** Selecting a connector type
+
+      **Figure 1** Selecting a connector type
+
 #. Select **MRS HDFS** and click **Next** to configure parameters for the MRS HDFS link.
 
    -  **Name**: Enter a custom link name, for example, **mrs_hdfs_link**.
@@ -70,16 +77,38 @@ Creating an OBS Link
 #. Click **Job Management** in the **Operation** column of the CDM cluster. On the displayed page, click the **Links** tab and then **Create Link**. The **Select Connector** page is displayed.
 
 
-   .. figure:: /_static/images/en-us_image_0000001373288365.png
-      :alt: **Figure 1** Selecting a connector type
+   .. figure:: /_static/images/en-us_image_0000002305440037.png
+      :alt: **Figure 2** Selecting a connector type
 
-      **Figure 1** Selecting a connector type
+      **Figure 2** Selecting a connector type
 
 #. Select **Object Storage Service (OBS)** and click **Next** to configure parameters for the OBS link.
 
    -  **Name**: Enter a custom link name, for example, **obslink**.
+
    -  **OBS Server** and **Port**: Enter the actual OBS address information.
+
    -  **AK** and **SK**: Enter the AK and SK used for logging in to OBS.
+
+      To obtain an access key, perform the following steps:
+
+      a. Log in to the management console, move the cursor to the username in the upper right corner, and select **My Credentials** from the drop-down list.
+
+      b. On the **My Credentials** page, choose **Access Keys**, and click **Create Access Key**. See :ref:`Figure 3 <dataartsstudio_01_0103__en-us_topic_0284710797_en-us_topic_0123434187_en-us_topic_0108275445_en-us_topic_0000001129241845_en-us_topic_0183643042_fig1552229194615>`.
+
+         .. _dataartsstudio_01_0103__en-us_topic_0284710797_en-us_topic_0123434187_en-us_topic_0108275445_en-us_topic_0000001129241845_en-us_topic_0183643042_fig1552229194615:
+
+         .. figure:: /_static/images/en-us_image_0000002270789428.png
+            :alt: **Figure 3** Clicking Create Access Key
+
+            **Figure 3** Clicking Create Access Key
+
+      c. Click **OK** and save the access key file as prompted. The access key file will be saved to your browser's configured download location. Open the **credentials.csv** file to view **Access Key Id** and **Secret Access Key**.
+
+         .. note::
+
+            -  Only two access keys can be added for each user.
+            -  To ensure access key security, the access key is automatically downloaded only when it is generated for the first time and cannot be obtained from the management console later. Keep them properly.
 
 #. Click **Save**. The **Link Management** page is displayed.
 
@@ -91,10 +120,10 @@ Creating a Migration Job
 #. Choose **Table/File Migration** > **Create Job** to create a job for exporting data from the MRS HDFS database to OBS.
 
 
-   .. figure:: /_static/images/en-us_image_0000001373087857.jpg
-      :alt: **Figure 2** Creating a job for migrating data from MRS HDFS to OBS
+   .. figure:: /_static/images/en-us_image_0000002270791600.jpg
+      :alt: **Figure 4** Creating a job for migrating data from MRS HDFS to OBS
 
-      **Figure 2** Creating a job for migrating data from MRS HDFS to OBS
+      **Figure 4** Creating a job for migrating data from MRS HDFS to OBS
 
    -  **Job Name**: Enter a unique name.
    -  **Source Job Configuration**
@@ -102,7 +131,7 @@ Creating a Migration Job
       -  **Source Link Name**: Select the **hdfs_llink** created in :ref:`Creating an MRS HDFS Link <dataartsstudio_01_0103__en-us_topic_0284710797_section136013511582>`.
       -  **Source Directory/File**: Enter the directory or file path of the data to be migrated.
       -  **File Format**: Select the file format used for data transmission. Select **Binary**. If files are transferred without being parsed, the file format does not have to be **Binary**. This applies to file copy.
-      -  Retain the default values of other optional parameters. For details, see :ref:`From HDFS <dataartsstudio_01_0049>`.
+      -  Retain the default values of other optional parameters.
 
    -  **Destination Job Configuration**
 
@@ -110,7 +139,7 @@ Creating a Migration Job
       -  **Bucket Name**: Select the bucket from which the data will be migrated.
       -  **Write Directory**: Enter the directory to which data is to be written on the OBS server.
       -  **File Format**: Select **Binary**.
-      -  Retain the default values of the optional parameters in **Show Advanced Attributes**. For details, see :ref:`To OBS <dataartsstudio_01_0062>`.
+      -  Retain the default values of the optional parameters in **Show Advanced Attributes**.
 
 #. Click **Next**. The **Map Field** page is displayed. CDM automatically matches the source and destination fields.
 
@@ -123,7 +152,7 @@ Creating a Migration Job
 
    -  **Retry Upon Failure**: If the job fails to be executed, you can determine whether to automatically retry. Retain the default value **Never**.
    -  **Group**: Select the group to which the job belongs. The default group is **DEFAULT**. On the **Job Management** page, jobs can be displayed, started, or exported by group.
-   -  **Schedule Execution**: To configure scheduled jobs, see :ref:`Scheduling Job Execution <dataartsstudio_01_0082>`. Retain the default value **No**.
+   -  **Schedule Execution**: Enable it if you need to configure scheduled jobs. Retain the default value **No**.
    -  **Concurrent Extractors**: Enter the number of extractors to be concurrently executed. CDM supports concurrent extraction of multiple files. Increasing the value of this parameter can improve migration efficiency.
    -  **Write Dirty Data**: Select **No**. The file-to-file migration is binary, and no dirty data will be generated.
    -  **Delete Job After Completion**: Retain the default value **Do not delete**. You can also set this parameter to **Delete** to prevent an accumulation of too many migration jobs.

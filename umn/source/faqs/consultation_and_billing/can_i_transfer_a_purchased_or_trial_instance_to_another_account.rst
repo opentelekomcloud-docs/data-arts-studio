@@ -5,4 +5,4 @@
 Can I Transfer a Purchased or Trial Instance to Another Account?
 ================================================================
 
-No. the purchased or trial instance cannot be transferred to another account.
+No. Purchased or trial instances cannot be transferred to another account.

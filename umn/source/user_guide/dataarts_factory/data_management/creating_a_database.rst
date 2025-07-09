@@ -23,17 +23,13 @@ Prerequisites
 Creating a Database on the DataArts Factory Console
 ---------------------------------------------------
 
-#. Log in to the DataArts Studio console. Locate an instance and click **Access**. On the displayed page, locate a workspace and click **DataArts Factory**.
+#. Log in to the DataArts Studio console by following the instructions in :ref:`Accessing the DataArts Studio Instance Console <dataartsstudio_01_0001>`.
 
+#. On the DataArts Studio console, locate a workspace and click **DataArts Factory**.
 
-   .. figure:: /_static/images/en-us_image_0000001321928320.png
-      :alt: **Figure 1** DataArts Factory
+#. In the left navigation pane of DataArts Factory, choose **Data Development** > **Develop Script**.
 
-      **Figure 1** DataArts Factory
-
-#. In the left navigation pane of DataArts Factory, choose **Development** > **Develop Script** or **Development** > **Develop Job**.
-
-#. In the menu on the left, click |image1|. Right-click the data connection for which you want to create a database, and choose **Create Database** from the shortcut menu. Set the parameters based on :ref:`Table 1 <dataartsstudio_01_0405__en-us_topic_0125929047_table152579468513>`.
+#. In the script development menu, click |image1|. Right-click the data connection for which you want to create a database, and choose **Create Database** from the shortcut menu. Set the parameters based on :ref:`Table 1 <dataartsstudio_01_0405__en-us_topic_0125929047_table152579468513>`.
 
    .. _dataartsstudio_01_0405__en-us_topic_0125929047_table152579468513:
 
@@ -57,22 +53,16 @@ Creating a Database on the DataArts Factory Console
 
 #. Click **OK**.
 
-Modifying a Database
---------------------
+Related Operations
+------------------
 
-#. In the left navigation pane of DataArts Factory, choose **Development** > **Develop Script** or **Development** > **Develop Job**.
-#. In the menu on the left, click |image2|. Expand the data connection where the database is created, right-click the database name, and choose **Modify** from the shortcut menu.
-#. In the **Modify Database** dialog box displayed, modify the database information.
-#. Click **Yes**.
+-  Modify a database: In the script development menu, click |image2|. Expand a data connection, right-click a database name, select **Edit**, and modify the database information.
+-  Delete a database: In the script development menu, click |image3|. Expand a data connection, right-click a database name, select **Delete**, and click **OK** in the displayed dialog box.
 
-Deleting a Database
--------------------
+   .. note::
 
-#. In the left navigation pane of DataArts Factory, choose **Development** > **Develop Script** or **Development** > **Develop Job**.
-#. In the menu on the left, click |image3|. Expand the data connection where the database is created, right-click the database name, and choose **Delete** from the shortcut menu.
-#. In the displayed data connection list, click **Delete**.
-#. Click **Yes**.
+      Deleted databases cannot be recovered. Exercise caution when performing this operation.
 
-.. |image1| image:: /_static/images/en-us_image_0000001322247912.png
-.. |image2| image:: /_static/images/en-us_image_0000001373168653.png
-.. |image3| image:: /_static/images/en-us_image_0000001373168653.png
+.. |image1| image:: /_static/images/en-us_image_0000002305407917.png
+.. |image2| image:: /_static/images/en-us_image_0000002305407921.png
+.. |image3| image:: /_static/images/en-us_image_0000002270791184.png
