@@ -28,7 +28,7 @@ Preparations
 Creating a Hive Data Connection
 -------------------------------
 
-Before developing a Hive SQL script, you must create a data connection to MRS Hive on the **Manage Data Connections** page of **Management Center**. The data connection name is **hive1009**.
+Before developing a Hive SQL script, you must create a data connection to MRS Hive on the **Manage Data Connections** page of **Management Center**. The data connection name is **hive1009**. For how to create an MRS Hive connection, see :ref:`MRS Hive Connection Parameters <dataartsstudio_01_1306>`.
 
 Description of key parameters:
 
@@ -44,7 +44,7 @@ Choose **Development** > **Develop Script** and create a Hive SQL script named *
 
 .. _dataartsstudio_01_0522__en-us_topic_0127305016_fig693875618223:
 
-.. figure:: /_static/images/en-us_image_0000002270791636.png
+.. figure:: /_static/images/en-us_image_0000002269195065.png
    :alt: **Figure 1** Developing a script
 
    **Figure 1** Developing a script
@@ -63,7 +63,7 @@ After the Hive SQL script is developed, build a periodically deducted job for th
 #. Create an empty DataArts Factory job named **job_hive_sql**.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305408377.png
+   .. figure:: /_static/images/en-us_image_0000002234235616.png
       :alt: **Figure 2** Creating a job named job_hive_sql
 
       **Figure 2** Creating a job named job_hive_sql
@@ -71,24 +71,24 @@ After the Hive SQL script is developed, build a periodically deducted job for th
 #. Go to the job development page, drag the MRS Hive SQL node to the canvas, and click the node to configure node properties.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305441437.png
+   .. figure:: /_static/images/en-us_image_0000002269195025.png
       :alt: **Figure 3** Configuring properties for an MRS Hive SQL node
 
       **Figure 3** Configuring properties for an MRS Hive SQL node
 
    Description of key properties:
 
-   -  SQL Script: Hive SQL script **hive_sql** that is developed in :ref:`Developing a Hive SQL Script <dataartsstudio_01_0522__en-us_topic_0127305016_section17888155820591>`.
-   -  Data Connection: Data connection that is configured in the SQL script **hive_sql** is selected by default. The value can be changed.
-   -  Database: Database that is configured in the SQL script **hive_sql** and is selected by default. The value can be changed.
-   -  Node Name: Name of the SQL script **hive_sql** by default. The value can be changed.
+   -  **Node Name**: Name of the SQL script **hive_sql** by default. The value can be changed.
+   -  **SQL Script**: Hive SQL script **hive_sql** that is developed in :ref:`Developing a Hive SQL Script <dataartsstudio_01_0522__en-us_topic_0127305016_section17888155820591>`.
+   -  **Data Connection**: Data connection that is configured in the SQL script **hive_sql** is selected by default. The value can be changed.
+   -  **Database**: Database that is configured in the SQL script **hive_sql** and is selected by default. The value can be changed.
 
 #. After configuring the job, click |image1| to test it.
 
 #. If the job runs successfully, click the blank area on the canvas and configure the job scheduling policy on the scheduling configuration page on the right.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305408373.png
+   .. figure:: /_static/images/en-us_image_0000002234235580.png
       :alt: **Figure 4** Configuring the scheduling mode
 
       **Figure 4** Configuring the scheduling mode
@@ -99,4 +99,4 @@ After the Hive SQL script is developed, build a periodically deducted job for th
 
 #. Click **Submit** and **Execute**. The job will be automatically executed every day.
 
-.. |image1| image:: /_static/images/en-us_image_0000002270848502.png
+.. |image1| image:: /_static/images/en-us_image_0000002269195049.png

@@ -5,7 +5,7 @@
 Creating a Data Connection
 ==========================
 
-After a data connection is created, you can perform data operations on DataArts Factory, for example, managing databases, namespaces, database schema, and tables.
+After creating a data connection, you can perform data operations on DataArts Factory, for example, managing databases, namespaces, database schema, and tables.
 
 With one data connection, you can run multiple jobs and develop multiple scripts. If the connection information saved in the data connection changes, you only need to modify the corresponding information in Connection Management.
 
@@ -13,7 +13,7 @@ With one data connection, you can run multiple jobs and develop multiple scripts
 Creating a Data Connection
 --------------------------
 
-The data connection of DataArts Factory is created based on the data connection of Management Center. For details about how to create a data connection, see :ref:`Managing Data Connections <dataartsstudio_01_0009>`.
+The data connection of DataArts Factory is created based on the data connection of Management Center. For details about how to create a data connection, see :ref:`Configuring DataArts Studio Data Connection Parameters <dataartsstudio_01_0009>`.
 
 Viewing Connection References
 -----------------------------
@@ -30,12 +30,12 @@ To view the references of a connection, perform the following steps:
 
 #. Right-click a connection in the list and select **View Reference**.
 
-#. In the displayed **Reference List** dialog box, view the references of the connection.
+#. In the displayed **Reference List** dialog box, view the jobs or scripts that use the connection.
 
 
-   .. figure:: /_static/images/en-us_image_0000002270791148.png
+   .. figure:: /_static/images/en-us_image_0000002269120705.png
       :alt: **Figure 1** Reference List
 
       **Figure 1** Reference List
 
-.. |image1| image:: /_static/images/en-us_image_0000002270848010.png
+.. |image1| image:: /_static/images/en-us_image_0000002269120701.png

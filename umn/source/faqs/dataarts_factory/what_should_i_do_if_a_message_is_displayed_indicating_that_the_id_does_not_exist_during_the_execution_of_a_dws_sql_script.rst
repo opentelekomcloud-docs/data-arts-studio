@@ -5,7 +5,13 @@
 What Should I Do If a Message Is Displayed Indicating that the ID Does Not Exist During the Execution of a DWS SQL Script?
 ==========================================================================================================================
 
-This issue is caused by the case of id.
+Possible Causes
+---------------
+
+This issue is caused by the case of the ID.
+
+Solution
+--------
 
 During the execution of a DWS SQL script, the system uses lowercase letters by default. If a field is in upper case, add "".
 

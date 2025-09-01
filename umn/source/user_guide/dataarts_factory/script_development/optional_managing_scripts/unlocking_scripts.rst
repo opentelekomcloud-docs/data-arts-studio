@@ -19,7 +19,7 @@ Procedure
 #. Click |image1| in the script directory and select **Show Check Box**.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305407821.png
+   .. figure:: /_static/images/en-us_image_0000002269114909.png
       :alt: **Figure 1** Clicking Show Check Box
 
       **Figure 1** Clicking Show Check Box
@@ -27,10 +27,10 @@ Procedure
 #. Select the scripts to unlock, click |image2|, and select **Batch Unlock**. The message "Unlocked." is displayed.
 
 
-   .. figure:: /_static/images/en-us_image_0000002270847942.png
+   .. figure:: /_static/images/en-us_image_0000002234235528.png
       :alt: **Figure 2** Batch Unlock
 
       **Figure 2** Batch Unlock
 
-.. |image1| image:: /_static/images/en-us_image_0000002270847946.png
-.. |image2| image:: /_static/images/en-us_image_0000002305407825.png
+.. |image1| image:: /_static/images/en-us_image_0000002234235552.png
+.. |image2| image:: /_static/images/en-us_image_0000002269194989.png

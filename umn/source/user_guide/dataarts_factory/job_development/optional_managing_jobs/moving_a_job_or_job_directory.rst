@@ -28,7 +28,7 @@ Procedure
    a. In the job directory, right-click a job or job folder and select **Move**.
 
 
-      .. figure:: /_static/images/en-us_image_0000002270846962.png
+      .. figure:: /_static/images/en-us_image_0000002269197233.png
          :alt: **Figure 1** Selecting a job to be moved
 
          **Figure 1** Selecting a job to be moved
@@ -36,13 +36,13 @@ Procedure
    b. In the displayed dialog box, configure the target directory.
 
 
-      .. figure:: /_static/images/en-us_image_0000002270846958.png
+      .. figure:: /_static/images/en-us_image_0000002269197229.png
          :alt: **Figure 2** Moving a job
 
          **Figure 2** Moving a job
 
 
-      .. figure:: /_static/images/en-us_image_0000002270846954.png
+      .. figure:: /_static/images/en-us_image_0000002234237788.png
          :alt: **Figure 3** Move a directory
 
          **Figure 3** Move a directory
@@ -60,3 +60,7 @@ Procedure
    **Method 2: drag-and-drop**
 
    Select a job or job folder and drag and drop it to the target folder.
+
+   **Method 3: batch selection and move**
+
+   Select multiple jobs and move them to the target folder.

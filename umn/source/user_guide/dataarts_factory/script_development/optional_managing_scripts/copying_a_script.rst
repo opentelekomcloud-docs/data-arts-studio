@@ -24,7 +24,7 @@ Procedure
 #. In the script directory, select the script to be copied, right-click the script name, and choose **Copy Save As**.
 
 
-   .. figure:: /_static/images/en-us_image_0000002270791016.png
+   .. figure:: /_static/images/en-us_image_0000002234237972.png
       :alt: **Figure 1** Copying a script
 
       **Figure 1** Copying a script

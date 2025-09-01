@@ -20,6 +20,8 @@ You have submitted a version. For details, see :ref:`Submitting a Version <dataa
 Procedure
 ---------
 
+#. Log in to the DataArts Studio console by following the instructions in :ref:`Accessing the DataArts Studio Instance Console <dataartsstudio_01_0001>`.
+
 #. On the DataArts Studio console, locate a workspace and click **DataArts Factory**.
 
 #. In the left navigation pane, choose **Data Development** > **Task Release**.
@@ -36,7 +38,7 @@ Procedure
       -  You can revoke tasks not to be released as a developer, deployer, or admin.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305439865.png
+   .. figure:: /_static/images/en-us_image_0000002236648476.png
       :alt: **Figure 1** Clicking Release
 
       **Figure 1** Clicking Release
@@ -46,7 +48,7 @@ Procedure
    You can filter packages by **Applicant**, **Application Time**, **Release At**, or **Released By**, and perform fuzzy search using a package name.
 
 
-   .. figure:: /_static/images/en-us_image_0000002270846914.png
+   .. figure:: /_static/images/en-us_image_0000002234085212.png
       :alt: **Figure 2** Viewing the task status
 
       **Figure 2** Viewing the task status
@@ -58,7 +60,7 @@ Procedure
    After the task is released, you can click **View Details** in the **Operation** column to view the release status and startup status of the task. You can also click **Compare Version** in the **Operation** column to view the differences between different versions of release packages.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305406805.png
+   .. figure:: /_static/images/en-us_image_0000002269124413.png
       :alt: **Figure 3** Viewing release package details
 
       **Figure 3** Viewing release package details

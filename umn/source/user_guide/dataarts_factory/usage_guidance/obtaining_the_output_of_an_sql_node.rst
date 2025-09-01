@@ -47,7 +47,7 @@ In this example, the MRS Hive SQL node returns a two-dimensional array that cont
 
 .. _dataartsstudio_01_0584__fig1785564894317:
 
-.. figure:: /_static/images/en-us_image_0000002270791728.png
+.. figure:: /_static/images/en-us_image_0000002269116113.png
    :alt: **Figure 1** Example job
 
    **Figure 1** Example job
@@ -97,7 +97,7 @@ The key configuration of the Kafka Client node is the **Sent Content** parameter
 #. Configuring parameters for an MRS Hive SQL node Select the **count95** script submitted in :ref:`4 <dataartsstudio_01_0584__li19298135016154>` for **SQL script** and select a Hive connection and database.
 
 
-   .. figure:: /_static/images/en-us_image_0000002270791732.png
+   .. figure:: /_static/images/en-us_image_0000002269196257.png
       :alt: **Figure 2** Configuring parameters for an MRS Hive SQL node
 
       **Figure 2** Configuring parameters for an MRS Hive SQL node
@@ -105,7 +105,7 @@ The key configuration of the Kafka Client node is the **Sent Content** parameter
 #. Configure parameters for the Kafka Client node. Set **Sent Content** to **#{StringUtil.split(StringUtil.split(StringUtil.split(Job.getNodeOutput("count95"),"]")[0],"[")[0],"\\\\"")[0]}** and select a Kafka connection and a topic name.
 
 
-   .. figure:: /_static/images/en-us_image_0000002270848606.png
+   .. figure:: /_static/images/en-us_image_0000002234077004.png
       :alt: **Figure 3** Configuring parameters for the Kafka Client node
 
       **Figure 3** Configuring parameters for the Kafka Client node
@@ -117,7 +117,7 @@ The key configuration of the Kafka Client node is the **Sent Content** parameter
       You can set **Sent Content** of the Kafka Client node to **#{Job.getNodeOutput("count95")}** and run the job. Then you can view the log of the Kafka Client node to verify that the result returned by the MRS Hive SQL node is two-dimensional array **[["2"]]**.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305408477.png
+   .. figure:: /_static/images/en-us_image_0000002269196209.png
       :alt: **Figure 4** Check the Kafka Client node logs.
 
       **Figure 4** Check the Kafka Client node logs.
@@ -144,7 +144,7 @@ Orchestrate the main job shown in :ref:`Figure 5 <dataartsstudio_01_0584__en-us_
 
 .. _dataartsstudio_01_0584__en-us_topic_0000001162343901_fig1639792911135:
 
-.. figure:: /_static/images/en-us_image_0000002270791740.png
+.. figure:: /_static/images/en-us_image_0000002269116181.png
    :alt: **Figure 5** Example main job
 
    **Figure 5** Example main job
@@ -153,7 +153,7 @@ For the subjobs selected for the For Each node, you must set their parameter nam
 
 .. _dataartsstudio_01_0584__en-us_topic_0000001162343901_fig517111111225:
 
-.. figure:: /_static/images/en-us_image_0000002305441541.png
+.. figure:: /_static/images/en-us_image_0000002234236804.png
    :alt: **Figure 6** Example subjob
 
    **Figure 6** Example subjob
@@ -179,7 +179,7 @@ Developing a Subjob
       To obtain the parameter values passed from the parent job and the global variables configured for the workspace, you are advised to use the **${job_param_name}** expression.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305441533.png
+   .. figure:: /_static/images/en-us_image_0000002234076984.png
       :alt: **Figure 7** Configuring parameters for the Kafka Client node
 
       **Figure 7** Configuring parameters for the Kafka Client node
@@ -223,7 +223,7 @@ Developing a Main Job
 #. Configure parameters for the MRS Hive SQL node. Select the **select95** script submitted in :ref:`3 <dataartsstudio_01_0584__li16477457163015>` for **SQL script** and select a Hive connection and database.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305441537.png
+   .. figure:: /_static/images/en-us_image_0000002269116161.png
       :alt: **Figure 8** Configuring parameters for an MRS Hive SQL node
 
       **Figure 8** Configuring parameters for an MRS Hive SQL node
@@ -235,7 +235,7 @@ Developing a Main Job
    -  **Subjob Parameter Name**: Enter the parameter name defined in the subjob. Transfer the parameter value defined in the main job to the subjob. Set the subjob parameter names to **name** and **score**, whose values are those in the first and second columns in the dataset, respectively. EL expressions **#{Loop.current[0]}** and **#{Loop.current[1]}** are used.
 
 
-   .. figure:: /_static/images/en-us_image_0000002270791744.png
+   .. figure:: /_static/images/en-us_image_0000002269116149.png
       :alt: **Figure 9** Configuring properties for the For Each node
 
       **Figure 9** Configuring properties for the For Each node
@@ -251,7 +251,7 @@ Testing the Main Job
 #. After the job is executed, view the cyclic execution result of the subjob **EL_test_slave** on the **Monitor Instance** page.
 
 
-   .. figure:: /_static/images/en-us_image_0000002270848590.png
+   .. figure:: /_static/images/en-us_image_0000002234076948.png
       :alt: **Figure 10** Execution result of the subjob
 
       **Figure 10** Execution result of the subjob
@@ -259,10 +259,10 @@ Testing the Main Job
 #. View the log of the cyclic execution of subjob **EL_test_slave**. The log shows that the output values of the previous node of the For Each node was obtained through the For Each node and the EL expression with a Loop embedded object.
 
 
-   .. figure:: /_static/images/en-us_image_0000002270791724.png
+   .. figure:: /_static/images/en-us_image_0000002269116221.png
       :alt: **Figure 11** Viewing the log
 
       **Figure 11** Viewing the log
 
-.. |image1| image:: /_static/images/en-us_image_0000002305408481.png
-.. |image2| image:: /_static/images/en-us_image_0000002305441529.png
+.. |image1| image:: /_static/images/en-us_image_0000002234236776.png
+.. |image2| image:: /_static/images/en-us_image_0000002234076960.png

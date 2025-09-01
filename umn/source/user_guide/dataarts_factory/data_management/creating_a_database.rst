@@ -15,7 +15,7 @@ This section describes how to create a database on the DataArts Factory console.
 Prerequisites
 -------------
 
--  You have already enabled the corresponding cloud services.
+-  You have already enabled the corresponding cloud services. for example, the MRS service.
 -  A data connection has been created. For details, see :ref:`Creating a Data Connection <dataartsstudio_01_0404>`.
 -  MRS API connections cannot be used to manage databases in a visualized mode. You are advised to create a database using SQL scripts.
 -  Before deleting a database, ensure that the database is not in use and is not associated with any data tables.
@@ -63,6 +63,6 @@ Related Operations
 
       Deleted databases cannot be recovered. Exercise caution when performing this operation.
 
-.. |image1| image:: /_static/images/en-us_image_0000002305407917.png
-.. |image2| image:: /_static/images/en-us_image_0000002305407921.png
-.. |image3| image:: /_static/images/en-us_image_0000002270791184.png
+.. |image1| image:: /_static/images/en-us_image_0000002234081428.png
+.. |image2| image:: /_static/images/en-us_image_0000002269120645.png
+.. |image3| image:: /_static/images/en-us_image_0000002234081440.png

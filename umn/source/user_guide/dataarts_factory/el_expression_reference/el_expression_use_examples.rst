@@ -26,7 +26,7 @@ Prerequisites
 
 -  A DLI data connection named **dli_demo** has been created.
 
-   If this data connection is not created, create one. For details, see :ref:`Managing Data Connections <dataartsstudio_01_0009>`.
+   If this data connection is not created, create one. For details, see :ref:`Configuring DataArts Studio Data Connection Parameters <dataartsstudio_01_0009>`.
 
 -  A database named **dli_db** has been created in DLI.
 
@@ -101,6 +101,6 @@ Procedure
 
    d. After the job test is complete, click |image3| to save the job configuration.
 
-.. |image1| image:: /_static/images/en-us_image_0000002305406585.png
-.. |image2| image:: /_static/images/en-us_image_0000002270789856.png
-.. |image3| image:: /_static/images/en-us_image_0000002305406585.png
+.. |image1| image:: /_static/images/en-us_image_0000002234085136.png
+.. |image2| image:: /_static/images/en-us_image_0000002234244964.png
+.. |image3| image:: /_static/images/en-us_image_0000002234085136.png

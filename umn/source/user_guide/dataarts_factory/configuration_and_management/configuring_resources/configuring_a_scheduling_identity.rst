@@ -35,6 +35,10 @@ Scheduling identities are classified into agencies and IAM accounts.
    -  Public IAM accounts: They apply to all jobs in the workspace. For details about how to configure a public IAM account, see :ref:`Configuring a Public IAM Account <dataartsstudio_01_0555__section11898926149>`.
    -  Execution users: They apply only to a single job. For details about how to configure an execution user, see :ref:`Configuring an Executor <dataartsstudio_01_0555__section177601853153314>`.
 
+      .. note::
+
+         You can configure execution users only after apply for the whitelist membership. To use this feature, contact customer service or technical support.
+
 Priorities of Scheduling Identities
 -----------------------------------
 
@@ -58,6 +62,8 @@ Configuring a Public Agency
 
    A public agency applies to all jobs in the workspace, especially those that contain MRS nodes. Exercise caution when performing this operation.
 
+#. Log in to the DataArts Studio console by following the instructions in :ref:`Accessing the DataArts Studio Instance Console <dataartsstudio_01_0001>`.
+
 #. On the DataArts Studio console, locate a workspace and click **DataArts Factory**.
 
 #. In the navigation pane, choose **Configuration** > **Configure**.
@@ -67,7 +73,7 @@ Configuring a Public Agency
 #. Click **+** to select an agency or create one. For how to create an agency and configure permissions, see :ref:`Reference: Creating an Agency <dataartsstudio_01_0555__section17505112912402>` and :ref:`Reference: Configuring Agency Permissions <dataartsstudio_01_0555__section1813152013116>`.
 
 
-   .. figure:: /_static/images/en-us_image_0000002270790996.png
+   .. figure:: /_static/images/en-us_image_0000002269195201.png
       :alt: **Figure 1** Configuring a workspace-level agency
 
       **Figure 1** Configuring a workspace-level agency
@@ -96,7 +102,7 @@ Configuring a Job-Level Agency
 #. Right-click the job directory and choose **Create Job** from the shortcut menu. The **Create Job** dialog box is displayed. If a workspace-level agency has been configured, it is used for the job by default. You can also select another agency from the agency list. For how to create an agency and configure permissions, see :ref:`Reference: Creating an Agency <dataartsstudio_01_0555__section17505112912402>` and :ref:`Reference: Configuring Agency Permissions <dataartsstudio_01_0555__section1813152013116>`.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305407745.png
+   .. figure:: /_static/images/en-us_image_0000002234235800.png
       :alt: **Figure 2** Configuring an agency for a job
 
       **Figure 2** Configuring an agency for a job
@@ -144,7 +150,7 @@ Reference: Creating an Agency
    -  If you want to meet the security control requirements for fewer permissions, you only need to configure the **OBS OperateAccess** permissions (During job execution, execution log information needs to be written to OBS. Therefore, you need to add the **OBS OperateAccess** permissions.) Then, configure different agency permissions based on the node type in the job. For example, if a job contains only the **Import GES** node, you can configure the **GES Administrator** and **OBS OperateAccess** permissions. For details, see :ref:`Reference: Configuring Agency Permissions <dataartsstudio_01_0555__section1813152013116>`.
 
 
-      .. figure:: /_static/images/en-us_image_0000002270847866.png
+      .. figure:: /_static/images/en-us_image_0000002269195241.png
          :alt: **Figure 3** Assigning permissions
 
          **Figure 3** Assigning permissions
@@ -194,17 +200,17 @@ The **Admin** permissions can also be configured based on the operations, resour
    |                                                                                                     |                             |                                                                                                                                                                                           |
    |                                                                                                     | KMS Administrator           | Users assigned the **KMS Administrator** role have the administrator permissions for encryption keys in DEW.                                                                              |
    +-----------------------------------------------------------------------------------------------------+-----------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | MRS Spark SQL, MRS Hive SQL, MRS Kafka, and Kafka Client (connecting to the clusters in proxy mode) | DARTS Administrator         | **DARTS Administrator** has all permissions required for DataArts Studio.                                                                                                                 |
+   | MRS Spark SQL, MRS Hive SQL, MRS Kafka, and Kafka Client (connecting to the clusters in proxy mode) | DARTS Administrator         | DARTS Administrator has all permissions required for DataArts Studio.                                                                                                                     |
    |                                                                                                     |                             |                                                                                                                                                                                           |
    |                                                                                                     | KMS Administrator           | Users assigned the **KMS Administrator** policy have the administrator permissions for encryption keys in DEW.                                                                            |
    +-----------------------------------------------------------------------------------------------------+-----------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
    | DLI Flink Job, DLI SQL, and DLI Spark                                                               | DLI Service Admin           | All operation permissions for DLI.                                                                                                                                                        |
    +-----------------------------------------------------------------------------------------------------+-----------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | DWS SQL, RDS SQL (connecting to data sources in proxy mode), and Shell                              | DARTS Administrator         | **DARTS Administrator** has all permissions required for DataArts Studio.                                                                                                                 |
+   | DWS SQL, RDS SQL (connecting to data sources in proxy mode), and Shell                              | DARTS Administrator         | DARTS Administrator has all permissions required for DataArts Studio.                                                                                                                     |
    |                                                                                                     |                             |                                                                                                                                                                                           |
    |                                                                                                     | KMS Administrator           | Users assigned the **KMS Administrator** policy have the administrator permissions for encryption keys in DEW.                                                                            |
    +-----------------------------------------------------------------------------------------------------+-----------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-   | CSS                                                                                                 | DARTS Administrator         | **DARTS Administrator** has all permissions required for DataArts Studio.                                                                                                                 |
+   | CSS                                                                                                 | DARTS Administrator         | DARTS Administrator has all permissions required for DataArts Studio.                                                                                                                     |
    |                                                                                                     |                             |                                                                                                                                                                                           |
    |                                                                                                     | Elasticsearch Administrator | Users assigned the **Elasticsearch Administrator** policy have all permissions for CSS. This role depends on the **Tenant Guest** and **Server Administrator** roles in the same project. |
    +-----------------------------------------------------------------------------------------------------+-----------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -279,5 +285,5 @@ The **Admin** permissions can also be configured based on the operations, resour
    |                                                                                                     | -  obs:bucket:ListBucket                |
    +-----------------------------------------------------------------------------------------------------+-----------------------------------------+
 
-.. |image1| image:: /_static/images/en-us_image_0000002270791012.png
-.. |image2| image:: /_static/images/en-us_image_0000002270847842.png
+.. |image1| image:: /_static/images/en-us_image_0000002269115113.png
+.. |image2| image:: /_static/images/en-us_image_0000002234075964.png

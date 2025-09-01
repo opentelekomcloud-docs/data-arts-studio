@@ -13,7 +13,7 @@ DataArts Migration can help you seamlessly migrate batch data between 30+ homoge
 DataArts Migration uses a distributed compute framework and concurrent processing techniques to help you migrate enterprise data in batches without any downtime and rapidly build desired data structures.
 
 
-.. figure:: /_static/images/en-us_image_0000002270788044.png
+.. figure:: /_static/images/en-us_image_0000002234068868.png
    :alt: **Figure 1** DataArts Migration
 
    **Figure 1** DataArts Migration
@@ -54,7 +54,7 @@ DataArts Factory: One-stop Collaborative Development
 DataArts Factory provides an intuitive UI and built-in development methods for script and job development. DataArts Factory also supports fully hosted job scheduling, O&M, and monitoring, and incorporates industry data processing pipelines. You can create data development jobs in a few steps, and the entire process is visual. Online jobs can be jointly developed by multiple users. You can use DataArts Factory to manage big data cloud services and quickly build a big data processing center.
 
 
-.. figure:: /_static/images/en-us_image_0000002270844914.png
+.. figure:: /_static/images/en-us_image_0000002269188109.png
    :alt: **Figure 2** DataArts Factory architecture
 
    **Figure 2** DataArts Factory architecture

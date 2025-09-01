@@ -24,7 +24,7 @@ Download Center
 On the **Download Center** page, you can centrally manage the execution results of SQL scripts. You can view and delete the download results, and view, download, and delete the dump results.
 
 
-.. figure:: /_static/images/en-us_image_0000002270847358.png
+.. figure:: /_static/images/en-us_image_0000002269117185.png
    :alt: **Figure 1** Download Center
 
    **Figure 1** Download Center
@@ -63,5 +63,5 @@ On the **Download Center** page, you can centrally manage the execution results 
 
    You can filter records by operation time, job name, OBS path, operator, operation type, and task status. You can enter a keyword for fuzzy search.
 
-.. |image1| image:: /_static/images/en-us_image_0000002270847362.png
-.. |image2| image:: /_static/images/en-us_image_0000002305407245.png
+.. |image1| image:: /_static/images/en-us_image_0000002269117181.png
+.. |image2| image:: /_static/images/en-us_image_0000002269197257.png

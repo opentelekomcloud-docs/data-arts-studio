@@ -26,7 +26,7 @@ Generally, you can determine the IF statement branch to be executed based on whe
 
 .. _dataartsstudio_01_0583__en-us_topic_0000001162343901_en-us_topic_0000001073100734_fig1727424664320:
 
-.. figure:: /_static/images/en-us_image_0000002305441389.png
+.. figure:: /_static/images/en-us_image_0000002269116645.png
    :alt: **Figure 1** Example job
 
    **Figure 1** Example job
@@ -42,7 +42,7 @@ Generally, you can determine the IF statement branch to be executed based on whe
    Set the **Failure Policy** for the CDM node to **Go to the next node**.
 
 
-   .. figure:: /_static/images/en-us_image_0000002270791576.png
+   .. figure:: /_static/images/en-us_image_0000002269196749.png
       :alt: **Figure 2** Configuring the failure policy for the CDM node
 
       **Figure 2** Configuring the failure policy for the CDM node
@@ -59,7 +59,7 @@ Generally, you can determine the IF statement branch to be executed based on whe
    After entering the IF statement expression, you can select either **Skip all subsequent nodes** or **Skip the next node** for **Failure Policy**. After the configuration is complete, click **OK** to save the job.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305441385.png
+   .. figure:: /_static/images/en-us_image_0000002234077448.png
       :alt: **Figure 3** Configuring a failure policy
 
       **Figure 3** Configuring a failure policy
@@ -69,7 +69,7 @@ Generally, you can determine the IF statement branch to be executed based on whe
 #. After the job is executed, view the job instance running result on the **Monitor Instance** page. The execution result meets the expectation. If the execution result is **fail**, branch A is skipped and branch B is executed.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305408333.png
+   .. figure:: /_static/images/en-us_image_0000002269196757.png
       :alt: **Figure 4** Job execution result
 
       **Figure 4** Job execution result
@@ -93,7 +93,7 @@ Analysis: The execution result of the select statement on the Hive SQL node is a
 
 .. _dataartsstudio_01_0583__en-us_topic_0000001162343901_fig1639792911135:
 
-.. figure:: /_static/images/en-us_image_0000002270791584.png
+.. figure:: /_static/images/en-us_image_0000002234237324.png
    :alt: **Figure 5** Example job
 
    **Figure 5** Example job
@@ -107,7 +107,7 @@ The sub-job selected on the For Each node determines the IF statement branch to 
 
 .. _dataartsstudio_01_0583__en-us_topic_0000001162343901_fig517111111225:
 
-.. figure:: /_static/images/en-us_image_0000002305441397.png
+.. figure:: /_static/images/en-us_image_0000002234077436.png
    :alt: **Figure 6** Example sub-job
 
    **Figure 6** Example sub-job
@@ -149,7 +149,7 @@ Developing a Subjob
 #. Configure job parameters. Set the parameter name to **result**. This parameter is only used by the For Each node in the main job **testif** to identify subjob parameters. You do not need to set the parameter value.
 
 
-   .. figure:: /_static/images/en-us_image_0000002270791588.png
+   .. figure:: /_static/images/en-us_image_0000002269196765.png
       :alt: **Figure 7** Configuring job parameters
 
       **Figure 7** Configuring job parameters
@@ -168,7 +168,7 @@ Developing a Job
       SELECT count(*) FROM student_score WHERE score> "85" ;
 
 
-   .. figure:: /_static/images/en-us_image_0000002305441373.png
+   .. figure:: /_static/images/en-us_image_0000002234077496.png
       :alt: **Figure 8** HIVE SQL script execution result
 
       **Figure 8** HIVE SQL script execution result
@@ -180,7 +180,7 @@ Developing a Job
    -  **Subjob Parameter Name**: Enter the parameter defined in the subjob. Transfer the output of the previous node of the main job to the sub-job for use. The variable name is **result** (parameter name of the subjob), and its value is a column in the dataset. The EL expression **#{Loop.dataArray[0][0]}** is used.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305441393.png
+   .. figure:: /_static/images/en-us_image_0000002269196781.png
       :alt: **Figure 9** Properties of the For Each node
 
       **Figure 9** Properties of the For Each node
@@ -196,7 +196,7 @@ Testing the Main Job
 #. After the job is executed, view the execution result of the subjob **foreach** on the **Monitor Instance** page. The execution result meets the expectation. Currently, the execution result of the Hive SQL statement is **4**. Therefore, the **>5** and **=5** branches are skipped, and the **<5** branch is successfully executed.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305408325.png
+   .. figure:: /_static/images/en-us_image_0000002269196741.png
       :alt: **Figure 10** Execution result of the subjob
 
       **Figure 10** Execution result of the subjob
@@ -216,7 +216,7 @@ If you choose neither, the **OR** policy will be used.
 
 .. _dataartsstudio_01_0583__fig1727474115310:
 
-.. figure:: /_static/images/en-us_image_0000002270791580.png
+.. figure:: /_static/images/en-us_image_0000002234237348.png
    :alt: **Figure 11** A job with multiple IF statements
 
    **Figure 11** A job with multiple IF statements
@@ -270,7 +270,7 @@ Test the job.
    If :ref:`Multi-IF Policy <dataartsstudio_01_0583__li1065634413613>` is set to **OR**, the **showtables** node is executed and the job execution is complete.
 
 
-   .. figure:: /_static/images/en-us_image_0000002270791596.png
+   .. figure:: /_static/images/en-us_image_0000002234237268.png
       :alt: **Figure 12** How the job runs if Multi-IF Policy is OR
 
       **Figure 12** How the job runs if Multi-IF Policy is OR
@@ -278,12 +278,12 @@ Test the job.
    If :ref:`Multi-IF Policy <dataartsstudio_01_0583__li1065634413613>` is set to **AND**, the **showtables** node is skipped and the job execution is complete.
 
 
-   .. figure:: /_static/images/en-us_image_0000002270848454.png
+   .. figure:: /_static/images/en-us_image_0000002234077444.png
       :alt: **Figure 13** How the job runs if Multi-IF Policy is AND
 
       **Figure 13** How the job runs if Multi-IF Policy is AND
 
-.. |image1| image:: /_static/images/en-us_image_0000002270848462.png
-.. |image2| image:: /_static/images/en-us_image_0000002305441401.png
-.. |image3| image:: /_static/images/en-us_image_0000002270848466.png
-.. |image4| image:: /_static/images/en-us_image_0000002305441381.png
+.. |image1| image:: /_static/images/en-us_image_0000002269116637.png
+.. |image2| image:: /_static/images/en-us_image_0000002234237300.png
+.. |image3| image:: /_static/images/en-us_image_0000002269196709.png
+.. |image4| image:: /_static/images/en-us_image_0000002234237340.png

@@ -15,6 +15,7 @@
 -  :ref:`Changing the Job Owner <dataartsstudio_01_1101>`
 -  :ref:`Unlocking Jobs <dataartsstudio_01_1108>`
 -  :ref:`Going to Monitor Job page <dataartsstudio_01_1209>`
+-  :ref:`Configuring Notifications <dataartsstudio_01_1210>`
 
 .. toctree::
    :maxdepth: 1
@@ -30,3 +31,4 @@
    changing_the_job_owner
    unlocking_jobs
    going_to_monitor_job_page
+   configuring_notifications

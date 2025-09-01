@@ -22,7 +22,7 @@ Copying the Job Name
 4. Locate the target job in the job directory, right-click the job name, and select **Copy Name** to copy the job name to the clipboard.
 
 
-   .. figure:: /_static/images/en-us_image_0000002270789476.png
+   .. figure:: /_static/images/en-us_image_0000002269116973.png
       :alt: **Figure 1** Copying the job name
 
       **Figure 1** Copying the job name
@@ -39,7 +39,7 @@ Renaming a job
 #. In the job directory, select the job to be renamed. Right-click the job name and choose **Rename** from the shortcut menu.
 
 
-   .. figure:: /_static/images/en-us_image_0000002270846334.png
+   .. figure:: /_static/images/en-us_image_0000002234237616.png
       :alt: **Figure 2** Renaming a job
 
       **Figure 2** Renaming a job
@@ -47,7 +47,7 @@ Renaming a job
 #. In the displayed **Modify Job Name** dialog box, change the job name.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305439269.png
+   .. figure:: /_static/images/en-us_image_0000002234077768.png
       :alt: **Figure 3** Renaming a job
 
       **Figure 3** Renaming a job

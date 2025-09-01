@@ -10,12 +10,14 @@ By configuring a task group, you can control the maximum number of concurrent no
 Constraints
 -----------
 
-This function is available only for batch processing jobs.
-
-Task groups cannot be used across workspaces.
+-  This function is available only for batch processing jobs.
+-  Task groups cannot be used across workspaces.
+-  For a pipeline job, you can configure a task group for each node or for the job. A task group configured for a node is prior to one configured for the job.
 
 Procedure
 ---------
+
+#. Log in to the DataArts Studio console by following the instructions in :ref:`Accessing the DataArts Studio Instance Console <dataartsstudio_01_0001>`.
 
 #. On the DataArts Studio console, locate a workspace and click **DataArts Factory**.
 
@@ -29,19 +31,21 @@ Procedure
 
    .. table:: **Table 1** Parameters for creating a task group
 
-      +-----------------------------------+-------------------------------------------------------------------------------------------------------+
-      | Parameter                         | Description                                                                                           |
-      +===================================+=======================================================================================================+
-      | Task Group Name                   | Name of the task group                                                                                |
-      +-----------------------------------+-------------------------------------------------------------------------------------------------------+
-      | Owner                             | Owner of the task group                                                                               |
-      +-----------------------------------+-------------------------------------------------------------------------------------------------------+
-      | Maximum number of concurrency     | Maximum number of concurrent job nodes in the current task group                                      |
-      |                                   |                                                                                                       |
-      |                                   | The maximum number of concurrent nodes is the current number of concurrent DataArts Studio instances. |
-      +-----------------------------------+-------------------------------------------------------------------------------------------------------+
-      | Description                       | Description of the task group                                                                         |
-      +-----------------------------------+-------------------------------------------------------------------------------------------------------+
+      +-----------------------------------+-----------------------------------------------------------------------------------------------------------------+
+      | Parameter                         | Description                                                                                                     |
+      +===================================+=================================================================================================================+
+      | Task Group Name                   | Name of the task group. It must be unique.                                                                      |
+      +-----------------------------------+-----------------------------------------------------------------------------------------------------------------+
+      | Maximum number of concurrency     | Maximum number of concurrent job nodes in the current task group                                                |
+      |                                   |                                                                                                                 |
+      |                                   | The maximum number of concurrent nodes is the current number of concurrent DataArts Studio instances.           |
+      |                                   |                                                                                                                 |
+      |                                   | The value cannot exceed the maximum number of concurrent nodes of the DataArts Studio instance, which is 1,000. |
+      |                                   |                                                                                                                 |
+      |                                   | The maximum number of concurrent nodes varies depending on the DataArts Studio instance specifications.         |
+      +-----------------------------------+-----------------------------------------------------------------------------------------------------------------+
+      | Description                       | Description of the task group                                                                                   |
+      +-----------------------------------+-----------------------------------------------------------------------------------------------------------------+
 
 #. Click **OK**.
 
@@ -50,7 +54,7 @@ Procedure
 Follow-up Operations
 --------------------
 
-Modifying a task group: Locate a task group and click **Modify** in the **Operation** column.
+Modifying a task group: Locate a task group and click **Modify** in the **Operation** column. The modification takes effect immediately.
 
 Deleting a task group: Locate a task group and click **Delete** in the **Operation** column. A task group used by a job cannot be deleted.
 

@@ -60,7 +60,7 @@ To perform these operations, you must have the **DARTS** **Administrator**, **Te
 Importing Job Tags
 ------------------
 
-To perform this operation, you must have the **DARTS** **Administrator**, **Tenant Administrator**, or workspace administrator permission.
+To perform these operations, you must have the **Administrator**, **Tenant Administrator**, or workspace administrator permission.
 
 #. In the navigation pane, choose **Configuration** > **Configure**.
 #. Choose **Job Tag**.
@@ -99,7 +99,7 @@ Exporting Job Tags
    The following figure shows the exported job tags.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305407285.png
+   .. figure:: /_static/images/en-us_image_0000002269118469.png
       :alt: **Figure 1** Exporting job tags
 
       **Figure 1** Exporting job tags

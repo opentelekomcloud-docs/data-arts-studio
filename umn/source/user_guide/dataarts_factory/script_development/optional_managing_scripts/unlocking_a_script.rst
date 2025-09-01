@@ -17,12 +17,12 @@ The lock function prevents conflict caused by collaborative script or job develo
    -  The locking operation depends on the soft and hard lock policies. For details about how to configure soft and hard lock policies, see :ref:`Configuring a Default Item <dataartsstudio_01_04501>`.
 
       -  **Soft lock**: You can lock or unlock jobs or scripts, regardless of whether they are locked by others.
-      -  **Hard Lock**: You can lock jobs or scripts only after they have been unlocked by other users. The space administrator and the DARTS Administrator can lock and unlock jobs or scripts without any limitations.
+      -  **Hard Lock**: You can lock jobs or scripts only after they have been unlocked by other users. The space administrator and the DARTS Administrator user can lock and unlock jobs or scripts without any limitations.
 
    -  Do not lock a script or job that is locked by another user because if you do so, changes to the script or job made by the user will be lost. If you want to modify the script or job, contact the user to unlock the script or job, and lock it by yourself.
 
 
-.. figure:: /_static/images/en-us_image_0000002270847370.png
+.. figure:: /_static/images/en-us_image_0000002234236424.png
    :alt: **Figure 1** Lock statuses
 
    **Figure 1** Lock statuses
@@ -49,7 +49,7 @@ If you submit a version, the latest script in the development state will be save
 #. In the upper part of the script editor, click **Unlock** to unlock the script.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305407377.png
+   .. figure:: /_static/images/en-us_image_0000002269117313.png
       :alt: **Figure 2** Unlocking a script
 
       **Figure 2** Unlocking a script

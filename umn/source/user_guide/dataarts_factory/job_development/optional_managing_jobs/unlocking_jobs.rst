@@ -21,10 +21,10 @@ Procedure
 #. Select the jobs to unlock, click |image2|, and select **Batch Unlock**. The message "Unlocked." is displayed.
 
 
-   .. figure:: /_static/images/en-us_image_0000002270790928.png
+   .. figure:: /_static/images/en-us_image_0000002269116789.png
       :alt: **Figure 1** Batch Unlock
 
       **Figure 1** Batch Unlock
 
-.. |image1| image:: /_static/images/en-us_image_0000002270790924.png
-.. |image2| image:: /_static/images/en-us_image_0000002305440725.png
+.. |image1| image:: /_static/images/en-us_image_0000002234077572.png
+.. |image2| image:: /_static/images/en-us_image_0000002234077580.png

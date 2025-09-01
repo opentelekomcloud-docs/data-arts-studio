@@ -19,7 +19,7 @@ Procedure
 #. At the top of the job directory, click |image1| and select **Configure Owner**.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305439949.png
+   .. figure:: /_static/images/en-us_image_0000002269199053.png
       :alt: **Figure 1** Changing the owner
 
       **Figure 1** Changing the owner
@@ -28,15 +28,4 @@ Procedure
 
 #. When the owner is changed, click **Close**.
 
-Related Operations
-------------------
-
-You can use an owner to filter jobs by entering the owner in the search box above the job directory.
-
-
-.. figure:: /_static/images/en-us_image_0000002270790152.png
-   :alt: **Figure 2** Filtering jobs by owner
-
-   **Figure 2** Filtering jobs by owner
-
-.. |image1| image:: /_static/images/en-us_image_0000002305439953.png
+.. |image1| image:: /_static/images/en-us_image_0000002234239624.png

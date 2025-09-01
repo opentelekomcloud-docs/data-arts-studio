@@ -10,7 +10,7 @@ In the real-time processing mode, data is processed in real time, which is used 
 You can choose **Monitor Job** and click the **Real-Time Job Monitoring** tab to view the job status, start time, and end time, and perform the operations listed in :ref:`Table 1 <dataartsstudio_01_0509__en-us_topic_0159098544_table958254318576>`.
 
 
-.. figure:: /_static/images/en-us_image_0000002305406909.png
+.. figure:: /_static/images/en-us_image_0000002269119761.png
    :alt: **Figure 1** Real-time job monitoring page
 
    **Figure 1** Real-time job monitoring page
@@ -57,7 +57,7 @@ You can choose **Monitor Job** and click the **Real-Time Job Monitoring** tab to
 
 Click a job name. On the displayed page, view the job parameters, properties, and instances.
 
-Click a node of a job to view the node properties, script content, and node monitoring information.
+Click a node of a job to view the node properties, script content, and node monitoring information. On the **Nodes** tab page, you can view the run logs of the real-time job.
 
 In addition, you can view the current job version and status, start, rerun, and develop jobs, determine whether to display metric monitoring, and set the job refresh frequency.
 
@@ -72,7 +72,7 @@ You can disable a node in a real-time job and restore it in another location.
 
 #. On the DataArts Studio console, locate a workspace and click **DataArts Factory**.
 
-#. In the left navigation pane of DataArts Factory, choose **Monitoring** > **Monitor Job**.
+#. In the left navigation pane of DataArts Factory, choose **Monitoring** > **Job Monitoring**.
 
 #. On the **Real-Time Job Monitoring** tab page, click a job name.
 
@@ -118,14 +118,14 @@ If event-driven scheduling is configured for a node in a real-time job, right-cl
 
 #. On the DataArts Studio console, locate a workspace and click **DataArts Factory**.
 
-#. In the left navigation pane of DataArts Factory, choose **Monitoring** > **Monitor Job**.
+#. In the left navigation pane of DataArts Factory, choose **Monitoring** > **Job Monitoring**.
 
 #. On the **Real-Time Job Monitoring** tab page, click a job name.
 
 #. On the displayed page, right-click the node where event-driven scheduling is configured, select **Configure Scheduling**, and configure the parameters shown in :ref:`Table 3 <dataartsstudio_01_0509__table9417351471>`.
 
 
-   .. figure:: /_static/images/en-us_image_0000002270847046.png
+   .. figure:: /_static/images/en-us_image_0000002234080564.png
       :alt: **Figure 2** Configuring scheduling
 
       **Figure 2** Configuring scheduling
@@ -147,4 +147,4 @@ If event-driven scheduling is configured for a node in a real-time job, right-cl
       |                                   | -  Ignore failure and proceed                                                                     |
       +-----------------------------------+---------------------------------------------------------------------------------------------------+
 
-.. |image1| image:: /_static/images/en-us_image_0000002270847038.png
+.. |image1| image:: /_static/images/en-us_image_0000002234080568.png

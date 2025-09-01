@@ -15,7 +15,7 @@ Introduction to DataArts Factory
 DataArts Factory enables a variety of operations such as data management, script development, job development, job scheduling, and monitoring, facilitating data analysis and processing.
 
 
-.. figure:: /_static/images/en-us_image_0000002305407373.png
+.. figure:: /_static/images/en-us_image_0000002234083444.png
    :alt: **Figure 1** DataArts Factory architecture
 
    **Figure 1** DataArts Factory architecture

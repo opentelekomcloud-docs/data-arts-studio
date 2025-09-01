@@ -5,4 +5,12 @@
 Why Does the Execution of an RDS SQL Statement Fail and an Error Is Reported Indicating That hll Does Not Exist?
 ================================================================================================================
 
+Symptom
+-------
+
+An RDS SQL statement fails to be executed and an error is reported indicating that hll does not exist.
+
+Solution
+--------
+
 By default, the hll plug-in is created in the public schema. The SQL statement must contain the schema to which the hll belongs.

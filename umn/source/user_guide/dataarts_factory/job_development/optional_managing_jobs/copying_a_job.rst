@@ -24,7 +24,7 @@ Procedure
 #. In the job directory, select the job to be copied, right-click the job name, and choose **Copy Save As**.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305439401.png
+   .. figure:: /_static/images/en-us_image_0000002234077808.png
       :alt: **Figure 1** Copying a job
 
       **Figure 1** Copying a job

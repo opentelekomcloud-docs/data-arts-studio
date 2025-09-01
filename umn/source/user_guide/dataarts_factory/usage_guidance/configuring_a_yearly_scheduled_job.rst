@@ -20,7 +20,7 @@ In DataArts Studio, create a job that is scheduled every month and add an empty 
 #. Set **Scheduling Frequency** to **Every month**.
 
 
-   .. figure:: /_static/images/en-us_image_0000002270848246.png
+   .. figure:: /_static/images/en-us_image_0000002269120033.png
       :alt: **Figure 1** Setting Scheduling Frequency to Every month
 
       **Figure 1** Setting Scheduling Frequency to Every month
@@ -28,7 +28,7 @@ In DataArts Studio, create a job that is scheduled every month and add an empty 
 #. Right-click the connection line between the Dummy node and its subsequent node and select **Set Condition** to configure a condition expression that is used to determine whether to execute the subsequent node.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305441189.png
+   .. figure:: /_static/images/en-us_image_0000002269120029.png
       :alt: **Figure 2** Configuring a condition expression
 
       **Figure 2** Configuring a condition expression
@@ -42,7 +42,7 @@ In DataArts Studio, create a job that is scheduled every month and add an empty 
    The expression is used to obtain the current time and check whether it falls in June. If yes, the subsequent node will be executed; if no, the subsequent node will be skipped.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305408129.png
+   .. figure:: /_static/images/en-us_image_0000002234080828.png
       :alt: **Figure 3** Condition expression
 
       **Figure 3** Condition expression

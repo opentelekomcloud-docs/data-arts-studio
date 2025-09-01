@@ -8,7 +8,7 @@ What Should I Do If Error Message "UnicodeEncodeError: 'ascii' codec can't encod
 This error occurs when **json.dumps(json_data, ensure_ascii=False)** is configured in the Python script. The following figure shows the error.
 
 
-.. figure:: /_static/images/en-us_image_0000002270788876.png
+.. figure:: /_static/images/en-us_image_0000002234076304.png
    :alt: **Figure 1** Error message
 
    **Figure 1** Error message
@@ -24,21 +24,20 @@ Solution
 #. Use the Python3 interpreter to create a soft connection on the host.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305438677.png
+   .. figure:: /_static/images/en-us_image_0000002234236144.png
       :alt: **Figure 2** Creating a soft connection on the host
 
       **Figure 2** Creating a soft connection on the host
 
-#. Enable the standard encoding mode in the file.
+#. Set the standard encoding mode in the file.
 
    # -``*``- coding: utf-8 -``*``-; Alternatively, set the encoding format for the host, that is, create a **sitecustomize.py** file in the **Lib\\site-packages** folder in the Python installation directory and write the following information in the file:
 
-   *# encoding=utf8*
+   .. code-block::
 
-   #import sys
-
-   #reload(sys)
-
-   #sys.setdefaultencoding('utf8')
+      # encoding=utf8
+      #import sys
+      #reload(sys)
+      #sys.setdefaultencoding('utf8')
 
 #. Restart Python and run **sys.getdefaultencoding()** to view the default encoding format, which is **utf8**.

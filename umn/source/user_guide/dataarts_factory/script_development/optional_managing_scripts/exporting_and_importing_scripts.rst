@@ -21,7 +21,7 @@ You can export one or more script files from the script directory. The exported 
 #. Select scripts, click |image2|, and select **Export Script**. After the export is successful, you can obtain the exported .zip file.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305441245.png
+   .. figure:: /_static/images/en-us_image_0000002269117649.png
       :alt: **Figure 1** Selecting and exporting scripts
 
       **Figure 1** Selecting and exporting scripts
@@ -29,7 +29,7 @@ You can export one or more script files from the script directory. The exported 
 #. In the displayed **Export Script** dialog box, set **Export Status** and click **OK**.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305408213.png
+   .. figure:: /_static/images/en-us_image_0000002269117665.png
       :alt: **Figure 2** Exporting scripts
 
       **Figure 2** Exporting scripts
@@ -54,13 +54,13 @@ You can import one or more script files in the script directory. After a job is 
       If you select **Overwrite** for **Duplicate Name Policy** but the hard lock policy is used and the script is locked by another user, the overwriting will fail. For details about soft and hard lock policies, see :ref:`Configuring the Hard and Soft Lock Policy <dataartsstudio_01_04501__section140018355442>`.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305408217.png
+   .. figure:: /_static/images/en-us_image_0000002234238280.png
       :alt: **Figure 3** Importing scripts
 
       **Figure 3** Importing scripts
 
 #. Click **Next**.
 
-.. |image1| image:: /_static/images/en-us_image_0000002305406205.png
-.. |image2| image:: /_static/images/en-us_image_0000002305406205.png
-.. |image3| image:: /_static/images/en-us_image_0000002305406205.png
+.. |image1| image:: /_static/images/en-us_image_0000002234235716.png
+.. |image2| image:: /_static/images/en-us_image_0000002234235716.png
+.. |image3| image:: /_static/images/en-us_image_0000002234235716.png

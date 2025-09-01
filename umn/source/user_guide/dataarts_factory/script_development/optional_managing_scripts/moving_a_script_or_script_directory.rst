@@ -32,13 +32,13 @@ Procedure
    b. In the displayed dialog box, configure related parameters. :ref:`Table 1 <dataartsstudio_01_0427__en-us_topic_0171677202_table133101211151017>` describes the parameters.
 
 
-      .. figure:: /_static/images/en-us_image_0000002305406657.png
+      .. figure:: /_static/images/en-us_image_0000002269118053.png
          :alt: **Figure 1** Moving a script
 
          **Figure 1** Moving a script
 
 
-      .. figure:: /_static/images/en-us_image_0000002270846782.png
+      .. figure:: /_static/images/en-us_image_0000002269118061.png
          :alt: **Figure 2** Move a directory
 
          **Figure 2** Move a directory
@@ -59,4 +59,4 @@ Procedure
 
    Select a script or script folder and drag and drop it to the target folder.
 
-.. |image1| image:: /_static/images/en-us_image_0000002305439725.png
+.. |image1| image:: /_static/images/en-us_image_0000002234078864.png

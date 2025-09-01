@@ -48,7 +48,7 @@ Procedure
       +-------------------------------------------------------------+---------------------------------------------------------------------------------+
 
 
-   .. figure:: /_static/images/en-us_image_0000002270846318.png
+   .. figure:: /_static/images/en-us_image_0000002234076372.png
       :alt: **Figure 1** Configuring the number of concurrently running nodes
 
       **Figure 1** Configuring the number of concurrently running nodes

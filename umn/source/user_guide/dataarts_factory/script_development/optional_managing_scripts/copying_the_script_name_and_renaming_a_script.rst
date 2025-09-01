@@ -24,7 +24,7 @@ Copying the Script Name
 #. Locate the target script in the script directory, right-click the script name, and select **Copy Name** to copy the script name to the clipboard.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305407281.png
+   .. figure:: /_static/images/en-us_image_0000002234078220.png
       :alt: **Figure 1** Copying the script name
 
       **Figure 1** Copying the script name
@@ -41,7 +41,7 @@ Renaming a Script
 #. Locate the target script In the script directory, right-click the script name, and select **Rename**.
 
 
-   .. figure:: /_static/images/en-us_image_0000002270847398.png
+   .. figure:: /_static/images/en-us_image_0000002269197485.png
       :alt: **Figure 2** Renaming a script
 
       **Figure 2** Renaming a script
@@ -53,7 +53,7 @@ Renaming a Script
 #. In the displayed **Modify Script Name** dialog box, change the script name.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305407277.png
+   .. figure:: /_static/images/en-us_image_0000002234078204.png
       :alt: **Figure 3** Renaming a script
 
       **Figure 3** Renaming a script

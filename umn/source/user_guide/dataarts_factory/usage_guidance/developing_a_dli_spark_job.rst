@@ -40,7 +40,7 @@ The Spark job code used in this example comes from the maven repository that can
    In the navigation tree on the left, choose **Configuration** > **Manage Resource**. Click **Create Resource** and create resource **spark-example** on DataArts Factory and associate it with the JAR package obtained in :ref:`1 <dataartsstudio_01_0521__en-us_topic_0127305014_li202617185718>`.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305440285.png
+   .. figure:: /_static/images/en-us_image_0000002234235780.png
       :alt: **Figure 1** Creating a resource
 
       **Figure 1** Creating a resource
@@ -53,7 +53,7 @@ You need to create a job on DataArts Factory and submit the Spark job using the 
 #. Create a job named **job_DLI_Spark** for the DataArts Factory module.
 
 
-   .. figure:: /_static/images/en-us_image_0000002270790480.png
+   .. figure:: /_static/images/en-us_image_0000002234235784.png
       :alt: **Figure 2** Creating a job
 
       **Figure 2** Creating a job
@@ -61,7 +61,7 @@ You need to create a job on DataArts Factory and submit the Spark job using the 
 #. Go to the job development page, drag the DLI Spark node to the canvas, and click the node to configure node properties.
 
 
-   .. figure:: /_static/images/en-us_image_0000002270847350.png
+   .. figure:: /_static/images/en-us_image_0000002269115141.png
       :alt: **Figure 3** Configuring node properties
 
       **Figure 3** Configuring node properties
@@ -76,11 +76,11 @@ You need to create a job on DataArts Factory and submit the Spark job using the 
 #. After the job orchestration is complete, click |image1| to test the job.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305407225.png
+   .. figure:: /_static/images/en-us_image_0000002269115137.png
       :alt: **Figure 4** Job logs (for reference only)
 
       **Figure 4** Job logs (for reference only)
 
 #. If no error is recorded in logs, save and submit the job.
 
-.. |image1| image:: /_static/images/en-us_image_0000002270790476.png
+.. |image1| image:: /_static/images/en-us_image_0000002269195221.png

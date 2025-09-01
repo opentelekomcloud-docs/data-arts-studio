@@ -24,7 +24,7 @@ Procedure
 #. In the job directory, right-click the job you want to view and choose **View Job Dependency Graph** from the shortcut menu.
 
 
-   .. figure:: /_static/images/en-us_image_0000002270846362.png
+   .. figure:: /_static/images/en-us_image_0000002269204853.png
       :alt: **Figure 1** Job Dependency page
 
       **Figure 1** Job Dependency page
@@ -44,7 +44,7 @@ Procedure
    -  When the cursor is hovered on a job node, the node is marked green, its upstream job is marked blue, and its downstream job is marked yellow.
 
 
-      .. figure:: /_static/images/en-us_image_0000002270789500.png
+      .. figure:: /_static/images/en-us_image_0000002269124773.png
          :alt: **Figure 2** Marking upstream and downstream job nodes of a node
 
          **Figure 2** Marking upstream and downstream job nodes of a node
@@ -52,7 +52,7 @@ Procedure
    -  Right-click a job node to view the job, copy the job name, and collapse upstream or downstream jobs.
 
 
-      .. figure:: /_static/images/en-us_image_0000002305406229.png
+      .. figure:: /_static/images/en-us_image_0000002234085576.png
          :alt: **Figure 3** Job node operations
 
          **Figure 3** Job node operations
@@ -66,7 +66,7 @@ Viewing a Job Dependency Graph
 #. Right-click the job directory and select **View Job Dependency Graph**.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305406225.png
+   .. figure:: /_static/images/en-us_image_0000002234085584.png
       :alt: **Figure 4** Viewing the job dependency graph
 
       **Figure 4** Viewing the job dependency graph

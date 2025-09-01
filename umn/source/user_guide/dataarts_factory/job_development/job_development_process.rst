@@ -19,18 +19,20 @@ The job development function provides the following capabilities:
 
       If you save a script multiple times within a minute, only one version is recorded. If the intermediate data is important, you can click **Save new version** to save and add a version.
 
--  Allows you to copy long job names. Click |image1|, perform fuzzy search to query matched scripts, and click the copy button next to a long job name to copy it.
 -  Allows you to right-click a job to quickly copy the job name and to quickly close an opened job tab page.
 -  Provides a link in the execution results of single-task MRS Spark SQL and MRS Hive SQL jobs that use a connection of the MRS API type. Through this link, you can switch to MRS Yarn to view execution logs.
 -  Allows you to switch to the task release page by clicking **Release** when developing a job in enterprise mode.
 -  Allows you to filter submitted, unsubmitted, scheduled, and unscheduled jobs. Unsubmitted jobs are marked in red, and unscheduled jobs are marked in yellow.
 -  Allows you to configure the SQL editor style for single-task jobs. Click **Style Configuration** to configure the editor, icon display, annotation templates, and shortcut keys that can be used in the SQL script editor.
 -  Allows you to view single-task SQL query results in a table or list. You can click **Style Configuration** and set **SQL Query Result Display Mode** on the **Configure Editor** tab page.
+-  You can filter out the latest jobs by owner or update time.
+-  Fine-grained permission control is available for job development. You can configure permission control policies for the job directories in DataArts Factory.
+-  You can click **Baseline Link** to view the baseline link to which a job belongs. If a job is not associated with any baseline, **Baseline Link** is unavailable.
 
 Before developing a job, you can learn about the basic job development process.
 
 
-.. figure:: /_static/images/en-us_image_0000002305406665.png
+.. figure:: /_static/images/en-us_image_0000002234237740.png
    :alt: **Figure 1** Job development process
 
    **Figure 1** Job development process
@@ -45,5 +47,3 @@ Before developing a job, you can learn about the basic job development process.
 #. Submit a version and unlock the script: After performing this step, the job can be scheduled and modified by other developers. For details, see :ref:`Submitting a Version <dataartsstudio_01_0902>`.
 #. (Optional) Manage the job: After the job development is complete, you can manage the job as required. For details, see :ref:`(Optional) Managing Jobs <dataartsstudio_01_0408>`.
 #. Release the job. This step is required in enterprise mode. For details, see :ref:`Releasing a Job Task <dataartsstudio_01_1903>`.
-
-.. |image1| image:: /_static/images/en-us_image_0000002270846790.png

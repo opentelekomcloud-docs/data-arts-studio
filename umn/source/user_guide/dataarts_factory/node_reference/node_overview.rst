@@ -16,7 +16,7 @@ A node defines the operations performed on data. DataArts Factory provides nodes
    Parallel connection: Nodes are run at the same time.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305440397.png
+   .. figure:: /_static/images/en-us_image_0000002234085828.png
       :alt: **Figure 1** Connection diagram
 
       **Figure 1** Connection diagram

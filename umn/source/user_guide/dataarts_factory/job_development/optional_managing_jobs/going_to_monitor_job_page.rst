@@ -19,7 +19,7 @@ Procedure
 #. Right-click a job in the directory tree and select **Monitor**.
 
 
-   .. figure:: /_static/images/en-us_image_0000002270846430.png
+   .. figure:: /_static/images/en-us_image_0000002269196933.png
       :alt: **Figure 1** Going to Monitor Job page
 
       **Figure 1** Going to Monitor Job page
@@ -27,7 +27,7 @@ Procedure
 #. On the **Monitor Job** page, you can view the logs of the job nodes and the job version. You can also execute the job or click the job name or **Edit** to go to the job development page and modify job configurations.
 
 
-   .. figure:: /_static/images/en-us_image_0000002270846434.png
+   .. figure:: /_static/images/en-us_image_0000002234237496.png
       :alt: **Figure 2** Monitor Job page
 
       **Figure 2** Monitor Job page

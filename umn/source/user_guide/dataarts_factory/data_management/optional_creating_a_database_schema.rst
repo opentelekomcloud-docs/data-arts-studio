@@ -7,6 +7,10 @@
 
 After creating a DWS data connection, you can manage the database schemas under the DWS data connection.
 
+.. note::
+
+   If existing database schemas meet your requirements, skip this section. Otherwise, create a database schema by following the instructions in this section.
+
 Prerequisites
 -------------
 
@@ -50,6 +54,6 @@ Related Operations
       -  The default database schema cannot be deleted.
       -  Deleted database schemas cannot be recovered. Exercise caution when performing this operation.
 
-.. |image1| image:: /_static/images/en-us_image_0000002270791372.png
-.. |image2| image:: /_static/images/en-us_image_0000002270791376.png
-.. |image3| image:: /_static/images/en-us_image_0000002305441177.png
+.. |image1| image:: /_static/images/en-us_image_0000002269120509.png
+.. |image2| image:: /_static/images/en-us_image_0000002269200561.png
+.. |image3| image:: /_static/images/en-us_image_0000002234241140.png

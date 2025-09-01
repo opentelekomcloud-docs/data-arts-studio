@@ -26,7 +26,7 @@ Preparing the Environment
 Creating a DWS Data Connection
 ------------------------------
 
-Before developing a DWS SQL job, you must create a data connection to DWS on the **Manage Data Connections** page of **Management Center**. The data connection name is **dws_link**.
+Before developing a DWS SQL job, you must create a data connection to DWS on the **Manage Data Connections** page of **Management Center**. The data connection name is **dws_link**. For how to create a DWS connections, see :ref:`DWS Connection Parameters <dataartsstudio_01_1300>`.
 
 The key parameters are as follows:
 
@@ -71,7 +71,7 @@ Choose **Development** > **Develop Script** and create a DWS SQL script named **
 
 .. _dataartsstudio_01_0524__en-us_topic_0127305016_fig693875618223:
 
-.. figure:: /_static/images/en-us_image_0000002305440405.png
+.. figure:: /_static/images/en-us_image_0000002234238460.png
    :alt: **Figure 1** Developing a script
 
    **Figure 1** Developing a script
@@ -92,7 +92,7 @@ After developing the DWS SQL script, create a job for periodically executing the
 #. Go to the job development page, drag the DWS SQL node to the canvas, and click the node to configure its properties.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305407345.png
+   .. figure:: /_static/images/en-us_image_0000002234238444.png
       :alt: **Figure 2** Configuring properties for the DWS SQL node
 
       **Figure 2** Configuring properties for the DWS SQL node
@@ -118,7 +118,7 @@ After developing the DWS SQL script, create a job for periodically executing the
 #. If the test is successful, click the blank area on the canvas and then the **Scheduling Setup** tab on the right. On the displayed page, configure the scheduling policy.
 
 
-   .. figure:: /_static/images/en-us_image_0000002270790596.png
+   .. figure:: /_static/images/en-us_image_0000002269197901.png
       :alt: **Figure 3** Configuring the scheduling policy
 
       **Figure 3** Configuring the scheduling policy
@@ -129,4 +129,4 @@ After developing the DWS SQL script, create a job for periodically executing the
 
 #. Click **Submit** and then **Execute**. The job will be executed automatically every day.
 
-.. |image1| image:: /_static/images/en-us_image_0000002270847458.png
+.. |image1| image:: /_static/images/en-us_image_0000002269197897.png

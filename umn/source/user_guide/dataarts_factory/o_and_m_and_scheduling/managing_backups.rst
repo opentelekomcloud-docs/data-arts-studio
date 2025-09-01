@@ -12,7 +12,8 @@ You can also restore assets that have been backed up, including jobs, scripts, r
 Constraints
 -----------
 
-This function depends on OBS.
+-  This function depends on OBS.
+-  Backup files cannot be automatically aged. You need to manually delete backup files on a regular basis.
 
 Prerequisites
 -------------
@@ -24,6 +25,7 @@ OBS has been enabled and a folder has been created in OBS.
 Backing Up Assets
 -----------------
 
+#. Log in to the DataArts Studio console by following the instructions in :ref:`Accessing the DataArts Studio Instance Console <dataartsstudio_01_0001>`.
 #. On the DataArts Studio console, locate a workspace and click **DataArts Factory**.
 #. In the navigation tree on the left, choose **Manage Backup**.
 #. Click **Start Daily Backup**. In the **Browse OBS File** dialog box, select an OBS folder.
@@ -52,7 +54,7 @@ Restoring Assets
       -  Before restoring assets, you can modify the **backup.json** file in the backup path. You can change the connection name (connectionName), database name (database), and cluster name (clusterName).
 
 
-   .. figure:: /_static/images/en-us_image_0000002270790304.png
+   .. figure:: /_static/images/en-us_image_0000002269199621.png
       :alt: **Figure 1** Restoring assets
 
       **Figure 1** Restoring assets

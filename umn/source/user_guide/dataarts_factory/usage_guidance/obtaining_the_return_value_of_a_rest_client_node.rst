@@ -28,14 +28,14 @@ As shown in :ref:`Figure 1 <dataartsstudio_01_0581__fig172611511282>`, the first
 
 .. _dataartsstudio_01_0581__fig172611511282:
 
-.. figure:: /_static/images/en-us_image_0000002270791064.png
+.. figure:: /_static/images/en-us_image_0000002234241808.png
    :alt: **Figure 1** Rest Client job example 1
 
    **Figure 1** Rest Client job example 1
 
 .. _dataartsstudio_01_0581__en-us_topic_0000001116272948_fig082225015325:
 
-.. figure:: /_static/images/en-us_image_0000002305440869.png
+.. figure:: /_static/images/en-us_image_0000002234241796.png
    :alt: **Figure 2** JSON message body
 
    **Figure 2** JSON message body
@@ -54,7 +54,7 @@ As shown in :ref:`Figure 3 <dataartsstudio_01_0581__en-us_topic_0000001116272948
 
 .. _dataartsstudio_01_0581__en-us_topic_0000001116272948_fig474512269340:
 
-.. figure:: /_static/images/en-us_image_0000002305440865.png
+.. figure:: /_static/images/en-us_image_0000002269201253.png
    :alt: **Figure 3** Rest Client job example 2
 
    **Figure 3** Rest Client job example 2

@@ -5,4 +5,12 @@
 Why Is a Table Unavailable When an Error Message Indicating that the Table Already Exists Is Displayed During Table Creation from a DWS Data Connection?
 ========================================================================================================================================================
 
+Cause Analysis
+--------------
+
+Role permissions are insufficient.
+
+Solution
+--------
+
 The table already exists, but you do not have permissions to view and edit it.

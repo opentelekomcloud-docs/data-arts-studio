@@ -11,7 +11,7 @@ Symptom
 When you view the logs of a data development node, the error message shown in the following figure is displayed.
 
 
-.. figure:: /_static/images/en-us_image_0000002270846026.png
+.. figure:: /_static/images/en-us_image_0000002269116145.png
    :alt: **Figure 1** Message displayed
 
    **Figure 1** Message displayed
@@ -24,14 +24,14 @@ Logs of data development jobs are stored in OBS buckets. This message is display
 Solution
 --------
 
-#. Log in to the IAM console as an administrator.
+#. Log in to the IAM management console as the administrator.
 
 #. In the navigation pane, choose **Users**. Then click your username to go to the user information page.
 
 #. Obtain the user group to which your user belongs.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305717785.png
+   .. figure:: /_static/images/en-us_image_0000002424389693.png
       :alt: **Figure 2** User group to which your user belongs
 
       **Figure 2** User group to which your user belongs
@@ -41,7 +41,7 @@ Solution
 #. On the displayed **Authorize User Group** page, search for and select the **OBS OperateAccess** or **OBS Administrator** permission.
 
 
-   .. figure:: /_static/images/en-us_image_0000002271181068.png
+   .. figure:: /_static/images/en-us_image_0000002424509573.png
       :alt: **Figure 3** Assigning permissions to the user group
 
       **Figure 3** Assigning permissions to the user group
@@ -55,7 +55,7 @@ Solution
 Handling the Error After Running a Job
 --------------------------------------
 
-#. Log in to the IAM console as an administrator.
+#. Log in to the IAM management console as the administrator.
 
 #. In the navigation pane, choose **Users**. Then click your username to go to the user information page.
 
@@ -64,7 +64,7 @@ Handling the Error After Running a Job
 #. Select **Programmatic access** and **Management console access**.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305438973.png
+   .. figure:: /_static/images/en-us_image_0000002269196181.png
       :alt: **Figure 4** Configuring the access type
 
       **Figure 4** Configuring the access type
@@ -76,4 +76,4 @@ Handling the Error After Running a Job
       -  When creating a workspace on the management console, you can set the OBS path for storing job logs only to an OBS object bucket rather than a parallel file system. If you do not set the OBS path for storing job logs, DataArts Factory writes logs to the **dlf-log-**\ *{projectId}* bucket, and DataArts DataService writes logs to the **dlm-log-**\ *{projectId}* bucket by default.
       -  If you do not select an existing OBS bucket for **Job Log Path**, the default **dlf-log-**\ *{projectId}* bucket cannot be created when you run the job for the first time. As a result, logs cannot be written. To ensure that job logs can be properly written to the OBS bucket, select an existing OBS path when creating a workspace.
 
-.. |image1| image:: /_static/images/en-us_image_0000002305438965.png
+.. |image1| image:: /_static/images/en-us_image_0000002234236792.png

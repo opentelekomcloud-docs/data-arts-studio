@@ -19,6 +19,8 @@ This function depends on OBS or MRS HDFS.
 
 If a directory exists, you do not need to create one.
 
+#. Log in to the DataArts Studio console by following the instructions in :ref:`Accessing the DataArts Studio Instance Console <dataartsstudio_01_0001>`.
+
 #. On the DataArts Studio console, locate a workspace and click **DataArts Factory**.
 
 #. In the left navigation pane, choose **Configuration** > **Manage Resource**.
@@ -45,8 +47,6 @@ Creating a Resource
 -------------------
 
 You have enabled OBS before creating a resource.
-
-#. On the DataArts Studio console, locate a workspace and click **DataArts Factory**.
 
 #. In the left navigation pane, choose **Configuration** > **Manage Resource**.
 
@@ -88,7 +88,6 @@ Editing a Resource
 
 After a resource is created, you can modify resource parameters.
 
-#. On the DataArts Studio console, locate a workspace and click **DataArts Factory**.
 #. In the left navigation pane, choose **Configuration** > **Manage Resource**.
 #. In the **Operation** column of the resource, click **Edit**. In the displayed dialog box, modify the resource parameters. For details, see :ref:`Table 2 <dataartsstudio_01_0519__en-us_topic_0165312432_table3484574617547>`.
 #. Click **OK**.
@@ -104,7 +103,6 @@ Before deleting a resource, ensure that it is not used by any jobs.
 
    If you are trying to delete a resource that is being used by jobs, the **Delete Resource** dialog box is displayed. When you click **OK**, the **Reference List** dialog box is displayed, in which you can view the jobs that are using the resource and click **View** in the **Operation** column to go to the job details page.
 
-#. On the DataArts Studio console, locate a workspace and click **DataArts Factory**.
 #. In the left navigation pane, choose **Configuration** > **Manage Resource**.
 #. In the **Operation** column of the resource, click **Delete**. The **Delete Resource** dialog box is displayed.
 #. Click **Yes**.
@@ -114,7 +112,6 @@ Importing a Resource
 
 To import a resource, perform the following operations:
 
-#. On the DataArts Studio console, locate a workspace and click **DataArts Factory**.
 #. In the left navigation pane, choose **Configuration** > **Manage Resource**.
 #. In the resource directory, click |image2| and select **Import Resource**. The **Import Resource** dialog box is displayed.
 #. Select the resource file that has been uploaded to OBS and click **Next**. After the import is complete, click **Close**.
@@ -124,7 +121,6 @@ Exporting a Resource
 
 To export a resource, perform the following operations:
 
-#. On the DataArts Studio console, locate a workspace and click **DataArts Factory**.
 #. In the left navigation pane, choose **Configuration** > **Manage Resource**.
 #. In the resource directory, select a resource, click |image3|, and select **Export Resource**. The system starts downloading the resource to the local PC.
 
@@ -133,11 +129,10 @@ Viewing Resource References
 
 To view the references of a resource, perform the following operations:
 
-#. On the DataArts Studio console, locate a workspace and click **DataArts Factory**.
 #. In the left navigation pane, choose **Configuration** > **Manage Resource**.
 #. Right-click a resource in the list and select **View Reference**.
 #. In the displayed **Reference List** dialog box, view the references of the resource.
 
-.. |image1| image:: /_static/images/en-us_image_0000002305440029.png
-.. |image2| image:: /_static/images/en-us_image_0000002305406205.png
-.. |image3| image:: /_static/images/en-us_image_0000002305406965.png
+.. |image1| image:: /_static/images/en-us_image_0000002234235724.png
+.. |image2| image:: /_static/images/en-us_image_0000002234235716.png
+.. |image3| image:: /_static/images/en-us_image_0000002234075884.png

@@ -5,4 +5,6 @@
 Does DataArts Studio Support Version Downgrade?
 ===============================================
 
-No. You cannot downgrade a purchased DataArts Studio instance.
+The version of a created DataArts Studio instance cannot be directly downgraded.
+
+However, you can downgrade the version by creating an instance of an earlier version, migrating data to an instance of an earlier version, or unsubscribing from an instance of an earlier version.

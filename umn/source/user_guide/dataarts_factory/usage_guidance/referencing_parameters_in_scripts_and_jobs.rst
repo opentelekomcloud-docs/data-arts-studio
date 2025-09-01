@@ -9,35 +9,29 @@ This section describes how to reference parameters in scripts and jobs, applicat
 
 .. note::
 
-   Parameters can be set in environment variables, job parameters, and script parameters, but their application scopes are different. If there is a conflict when parameters in environment variables, job parameters, and script parameters of the same name, the calling priority is: **job parameters > environment variables > script parameters**.
+   The application scopes of workspace environment variables, job parameters, and script parameters are different. If a workspace environment variable, a job parameter, and a script parameter have the same name, their priorities are as follows: **job parameter > workspace environment variable > script parameter**.
 
 .. table:: **Table 1** Methods of using parameters
 
-   +---------------------------------+------------------------------------------------------------------------------------------------------------------------+-------------------+---------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------+
-   | Type                            | Scenario                                                                                                               | Scope             | Calling Method                                                                                                                  | Example                                         |
-   +=================================+========================================================================================================================+===================+=================================================================================================================================+=================================================+
-   | Environment variables/constants | When configuring job parameters, you can extract a parameter that belongs to multiple jobs as an environment variable. | Current workspace | ${*Environment variable*}                                                                                                       | EL expression: #{DateUtil.getDay(Job.planTime)} |
-   |                                 |                                                                                                                        |                   |                                                                                                                                 |                                                 |
-   |                                 |                                                                                                                        |                   | ${*Environment constant*}                                                                                                       | Simple variable set: ${yyyymmdd±N}              |
-   |                                 |                                                                                                                        |                   |                                                                                                                                 |                                                 |
-   |                                 |                                                                                                                        |                   | For details about the configuration method, see :ref:`Environment Variable <dataartsstudio_01_7524__section22181399319>`.       |                                                 |
-   +---------------------------------+------------------------------------------------------------------------------------------------------------------------+-------------------+---------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------+
-   | Job variables/constants         | Job parameters can be used in any node in jobs.                                                                        | Current job       | ${*Job variable*}                                                                                                               | EL expression: #{DateUtil.now()}                |
-   |                                 |                                                                                                                        |                   |                                                                                                                                 |                                                 |
-   |                                 |                                                                                                                        |                   | ${*Job constant*}                                                                                                               | Simple variable set: ${yyyymm±N}                |
-   |                                 |                                                                                                                        |                   |                                                                                                                                 |                                                 |
-   |                                 |                                                                                                                        |                   | For details about the configuration method, see :ref:`Configuring Job Parameters <dataartsstudio_01_7524__section56401130635>`. |                                                 |
-   +---------------------------------+------------------------------------------------------------------------------------------------------------------------+-------------------+---------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------+
-   | Script parameters               | Set the name and value of a custom field.                                                                              | Current script    | ${*Script parameter*}                                                                                                           | Example script parameters:                      |
-   |                                 |                                                                                                                        |                   |                                                                                                                                 |                                                 |
-   |                                 |                                                                                                                        |                   | For details about the configuration method, see :ref:`Script Parameter <dataartsstudio_01_7524__section04082466318>`.           | ${time}                                         |
-   |                                 |                                                                                                                        |                   |                                                                                                                                 |                                                 |
-   |                                 |                                                                                                                        |                   |                                                                                                                                 | ${yyyymmddhh24miss}                             |
-   |                                 |                                                                                                                        |                   |                                                                                                                                 |                                                 |
-   |                                 |                                                                                                                        |                   |                                                                                                                                 | ${job_id}                                       |
-   |                                 |                                                                                                                        |                   |                                                                                                                                 |                                                 |
-   |                                 |                                                                                                                        |                   |                                                                                                                                 | ${instance_id}                                  |
-   +---------------------------------+------------------------------------------------------------------------------------------------------------------------+-------------------+---------------------------------------------------------------------------------------------------------------------------------+-------------------------------------------------+
+   +---------------------------------+------------------------------------------------------------------------------------------------------------------------+-------------------+---------------------------------------------------------------------------------------------------------------------------------+
+   | Type                            | Scenario                                                                                                               | Scope             | Calling Method                                                                                                                  |
+   +=================================+========================================================================================================================+===================+=================================================================================================================================+
+   | Environment variables/constants | When configuring job parameters, you can extract a parameter that belongs to multiple jobs as an environment variable. | Current workspace | ${*Environment variable*}                                                                                                       |
+   |                                 |                                                                                                                        |                   |                                                                                                                                 |
+   |                                 |                                                                                                                        |                   | ${*Environment constant*}                                                                                                       |
+   |                                 |                                                                                                                        |                   |                                                                                                                                 |
+   |                                 |                                                                                                                        |                   | For details about the configuration method, see :ref:`Environment Variable <dataartsstudio_01_7524__section22181399319>`.       |
+   +---------------------------------+------------------------------------------------------------------------------------------------------------------------+-------------------+---------------------------------------------------------------------------------------------------------------------------------+
+   | Job variables/constants         | Job parameters can be used in any node in jobs.                                                                        | Current job       | ${*Job variable*}                                                                                                               |
+   |                                 |                                                                                                                        |                   |                                                                                                                                 |
+   |                                 |                                                                                                                        |                   | ${*Job constant*}                                                                                                               |
+   |                                 |                                                                                                                        |                   |                                                                                                                                 |
+   |                                 |                                                                                                                        |                   | For details about the configuration method, see :ref:`Configuring Job Parameters <dataartsstudio_01_7524__section56401130635>`. |
+   +---------------------------------+------------------------------------------------------------------------------------------------------------------------+-------------------+---------------------------------------------------------------------------------------------------------------------------------+
+   | Script parameters               | Set the name and value of a custom field.                                                                              | Current script    | ${*Script parameter*}                                                                                                           |
+   |                                 |                                                                                                                        |                   |                                                                                                                                 |
+   |                                 |                                                                                                                        |                   | For details about the configuration method, see :ref:`Script Parameter <dataartsstudio_01_7524__section04082466318>`.           |
+   +---------------------------------+------------------------------------------------------------------------------------------------------------------------+-------------------+---------------------------------------------------------------------------------------------------------------------------------+
 
 .. note::
 
@@ -56,7 +50,7 @@ Variables and constants can be defined in environment variables. Environment var
 -  The value of a constant in different workspaces is the same. When importing a constant to another workspace, you do not need to reconfigure its value.
 
 
-.. figure:: /_static/images/en-us_image_0000002270790368.png
+.. figure:: /_static/images/en-us_image_0000002234236216.png
    :alt: **Figure 1** Environment Variable
 
    **Figure 1** Environment Variable
@@ -70,7 +64,7 @@ An environment variable has been added. The parameter name is **sdqw** and the p
 #. On the **Node Properties** tab page, configure the node properties.
 
 
-   .. figure:: /_static/images/en-us_image_0000002270790352.png
+   .. figure:: /_static/images/en-us_image_0000002269195693.png
       :alt: **Figure 2** Create OBS
 
       **Figure 2** Create OBS
@@ -82,14 +76,14 @@ An environment variable has been added. The parameter name is **sdqw** and the p
 Configuring Job Parameters
 --------------------------
 
-Parameters and constants can be defined in job parameters. Job parameters take effect in current job.
+Variables and constants can be defined in job parameters. Job parameters take effect in the current job.
 
--  The value of a parameter varies depending on the job. You need to reconfigure the parameter.
+-  The value of a variable varies depending on the job. You need to configure a value for the variable in each job.
 
 -  The value of a constant in different jobs is the same. When importing a constant to another job, you do not need to reconfigure its value.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305440145.png
+   .. figure:: /_static/images/en-us_image_0000002234076400.png
       :alt: **Figure 3** Job parameter.
 
       **Figure 3** Job parameter.
@@ -97,7 +91,7 @@ Parameters and constants can be defined in job parameters. Job parameters take e
    After a job parameter is defined, it can be referenced by a job node.
 
 
-   .. figure:: /_static/images/en-us_image_0000002270847218.png
+   .. figure:: /_static/images/en-us_image_0000002269115597.png
       :alt: **Figure 4** Using a Job Parameter Configuration
 
       **Figure 4** Using a Job Parameter Configuration
@@ -119,7 +113,7 @@ Script Parameter
 
       .. _dataartsstudio_01_7524__fig35061784103:
 
-      .. figure:: /_static/images/en-us_image_0000002305407093.png
+      .. figure:: /_static/images/en-us_image_0000002269195641.png
          :alt: **Figure 5** Configuring script parameters when executing a script independently
 
          **Figure 5** Configuring script parameters when executing a script independently
@@ -133,7 +127,7 @@ Script Parameter
       INSERT INTO B FROM (SELECT * FROM A WHERE DATE = ${DATE})
 
 
-   .. figure:: /_static/images/en-us_image_0000002270847230.png
+   .. figure:: /_static/images/en-us_image_0000002269195669.png
       :alt: **Figure 6** Developing a script
 
       **Figure 6** Developing a script
@@ -147,7 +141,7 @@ Script Parameter
    In the left navigation pane of DataArts Factory, choose **Data Development** > **Develop Job**.
 
 
-   .. figure:: /_static/images/en-us_image_0000002270847222.png
+   .. figure:: /_static/images/en-us_image_0000002269115569.png
       :alt: **Figure 7** Configuring script parameters when the script is executed by job scheduling
 
       **Figure 7** Configuring script parameters when the script is executed by job scheduling
@@ -163,5 +157,5 @@ Simple Variable Set
 
 The simple variable set provides a series of customized variables. Customized parameters are automatically replaced with specific values based on the service date, plan time, and parameter value format of task scheduling. In this way, parameters can be dynamically replaced during task scheduling. For details about the simple variable set, see :ref:`Simple Variable Set <dataartsstudio_01_0556>`.
 
-.. |image1| image:: /_static/images/en-us_image_0000002270847198.png
-.. |image2| image:: /_static/images/en-us_image_0000002305440177.png
+.. |image1| image:: /_static/images/en-us_image_0000002234076364.png
+.. |image2| image:: /_static/images/en-us_image_0000002269115617.png

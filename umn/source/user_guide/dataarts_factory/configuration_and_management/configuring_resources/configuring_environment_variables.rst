@@ -36,10 +36,18 @@ This function is available only if the OBS service is available. If OBS is unava
 #. In the **Import Environment Variable** dialog box, select an environment variable file from OBS or a local path and the duplicate name policy.
 
 
-   .. figure:: /_static/images/en-us_image_0000002270847522.png
+   .. figure:: /_static/images/en-us_image_0000002234075804.png
       :alt: **Figure 1** Importing Environment Variables
 
       **Figure 1** Importing Environment Variables
+
+Exporting Environment Variables
+-------------------------------
+
+#. Log in to the DataArts Studio console by following the instructions in :ref:`Accessing the DataArts Studio Instance Console <dataartsstudio_01_0001>`.
+#. On the DataArts Studio console, locate a workspace and click **DataArts Factory**.
+#. In the navigation tree on the left, choose **Specifications**.
+#. Click **Environment Variable**. On the **Environment Variable** page, click **Export** to export environment variables.
 
 .. _dataartsstudio_01_0504__en-us_topic_0175328117_section7729152119279:
 
@@ -62,7 +70,7 @@ Configuration Method
       -  The value of a constant in different workspaces is the same. When importing a constant to another workspace, you do not need to reconfigure its value.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305440477.png
+   .. figure:: /_static/images/en-us_image_0000002234235624.png
       :alt: **Figure 2** Configuring environment variables
 
       **Figure 2** Configuring environment variables
@@ -85,11 +93,12 @@ Configuration Method
       | Description           | No                    | Parameter description                                                                                                                                                                                                                                                   |
       +-----------------------+-----------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-   After configuring an environment variable, you can add, edit, or delete it.
+   You can add, modify, delete, and reset environment variables.
 
-   -  **Add**: Click **Add** to add an environment variable.
-   -  **Edit**: If the parameter value is a constant, change the parameter value in the text box. If the parameter value is an EL expression, click |image1| next to the text box to edit the EL expression. Click **Save**.
-   -  **Delete**: Click |image2| next to the parameter value text box to delete the environment variable.
+   -  Add an environment variable: Click **Add**. After an environment variable is added, **Add** is displayed for it.
+   -  Edit an environment variable: If the parameter value is a constant, change the parameter value in the text box. If the parameter value is an EL expression, click |image1| next to the text box to edit the EL expression. Click **Save**. After an environment variable is modified, **Modify** is displayed for it.
+   -  Delete an environment variable: Click **Delete** next to the parameter value text box. After an environment variable is deleted, **Delete** is displayed for it.
+   -  Reset an environment variable: When modifying or deleting an environment variable, you can click **Reset** in the **Operation** column to reset the variable value to the original value.
 
 How-Tos
 -------
@@ -112,12 +121,11 @@ Context:
 #. On the **Node Properties** tab page, configure the node properties.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305407393.png
+   .. figure:: /_static/images/en-us_image_0000002269114989.png
       :alt: **Figure 3** Configuring parameters for the Create OBS node
 
       **Figure 3** Configuring parameters for the Create OBS node
 
 #. Click **Save** and then **Monitor** to monitor the running status of the job.
 
-.. |image1| image:: /_static/images/en-us_image_0000002270847530.png
-.. |image2| image:: /_static/images/en-us_image_0000002305407397.png
+.. |image1| image:: /_static/images/en-us_image_0000002234075784.png

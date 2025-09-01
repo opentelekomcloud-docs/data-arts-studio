@@ -5,7 +5,7 @@
 Releasing a Job Task
 ====================
 
-In enterprise mode, when a developer submits a job version, the system generates a job release task. After the developer confirms the release task and the admin, deployer, a user with the DARTS Administrator or Tenant Administrator permission approves the package release request, the modified job is synchronized to the production environment.
+In enterprise mode, when a developer submits a job version, the system generates a job release task. After the developer confirms releasing a package and the admin, deployer, a user with the DARTS Administrator or Tenant Administrator permission approves the package release request, the modified job is synchronized to the production environment.
 
 .. important::
 
@@ -20,6 +20,8 @@ You have submitted a version. For details, see :ref:`Submitting a Version <dataa
 
 Procedure
 ---------
+
+#. Log in to the DataArts Studio console by following the instructions in :ref:`Accessing the DataArts Studio Instance Console <dataartsstudio_01_0001>`.
 
 #. On the DataArts Studio console, locate a workspace and click **DataArts Factory**.
 
@@ -38,7 +40,7 @@ Procedure
       -  You can revoke tasks not to be released as a developer, deployer, or admin.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305439645.png
+   .. figure:: /_static/images/en-us_image_0000002236808296.png
       :alt: **Figure 1** Clicking Release
 
       **Figure 1** Clicking Release
@@ -48,7 +50,7 @@ Procedure
    You can filter release tasks by **Applicant**, **Application Time**, **Release At**, or **Released By**, and perform fuzzy search using a package name.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305406573.png
+   .. figure:: /_static/images/en-us_image_0000002234236268.png
       :alt: **Figure 2** Viewing the task status
 
       **Figure 2** Viewing the task status
@@ -60,7 +62,7 @@ Procedure
    After the task is released, you can click **View Details** in the **Operation** column to view the release status and startup status of the task. You can also click **Compare Version** in the **Operation** column to view the differences between different versions of release packages.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305406569.png
+   .. figure:: /_static/images/en-us_image_0000002234236276.png
       :alt: **Figure 3** Viewing release package details
 
       **Figure 3** Viewing release package details

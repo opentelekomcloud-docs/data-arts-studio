@@ -21,6 +21,8 @@ Node Reference
 -  :ref:`MRS Presto SQL <dataartsstudio_01_1099>`
 -  :ref:`MRS Spark <dataartsstudio_01_0455>`
 -  :ref:`MRS Spark Python <dataartsstudio_01_0456>`
+-  :ref:`MRS ClickHouse <dataartsstudio_01_0528>`
+-  :ref:`MRS Impala SQL <dataartsstudio_01_1104>`
 -  :ref:`MRS Flink Job <dataartsstudio_01_0554>`
 -  :ref:`MRS MapReduce <dataartsstudio_01_0457>`
 -  :ref:`CSS <dataartsstudio_01_0458>`
@@ -28,8 +30,8 @@ Node Reference
 -  :ref:`RDS SQL <dataartsstudio_01_0460>`
 -  :ref:`ETL Job <dataartsstudio_01_0461>`
 -  :ref:`Python <dataartsstudio_01_4504>`
+-  :ref:`DORIS SQL <dataartsstudio_01_4509>`
 -  :ref:`ModelArts Train <dataartsstudio_01_4500>`
--  :ref:`Http Trigger <dataartsstudio_01_0489>`
 -  :ref:`Create OBS <dataartsstudio_01_0462>`
 -  :ref:`Delete OBS <dataartsstudio_01_0463>`
 -  :ref:`OBS Manager <dataartsstudio_01_0464>`
@@ -59,6 +61,8 @@ Node Reference
    mrs_presto_sql
    mrs_spark
    mrs_spark_python
+   mrs_clickhouse
+   mrs_impala_sql
    mrs_flink_job
    mrs_mapreduce
    css
@@ -66,8 +70,8 @@ Node Reference
    rds_sql
    etl_job
    python
+   doris_sql
    modelarts_train
-   http_trigger
    create_obs
    delete_obs
    obs_manager
