@@ -13,7 +13,7 @@ Prerequisites
 -------------
 
 -  A Python script has been added. For details, see :ref:`Creating a Script <dataartsstudio_01_0423>`.
--  A host connection has been created. The Linux host is used to execute Python scripts. For details about how to create a host connection, see :ref:`Configuring a Host Connection <dataartsstudio_01_1305>`.
+-  A host connection has been created. The Linux host is used to execute Python scripts. For details about how to create a host connection, see :ref:`Host Connection Parameters <dataartsstudio_01_1305>`.
 -  You have the permission to create and execute files in the **/tmp** directory on the host.
 -  The maximum number of shell or Python scripts that can run concurrently on the ECS is determined by the value of **MaxSessions** in the **/etc/ssh/sshd_config** file on the ECS. Set **MaxSessions** based on the scheduling frequency of shell or Python scripts.
 -  You have locked the script. Otherwise, you must click **Lock** so that you can develop the script. A script you create or import is locked by you by default. For details, see the :ref:`lock function <dataartsstudio_01_0912>`.
@@ -70,7 +70,6 @@ Procedure
       -  **Ctrl** + **X**: Cut (Cut a line when the cursor selects nothing.)
       -  **Alt** + mouse dragging: Select columns to edit a block.
       -  **Ctrl** + mouse click: Select multiple lines to edit or indent them together.
-      -  **Shift** + **Ctrl** + **K**: Delete the current line.
       -  **Ctrl** + **→** (or **←**): Move the cursor rightwards (or leftwards) by word.
       -  **Ctrl** + **Home** or **Ctrl** + **End**: Navigate to the beginning or end of the current file.
       -  **Home** or **End**: Navigate to the beginning or end of the current line.
@@ -95,12 +94,22 @@ Procedure
 
       a. Write the script parameter name and parameter value in the Python statement. When the Python script is referenced by a job, if the parameter name configured for the job is the same as the parameter name of the Python script, the parameter value of the Python script is replaced by the parameter value of the job.
 
-         The following is an example script:
+         Transfer parameters in the script. The following is an example script:
 
          .. code-block::
 
             a=1
-            print {a}
+            print (a)
+            or
+            a= 'qqq'
+            print (a)
+
+         Transfer parameters outside the script. For example, if you want to transfer parameters of the Python script to a Python job which uses the Python script, enclose string parameters in single quotation marks. The following is an example script:
+
+         .. code-block::
+
+            a= 'zhang'
+            print (${a})
 
          In the preceding command, *a* indicates the parameter name. It can contain only letters, digits, hyphens (-), underscores (_), greater-than signs (>), and less-than signs (<), and can contain a maximum of 16 characters. The parameter name must be unique.
 
@@ -123,8 +132,10 @@ Procedure
       -  Double-click or right-click the name of an execution result tab to rename it. The name can contain a maximum of 16 characters.
       -  Right-click the name of an execution result tab to close the current tab, all the tabs to the left or right of the current tab, all the other tabs, or all the tabs.
       -  The execution result of a Python script cannot be larger than 30 MB. Otherwise, an error is reported.
+      -  When viewing the script execution result, you can double-click a field in any row to view the result details. You can copy the field name.
+      -  You can control display of the script execution history by setting **Script Execution History** in **Default Configuration** to **Myself** or **All users**.
 
-#. Above the editor, click |image2| to save the script.
+#. Above the editor, click **Save** to save the script.
 
    If the script is created but not saved, set the parameters listed in :ref:`Table 3 <dataartsstudio_01_4503__en-us_topic_0104967365_table35383235269>`.
 
@@ -148,5 +159,4 @@ Procedure
 
       After the script is saved, a version is automatically generated and displayed in **Versions**. The version can be rolled back. If you save a script multiple times within a minute, only one version is recorded. If the intermediate data is important, you can click **Save new version** to save and add a version.
 
-.. |image1| image:: /_static/images/en-us_image_0000002305406613.png
-.. |image2| image:: /_static/images/en-us_image_0000002270847146.png
+.. |image1| image:: /_static/images/en-us_image_0000002269116013.png

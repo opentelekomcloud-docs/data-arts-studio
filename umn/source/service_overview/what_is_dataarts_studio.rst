@@ -37,18 +37,18 @@ DataArts Studio is a one-stop data operations platform that drives digital trans
 
 .. _dataartsstudio_07_001__fig156921728104018:
 
-.. figure:: /_static/images/en-us_image_0000002305404701.png
+.. figure:: /_static/images/en-us_image_0000002234228660.png
    :alt: **Figure 1** Architecture
 
    **Figure 1** Architecture
 
-As shown in the figure, DataArts Studio is based on the data lake base and provides capabilities such as data integration, development, and governance. DataArts Studio can connect to data lakes and cloud database services, such as MRS Hive and GaussDB(DWS). These data lakes and cloud database services are used as the data lake base. DataArts Studio can also connect to traditional enterprise data warehouses, such as Oracle and MySQL.
+As shown in the figure, DataArts Studio is built on the data foundation and provides capabilities such as data integration, development, and governance. DataArts Studio can connect to data lakes and cloud database services, such as MRS Hive and GaussDB(DWS). These data lakes and cloud database services are used as the data foundation. DataArts Studio can also connect to traditional enterprise data warehouses, such as Oracle and MySQL.
 
 DataArts Studio consists of the following functional modules:
 
 -  **Management Center**
 
-   Management Center supports data connection management and connects to the data lake foundation for activities such as data development.
+   Management Center supports data connection management and connects to the data foundation for activities such as data development.
 
 -  **DataArts Migration**
 

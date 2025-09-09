@@ -20,7 +20,7 @@ You can use a For Each node to execute a subjob in a loop and use a dataset to r
 
 .. _dataartsstudio_01_0582__en-us_topic_0000001115624138_fig2814057154712:
 
-.. figure:: /_static/images/en-us_image_0000002305407333.png
+.. figure:: /_static/images/en-us_image_0000002234242340.png
    :alt: **Figure 1** For Each node
 
    **Figure 1** For Each node
@@ -115,7 +115,7 @@ If you use SQL nodes to execute import scripts, a large number of scripts and no
    The generated data in the **Table_List** table is as follows:
 
 
-   .. figure:: /_static/images/en-us_image_0000002305407325.png
+   .. figure:: /_static/images/en-us_image_0000002269201777.png
       :alt: **Figure 2** Data in the Table_List table
 
       **Figure 2** Data in the Table_List table
@@ -140,7 +140,7 @@ If you use SQL nodes to execute import scripts, a large number of scripts and no
 
       .. _dataartsstudio_01_0582__en-us_topic_0000001115624138_en-us_topic_0284272823_fig15465132918479:
 
-      .. figure:: /_static/images/en-us_image_0000002270847462.png
+      .. figure:: /_static/images/en-us_image_0000002269121693.png
          :alt: **Figure 3** Cyclically executing a subjob
 
          **Figure 3** Cyclically executing a subjob
@@ -148,7 +148,7 @@ If you use SQL nodes to execute import scripts, a large number of scripts and no
    b. After configuring the SQL statement, configure parameters for the subjob. You only need to set the parameter names, which are used by the For Each operator of the **ForeachDemo_master** job to identify subjob parameters.
 
 
-      .. figure:: /_static/images/en-us_image_0000002305440377.png
+      .. figure:: /_static/images/en-us_image_0000002269121685.png
          :alt: **Figure 4** Configuring subjob parameters
 
          **Figure 4** Configuring subjob parameters
@@ -161,7 +161,7 @@ If you use SQL nodes to execute import scripts, a large number of scripts and no
 
       .. _dataartsstudio_01_0582__en-us_topic_0000001115624138_fig144616386493:
 
-      .. figure:: /_static/images/en-us_image_0000002270790600.png
+      .. figure:: /_static/images/en-us_image_0000002269201849.png
          :alt: **Figure 5** Compiling a job
 
          **Figure 5** Compiling a job
@@ -173,7 +173,7 @@ If you use SQL nodes to execute import scripts, a large number of scripts and no
          SELECT * FROM Table_List;
 
 
-      .. figure:: /_static/images/en-us_image_0000002305407329.png
+      .. figure:: /_static/images/en-us_image_0000002269201865.png
          :alt: **Figure 6** DLI SQL node configuration
 
          **Figure 6** DLI SQL node configuration
@@ -185,7 +185,7 @@ If you use SQL nodes to execute import scripts, a large number of scripts and no
       -  **Subjob Parameter Name**: used to transfer data in the dataset to the subjob **Source** corresponds to the first column in the **Table_List** table of the dataset, and **Destination** corresponds to the second column. Therefore, enter EL expression **#{Loop.current[0]}** for **Source** and **#{Loop.current[1]}** for **Destination**.
 
 
-      .. figure:: /_static/images/en-us_image_0000002270847446.png
+      .. figure:: /_static/images/en-us_image_0000002269121789.png
          :alt: **Figure 7** Configuring properties for the For Each node
 
          **Figure 7** Configuring properties for the For Each node
@@ -199,7 +199,7 @@ If you use SQL nodes to execute import scripts, a large number of scripts and no
    b. In the navigation pane on the left, choose **Monitor Instance** to view the job execution status. After the job is successfully executed, you can view the subjob instances generated on the For Each node. Because the dataset contains six rows of data, six subjob instances are generated.
 
 
-      .. figure:: /_static/images/en-us_image_0000002305407317.png
+      .. figure:: /_static/images/en-us_image_0000002269201833.png
          :alt: **Figure 8** Viewing job instances
 
          **Figure 8** Viewing job instances
@@ -214,7 +214,7 @@ If you use SQL nodes to execute import scripts, a large number of scripts and no
       Compare the obtained data with the data in :ref:`Insert data into the source data table <dataartsstudio_01_0582__en-us_topic_0000001115624138_li53232042350>`. The inserted data meets the expectation.
 
 
-      .. figure:: /_static/images/en-us_image_0000002271461758.png
+      .. figure:: /_static/images/en-us_image_0000002424391613.png
          :alt: **Figure 9** Destination table data
 
          **Figure 9** Destination table data
@@ -226,4 +226,4 @@ For Each nodes can work with other nodes to implement more functions. You can re
 
 -  :ref:`Determining the IF Statement Branch to Be Executed Based on the Execution Result of the Previous Node <dataartsstudio_01_0583__en-us_topic_0000001162343901_section191402715452>`
 
-.. |image1| image:: /_static/images/en-us_image_0000002305440373.png
+.. |image1| image:: /_static/images/en-us_image_0000002234082492.png

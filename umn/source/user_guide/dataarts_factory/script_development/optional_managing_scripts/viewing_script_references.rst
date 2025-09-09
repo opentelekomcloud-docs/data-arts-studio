@@ -28,7 +28,7 @@ Procedure
 #. In the displayed dialog box, you can view the references of a script or all the scripts in the folder.
 
 
-   .. figure:: /_static/images/en-us_image_0000002270789664.png
+   .. figure:: /_static/images/en-us_image_0000002269198221.png
       :alt: **Figure 1** References of a script
 
       **Figure 1** References of a script

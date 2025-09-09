@@ -162,7 +162,7 @@ CTS provides records of operations on cloud service resources. With CTS, you can
    +------------------------------------------------------+---------------------+-------------------------------+
    | Exporting a tag                                      | tag                 | exportJobTags                 |
    +------------------------------------------------------+---------------------+-------------------------------+
-   | Import a tag from OBS                                | tag                 | importJobTag                  |
+   | Importing a tag from OBS                             | tag                 | importJobTag                  |
    +------------------------------------------------------+---------------------+-------------------------------+
    | Importing a tag from a local server                  | tag                 | importJobTag2                 |
    +------------------------------------------------------+---------------------+-------------------------------+

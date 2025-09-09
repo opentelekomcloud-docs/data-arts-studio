@@ -33,14 +33,14 @@ If you submit a version, the latest script in the development state will be save
 #. Above the script editor, click **Submit** to submit a version. In the displayed dialog box, select the reviewer, enter the change description (a maximum of 128 characters allowed), and select the check box below. If you do not select this option, you cannot click **OK**. When submitting a version, you can click **Compare Version** to view the differences between the current version and the last version.
 
 
-   .. figure:: /_static/images/en-us_image_0000002270847126.png
+   .. figure:: /_static/images/en-us_image_0000002234076428.png
       :alt: **Figure 1** Submitting a version
 
       **Figure 1** Submitting a version
 
    .. note::
 
-      -  If review is enabled on the **Review Center** page, your submitted version will be reviewed by the workspace admin on the **Pending Review** tab page on the **Review Center** page. The version is submitted successfully only after it is approved by the admin. For details, see :ref:`Approval Settings <dataartsstudio_01_1820__li1334183317582>`.
+      -  If review is enabled on the **Review Center** page, your submitted version will be reviewed by the reviewer on the **Pending Review** tab page on the **Review Center** page. The version is submitted successfully only after it is approved by the reviewer. For details, see :ref:`Approval Settings <dataartsstudio_01_1820__section1416816392412>`. If review is disabled, the version can be directly submitted.
 
          To revoke a submitted request, go to the **Review Center** page and click the **My Applications** tab. Then you can submit an application again.
 
@@ -69,10 +69,6 @@ The rollback involves the following contents:
 
 The procedure is as follows:
 
-#. Log in to the DataArts Studio console by following the instructions in :ref:`Accessing the DataArts Studio Instance Console <dataartsstudio_01_0001>`.
-
-#. On the DataArts Studio console, locate a workspace and click **DataArts Factory**.
-
 #. In the left navigation pane of DataArts Factory, choose **Data Development** > **Develop Script**.
 
 #. In the script directory list, double-click a script that you want to develop. The script development page is displayed.
@@ -82,7 +78,7 @@ The procedure is as follows:
    If the content in the development state is not submitted, the content will be overwritten after the rollback. In this case, you must submit the rollback version again to make it take effect. By default, the latest submitted version is used for scheduling.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305407005.png
+   .. figure:: /_static/images/en-us_image_0000002269115641.png
       :alt: **Figure 2** Rolling back a version
 
       **Figure 2** Rolling back a version
@@ -94,8 +90,6 @@ You can compare the script contents of two different versions. If you select onl
 
 The procedure is as follows:
 
-#. Log in to the DataArts Studio console by following the instructions in :ref:`Accessing the DataArts Studio Instance Console <dataartsstudio_01_0001>`.
-
 #. In the left navigation pane of DataArts Factory, choose **Data Development** > **Develop Script**.
 
 #. In the script directory list, double-click a script that you want to develop. The script development page is displayed.
@@ -103,7 +97,7 @@ The procedure is as follows:
 #. On the right of the page, click the **Versions** tab and view the version submission records. Select the versions to be compared and click **Compare Version**.
 
 
-   .. figure:: /_static/images/en-us_image_0000002270847118.png
+   .. figure:: /_static/images/en-us_image_0000002234076436.png
       :alt: **Figure 3** Comparing versions
 
       **Figure 3** Comparing versions
@@ -111,10 +105,10 @@ The procedure is as follows:
 #. A new page is displayed, showing the script content of different versions on the left and right separately. The differences between the two versions have been marked. You can use the |image1| and |image2| buttons in the upper right corner to go to the previous or next change.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305406993.png
+   .. figure:: /_static/images/en-us_image_0000002234236252.png
       :alt: **Figure 4** Version comparison details
 
       **Figure 4** Version comparison details
 
-.. |image1| image:: /_static/images/en-us_image_0000002270790272.png
-.. |image2| image:: /_static/images/en-us_image_0000002305407013.png
+.. |image1| image:: /_static/images/en-us_image_0000002271689457.png
+.. |image2| image:: /_static/images/en-us_image_0000002271769549.png

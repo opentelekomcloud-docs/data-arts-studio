@@ -5,17 +5,22 @@
 What Should I Do If a User Cannot View Workspaces After I Have Assigned the Required Policy to the User?
 ========================================================================================================
 
-Check whether a user has been added to the workspace. If no, perform the following steps to add the user.
+Possible Causes
+---------------
 
-Adding a Member and Assigning a Role
-------------------------------------
+If you assign only the DARTS User system role but not a workspace role to a user, the user cannot access a workspace and an error message is displayed.
 
-#. Log in to the DataArts Studio console by referring to :ref:`Accessing the DataArts Studio Instance Console <dataartsstudio_01_0001>`.
+Solution
+--------
 
-#. On the **Workspaces** page, locate the target workspace and click **Edit** in the **Operation** column.
+Check whether the user has been added to the workspace. If not, perform the following steps to add the user:
+
+#. Log in to the DataArts Studio console by following the instructions in :ref:`Accessing the DataArts Studio Instance Console <dataartsstudio_01_0001>`.
+
+#. On the **Workspaces** page, locate a workspace and click **Edit** in the **Operation** column.
 
 
-   .. figure:: /_static/images/en-us_image_0000002270788796.png
+   .. figure:: /_static/images/en-us_image_0000002269116513.png
       :alt: **Figure 1** Workspace Information dialog box
 
       **Figure 1** Workspace Information dialog box
@@ -23,7 +28,7 @@ Adding a Member and Assigning a Role
 #. Click **Add** under **Workspace Members**. In the displayed **Add Member** dialog box, select **Add User** or **Add Group**, select a member account from the drop-down list, and select a role for it.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305405525.png
+   .. figure:: /_static/images/en-us_image_0000002234077296.png
       :alt: **Figure 2** Adding a member
 
       **Figure 2** Adding a member

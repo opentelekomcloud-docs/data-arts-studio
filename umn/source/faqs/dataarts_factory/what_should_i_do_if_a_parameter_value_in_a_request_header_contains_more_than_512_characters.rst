@@ -13,7 +13,7 @@ Symptom
 When configuring a parameter for a job operator, you need to enter the parameter name and value. If you already enter 512 characters for the parameter value, you cannot enter more characters.
 
 
-.. figure:: /_static/images/en-us_image_0000002270845678.png
+.. figure:: /_static/images/en-us_image_0000002269115709.png
    :alt: **Figure 1** Configuring a request header parameter
 
    **Figure 1** Configuring a request header parameter
@@ -26,7 +26,7 @@ Solution
    Enter a variable name for **Value**, for example, **{para}**.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305438625.png
+   .. figure:: /_static/images/en-us_image_0000002269115725.png
       :alt: **Figure 2** Configuring a request header parameter
 
       **Figure 2** Configuring a request header parameter
@@ -38,7 +38,7 @@ Solution
    b. Enter variable **para** and its value. The value can contain a maximum of 1,024 characters.
 
 
-      .. figure:: /_static/images/en-us_image_0000002270845686.png
+      .. figure:: /_static/images/en-us_image_0000002234076524.png
          :alt: **Figure 3** Configuring job parameters
 
          **Figure 3** Configuring job parameters

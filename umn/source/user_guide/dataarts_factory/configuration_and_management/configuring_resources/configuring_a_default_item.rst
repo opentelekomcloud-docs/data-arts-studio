@@ -12,23 +12,105 @@ Scenario
 
 If a parameter is invoked by multiple jobs, you can use this parameter as the default configuration item. In this way, you do not need to set this parameter for each job.
 
+.. table:: **Table 1** Configuration items
+
+   +--------------------------------------------------------------------------------------------------------------+----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Configuration Item                                                                                           | Affected Module                  | Main Usage                                                                                                                                                                                                                                                                    |
+   +==============================================================================================================+==================================+===============================================================================================================================================================================================================================================================================+
+   | :ref:`Periodic Scheduling <dataartsstudio_01_04501__section758614222215>`                                    | Job scheduling                   | -  Default action on the **current job** when the job it depends on fails                                                                                                                                                                                                     |
+   +--------------------------------------------------------------------------------------------------------------+----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`Multi-IF Policy <dataartsstudio_01_04501__section1105620164415>`                                       | Job scheduling                   | Policy for executing nodes with multiple IF conditions                                                                                                                                                                                                                        |
+   +--------------------------------------------------------------------------------------------------------------+----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`Hard and Soft Lock Policy <dataartsstudio_01_04501__section140018355442>`                              | Script/Job development           | Policy for grabbing the lock of a job or script                                                                                                                                                                                                                               |
+   +--------------------------------------------------------------------------------------------------------------+----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`Script Variable Definition <dataartsstudio_01_04501__section310213518565>`                             | Script development               | Format definition of script variables. Two formats are available: ${} and ${dlf.}.                                                                                                                                                                                            |
+   +--------------------------------------------------------------------------------------------------------------+----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`Data Export Policy <dataartsstudio_01_04501__section1970845152011>`                                    | Script/Job development           | Policy for downloading or dumping the SQL execution result                                                                                                                                                                                                                    |
+   |                                                                                                              |                                  |                                                                                                                                                                                                                                                                               |
+   |                                                                                                              |                                  | -  All users                                                                                                                                                                                                                                                                  |
+   |                                                                                                              |                                  | -  No user                                                                                                                                                                                                                                                                    |
+   |                                                                                                              |                                  | -  Only workspace administrator                                                                                                                                                                                                                                               |
+   +--------------------------------------------------------------------------------------------------------------+----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`Disable Auto Node Name Change <dataartsstudio_01_04501__section67661828112219>`                        | Job Development                  | When a node in a DataArts Studio job is associated with a script or a job of another service, the node name does not change accordingly.                                                                                                                                      |
+   +--------------------------------------------------------------------------------------------------------------+----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`Use Simple Variable Set <dataartsstudio_01_04501__section12475339019>`                                 | Job development                  | A simple variable set provides a series of custom variables that automatically replace parameters during job scheduling.                                                                                                                                                      |
+   +--------------------------------------------------------------------------------------------------------------+----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`Notification Policy for Jobs in Failure Ignored Status <dataartsstudio_01_04501__section201662581464>` | O&M and scheduling               | Notification type for jobs whose status is failure ignored                                                                                                                                                                                                                    |
+   +--------------------------------------------------------------------------------------------------------------+----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`Retry Node upon Timeout <dataartsstudio_01_04501__section687113915618>`                                | Job execution                    | Whether a node will be re-executed if it fails upon timeout                                                                                                                                                                                                                   |
+   +--------------------------------------------------------------------------------------------------------------+----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`Exclude Waiting Time from Instance Timeout Duration <dataartsstudio_01_04501__section14959925164217>`  | Job execution                    | If you select **Yes**, the waiting time before an instance starts running is excluded from the instance timeout duration.                                                                                                                                                     |
+   +--------------------------------------------------------------------------------------------------------------+----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`Rules for Splitting MRS JAR Package Parameters <dataartsstudio_01_04501__section105211772476>`         | Job development                  | Rules for splitting string parameters (parameters enclosed by "") in the JAR packages of MRS MapReduce and MRS Spark operators                                                                                                                                                |
+   +--------------------------------------------------------------------------------------------------------------+----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`Synchronization of Job Version by Waiting Instance <dataartsstudio_01_04501__section2986254123414>`    | O&M and scheduling               | Whether a waiting instance synchronizes the latest job version when it runs                                                                                                                                                                                                   |
+   +--------------------------------------------------------------------------------------------------------------+----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`Execution Mode for Hive SQL and Spark SQL Statements <dataartsstudio_01_04501__section1545212478426>`  | Script/Job development           | -  **In OBS**: The OBS path is returned to MRS.                                                                                                                                                                                                                               |
+   |                                                                                                              |                                  | -  **In the request message body**: The script content is returned to MRS.                                                                                                                                                                                                    |
+   +--------------------------------------------------------------------------------------------------------------+----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`Whether MRS Resource Queue Is Mandatory <dataartsstudio_01_04501__section146531751579>`                | Job development                  | If you select **Yes**, parameter **MRS Resource Queue** is mandatory.                                                                                                                                                                                                         |
+   +--------------------------------------------------------------------------------------------------------------+----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`PatchData Job Priority <dataartsstudio_01_04501__section1149418391843>`                                | O&M - PatchData                  | Priority of a PatchData job. If system resources are insufficient, computing resources are preferentially allocated to jobs with higher priorities. A larger value indicates a higher priority. Priorities can be set only for DLI SQL operators.                             |
+   +--------------------------------------------------------------------------------------------------------------+----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`Historical Job Instance Cancellation Policy <dataartsstudio_01_04501__section10606125173916>`          | O&M and scheduling               | Days to wait before job instances are canceled. If the wait time of a job instance exceeds the value of this parameter, the instance will be canceled. The minimum value is 2, that is, a job instance can be canceled only after two days. The default value is **60** days. |
+   +--------------------------------------------------------------------------------------------------------------+----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`Historical Job Instance Alarm Policy <dataartsstudio_01_04501__section166989301817>`                   | O&M and scheduling               | Days in which alarms can be reported for job instances.                                                                                                                                                                                                                       |
+   |                                                                                                              |                                  |                                                                                                                                                                                                                                                                               |
+   |                                                                                                              |                                  | The default value is **7**, that is, alarms can be reported for the job instances created within the last seven days, but not for those created before that.                                                                                                                  |
+   +--------------------------------------------------------------------------------------------------------------+----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`Default Retry Policy upon Job Operator Failure <dataartsstudio_01_04501__section1048217439191>`        | O&M and scheduling               | Default policy for retrying a failed job operator                                                                                                                                                                                                                             |
+   +--------------------------------------------------------------------------------------------------------------+----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`Generate Alarm Upon Job Retry Failure <dataartsstudio_01_04501__section132101959182118>`               | O&M and scheduling               | If you select **All jobs**, **Real-time jobs**, or **Batch jobs**, an alarm is generated each time a job fails to be retried.                                                                                                                                                 |
+   |                                                                                                              |                                  |                                                                                                                                                                                                                                                                               |
+   |                                                                                                              |                                  | If you select **Disable**, an alarm is generated only when the maximum number of retries has been reached for the job.                                                                                                                                                        |
+   +--------------------------------------------------------------------------------------------------------------+----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`Automatic Script Name Transfer During Job Execution <dataartsstudio_01_04501__section5197124710613>`   | Job development (job execution)  | If this function is enabled, set mapreduce.job.name=Script name of the Hive SQL script is automatically transferred to MRS during job execution in the current workspace.                                                                                                     |
+   +--------------------------------------------------------------------------------------------------------------+----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`Job Dependency Rule <dataartsstudio_01_04501__section45021415123915>`                                  | Job scheduling                   | Jobs can be depended on by jobs in other workspaces (requires the permission to query the job list in the workspace). All default roles in the workspace have this permission. Custom roles must have the job query permission in DataArts Factory.                           |
+   +--------------------------------------------------------------------------------------------------------------+----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`Script Execution History <dataartsstudio_01_04501__section7536359192017>`                              | Script/Job development           | Which script execution results are displayed                                                                                                                                                                                                                                  |
+   |                                                                                                              |                                  |                                                                                                                                                                                                                                                                               |
+   |                                                                                                              |                                  | -  **Myself**: The script execution history for only myself is displayed.                                                                                                                                                                                                     |
+   |                                                                                                              |                                  | -  **All users**: The script execution history for all users is displayed.                                                                                                                                                                                                    |
+   +--------------------------------------------------------------------------------------------------------------+----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`Identity for Job Tests <dataartsstudio_01_04501__section83901219181110>`                               | Job development (job test)       | Identity for testing jobs.                                                                                                                                                                                                                                                    |
+   |                                                                                                              |                                  |                                                                                                                                                                                                                                                                               |
+   |                                                                                                              |                                  | -  **Public agency or IAM account**: A public agency or IAM account is used to execute jobs.                                                                                                                                                                                  |
+   |                                                                                                              |                                  | -  **Personal account**: The user who clicks **Test** is used to execute jobs.                                                                                                                                                                                                |
+   +--------------------------------------------------------------------------------------------------------------+----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`SparkSqlJob/Script Default Template Configuration <dataartsstudio_01_04501__section977293342312>`      | Spark SQL script/job development | Whether any parameters can be set for Spark SQL jobs and scripts                                                                                                                                                                                                              |
+   +--------------------------------------------------------------------------------------------------------------+----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`HiveSqlJob/Script Default Template Configuration <dataartsstudio_01_04501__section20499113582315>`     | Spark SQL script/job development | Whether any parameters can be set for Hive SQL jobs and scripts                                                                                                                                                                                                               |
+   +--------------------------------------------------------------------------------------------------------------+----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`Job/Script Change Management <dataartsstudio_01_04501__section375164516215>`                           | Job/Script import and export     | Whether to enable job/script change management for the workspace                                                                                                                                                                                                              |
+   |                                                                                                              |                                  |                                                                                                                                                                                                                                                                               |
+   |                                                                                                              |                                  | -  **Yes**: Events are recorded for job and script changes. All the changed jobs and scripts can be incrementally exported and imported by time.                                                                                                                              |
+   |                                                                                                              |                                  | -  **No**: No events are recorded for job and script changes. Only selected jobs and scripts can be exported and imported.                                                                                                                                                    |
+   +--------------------------------------------------------------------------------------------------------------+----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`Log Open Mode <dataartsstudio_01_04501__section108941170226>`                                          | Viewing logs                     | Whether to open logs on a new tab or in a pop-up window                                                                                                                                                                                                                       |
+   +--------------------------------------------------------------------------------------------------------------+----------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+.. _dataartsstudio_01_04501__section758614222215:
+
 Configuring Periodic Scheduling
 -------------------------------
 
-To configure the default action on the current job when the job it depends on fails, perform the following operations:
+-  To configure the default action on the **current job** when the job it depends on fails, perform the following operations:
 
-#. In the navigation pane, choose **Configuration** > **Specifications**.
-#. Choose **Default Configuration**.
+   #. In the left navigation pane on the DataArts Factory console, choose **Configuration** > **Configure**.
+   #. Choose **Default Configuration**.
 
-   .. note::
+      .. note::
 
-      Three options are available. The default value is **Suspend**.
+         Three options are available. The default value is **Terminate**.
 
-      -  **Suspend**: The current job is suspended.
-      -  **Continue**: The current job continues to be executed.
-      -  **Cancel**: The current job is canceled.
+         -  **Suspend**: The current job is suspended.
+         -  **Continue**: The current job continues to be executed.
+         -  **Cancel**: The current job is canceled.
 
-#. Click **Save** to save the settings. This parameter takes effect only for new jobs.
+   #. Click **Save** to save the settings. This parameter takes effect only for new jobs.
+
+.. _dataartsstudio_01_04501__section1105620164415:
 
 Configuring the Multi-IF Policy
 -------------------------------
@@ -66,7 +148,7 @@ You can configure the hard/soft policy based on your needs.
       The default policy is **Soft Lock**.
 
       -  **Soft lock**: You can lock or unlock jobs or scripts, regardless of whether they are locked by others.
-      -  **Hard Lock**: You can lock jobs or scripts only after they have been unlocked by other users. The space administrator and the DARTS Administrator can lock and unlock jobs or scripts without any limitations.
+      -  **Hard Lock**: You can lock jobs or scripts only after they have been unlocked by other users. The space administrator and the DARTS Administrator user can lock and unlock jobs or scripts without any limitations.
 
 #. Click **Save** to save the settings.
 
@@ -121,7 +203,7 @@ On the **Develop Job** page, when you select a script for a node or associate a 
 
    .. note::
 
-      -  You can disable automatic name change for the following nodes: CDM Job, DIS Stream, DLI SQL, DWS SQL, MRS Spark SQL, MRS Hive SQL, MRS Presto SQL, MRS HetuEngine, MRS ClickHouse, Shell, RDS SQL, Subjob, For Each, or Python.
+      -  You can disable automatic name change for the following nodes: CDM Job, DLI SQL, DWS SQL, MRS Spark SQL, MRS Hive SQL, MRS Presto SQL, MRS HetuEngine, MRS ClickHouse, MRS Impala SQL, Shell, RDS SQL, Subjob, For Each, Doris SQL, or Python.
       -  No job nodes are selected by default.
       -  Names of the selected nodes will not be automatically changed when a script is selected or a function is associated with them.
 
@@ -144,8 +226,10 @@ The simple variable set provides a series of customized variables to dynamically
 
 #. Click **Save** to save the settings.
 
-Setting the Notification Policy for Jobs in Failure Ignored Status
-------------------------------------------------------------------
+.. _dataartsstudio_01_04501__section201662581464:
+
+Notification Policy for Jobs in Failure Ignored Status
+------------------------------------------------------
 
 To configure the notification type for jobs whose status is failure ignored, perform the following steps:
 
@@ -164,6 +248,8 @@ To configure the notification type for jobs whose status is failure ignored, per
          **Successful** (default)
 
 #. Click **Save**.
+
+.. _dataartsstudio_01_04501__section687113915618:
 
 Setting Retry Node upon Timeout
 -------------------------------
@@ -200,6 +286,8 @@ You can specify whether to exclude waiting time from instance timeout duration.
 
 #. Click **Save** to save the settings.
 
+.. _dataartsstudio_01_04501__section105211772476:
+
 Rules for Splitting MRS JAR Package Parameters
 ----------------------------------------------
 
@@ -216,6 +304,8 @@ You can set the rule for splitting the string parameters (enclosed by "") in the
       **Do not split string arguments**: For example, **"select \* from table"** is regarded as one parameter and is not split.
 
 #. Click **Save** to save the settings.
+
+.. _dataartsstudio_01_04501__section2986254123414:
 
 Synchronization of Job Version by Waiting Instance
 --------------------------------------------------
@@ -234,10 +324,12 @@ You can specify whether a waiting instance can synchronize the latest job versio
 
 #. Click **Save** to save the settings.
 
+.. _dataartsstudio_01_04501__section1545212478426:
+
 Execution Mode for Hive SQL and Spark SQL Statements
 ----------------------------------------------------
 
-When Hive SQL and Spark SQL statements are executed, DGCDataArts Studio can place SQL statements in OBS or in the request body.
+When Hive SQL and Spark SQL statements are executed, DataArts Studio can place SQL statements in OBS or in the request body.
 
 #. In the navigation pane, choose **Configuration** > **Configure**.
 #. Choose **Default Configuration**.
@@ -254,6 +346,42 @@ When Hive SQL and Spark SQL statements are executed, DGCDataArts Studio can plac
    .. note::
 
       This configuration supports Hive SQL and Spark SQL scripts, and pipeline and single-task jobs.
+
+.. _dataartsstudio_01_04501__section146531751579:
+
+Whether MRS Resource Queue Is Mandatory
+---------------------------------------
+
+You can set whether the **MRS resource queue** is mandatory for configuring an MRS-related job.
+
+.. note::
+
+   This function is available for the following scenarios:
+
+   -  Pipeline job operators: MRS Spark SQL, MRS Flink Job, MRS Hive SQL, MRS Spark Python, and MRS Spark
+   -  Real-time processing jobs: Flink Jar and Flink SQL
+   -  Batch processing single-task jobs: Spark SQL and Hive SQL
+   -  Job import (including the job types listed above)
+
+#. In the left navigation pane on the DataArts Factory console, choose **Configuration** > **Configure**.
+#. Choose **Default Configuration**.
+#. Set **Whether MRS Resource Queue Is Mandatory**.
+
+   .. note::
+
+      **Yes**: The **MRS Resource Queue** parameter is mandatory.
+
+      **No**: The **MRS Resource Queue** parameter is not mandatory.
+
+      As shown in the following figure, there are no red asterisks (``*``) before **MRS Resource Queue**, indicating that this parameter is not mandatory.
+
+
+      .. figure:: /_static/images/en-us_image_0000002269124893.png
+         :alt: **Figure 1** Setting MRS Resource Queue
+
+         **Figure 1** Setting MRS Resource Queue
+
+#. Click **Save**.
 
 .. _dataartsstudio_01_04501__section1149418391843:
 
@@ -281,6 +409,8 @@ You can set the priority of a PatchData job. When system resources are insuffici
 
       If **PatchData Job Priority** is set to **5**, **spark.sql.dli.job.priority** of DLI is **10**.
 
+.. _dataartsstudio_01_04501__section10606125173916:
+
 Historical Job Instance Cancellation Policy
 -------------------------------------------
 
@@ -290,6 +420,15 @@ You can set the number of retention days for waiting job instances. If the waiti
 #. Choose **Default Configuration**.
 #. Set the number of retention days for waiting job instances.
 #. Click **Save** to save the settings.
+
+Send Alarm Upon Instance Cancellation If you select **Yes** for this parameter and configure a cancellation notification for a job, an alarm notification will be sent when a historical job instance is canceled upon timeout. If you select **No**, no alarm notification will be sent.
+
+#. In the left navigation pane on the DataArts Factory console, choose **Configuration** > **Configure**.
+#. Choose **Default Configuration**.
+#. Set **Send Alarm Upon Instance Cancellation**.
+#. Click **Save** to save the settings.
+
+.. _dataartsstudio_01_04501__section166989301817:
 
 Historical Job Instance Alarm Policy
 ------------------------------------
@@ -310,22 +449,7 @@ For example, if you set the value of this parameter to **2**, alarms can be gene
 
 #. Click **Save** to save the settings.
 
-.. _dataartsstudio_01_04501__section81976461047:
-
-Job Alarm Notification Topic
-----------------------------
-
-You can set the topic used to send notifications by owner.
-
-#. In the navigation pane, choose **Configuration** > **Configure**.
-#. Choose **Default Configuration**.
-#. Set **Job Alarm Notification Topic**. Click **View Topic** to go to the SMN console to view available topics.
-
-   .. note::
-
-      You can only select a topic that you created on the SMN console (to prevent conflict with any existing topic). Only the workspace administrator can configure topic.
-
-#. Click **Save** to save the settings.
+.. _dataartsstudio_01_04501__section1048217439191:
 
 Default Retry Policy upon Job Operator Failure
 ----------------------------------------------
@@ -342,21 +466,25 @@ This policy takes effect only for new job operators in the current workspace. Th
 
 #. Click **Save** to save the settings.
 
-Alarm Upon First Job Operator Failure
+.. _dataartsstudio_01_04501__section132101959182118:
+
+Generate Alarm Upon Job Retry Failure
 -------------------------------------
 
-If you select **Yes** for this parameter, an alarm is generated when a job operator fails for the first time.
+If you enable this function, an alarm is generated each time a job fails to be retried.
 
 #. In the left navigation pane on the DataArts Factory console, choose **Configuration** > **Configure**.
 #. Choose **Default Configuration**.
-#. Set **Alarm Upon First Job Operator Failure**.
+#. Set **Generate Alarm Upon Job Retry Failure**.
 
    .. note::
 
-      -  **Yes**: An alarm is generated when a job operator fails for the first time.
-      -  **No**: An alarm is generated when the maximum number of retries for a job operator is reached. For example, if the maximum number of retries for a job operator is 3, an alarm is generated if the operator has been retried three times but still fails.
+      -  If you select **All jobs**, **Real-time jobs**, or **Batch jobs**, an alarm is generated each time a job fails to be retried.
+      -  If you select **Disable**, an alarm is generated only when the maximum number of retries has been reached for the job.
 
 #. Click **Save** to save the settings.
+
+.. _dataartsstudio_01_04501__section5197124710613:
 
 Automatic Script Name Transfer During Job Execution
 ---------------------------------------------------
@@ -397,6 +525,8 @@ Jobs can be depended on by jobs in other workspaces (requires the permission to 
 
 #. Click **Save** to save the settings.
 
+.. _dataartsstudio_01_04501__section7536359192017:
+
 Script Execution History
 ------------------------
 
@@ -412,6 +542,8 @@ You can set this parameter to control the permissions to view the script executi
       -  **All users**: The script execution history for all users is displayed.
 
 #. Click **Save** to save the settings.
+
+.. _dataartsstudio_01_04501__section83901219181110:
 
 Identity for Job Tests
 ----------------------
@@ -434,10 +566,12 @@ After configuring this parameter, you can specify the identity used to test jobs
 
 #. Click **Save** to save the settings.
 
-Spark SQL Job/Script Default Template Configuration
----------------------------------------------------
+.. _dataartsstudio_01_04501__section977293342312:
 
-You can set this parameter to determine whether parameters can be set to overwrite the default parameters of the template.
+SparkSqlJob/Script Default Template Configuration
+-------------------------------------------------
+
+You can set this parameter to determine whether any parameters can be set to overwrite the default parameters of the template.
 
 In the MRS API connection mode, default parameters can be configured for Spark SQL scripts. For proxy connections, this function is not supported.
 
@@ -447,16 +581,18 @@ In the MRS API connection mode, default parameters can be configured for Spark S
 
    .. note::
 
-      -  **Yes**: You can set parameters to overwrite the default parameters in the template.
+      -  **Yes**: You can set any parameters for jobs and scripts.
 
-      -  **No**: You cannot set parameters to overwrite the default parameters in the template. If you select **No**, select a default parameter template that has been configured.
+      -  **No**: You must select a template for jobs and scripts. If you select **No**, select a default parameter template that has been configured. For details about how to configure a template, see :ref:`Configuring a Template <dataartsstudio_01_1282>`.
 
          Then go to the **basic information page of the Spark SQL job or Spark SQL script page and click** |image1| **in the upper right corner** to view the configured default program parameters. The preset default parameters are unavailable and cannot be modified.
 
-         You can also customize program parameters. When a Spark SQL job or script is executed, the unavailable parameters in the template prevail.
+         You can also customize program parameters, which can replace the template parameters during the execution of Spark SQL jobs or scripts.
 
-Hive SQL Job/Script Default Template Configuration
---------------------------------------------------
+.. _dataartsstudio_01_04501__section20499113582315:
+
+HiveSqlJob/Script Default Template Configuration
+------------------------------------------------
 
 You can set this parameter to determine whether parameters can be set to overwrite the default parameters of the template.
 
@@ -468,15 +604,17 @@ In the MRS API connection mode, default parameters can be configured for Hive SQ
 
    .. note::
 
-      -  **Yes**: You can set parameters to overwrite the default parameters in the template.
+      -  **Yes**: You can set any parameters for jobs and scripts.
 
-      -  **No**: You cannot set parameters to overwrite the default parameters in the template. If you select **No**, select a default parameter template that has been configured.
+      -  **No**: You must select a template for jobs and scripts. If you select **No**, select a default parameter template that has been configured. For details about how to configure a template, see :ref:`Configuring a Template <dataartsstudio_01_1282>`.
 
          Then go to the **basic information page of the Hive SQL job or Hive SQL script page and click** |image2| **in the upper right corner** to view the configured default program parameters. The preset default parameters are unavailable and cannot be modified.
 
-         You can also customize program parameters. When a Hive SQL job or script is executed, the unavailable parameters in the template prevail.
+         You can also customize program parameters, which can replace the template parameters during the execution of Hive SQL jobs or scripts.
 
 #. Click **Save** to save the settings.
+
+.. _dataartsstudio_01_04501__section375164516215:
 
 Job/Script Change Management
 ----------------------------
@@ -498,5 +636,23 @@ If you enable this function, you can export job/script changes (addition, modifi
 
       You can export and import jobs and scripts in the workspace only if you have set **Job/Script Change Management** to **Yes**.
 
-.. |image1| image:: /_static/images/en-us_image_0000002270846766.png
-.. |image2| image:: /_static/images/en-us_image_0000002270846770.png
+.. _dataartsstudio_01_04501__section108941170226:
+
+Log Open Mode
+-------------
+
+You can configure whether to open logs on a new tab or in a pop-up window.
+
+#. In the left navigation pane on the DataArts Factory console, choose **Configuration** > **Configure**.
+#. Choose **Default Configuration** and locate **Log Open Mode**.
+#. Select **New tab** or **Pop-up**.
+
+   .. note::
+
+      -  **New tab**: Logs are opened on a new page.
+      -  **Pop-up**: Logs are opened in a pop-up window on the current page.
+
+#. Click **Save** to save the settings.
+
+.. |image1| image:: /_static/images/en-us_image_0000002269204977.png
+.. |image2| image:: /_static/images/en-us_image_0000002234245540.png

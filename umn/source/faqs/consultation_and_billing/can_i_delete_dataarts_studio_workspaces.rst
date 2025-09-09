@@ -9,13 +9,13 @@ Yes. The procedure is as follows.
 
 .. note::
 
-   To prevent service loss caused by mis-deletion, the system allows only the **DARTS** **Administrator** or **Tenant Administrator** to delete workspaces. Before deleteing a workspace, ensure that no resource is available in any of the following modules:
+   Mis-deletion may result in service loss. To delete a workspace, you must use the **DARTS** **Administrator** or **Tenant Administrator** account and ensure that the workspace does not contain any of the following resources:
 
    -  Management Center: data connections
    -  DataArts Migration: CDM clusters
    -  DataArts Factory: jobs, job directories, scripts, script directories, and resources
 
-   If any component of a workspace has any service resource, deleting the workspace will fail.
+   If any module has resources, a message is displayed, indicating that the workspace cannot be deleted.
 
 #. Log in to the DataArts Studio console and go to the **Workspaces** page.
 
@@ -26,7 +26,7 @@ Yes. The procedure is as follows.
    If any module has resources, delete the resources as prompted and try again.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305405869.png
+   .. figure:: /_static/images/en-us_image_0000002234076600.png
       :alt: **Figure 1** Message indicating that the workspace cannot be deleted
 
       **Figure 1** Message indicating that the workspace cannot be deleted

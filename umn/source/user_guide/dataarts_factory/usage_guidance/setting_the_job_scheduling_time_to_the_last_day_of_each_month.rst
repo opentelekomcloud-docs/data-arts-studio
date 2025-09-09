@@ -32,7 +32,7 @@ In DataArts Studio, create a job that is scheduled every day and add an empty Du
 #. Set **Scheduling Frequency** to **Every day**.
 
 
-   .. figure:: /_static/images/en-us_image_0000002270791280.png
+   .. figure:: /_static/images/en-us_image_0000002234243360.png
       :alt: **Figure 1** Setting Scheduling Frequency to Every day
 
       **Figure 1** Setting Scheduling Frequency to Every day
@@ -40,7 +40,7 @@ In DataArts Studio, create a job that is scheduled every day and add an empty Du
 #. Right-click the connection line between the Dummy node and its subsequent node and select **Set Condition** to configure a condition expression that is used to determine whether to execute the subsequent node.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305408021.png
+   .. figure:: /_static/images/en-us_image_0000002269202797.png
       :alt: **Figure 2** Configuring a condition expression
 
       **Figure 2** Configuring a condition expression
@@ -54,12 +54,14 @@ In DataArts Studio, create a job that is scheduled every day and add an empty Du
    The expression is used to obtain the current time and check whether the next day is 1st of a month. If yes, the current day is the last day of the current month, and the subsequent node will be executed; if no, the subsequent node will be skipped.
 
 
-   .. figure:: /_static/images/en-us_image_0000002270791276.png
+   .. figure:: /_static/images/en-us_image_0000002269202825.png
       :alt: **Figure 3** Condition expression
 
       **Figure 3** Condition expression
 
-   For example, if you want a job to be executed on the last day and seventh day of each month, perform the following operation:
+   For example, if you want a job to be executed on the last day of each month, perform the above operations.
+
+   For example, if you want a job to be executed on the seventh day of each month, perform the following operations:
 
    Configure the following expression to check whether the current day is 7th:
 
@@ -79,7 +81,7 @@ Method 2
 #. Set **Scheduling Type** to **Run periodically**, **Scheduling Frequency** to **Every month**, and **Select Time** to **the last day of each month**.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305441089.png
+   .. figure:: /_static/images/en-us_image_0000002234243352.png
       :alt: **Figure 4** Setting the scheduling time to the last day of each month
 
       **Figure 4** Setting the scheduling time to the last day of each month

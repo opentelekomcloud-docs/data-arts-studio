@@ -10,7 +10,8 @@ DataArts Factory allows you to create, edit, debug, and run SQL, Python, and She
 Prerequisites
 -------------
 
-You have completed operations in :ref:`Creating a Data Connection <dataartsstudio_01_0404>` and :ref:`Creating a Database <dataartsstudio_01_0405>`.
+-  You have completed operations in :ref:`Creating a Data Connection <dataartsstudio_01_0404>` and :ref:`Creating a Database <dataartsstudio_01_0405>`.
+-  A workspace can contain a maximum of 10,000 scripts, 5,000 script directories, and 10 directory levels. Ensure that these upper limits are not reached.
 
 Procedure
 ---------

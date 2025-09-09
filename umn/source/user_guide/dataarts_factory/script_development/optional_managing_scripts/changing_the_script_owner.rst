@@ -19,7 +19,7 @@ Procedure
 #. At the top of the script directory, click |image1| and select **Configure Owner**.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305406385.png
+   .. figure:: /_static/images/en-us_image_0000002234080928.png
       :alt: **Figure 1** Changing the owner
 
       **Figure 1** Changing the owner
@@ -28,15 +28,4 @@ Procedure
 
 #. When the owner is changed, click **Close**.
 
-Related Operations
-------------------
-
-You can use an owner to filter scripts by entering the owner in the search box above the script directory.
-
-
-.. figure:: /_static/images/en-us_image_0000002270846514.png
-   :alt: **Figure 2** Filtering scripts by owner
-
-   **Figure 2** Filtering scripts by owner
-
-.. |image1| image:: /_static/images/en-us_image_0000002305406389.png
+.. |image1| image:: /_static/images/en-us_image_0000002269200193.png

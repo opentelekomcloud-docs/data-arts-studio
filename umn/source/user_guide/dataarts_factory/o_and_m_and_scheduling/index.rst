@@ -9,7 +9,7 @@ O&M and Scheduling
 -  :ref:`Monitoring a Job <dataartsstudio_01_0413>`
 -  :ref:`Instance Monitoring <dataartsstudio_01_0511>`
 -  :ref:`Monitoring PatchData <dataartsstudio_01_0512>`
--  :ref:`Managing Notifications <dataartsstudio_01_0414>`
+-  :ref:`Notification Management <dataartsstudio_01_0414>`
 -  :ref:`Managing Backups <dataartsstudio_01_0516>`
 -  :ref:`Operation History <dataartsstudio_01_1822>`
 
@@ -21,6 +21,6 @@ O&M and Scheduling
    monitoring_a_job/index
    instance_monitoring
    monitoring_patchdata
-   managing_notifications/index
+   notification_management/index
    managing_backups
    operation_history

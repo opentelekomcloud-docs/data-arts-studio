@@ -60,7 +60,7 @@ You have the permission to access OBS paths.
 #. Upload the script and data file to the OBS bucket.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305439593.png
+   .. figure:: /_static/images/en-us_image_0000002269198269.png
       :alt: **Figure 1** Uploading files to an OBS bucket
 
       **Figure 1** Uploading files to an OBS bucket
@@ -72,7 +72,7 @@ You have the permission to access OBS paths.
 #. Create an empty job named **job_MRS_Spark_Python**.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305406533.png
+   .. figure:: /_static/images/en-us_image_0000002269198253.png
       :alt: **Figure 2** Creating a job
 
       **Figure 2** Creating a job
@@ -80,7 +80,7 @@ You have the permission to access OBS paths.
 #. Go to the job development page, drag the **MRS Spark Python** node to the canvas, and click the node to configure its properties.
 
 
-   .. figure:: /_static/images/en-us_image_0000002270846666.png
+   .. figure:: /_static/images/en-us_image_0000002234078972.png
       :alt: **Figure 3** Configuring properties for an MRS Spark Python node
 
       **Figure 3** Configuring properties for an MRS Spark Python node
@@ -112,7 +112,7 @@ You have the permission to access OBS paths.
 #. Choose **Monitor Job** in the navigation pane and view the job execution result.
 
 
-   .. figure:: /_static/images/en-us_image_0000002270789796.png
+   .. figure:: /_static/images/en-us_image_0000002269198261.png
       :alt: **Figure 4** Viewing the job execution result
 
       **Figure 4** Viewing the job execution result
@@ -120,13 +120,13 @@ You have the permission to access OBS paths.
    The job log shows that the job was successfully executed.
 
 
-   .. figure:: /_static/images/en-us_image_0000002270846670.png
+   .. figure:: /_static/images/en-us_image_0000002269118173.png
       :alt: **Figure 5** Job run logs
 
       **Figure 5** Job run logs
 
 
-   .. figure:: /_static/images/en-us_image_0000002270789804.png
+   .. figure:: /_static/images/en-us_image_0000002234238812.png
       :alt: **Figure 6** Job execution status
 
       **Figure 6** Job execution status
@@ -134,7 +134,7 @@ You have the permission to access OBS paths.
 #. View the returned records in the OBS bucket. (Skip this step if the return function is not configured.)
 
 
-   .. figure:: /_static/images/en-us_image_0000002270846650.png
+   .. figure:: /_static/images/en-us_image_0000002234238820.png
       :alt: **Figure 7** Viewing the returned records in the OBS bucket
 
       **Figure 7** Viewing the returned records in the OBS bucket
@@ -185,7 +185,7 @@ Prepare the script file **zt_test_sparkPython1.py** with the following content:
 #. Choose **Monitor Job** in the navigation pane and view the job execution result.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305406541.png
+   .. figure:: /_static/images/en-us_image_0000002234078988.png
       :alt: **Figure 8** Viewing the job execution result
 
       **Figure 8** Viewing the job execution result
@@ -195,7 +195,7 @@ Prepare the script file **zt_test_sparkPython1.py** with the following content:
    Log in to MRS Manager and check that the log on YARN contains **hello python**.
 
 
-   .. figure:: /_static/images/en-us_image_0000002270846658.png
+   .. figure:: /_static/images/en-us_image_0000002234078980.png
       :alt: **Figure 9** Viewing logs on YARN
 
       **Figure 9** Viewing logs on YARN

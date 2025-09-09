@@ -5,6 +5,14 @@
 How Do I Check Which Jobs Invoke a CDM Job?
 ===========================================
 
+Symptom
+-------
+
+Jobs that invoke a CDM job
+
+Solution
+--------
+
 #. In the left navigation pane of DataArts Factory, choose **Monitoring** > **Job Monitoring**.
 
 #. Click the **Batch Job Monitoring** tab.
@@ -18,7 +26,7 @@ How Do I Check Which Jobs Invoke a CDM Job?
       You can query the scheduling and execution information of CDMJob operators by **CDMJob** in **Node Type**.
 
 
-   .. figure:: /_static/images/en-us_image_0000002270845726.png
+   .. figure:: /_static/images/en-us_image_0000002234077152.png
       :alt: **Figure 1** Batch Job Monitoring
 
       **Figure 1** Batch Job Monitoring

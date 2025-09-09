@@ -5,10 +5,18 @@
 Will Subsequent Jobs Be Affected If a Job Fails to Be Executed During Scheduling of Dependent Jobs? What Should I Do?
 =====================================================================================================================
 
+Possible Causes
+---------------
+
+One of the jobs that depend on each other fails during scheduling.
+
+Solution
+--------
+
 The subsequent jobs may be suspended, continued, or canceled, depending on the configuration.
 
 
-.. figure:: /_static/images/en-us_image_0000002305438813.png
+.. figure:: /_static/images/en-us_image_0000002269195897.png
    :alt: **Figure 1** Job dependencies
 
    **Figure 1** Job dependencies

@@ -5,4 +5,12 @@
 Does DataArts Studio Support Custom Python Scripts?
 ===================================================
 
+Symptom
+-------
+
+Whether DataArts Studio supports custom Python scripts
+
+Solution
+--------
+
 Yes.

@@ -33,14 +33,14 @@ If you submit a version, the latest job in the development state will be saved a
 #. Above the job canvas or editor, click **Submit** to submit a version. In the displayed dialog box, select the reviewer, enter the change description (a maximum of 128 characters allowed), and select the check box below. If you do not select this option, you cannot click **OK**. When submitting a version, you can click **Compare Version** to view the differences between the current version and the last version.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305441221.png
+   .. figure:: /_static/images/en-us_image_0000002269120589.png
       :alt: **Figure 1** Submitting a version
 
       **Figure 1** Submitting a version
 
    .. note::
 
-      -  If review is enabled on the **Review Center** page, your submitted version will be reviewed by the workspace admin on the **Pending Review** tab page on the **Review Center** page. The version is submitted successfully only after it is approved by the admin. For details, see :ref:`Approval Settings <dataartsstudio_01_1820__li1334183317582>`.
+      -  If review is enabled on the **Review Center** page, your submitted version will be reviewed by the reviewer on the **Pending Review** tab page on the **Review Center** page. The version is submitted successfully only after it is approved by the reviewer. For details, see :ref:`Approval Settings <dataartsstudio_01_1820__section1416816392412>`. If review is disabled, the version can be directly submitted.
 
          To revoke a submitted request, go to the **Review Center** page and click the **My Applications** tab. Then you can submit an application again.
 
@@ -73,7 +73,7 @@ The procedure is as follows:
 #. On the right of the page, click the **Versions** tab and view the version submission records. Select the version to be rolled back and click **Roll Back**.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305408141.png
+   .. figure:: /_static/images/en-us_image_0000002236652800.png
       :alt: **Figure 2** Rolling back the version
 
       **Figure 2** Rolling back the version
@@ -98,7 +98,7 @@ The procedure is as follows:
    A new page is displayed, showing the job definition of the version. You cannot modify any job attributes in this window.
 
 
-   .. figure:: /_static/images/en-us_image_0000002270848266.png
+   .. figure:: /_static/images/en-us_image_0000002271691905.png
       :alt: **Figure 3** Viewing version details
 
       **Figure 3** Viewing version details
@@ -119,7 +119,7 @@ Version Comparison
    If you select only one version, the selected version is compared with the JSON of the development-state job. If you select two versions, the JSON of the two versions is compared.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305441209.png
+   .. figure:: /_static/images/en-us_image_0000002424391793.png
       :alt: **Figure 4** Comparing versions
 
       **Figure 4** Comparing versions

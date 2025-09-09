@@ -22,7 +22,7 @@ A job executes a scheduling task to generate a series of instances in a certain 
 Constraints
 -----------
 
--  PatchData is available only when periodic scheduling is configured for the data development job.
+PatchData is available only when periodic scheduling is configured for the data development job.
 
 Example
 -------
@@ -76,7 +76,7 @@ Among the product data tables of a company, there is a source data table A that 
       INSERT INTO B (SELECT * FROM A WHERE DATE = ${DATE})
 
 
-   .. figure:: /_static/images/en-us_image_0000002305440105.png
+   .. figure:: /_static/images/en-us_image_0000002234076104.png
       :alt: **Figure 1** Developing a script
 
       **Figure 1** Developing a script
@@ -90,7 +90,7 @@ Among the product data tables of a company, there is a source data table A that 
    In the left navigation pane of the DataArts Factory console, choose **Data Development** > **Develop Job**.
 
 
-   .. figure:: /_static/images/en-us_image_0000002270790300.png
+   .. figure:: /_static/images/en-us_image_0000002234235952.png
       :alt: **Figure 2** Node parameters
 
       **Figure 2** Node parameters
@@ -116,7 +116,7 @@ Among the product data tables of a company, there is a source data table A that 
    Configure the scheduling period of the PatchData job. Click **Scheduling Setup** and set **Scheduling Frequency** to **Every day**.
 
 
-   .. figure:: /_static/images/en-us_image_0000002270790316.png
+   .. figure:: /_static/images/en-us_image_0000002269115341.png
       :alt: **Figure 3** Configuring the scheduling period
 
       **Figure 3** Configuring the scheduling period
@@ -139,14 +139,14 @@ Among the product data tables of a company, there is a source data table A that 
 
    After creating a periodic job, you need to configure PatchData for the job.
 
-   a. In the left navigation pane of DataArts Factory, choose **Monitoring** > **Monitor Job**.
+   a. In the left navigation pane of DataArts Factory, choose **Monitoring** > **Job Monitoring**.
 
    b. Click the **Batch Job Monitoring** tab. In the **Operation** column of the job, choose **More** > **Configure PatchData**. The **Configure PatchData** page is displayed.
 
       If you want to supplement historical data from February 27, 2023 to March 1, 2023, set **Date** to **Feb 28, 2023 00:00:00 - Mar 02, 2023 23:59:59**. The system automatically transfers the configured date to the planned job time. In the expression of the script time variable **DATE**, the defined time is the planned job time minus one day. That is, the time of the day before the planned job time is the time range (**Feb 27, 2023 to Mar 1, 2023**) for PatchData.
 
 
-      .. figure:: /_static/images/en-us_image_0000002270790320.png
+      .. figure:: /_static/images/en-us_image_0000002269195385.png
          :alt: **Figure 4** Configuring PatchData
 
          **Figure 4** Configuring PatchData
@@ -184,7 +184,13 @@ Among the product data tables of a company, there is a source data table A that 
 
    c. Click **OK**. The system starts to run the PatchData task based on the configured scheduling period.
 
-   d. On the **Monitor PatchData** page, you can view the PatchData task status, date, number of parallel periods, PatchData job name, and stopped tasks. You can also view details about the PatchData task.
+   d. On the **Monitor PatchData** page, you can view the PatchData task status, date, number of parallel periods, PatchData job name, and stopped tasks. You can also view logs of the PatchData task.
+
+
+      .. figure:: /_static/images/en-us_image_0000002269195381.png
+         :alt: **Figure 5** Querying PatchData details
+
+         **Figure 5** Querying PatchData details
 
    e. Run the following SQL statement to check whether destination table B contains historical data of source table A:
 
@@ -192,5 +198,5 @@ Among the product data tables of a company, there is a source data table A that 
 
          SELECT * FROM B
 
-.. |image1| image:: /_static/images/en-us_image_0000002305407049.png
-.. |image2| image:: /_static/images/en-us_image_0000002270847174.png
+.. |image1| image:: /_static/images/en-us_image_0000002269195369.png
+.. |image2| image:: /_static/images/en-us_image_0000002234076120.png

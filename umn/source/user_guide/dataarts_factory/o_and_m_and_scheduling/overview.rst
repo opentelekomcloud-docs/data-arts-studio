@@ -18,7 +18,16 @@ Choose **Monitoring** > **Overview**. On the **Overview** page, you can view the
       .. note::
 
          -  The statistics include the monitoring data of the instances of real-time jobs. When you click a status, you will not be redirected to the **Monitor Instance** page of real-time jobs. Instead, you can only view the details of the instances of batch jobs.
+
          -  By default, the system displays all job instances of the current day.
+
+         -  You can view the total number of instances that meet the filter criteria, the total number of instances that were successfully executed, and the percentage of such instances.
+
+
+            .. figure:: /_static/images/en-us_image_0000002234084820.png
+               :alt: **Figure 1** Status
+
+               **Figure 1** Status
 
 -  Completed Tasks
 
@@ -26,8 +35,8 @@ Choose **Monitoring** > **Overview**. On the **Overview** page, you can view the
 
       Successfully executed instances of the current day are collected once an hour. A task is a job node.
 
-   -  You can view the number of all types of job nodes successfully executed on the previous day, on the current day, and over the last seven days on average.
-   -  You can view the number of a specific type of job nodes successfully executed on the previous day, on the current day, and over the last seven days on average.
+   -  You can specify a date and view the number of **all** job nodes successfully executed on the **previous day**, on the **selected day**, and **over the last seven days on average**.
+   -  You can specify a date and view the number of different types of job nodes successfully executed on the **previous day**, on the **selected day**, and **over the last seven days on average**.
 
 -  Tasks
 

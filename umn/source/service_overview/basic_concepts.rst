@@ -17,12 +17,12 @@ A workspace enables admins to manage member permissions, resources, and configur
 
 The workspace is a basic unit for member management as well as role and permission assignment. Each team must have an independent workspace.
 
-You can access the Management Center, DataArts Factory, and DataArts Migration modules, but only after your account is added to a workspace and assigned the permissions required to perform such operations.
+You can access the Management Center, DataArts Factory, and DataArts Migration modules only after your account is added to a workspace and assigned the permissions required to perform such operations.
 
 Member and Role
 ---------------
 
-A member is a a cloud platform account account that has been assigned the permissions required to access and use a workspace. As an admin, when you add a workspace member, you must set a role.
+A member is a account that has been assigned the permissions required to access and use a workspace. As an admin, when you add a workspace member, you must set a role.
 
 A role is a predefined combination of permissions. Different roles have different permission sets. After a role is assigned to a member, the member has all the permissions of that role. Each member must have at least one role, and they can have multiple roles at the same time.
 

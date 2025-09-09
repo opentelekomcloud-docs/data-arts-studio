@@ -82,9 +82,13 @@ Solution
 
    .. note::
 
-      The ClientAliveInterval parameter specifies the interval for the server to send requests to a client. The default value is **0**, indicating that the server does not send requests to the client. Value **300** indicates that the server sends a request every five minutes and the client sends a response accordingly. In this process, a persistent connection is maintained. The default value of **ClientAliveCountMax** is **3**. If the number of times that the client does not respond to requests sent by the server reaches the value of this parameters, the server disconnects the connection to the client. Normally, the client sends responses.
+      The ClientAliveInterval parameter specifies the interval for the server to send requests to a client. The default value is **0**, indicating that the server does not send requests to the client. Value **300** indicates that the server sends a request every five minutes and the client sends a response accordingly. In this process, a persistent connection is maintained. The default value of **ClientAliveCountMax** is **3**. If the number of times that the client does not respond to requests sent by the server reaches the value of this parameter, the server disconnects the connection to the client. Normally, the client sends responses.
 
 #. After the modification, restart the sshd of the ECS and run the following command:
+
+   .. code-block::
+
+      restart sshd.service
 
    |image2|
 
@@ -92,6 +96,6 @@ Solution
 
    |image3|
 
-.. |image1| image:: /_static/images/en-us_image_0000002270788936.png
-.. |image2| image:: /_static/images/en-us_image_0000002270845798.png
-.. |image3| image:: /_static/images/en-us_image_0000002305438737.png
+.. |image1| image:: /_static/images/en-us_image_0000002269195801.png
+.. |image2| image:: /_static/images/en-us_image_0000002234236364.png
+.. |image3| image:: /_static/images/en-us_image_0000002269195813.png

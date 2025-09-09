@@ -15,6 +15,7 @@ This function depends on OBS buckets. For details about how to configure OBS buc
 Script Execution History
 ------------------------
 
+#. Log in to the DataArts Studio console by following the instructions in :ref:`Accessing the DataArts Studio Instance Console <dataartsstudio_01_0001>`.
 #. On the DataArts Studio console, locate a workspace and click **DataArts Factory**.
 #. In the navigation pane of the DataArts Factory homepage, choose **Data Development** > **Develop Script**.
 #. Above the directory, click |image1| to display the script and job execution history in the past seven days.
@@ -41,5 +42,5 @@ Job Execution History
 
       If only some nodes of the job were tested, the execution history only displays information and logs for these nodes.
 
-.. |image1| image:: /_static/images/en-us_image_0000002305441077.png
-.. |image2| image:: /_static/images/en-us_image_0000002270791272.png
+.. |image1| image:: /_static/images/en-us_image_0000002269202721.png
+.. |image2| image:: /_static/images/en-us_image_0000002269202729.png

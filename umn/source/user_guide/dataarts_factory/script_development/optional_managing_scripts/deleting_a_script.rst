@@ -5,7 +5,7 @@
 Deleting a Script
 =================
 
-If you do not need to use a script any more, perform the following operations to delete it.
+If you do not need to use a script any longer, perform the following operations to delete it.
 
 When you delete a script, the system checks whether the script is being referenced by some jobs. **Version** in the reference list lists the job versions that reference the script. After you click **Delete**, the job will be deleted as well as all version information about the job.
 
@@ -38,5 +38,5 @@ Batch Deleting Scripts
 #. Select the scripts to be deleted, click |image2|, and select **Batch Delete**.
 #. In the displayed dialog box, click **OK**.
 
-.. |image1| image:: /_static/images/en-us_image_0000002305406205.png
-.. |image2| image:: /_static/images/en-us_image_0000002305406205.png
+.. |image1| image:: /_static/images/en-us_image_0000002234235716.png
+.. |image2| image:: /_static/images/en-us_image_0000002234235716.png

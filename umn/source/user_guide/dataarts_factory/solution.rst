@@ -90,5 +90,5 @@ Deleting a Solution
 
 In the solution directory, right-click the solution name and choose **Delete** from the shortcut menu. A deleted solution cannot be restored. Exercise caution when performing this operation.
 
-.. |image1| image:: /_static/images/en-us_image_0000002305407289.png
-.. |image2| image:: /_static/images/en-us_image_0000002270847406.png
+.. |image1| image:: /_static/images/en-us_image_0000002269124789.png
+.. |image2| image:: /_static/images/en-us_image_0000002269124797.png

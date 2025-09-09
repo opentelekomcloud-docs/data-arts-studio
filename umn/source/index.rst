@@ -6,7 +6,6 @@ DataArts Studio - User Guide
    :maxdepth: 1
 
    service_overview/index
-   preparations/index
    user_guide/index
    faqs/index
    change_history

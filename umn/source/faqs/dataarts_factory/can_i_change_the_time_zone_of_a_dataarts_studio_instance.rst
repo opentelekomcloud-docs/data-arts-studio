@@ -5,6 +5,14 @@
 Can I Change the Time Zone of a DataArts Studio Instance?
 =========================================================
 
+Symptom
+-------
+
+Whether the time zone of a DataArts Studio instance can be changed. If not, how can the time of a DataArts Studio instance be adapted to the local time.
+
+Solution
+--------
+
 Currently, the time zone of a DataArts Studio instance cannot be changed.
 
 During the scheduling of data development jobs, an EL expression can be used to adapt to the local time. The following is an example EL expression:

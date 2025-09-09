@@ -31,7 +31,7 @@ Procedure
    -  **DLG**: traces of Management Center, DataArts Architecture, DataArts Quality, DataArts Catalog, and DataArts DataService
 
 
-   .. figure:: /_static/images/en-us_image_0000002305407381.png
+   .. figure:: /_static/images/en-us_image_0000002269204349.png
       :alt: **Figure 1** CDM traces
 
       **Figure 1** CDM traces
@@ -42,4 +42,4 @@ Procedure
 
    For more information about CTS, see *Cloud Trace Service User Guide*.
 
-.. |image1| image:: /_static/images/en-us_image_0000002305440441.png
+.. |image1| image:: /_static/images/en-us_image_0000002234085076.png

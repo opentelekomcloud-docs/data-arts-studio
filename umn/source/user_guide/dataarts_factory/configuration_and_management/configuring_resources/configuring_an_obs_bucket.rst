@@ -15,6 +15,8 @@ The OBS path is only supported for OBS buckets and not for parallel file systems
 Procedure
 ---------
 
+#. Log in to the DataArts Studio console by following the instructions in :ref:`Accessing the DataArts Studio Instance Console <dataartsstudio_01_0001>`.
+
 #. On the DataArts Studio console, locate a workspace and click **DataArts Factory**.
 
 #. In the navigation pane, choose **Configuration** > **Configure**.
@@ -24,7 +26,7 @@ Procedure
 #. Select an OBS bucket.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305406661.png
+   .. figure:: /_static/images/en-us_image_0000002234080176.png
       :alt: **Figure 1** Configuring an OBS bucket
 
       **Figure 1** Configuring an OBS bucket

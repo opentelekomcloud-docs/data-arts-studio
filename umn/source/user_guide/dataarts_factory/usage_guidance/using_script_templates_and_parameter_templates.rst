@@ -36,7 +36,7 @@ Using Templates
    #. Click **Template**. In the slide-out pane, select a template, for example, **412_mobna**. You can select multiple templates.
 
 
-      .. figure:: /_static/images/en-us_image_0000002305406493.png
+      .. figure:: /_static/images/en-us_image_0000002269199961.png
          :alt: **Figure 1** Using a script template
 
          **Figure 1** Using a script template
@@ -56,7 +56,7 @@ Using Templates
       After the script is selected, the template parameters and values used by the script are automatically displayed.
 
 
-      .. figure:: /_static/images/en-us_image_0000002305406473.png
+      .. figure:: /_static/images/en-us_image_0000002234080688.png
          :alt: **Figure 2** Using the Flink SQL script
 
          **Figure 2** Using the Flink SQL script
@@ -70,7 +70,7 @@ Using Templates
       The parameter names and values are automatically displayed.
 
 
-      .. figure:: /_static/images/en-us_image_0000002270789752.png
+      .. figure:: /_static/images/en-us_image_0000002269199973.png
          :alt: **Figure 3** Using a parameter template for program parameters
 
          **Figure 3** Using a parameter template for program parameters
@@ -84,10 +84,12 @@ Using Templates
    #. Click **Template**. In the slide-out pane, select a template, for example, **412_mobna**. You can select multiple templates.
 
 
-      .. figure:: /_static/images/en-us_image_0000002305439557.png
-         :alt: **Figure 4** Using a script template in a single-task Flink SQL job.
+      .. figure:: /_static/images/en-us_image_0000002269199985.png
+         :alt: **Figure 4** Using a script template in a single-task Flink SQL job
 
-         **Figure 4** Using a script template in a single-task Flink SQL job.
+         **Figure 4** Using a script template in a single-task Flink SQL job
+
+      |image1|
 
 -  Use template parameters in a single-task Flink JAR job.
 
@@ -102,7 +104,9 @@ Using Templates
       The parameter names and values are automatically displayed.
 
 
-      .. figure:: /_static/images/en-us_image_0000002270789764.png
+      .. figure:: /_static/images/en-us_image_0000002234080700.png
          :alt: **Figure 5** Using a script template in a single-task Flink JAR job.
 
          **Figure 5** Using a script template in a single-task Flink JAR job.
+
+.. |image1| image:: /_static/images/en-us_image_0000002234240552.png

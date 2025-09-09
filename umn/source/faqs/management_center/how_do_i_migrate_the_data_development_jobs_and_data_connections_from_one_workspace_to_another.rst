@@ -5,6 +5,7 @@
 How Do I Migrate the Data Development Jobs and Data Connections from One Workspace to Another?
 ==============================================================================================
 
-You can export the jobs in DataArts Factory and then import them to DataArts Factory in another workspace.
+You can export data connections and jobs from one workspace and import them to another workspace.
 
-You can export data connections on the **Migrate Resources** page of Manager Center and then import them on the **Migrate Resources** page in another workspace.
+-  Export and import data connections in Management Center.
+-  Export and import jobs in DataArts Factory.

@@ -42,7 +42,7 @@ Examples
 #. Select a CDM Job node and configure the node properties.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305407725.png
+   .. figure:: /_static/images/en-us_image_0000002234079008.png
       :alt: **Figure 1** Configuring CDM Job node properties
 
       **Figure 1** Configuring CDM Job node properties
@@ -52,7 +52,7 @@ Examples
    Configure the job parameters and add job parameter **maxtime**.
 
 
-   .. figure:: /_static/images/en-us_image_0000002270790992.png
+   .. figure:: /_static/images/en-us_image_0000002234238852.png
       :alt: **Figure 2** Configuring job parameters
 
       **Figure 2** Configuring job parameters
@@ -68,7 +68,7 @@ Examples
 #. Configure properties of the MRS Spark SQL node and associate the node with the created **maxtime** script.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305440781.png
+   .. figure:: /_static/images/en-us_image_0000002234079016.png
       :alt: **Figure 3** Configuring properties for the MRS Spark SQL node
 
       **Figure 3** Configuring properties for the MRS Spark SQL node
@@ -76,7 +76,7 @@ Examples
 #. Configure properties of the For Each node and associate the node with the created CDM subjob.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305407721.png
+   .. figure:: /_static/images/en-us_image_0000002269118201.png
       :alt: **Figure 4** Configuring properties for the For Each node
 
       **Figure 4** Configuring properties for the For Each node
@@ -102,7 +102,7 @@ Examples
 #. Click |image1| next to the job name to go to the job configuration page.
 
 
-   .. figure:: /_static/images/en-us_image_0000002305440801.png
+   .. figure:: /_static/images/en-us_image_0000002269118193.png
       :alt: **Figure 5** Editing the CDM job
 
       **Figure 5** Editing the CDM job
@@ -110,7 +110,7 @@ Examples
 #. In the advanced attributes of the source job configuration, configure a where clause to obtain the data to be migrated. When the job is executed, the migration data obtained from the source will be replicated, exported, and imported to the destination.
 
 
-   .. figure:: /_static/images/en-us_image_0000002270790972.png
+   .. figure:: /_static/images/en-us_image_0000002234079000.png
       :alt: **Figure 6** Configuring a where clause
 
       **Figure 6** Configuring a where clause
@@ -121,4 +121,4 @@ Examples
 
       dt > '${maxtime}'
 
-.. |image1| image:: /_static/images/en-us_image_0000002270790960.png
+.. |image1| image:: /_static/images/en-us_image_0000002269198293.png
