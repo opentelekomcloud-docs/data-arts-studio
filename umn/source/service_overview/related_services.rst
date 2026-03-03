@@ -18,7 +18,7 @@ DataArts Studio uses Cloud Trace Service (CTS) to audit users' non-query operati
 ECS
 ---
 
-CDM clusters of DataArts Studio consist of Elastic Cloud Servers (ECSs). In addition, DataArts Studio can use host connections to connect to ECSs and run Shell or Python scripts.
+CDM and DataArts DataService clusters of DataArts Studio consist of Elastic Cloud Servers (ECSs). In addition, DataArts Studio can use host connections to connect to ECSs and run Shell or Python scripts.
 
 VPC
 ---

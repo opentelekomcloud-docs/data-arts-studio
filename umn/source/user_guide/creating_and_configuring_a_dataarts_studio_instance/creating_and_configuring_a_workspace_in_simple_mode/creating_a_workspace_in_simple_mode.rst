@@ -9,7 +9,7 @@ The system creates a default workspace named **default** for the DataArts Studio
 
 A workspace in a DataArts Studio instance is the basic unit for member management and role and permission allocation. It provides all DataArts Studio functions. Workspaces are allocated by branch or subsidiary (such as the group, subsidiary, and department), business domain (such as the procurement, production, and sales), or implementation environment (such as the development, test, and production environment). There are no fixed rules.
 
-As an admin, you can manage user (member) permissions, resources, and compute engines for a workspace. To enable users to work together, admins can add users to a workspace and assign the preset roles of DataArts Studio (admin, developer, operator, and visitor) to the users. Users other than admins can access Management Center, DataArts Migration, and DataArts Factory only after they are added to a workspace and assigned relevant roles.
+As an admin, you can manage user (member) permissions, resources, and compute engines for a workspace. To enable users to work together, admins can add users to a workspace and assign the preset roles of DataArts Studio (admin, developer, operator, and visitor) to the users. Users other than admins can access Management Center, DataArts Migration, DataArts Architecture, DataArts Catalog, DataArts Quality, DataArts DataService, DataArts Security, and DataArts Factory only after they are added to a workspace and assigned relevant roles.
 
 Notes and Constraints
 ---------------------
@@ -105,7 +105,7 @@ Related Operations
 
 -  Editing a workspace: On the **Workspaces** page, locate the workspace you want to edit and click **Edit** in the **Operation** column. In the displayed **Workspace Information** dialog box, modify workspace parameters by referring to :ref:`Table 1 <dataartsstudio_01_0116__en-us_topic_0196417517_table1413713319103>` and click **OK**.
 
-   When editing a workspace, you can add workspace members (see :ref:`Adding Workspace Members and Assigning Roles <dataartsstudio_01_0117>`).
+   When editing a workspace, you can add workspace members (see :ref:`Adding Workspace Members and Assigning Roles <dataartsstudio_01_0117>`) and configure workspace quotas (see :ref:`Setting Workspace Quotas <dataartsstudio_01_0021>`).
 
 -  Viewing the quota usage: On the **Workspaces** page, locate a workspace and click **Quota Usage** in the **Operation** column. In the displayed **Quota Usage** dialog box, you can view the quota usage of each module.
 
@@ -119,7 +119,12 @@ Related Operations
 
       -  Management Center: data connections
       -  DataArts Migration: CDM clusters
+      -  DataArts Architecture: subjects, logical models, standards, physical models, dimensional models, and metrics
       -  DataArts Factory: jobs, job directories, scripts, script directories, and resources
+      -  DataArts Quality: quality jobs and comparison jobs
+      -  DataArts Catalog: technical assets including tables and files, and metadata collection tasks
+      -  DataArts DataService: clusters, APIs, and apps
+      -  DataArts Security: sensitive data discovery tasks, masking policies, static masking tasks, and data watermarking tasks
 
       If any module has resources, a message is displayed, indicating that the workspace cannot be deleted.
 

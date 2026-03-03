@@ -7,7 +7,7 @@ Developing a Batch Processing Single-Task SQL Job
 
 This section describes how to develop and configure a job.
 
-For details about how to develop a batch processing job in single-task mode, see sections :ref:`Developing an SQL Script <dataartsstudio_01_1436__section037832452814>`, :ref:`Configuring job parameters <dataartsstudio_01_1436__en-us_topic_0099797007_section754991272419>`, :ref:`Data Table <dataartsstudio_01_1436__section17103142782618>`, :ref:`Testing and Saving the Job <dataartsstudio_01_1436__section1462324142616>`, and :ref:`Downloading or Dumping a Script Execution Result <dataartsstudio_01_1436__section2246103584414>`.
+For details about how to develop a batch processing job in single-task mode, see sections :ref:`Developing an SQL Script <dataartsstudio_01_1436__section037832452814>`, :ref:`Configuring job parameters <dataartsstudio_01_1436__en-us_topic_0099797007_section754991272419>`, :ref:`Monitoring Quality <dataartsstudio_01_1436__section114629141564>`, :ref:`Data Table <dataartsstudio_01_1436__section17103142782618>`, :ref:`Testing and Saving the Job <dataartsstudio_01_1436__section1462324142616>`, and :ref:`Downloading or Dumping a Script Execution Result <dataartsstudio_01_1436__section2246103584414>`.
 
 Prerequisites
 -------------
@@ -426,6 +426,90 @@ Click the **Parameter Preview** tab and configure the parameters listed in :ref:
 
    If a parameter depends on the data generated during job execution, such data cannot be simulated and displayed in **Parameter Preview**.
 
+.. _dataartsstudio_01_1436__section114629141564:
+
+Monitoring Quality
+------------------
+
+Data migration and single-task real-time jobs that have been orchestrated cannot be associated with quality jobs.
+
+Two execution modes are available: parallel and serial. Click the **Quality Monitoring** tab on the right of the canvas to expand the slide-out panel and configure the parameters listed in :ref:`Table 6 <dataartsstudio_01_1436__table290310111444>`.
+
+.. _dataartsstudio_01_1436__table290310111444:
+
+.. table:: **Table 6** Quality monitoring parameters
+
+   +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter                         | Description                                                                                                                                                                                                                           |
+   +===================================+=======================================================================================================================================================================================================================================+
+   | Execution Mode                    | Execution mode of quality monitoring. The options are as follows:                                                                                                                                                                     |
+   |                                   |                                                                                                                                                                                                                                       |
+   |                                   | -  **Parallel**: All the upstream operators of the quality job operator are set as primary operators.                                                                                                                                 |
+   |                                   | -  **Serial**: Quality jobs are connected in series from top to bottom. The quality job on the top depends on the primary operator.                                                                                                   |
+   +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Quality job                       | Quality jobs to be associated with the single-task job                                                                                                                                                                                |
+   |                                   |                                                                                                                                                                                                                                       |
+   |                                   | #. Click **Add**. The **Data Quality Monitor** slide-out panel is displayed.                                                                                                                                                          |
+   |                                   |                                                                                                                                                                                                                                       |
+   |                                   | #. Set a node name.                                                                                                                                                                                                                   |
+   |                                   |                                                                                                                                                                                                                                       |
+   |                                   | #. Set **Job Type** to **Quality job**.                                                                                                                                                                                               |
+   |                                   |                                                                                                                                                                                                                                       |
+   |                                   |    .. note::                                                                                                                                                                                                                          |
+   |                                   |                                                                                                                                                                                                                                       |
+   |                                   |       **Comparison job** is not supported.                                                                                                                                                                                            |
+   |                                   |                                                                                                                                                                                                                                       |
+   |                                   | #. Select the quality job to be associated and set other parameters based on the site requirements. If no quality job is available, create a quality job by referring to :ref:`Creating a Data Quality Job <dataartsstudio_01_0712>`. |
+   |                                   |                                                                                                                                                                                                                                       |
+   |                                   |    .. note::                                                                                                                                                                                                                          |
+   |                                   |                                                                                                                                                                                                                                       |
+   |                                   |       -  Click **Add** to add multiple quality jobs.                                                                                                                                                                                  |
+   |                                   |       -  Click to modify an added quality job.                                                                                                                                                                                        |
+   |                                   |       -  Click |image10| to delete an added quality job.                                                                                                                                                                              |
+   |                                   |                                                                                                                                                                                                                                       |
+   |                                   | #. Ignore Quality Job Alarm                                                                                                                                                                                                           |
+   |                                   |                                                                                                                                                                                                                                       |
+   |                                   |    **Yes**: Quality job alarms can be ignored.                                                                                                                                                                                        |
+   |                                   |                                                                                                                                                                                                                                       |
+   |                                   |    **No**: Quality job alarms cannot be ignored. When an alarm is generated, it will be reported.                                                                                                                                     |
+   |                                   |                                                                                                                                                                                                                                       |
+   |                                   | #. Configure advanced settings.                                                                                                                                                                                                       |
+   |                                   |                                                                                                                                                                                                                                       |
+   |                                   |    a. **Max. Node Execution Duration**: indicates the execution timeout interval for the node. If retry is configured and the execution is not complete within the timeout interval, the node will be executed again.                 |
+   |                                   |                                                                                                                                                                                                                                       |
+   |                                   |    b. **Retry upon Failure**: specifies whether to re-execute a node if it fails to be executed.                                                                                                                                      |
+   |                                   |                                                                                                                                                                                                                                       |
+   |                                   |       **Yes**: The node will be re-executed, and the following parameters must be configured:                                                                                                                                         |
+   |                                   |                                                                                                                                                                                                                                       |
+   |                                   |       Retry upon Timeout                                                                                                                                                                                                              |
+   |                                   |                                                                                                                                                                                                                                       |
+   |                                   |       **Maximum Retries**                                                                                                                                                                                                             |
+   |                                   |                                                                                                                                                                                                                                       |
+   |                                   |       **Retry Interval (seconds)**                                                                                                                                                                                                    |
+   |                                   |                                                                                                                                                                                                                                       |
+   |                                   |       **No**: The node will not be re-executed. This is the default value.                                                                                                                                                            |
+   |                                   |                                                                                                                                                                                                                                       |
+   |                                   |       .. note::                                                                                                                                                                                                                       |
+   |                                   |                                                                                                                                                                                                                                       |
+   |                                   |          If retry is configured for a job node and the timeout duration is configured, the system allows you to retry a node when the node execution times out.                                                                       |
+   |                                   |                                                                                                                                                                                                                                       |
+   |                                   |          If a node is not re-executed when it fails upon timeout, you can go to the **Default Configuration** page to modify this policy.                                                                                             |
+   |                                   |                                                                                                                                                                                                                                       |
+   |                                   |          **Retry upon Timeout** is displayed only when **Retry upon Failure** is set to **Yes**.                                                                                                                                      |
+   |                                   |                                                                                                                                                                                                                                       |
+   |                                   |    c. Policy for Handling Subsequent Nodes If the Current Node Fails                                                                                                                                                                  |
+   |                                   |                                                                                                                                                                                                                                       |
+   |                                   |       **End the current job execution plan**: stops running the current job. The job instance status is **Failed**.                                                                                                                   |
+   |                                   |                                                                                                                                                                                                                                       |
+   |                                   |       **Go to the next node**: ignores the execution failure of the current node. The job instance status is **Failure ignored**.                                                                                                     |
+   |                                   |                                                                                                                                                                                                                                       |
+   |                                   |       **Suspend current job execution plan**: suspends running the current job. The job instance status is **Waiting**.                                                                                                               |
+   |                                   |                                                                                                                                                                                                                                       |
+   |                                   |       **Suspend execution plans of the subsequent nodes**: stops running subsequent nodes. The job instance status is **Failed**.                                                                                                     |
+   |                                   |                                                                                                                                                                                                                                       |
+   |                                   | #. Click **OK** to complete the quality monitoring configuration.                                                                                                                                                                     |
+   +-----------------------------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
 .. _dataartsstudio_01_1436__section17103142782618:
 
 Data Table
@@ -446,13 +530,13 @@ Testing and Saving the Job
 
 After configuring the job, perform the following operations:
 
-#. Click |image10| to execute the job.
+#. Click |image11| to execute the job.
 
    .. note::
 
       You can view the run logs of the job by clicking **View Log**.
 
-#. After the job is executed, click |image11| to save the job configuration.
+#. After the job is executed, click |image12| to save the job configuration.
 
    After the job is saved, a version is automatically generated and displayed in **Versions**. The version can be rolled back. If you save a job multiple times within a minute, only one version is recorded. If the intermediate data is important, you can click **Save new version** to save and add a version.
 
@@ -465,7 +549,7 @@ After a script is executed successfully, you can download or dump the execution 
 
 -  After executing a script, you can click **Download** on the **Result** tab page to download a CSV result file to a local path. You can view the download record on the :ref:`Download Center <dataartsstudio_01_1821>` page.
 
--  After executing a script, you can click **Dump** on the **Result** tab page to dump a CSV and a JSON result file to OBS. For details, see :ref:`Table 6 <dataartsstudio_01_1436__en-us_topic_0181092880_table1192101552416>`.
+-  After executing a script, you can click **Dump** on the **Result** tab page to dump a CSV and a JSON result file to OBS. For details, see :ref:`Table 7 <dataartsstudio_01_1436__en-us_topic_0181092880_table1192101552416>`.
 
    .. note::
 
@@ -475,7 +559,7 @@ After a script is executed successfully, you can download or dump the execution 
 
    .. _dataartsstudio_01_1436__en-us_topic_0181092880_table1192101552416:
 
-   .. table:: **Table 6** Dump parameters
+   .. table:: **Table 7** Dump parameters
 
       +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
       | Parameter             | Mandatory             | Description                                                                                                                                                                                                |
@@ -532,11 +616,11 @@ After a script is executed successfully, you can download or dump the execution 
       |                       |                       | For details about the examples of using quotation characters and escape characters, see :ref:`Example of Using Quotation Characters and Escape Characters <dataartsstudio_01_0424__section1729219531331>`. |
       +-----------------------+-----------------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
-Download or dump allows you to view more SQL script execution results. :ref:`Table 7 <dataartsstudio_01_1436__en-us_topic_0181092880_table19855813154916>` lists the maximum number of results that you can view, dump, and downloaded for different types of SQL scripts.
+Download or dump allows you to view more SQL script execution results. :ref:`Table 8 <dataartsstudio_01_1436__en-us_topic_0181092880_table19855813154916>` lists the maximum number of results that you can view, dump, and downloaded for different types of SQL scripts.
 
 .. _dataartsstudio_01_1436__en-us_topic_0181092880_table19855813154916:
 
-.. table:: **Table 7** Maximum number of results that you can view, dump, and download
+.. table:: **Table 8** Maximum number of results that you can view, dump, and download
 
    +--------------+----------------------------------------------------+-------------------------------------------------------+---------------------------------------------------+
    | SQL Type     | Maximum Number of Results That You Can View Online | Maximum Number/Size of Results That Can Be Downloaded | Maximum Number/Size of Results That Can Be Dumped |
@@ -567,19 +651,19 @@ Example of Using Quotation Characters and Escape Characters
 
 -  Example:
 
-   |image12|
+   |image13|
 
    You can leave **Quotation Character** and **Escape Character** empty.
 
-   |image13|
+   |image14|
 
    If you leave them empty, the downloaded .csv file contains two rows in Excel.
 
-   |image14|
+   |image15|
 
    If you specify both of them, for example, enter double quotation marks ("), the downloaded file is as follows.
 
-   |image15|
+   |image16|
 
 .. |image1| image:: /_static/images/en-us_image_0000002269199617.png
 .. |image2| image:: /_static/images/en-us_image_0000002234080348.png
@@ -590,9 +674,10 @@ Example of Using Quotation Characters and Escape Characters
 .. |image7| image:: /_static/images/en-us_image_0000002234077652.png
 .. |image8| image:: /_static/images/en-us_image_0000002234237516.png
 .. |image9| image:: /_static/images/en-us_image_0000002269116869.png
-.. |image10| image:: /_static/images/en-us_image_0000002269119545.png
-.. |image11| image:: /_static/images/en-us_image_0000002234240172.png
-.. |image12| image:: /_static/images/en-us_image_0000002269198189.png
-.. |image13| image:: /_static/images/en-us_image_0000002234078892.png
-.. |image14| image:: /_static/images/en-us_image_0000002234078900.png
-.. |image15| image:: /_static/images/en-us_image_0000002234238756.png
+.. |image10| image:: /_static/images/en-us_image_0000002234080340.png
+.. |image11| image:: /_static/images/en-us_image_0000002269119545.png
+.. |image12| image:: /_static/images/en-us_image_0000002234240172.png
+.. |image13| image:: /_static/images/en-us_image_0000002269198189.png
+.. |image14| image:: /_static/images/en-us_image_0000002234078892.png
+.. |image15| image:: /_static/images/en-us_image_0000002234078900.png
+.. |image16| image:: /_static/images/en-us_image_0000002234238756.png

@@ -71,7 +71,7 @@ This function is available only if the OBS service is available. If OBS is unava
 
       -  If a job contains a tag in the locked state, the job fails to be imported.
       -  When a job fails to be imported and a tag needs to be automatically generated, if the tag already exists and is locked, it will not be added to the job.
-      -  During the import, if the data connection, DLI queue, associated with the job does not exist in DataArts Factory, the system prompts you to select one again.
+      -  During the import, if the data connection, DLI queue, or GES graph associated with the job does not exist in DataArts Factory, the system prompts you to select one again.
 
 .. |image1| image:: /_static/images/en-us_image_0000002234235716.png
 .. |image2| image:: /_static/images/en-us_image_0000002234235716.png

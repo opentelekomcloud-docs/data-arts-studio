@@ -20,7 +20,7 @@ A workspace role determines the permissions of a user in a workspace. Preset rol
 -  Operator: This role has the operation permissions of services such as O&M and scheduling in a workspace, but cannot modify resources or configurations. You are advised to assign this role to users responsible for O&M management and status monitoring.
 -  Viewer: This role can view data in a workspace but cannot perform any other operation. You are advised to assign this role to users who only need to view data in a workspace but do not need to perform operations.
 -  Deployer: This role is unique to the enterprise mode and has permissions to release task packages in a workspace. In enterprise mode, when a developer submits a script or job version, the system generates a release task. After the developer confirms the release and the deployer approves the release request, the modified job is synchronized to the production environment.
--  Custom roles: If the preset roles cannot meet your requirements, you can create custom roles. You can configure permissions for such roles to meet the the principle of least privilege (PoLP).
+-  Custom roles: If the preset roles cannot meet your requirements, you can create custom roles. You can configure permissions for such roles to meet the principle of least privilege (PoLP).
 
 Context
 -------

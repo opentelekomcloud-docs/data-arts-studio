@@ -31,7 +31,7 @@ Enterprises often face challenges in the following aspects when managing data:
 What Is DataArts Studio?
 ------------------------
 
-DataArts Studio is a one-stop data operations platform that drives digital transformation. It allows you to perform many operations, such as integrating and developing data. Incorporating big data storage, computing and analytical engines, it can also construct industry knowledge bases and help your enterprise build an intelligent end-to-end data system. This system can eliminate data silos, unify data standards, accelerate data monetization, and accelerate your enterprise's digital transformation.
+DataArts Studio is a one-stop data operations platform that drives digital transformation. It allows you to perform many operations, such as integrating and developing data, designing data architecture, controlling data quality, managing data assets, creating data services, and ensuring data security. Incorporating big data storage, computing and analytical engines, it can also construct industry knowledge bases and help your enterprise build an intelligent end-to-end data system. This system can eliminate data silos, unify data standards, accelerate data monetization, and accelerate your enterprise's digital transformation.
 
 :ref:`Figure 1 <dataartsstudio_07_001__fig156921728104018>` shows the architecture.
 
@@ -48,12 +48,32 @@ DataArts Studio consists of the following functional modules:
 
 -  **Management Center**
 
-   Management Center supports data connection management and connects to the data foundation for activities such as data development.
+   Management Center supports data connection management and connects to the data foundation for activities such as data development and data governance.
 
 -  **DataArts Migration**
 
    DataArts Migration supports data migration between 20+ data sources and integration of data sources into the data lake. It provides wizard-based configuration and management and supports single table, entire database, incremental, and periodic data integration.
 
+-  **DataArts Architecture**
+
+   DataArts Architecture helps you plan the data architecture, customize models, unify data standards, visualize data modeling, and label data. DataArts Architecture defines how data will be processed and utilized to solve business problems and enables you to make informed decisions.
+
 -  **DataArts Factory**
 
    DataArts Factory helps you build a big data processing center, create data models, integrate data, develop scripts, and orchestrate workflows.
+
+-  **DataArts Quality**
+
+   DataArts Quality monitors the data quality in real time with data lifecycle management and generates real-time notifications on abnormal events.
+
+-  **DataArts Catalog**
+
+   DataArts Catalog provides enterprise-grade metadata management to help you better know your data assets. A data map shows the lineage of your data and allows you to have a global view of your data assets. Data search, operations, and monitoring are smarter than before.
+
+-  **DataArts DataService**
+
+   DataArts DataService is a platform where you can develop, test, and deploy your data services. It ensures agile response to data service needs, easier data retrieval, better experience for data consumers, higher efficiency, and better monetization of data assets.
+
+-  **DataArts Security**
+
+   DataArts Security provides all-round protection for enterprises' data. It provides access permission management, sensitive data identification, and privacy protection management to help you establish a security warning mechanism, improve the overall security protection capability, ensure data availability, and obtain security certifications.
