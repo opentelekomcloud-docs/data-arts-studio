@@ -19,7 +19,8 @@ Token-based Authentication
 
 .. note::
 
-   The validity period of a token is 24 hours. When using a token for authentication, cache it to prevent frequently calling the IAM API used to obtain a user token.
+   -  The validity period of a token is 24 hours. When using a token for authentication, cache it to prevent frequently calling the IAM API used to obtain a user token.
+   -  Ensure that the token is valid when you use it. Using a token that will soon expire may cause API calling failures.
 
 A token specifies temporary permissions in a computer system. During API authentication using a token, the token is added to a request to get permissions for calling the API.
 
@@ -51,20 +52,21 @@ When calling the API to obtain a user token, you must set **auth.scope** in the 
        }
    }
 
-After a token is obtained, the X-Auth-Token header field must be added to requests to specify the token when calling other APIs, for example, the API used to query a connection list. For example, if the token is **ABCDEFJ....**, **X-Auth-Token: ABCDEFJ....** can be added to a request as follows:
+After a token is obtained, the X-Auth-Token header field must be added to requests to specify the token when calling other APIs, for example, the API used to query a connection list. For example, if the token is **ABCDEFG....**, **X-Auth-Token: ABCDEFJ....** can be added to a request as follows:
 
-.. code-block::
+.. code-block:: text
 
    GET https://{{endpoint}}/v1/{project_id}/connections
    Content-Type: application/json
-   X-Auth-Token: ABCDEFJ....
+   X-Auth-Token: ABCDEFG....
 
 AK/SK-based Authentication
 --------------------------
 
 .. note::
 
-   AK/SK-based authentication supports API requests with a body not larger than 12 MB. For API requests with a larger body, token-based authentication is recommended.
+   -  AK/SK-based authentication supports API requests with a body not larger than 12 MB. For API requests with a larger body, use token-based authentication.
+   -  You can use the AK/SK in a permanent or temporary access key. The **X-Security-Token** field must be configured if the AK/SK in a temporary access key is used, and the field value is **security_token** of the temporary access key.
 
 In AK/SK-based authentication, AK/SK is used to sign requests and the signature is then added to the requests for authentication.
 
@@ -75,11 +77,11 @@ To obtain an access key, perform the following steps:
 
 #. Log in to the management console, move the cursor to the username in the upper right corner, and select **My Credentials** from the drop-down list.
 
-#. On the **My Credentials** page, choose **Access Keys**, and click **Create Access Key**. See :ref:`Figure 1 <dataartsstudio_02_0010__en-us_topic_0000001668118762_en-us_topic_0183643042_fig1552229194615>`.
+#. On the **My Credentials** page, choose **Access Keys**, and click **Create Access Key**. See :ref:`Figure 1 <dataartsstudio_02_0010__en-us_topic_0000001129241845_en-us_topic_0183643042_fig1552229194615>`.
 
-   .. _dataartsstudio_02_0010__en-us_topic_0000001668118762_en-us_topic_0183643042_fig1552229194615:
+   .. _dataartsstudio_02_0010__en-us_topic_0000001129241845_en-us_topic_0183643042_fig1552229194615:
 
-   .. figure:: /_static/images/en-us_image_0000001668278494.png
+   .. figure:: /_static/images/en-us_image_0000002269146225.png
       :alt: **Figure 1** Clicking Create Access Key
 
       **Figure 1** Clicking Create Access Key

@@ -32,11 +32,21 @@ Request Parameters
 
 .. table:: **Table 2** Request parameters
 
-   +-----------+-----------+--------+-----------------------------------------------------------------------------------------------------+
-   | Parameter | Mandatory | Type   | Description                                                                                         |
-   +===========+===========+========+=====================================================================================================+
-   | path      | No        | String | If OBS is deployed, the job definition file is stored on OBS, for example, obs://myBucket/jobs.zip. |
-   +-----------+-----------+--------+-----------------------------------------------------------------------------------------------------+
+   +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------+
+   | Parameter       | Mandatory       | Type            | Description                                                                                                            |
+   +=================+=================+=================+========================================================================================================================+
+   | path            | Yes             | String          | If OBS is deployed, the job definition file is stored on OBS, for example, obs://myBucket/jobs.zip.                    |
+   +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------+
+   | workspace       | No              | String          | Workspace ID                                                                                                           |
+   |                 |                 |                 |                                                                                                                        |
+   |                 |                 |                 | -  If this parameter is not set, data in the **default** workspace is queried by default.                              |
+   |                 |                 |                 | -  To query data in other workspaces, this header must be carried.                                                     |
+   |                 |                 |                 |                                                                                                                        |
+   |                 |                 |                 |    .. note::                                                                                                           |
+   |                 |                 |                 |                                                                                                                        |
+   |                 |                 |                 |       -  You need to specify a workspace for multiple DataArts Studio instances.                                       |
+   |                 |                 |                 |       -  This parameter is mandatory if no default workspace is available. If you do not set it, an error is reported. |
+   +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------+
 
 Response Parameters
 -------------------

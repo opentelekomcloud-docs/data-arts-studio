@@ -5,9 +5,9 @@
 DataArts Migration APIs
 =======================
 
--  :ref:`Cluster Management <topic_300000000_8>`
--  :ref:`Job Management <topic_300000001_6>`
--  :ref:`Link Management <topic_300000002_6>`
+-  :ref:`Cluster Management <topic_300000000_0>`
+-  :ref:`Job Management <topic_300000001_0>`
+-  :ref:`Link Management <topic_300000002_0>`
 -  :ref:`Public Data Structures <dataartsstudio_02_0260>`
 
 .. toctree::

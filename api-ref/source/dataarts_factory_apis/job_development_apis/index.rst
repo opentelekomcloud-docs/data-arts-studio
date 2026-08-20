@@ -6,7 +6,7 @@ Job Development APIs
 ====================
 
 -  :ref:`Creating a Job <dataartsstudio_02_0084>`
--  :ref:`Editing a Job <dataartsstudio_02_0085>`
+-  :ref:`Modifying a Job <dataartsstudio_02_0085>`
 -  :ref:`Viewing a Job List <dataartsstudio_02_0086>`
 -  :ref:`Viewing Job Details <dataartsstudio_02_0087>`
 -  :ref:`Viewing a Job File <dataartsstudio_02_0063>`
@@ -18,7 +18,7 @@ Job Development APIs
 -  :ref:`Stopping a Job <dataartsstudio_02_0064>`
 -  :ref:`Deleting a Job <dataartsstudio_02_0065>`
 -  :ref:`Stopping a Job Instance <dataartsstudio_02_0066>`
--  :ref:`Retrying a Job Instance <dataartsstudio_02_0067>`
+-  :ref:`Rerunning a Job Instance <dataartsstudio_02_0067>`
 -  :ref:`Viewing Running Status of a Real-Time Job <dataartsstudio_02_0093>`
 -  :ref:`Viewing a Job Instance List <dataartsstudio_02_0094>`
 -  :ref:`Viewing Job Instance Details <dataartsstudio_02_0095>`
@@ -29,7 +29,7 @@ Job Development APIs
    :hidden: 
 
    creating_a_job
-   editing_a_job
+   modifying_a_job
    viewing_a_job_list
    viewing_job_details
    viewing_a_job_file
@@ -41,7 +41,7 @@ Job Development APIs
    stopping_a_job
    deleting_a_job
    stopping_a_job_instance
-   retrying_a_job_instance
+   rerunning_a_job_instance
    viewing_running_status_of_a_real-time_job
    viewing_a_job_instance_list
    viewing_job_instance_details

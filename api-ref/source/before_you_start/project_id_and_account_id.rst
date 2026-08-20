@@ -12,7 +12,7 @@ A project is a group of tenant resources, and an account ID corresponds to the c
 
 #. Register with and log in to the management console.
 #. Hover the cursor on the username in the upper right corner and select **My Credentials** from the drop-down list.
-#. On the **API Credentials** page, obtain the account name, account ID, IAM username, and IAM user ID, and obtain the project ID from the project list.
+#. On the **API Credentials** page, obtain the account name, account ID, IAM username, and IAM user ID, and obtain the project and its ID from the project list.
 
 Obtaining a Project ID by Calling an API
 ----------------------------------------
