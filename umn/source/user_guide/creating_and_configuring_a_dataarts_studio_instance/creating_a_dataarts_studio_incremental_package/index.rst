@@ -7,7 +7,7 @@ Creating a DataArts Studio Incremental Package
 
 -  :ref:`Introduction to Incremental Packages <dataartsstudio_01_0139>`
 -  :ref:`Creating a DataArts Migration Incremental Package <dataartsstudio_01_0119>`
--  :ref:`Creating a DataArts Migration Resource Group Incremental Package <dataartsstudio_01_0145>`
+-  :ref:`Creating a DataArts DataService Exclusive Cluster Incremental Package <dataartsstudio_01_0140>`
 
 .. toctree::
    :maxdepth: 1
@@ -15,4 +15,4 @@ Creating a DataArts Studio Incremental Package
 
    introduction_to_incremental_packages
    creating_a_dataarts_migration_incremental_package
-   creating_a_dataarts_migration_resource_group_incremental_package
+   creating_a_dataarts_dataservice_exclusive_cluster_incremental_package

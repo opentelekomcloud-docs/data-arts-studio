@@ -78,7 +78,7 @@ Important Notes
 
       .. _dataartsstudio_01_5099__fig17291130105915:
 
-      .. figure:: /_static/images/en-us_image_0000002234237212.png
+      .. figure:: /_static/images/en-us_image_0000002516633132.png
          :alt: **Figure 4** DB Configuration
 
          **Figure 4** DB Configuration
