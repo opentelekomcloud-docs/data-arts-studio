@@ -24,10 +24,11 @@ The following describes how to use the port forwarding tool to access intranet d
 Scenario
 --------
 
-Suppose that the MySQL database on the intranet is migrated to DWS.
+Suppose that the MySQL database on the intranet is migrated to DWS. :ref:`Figure 1 <dataartsstudio_03_0033__en-us_topic_0108275483_fig014831163019>` shows the network topology.
 
 In the figure, the intranet can be either an enterprise's data center or the intranet of the virtual data center on a third-party cloud.
 
+.. _dataartsstudio_03_0033__en-us_topic_0108275483_fig014831163019:
 
 .. figure:: /_static/images/en-us_image_0000002234237092.png
    :alt: **Figure 1** Network topology example

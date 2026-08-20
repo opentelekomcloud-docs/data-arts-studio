@@ -16,4 +16,11 @@ Procedure
 #. Log in to the cloud console. Choose DataArts Studio from the service list in the upper left corner.
 
    -  If there are multiple DataArts Studio instances in the current region, the instance list is displayed by default. Locate an instance and click **Access** to access the DataArts Studio console homepage.
+
    -  If there is only one DataArts Studio instance in the current region, the DataArts Studio console homepage is displayed by default.
+
+
+      .. figure:: /_static/images/en-us_image_0000002516805370.png
+         :alt: **Figure 1** Console homepage
+
+         **Figure 1** Console homepage

@@ -13,7 +13,12 @@ Yes. The procedure is as follows.
 
    -  Management Center: data connections
    -  DataArts Migration: CDM clusters
+   -  DataArts Architecture: subjects, logical models, standards, physical models, dimensional models, and metrics
    -  DataArts Factory: jobs, job directories, scripts, script directories, and resources
+   -  DataArts Quality: quality jobs and comparison jobs
+   -  DataArts Catalog: technical assets including tables and files, and metadata collection tasks
+   -  DataArts DataService: clusters, APIs, and apps
+   -  DataArts Security: sensitive data discovery tasks, masking policies, static masking tasks, and data watermarking tasks
 
    If any module has resources, a message is displayed, indicating that the workspace cannot be deleted.
 

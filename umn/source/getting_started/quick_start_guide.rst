@@ -1,0 +1,20 @@
+:original_name: dataartsstudio_04_0000.html
+
+.. _dataartsstudio_04_0000:
+
+Quick Start Guide
+=================
+
+DataArts Studio is a one-stop data governance platform that provides full data lifecycle management and intelligent data management capabilities. It is built on a data lake foundation and provides data integration, development, and governance capabilities. The following table lists the use cases for different application scenarios.
+
+.. table:: **Table 1** Use cases
+
+   +-------------------------------------------------------------------------------------------------------------+----------------------+---------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Example Use Case                                                                                            | Data Lake Foundation | Capability                                              | Scenario                                                                                                                                                                                                     |
+   +=============================================================================================================+======================+=========================================================+==============================================================================================================================================================================================================+
+   | :ref:`Beginners: DLI-powered Data Development Based on E-commerce BI Reports <dataartsstudio_04_0021>`      | DLI                  | Data development                                        | Full data lifecycle management is usually not required, and fully managed big data scheduling capabilities are required. Such scenarios include trial use for developers and small-scale verification.       |
+   +-------------------------------------------------------------------------------------------------------------+----------------------+---------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`Novices: DWS-powered Data Integration and Development Based on Movie Scores <dataartsstudio_04_0031>` | DWS                  | Data integration and development                        | Big data development scenarios such as management of data ETL tasks where data governance is not required. Such scenarios include trial use for developers and small-scale verification.                     |
+   +-------------------------------------------------------------------------------------------------------------+----------------------+---------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | :ref:`Advanced Users: MRS Hive-powered Data Governance Based on Taxi Trip Data <dataartsstudio_04_0001>`    | MRS Hive             | Data integration, data development, and data governance | All data governance capabilities are required. Users should have a data management team and system and want to implement enterprise information architecture, data standards, data models, and data metrics. |
+   +-------------------------------------------------------------------------------------------------------------+----------------------+---------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+

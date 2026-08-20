@@ -6,9 +6,9 @@ Node Reference
 ==============
 
 -  :ref:`Node Overview <dataartsstudio_01_0442>`
+-  :ref:`Node Lineages <dataartsstudio_01_0552>`
 -  :ref:`CDM Job <dataartsstudio_01_0443>`
 -  :ref:`Rest Client <dataartsstudio_01_0447>`
--  :ref:`Import GES <dataartsstudio_01_0448>`
 -  :ref:`MRS Kafka <dataartsstudio_01_0537>`
 -  :ref:`Kafka Client <dataartsstudio_01_0538>`
 -  :ref:`ROMA FDI Job <dataartsstudio_01_1098>`
@@ -28,14 +28,12 @@ Node Reference
 -  :ref:`CSS <dataartsstudio_01_0458>`
 -  :ref:`Shell <dataartsstudio_01_0459>`
 -  :ref:`RDS SQL <dataartsstudio_01_0460>`
--  :ref:`ETL Job <dataartsstudio_01_0461>`
 -  :ref:`Python <dataartsstudio_01_4504>`
--  :ref:`DORIS SQL <dataartsstudio_01_4509>`
--  :ref:`ModelArts Train <dataartsstudio_01_4500>`
 -  :ref:`Create OBS <dataartsstudio_01_0462>`
 -  :ref:`Delete OBS <dataartsstudio_01_0463>`
 -  :ref:`OBS Manager <dataartsstudio_01_0464>`
 -  :ref:`Open/Close Resource <dataartsstudio_01_0465>`
+-  :ref:`Data Quality Monitor <dataartsstudio_01_0472>`
 -  :ref:`Subjob <dataartsstudio_01_0467>`
 -  :ref:`For Each <dataartsstudio_01_0535>`
 -  :ref:`SMN <dataartsstudio_01_0468>`
@@ -46,9 +44,9 @@ Node Reference
    :hidden: 
 
    node_overview
+   node_lineages/index
    cdm_job
    rest_client
-   import_ges
    mrs_kafka
    kafka_client
    roma_fdi_job
@@ -68,14 +66,12 @@ Node Reference
    css
    shell
    rds_sql
-   etl_job
    python
-   doris_sql
-   modelarts_train
    create_obs
    delete_obs
    obs_manager
    open_close_resource
+   data_quality_monitor
    subjob
    for_each
    smn
