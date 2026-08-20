@@ -8,7 +8,11 @@ Executing a Script
 Function
 --------
 
-This API is used to execute a specific script, which can be a DWS SQL, DLI SQL, RDS SQL, Flink SQL, Hive SQL, Presto SQL, or Spark SQL script. A script instance is generated each time the script is executed. You can call the API :ref:`Querying the Execution Result of a Script Instance <dataartsstudio_02_0101>` to obtain script execution results.
+This API is used to execute specified scripts, including DWS SQL, DLI SQL, RDS SQL, Hive SQL, Spark SQL, Presto SQL, Shell, ClickHouse SQL, HetuEngine SQL, Python, Impala SQL, or Spark Python scripts. A script instance is generated each time the script is executed. You can call the API :ref:`Querying the Execution Result of a Script Instance <dataartsstudio_02_0101>` to obtain script execution results.
+
+.. note::
+
+   DLI SQL and Presto SQL scripts do not support multi-statement scenarios.
 
 URI
 ---
@@ -34,14 +38,19 @@ Request Parameters
 
 .. table:: **Table 2** Request header parameter
 
-   +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------+
-   | Parameter       | Mandatory       | Type            | Description                                                                               |
-   +=================+=================+=================+===========================================================================================+
-   | workspace       | No              | String          | Workspace ID.                                                                             |
-   |                 |                 |                 |                                                                                           |
-   |                 |                 |                 | -  If this parameter is not set, data in the **default** workspace is queried by default. |
-   |                 |                 |                 | -  To query data in other workspaces, this header must be carried.                        |
-   +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------+
+   +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------+
+   | Parameter       | Mandatory       | Type            | Description                                                                                                            |
+   +=================+=================+=================+========================================================================================================================+
+   | workspace       | No              | String          | Workspace ID.                                                                                                          |
+   |                 |                 |                 |                                                                                                                        |
+   |                 |                 |                 | -  If this parameter is not set, data in the **default** workspace is queried by default.                              |
+   |                 |                 |                 | -  To query data in other workspaces, this header must be carried.                                                     |
+   |                 |                 |                 |                                                                                                                        |
+   |                 |                 |                 |    .. note::                                                                                                           |
+   |                 |                 |                 |                                                                                                                        |
+   |                 |                 |                 |       -  You need to specify a workspace for multiple DataArts Studio instances.                                       |
+   |                 |                 |                 |       -  This parameter is mandatory if no default workspace is available. If you do not set it, an error is reported. |
+   +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------+
 
 .. table:: **Table 3** Parameters
 
@@ -69,14 +78,14 @@ Response Parameters
 Example Request
 ---------------
 
-Run the **dws_sql** script. In the script, the value of **tableVar** is **citys**, and the value of **time** is **2019-07-25**.
+Run the **dws_sql** script. In the script, the value of **tableVar** is **cities**, and the value of **time** is **2019-07-25**.
 
 .. code-block:: text
 
    POST /v1/b384b9e9ab9b4ee8994c8633aabc9505/scripts/dws_sql/execute
    {
        "params": {
-           "tableVar": "citys",
+           "tableVar": "cities",
            "time": "2019-07-25"
        }
    }
@@ -104,4 +113,4 @@ Status Codes
 
 See :ref:`Status Codes <dataartsstudio_02_0310>`.
 
-.. |image1| image:: /_static/images/en-us_image_0000001668210950.png
+.. |image1| image:: /_static/images/en-us_image_0000002269146157.png

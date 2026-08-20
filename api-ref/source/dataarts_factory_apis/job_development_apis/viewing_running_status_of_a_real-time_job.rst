@@ -26,7 +26,7 @@ URI
       +============+===========+========+=======================================================================================================================+
       | project_id | Yes       | String | Project ID. For details about how to obtain a project ID, see :ref:`Project ID and Account ID <projectid_accountid>`. |
       +------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-      | job_name   | Yes       | String | Job name.                                                                                                             |
+      | job_name   | Yes       | String | Job name                                                                                                              |
       +------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
 
 Request Parameters
@@ -34,75 +34,80 @@ Request Parameters
 
 .. table:: **Table 2** Request header parameter
 
-   +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------+
-   | Parameter       | Mandatory       | Type            | Description                                                                               |
-   +=================+=================+=================+===========================================================================================+
-   | workspace       | No              | String          | Workspace ID.                                                                             |
-   |                 |                 |                 |                                                                                           |
-   |                 |                 |                 | -  If this parameter is not set, data in the **default** workspace is queried by default. |
-   |                 |                 |                 | -  To query data in other workspaces, this header must be carried.                        |
-   +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------+
+   +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------+
+   | Parameter       | Mandatory       | Type            | Description                                                                                                            |
+   +=================+=================+=================+========================================================================================================================+
+   | workspace       | No              | String          | Workspace ID.                                                                                                          |
+   |                 |                 |                 |                                                                                                                        |
+   |                 |                 |                 | -  If this parameter is not set, data in the **default** workspace is queried by default.                              |
+   |                 |                 |                 | -  To query data in other workspaces, this header must be carried.                                                     |
+   |                 |                 |                 |                                                                                                                        |
+   |                 |                 |                 |    .. note::                                                                                                           |
+   |                 |                 |                 |                                                                                                                        |
+   |                 |                 |                 |       -  You need to specify a workspace for multiple DataArts Studio instances.                                       |
+   |                 |                 |                 |       -  This parameter is mandatory if no default workspace is available. If you do not set it, an error is reported. |
+   +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------+
 
 Response Parameters
 -------------------
 
 .. table:: **Table 3** Response parameters
 
-   +-----------------+-----------------+-----------------+---------------------+
-   | Parameter       | Mandatory       | Type            | Description         |
-   +=================+=================+=================+=====================+
-   | name            | Yes             | String          | Name of a solution. |
-   +-----------------+-----------------+-----------------+---------------------+
-   | nodes           | No              | List            | Node status list.   |
-   +-----------------+-----------------+-----------------+---------------------+
-   | status          | No              | String          | Job status.         |
-   |                 |                 |                 |                     |
-   |                 |                 |                 | -  STARTING         |
-   |                 |                 |                 | -  NORMAL           |
-   |                 |                 |                 | -  EXCEPTION        |
-   |                 |                 |                 | -  STOPPING         |
-   |                 |                 |                 | -  STOPPED          |
-   +-----------------+-----------------+-----------------+---------------------+
-   | startTime       | Yes             | Date            | Start time.         |
-   +-----------------+-----------------+-----------------+---------------------+
-   | endTime         | No              | Date            | End time.           |
-   +-----------------+-----------------+-----------------+---------------------+
-   | lastUpdateTime  | No              | Date            | Last update time.   |
-   +-----------------+-----------------+-----------------+---------------------+
+   +-----------------+-----------------+-----------------+--------------------------------------------+
+   | Parameter       | Mandatory       | Type            | Description                                |
+   +=================+=================+=================+============================================+
+   | name            | Yes             | String          | Solution name                              |
+   +-----------------+-----------------+-----------------+--------------------------------------------+
+   | nodes           | No              | List            | Node status list                           |
+   +-----------------+-----------------+-----------------+--------------------------------------------+
+   | status          | No              | String          | Job status                                 |
+   |                 |                 |                 |                                            |
+   |                 |                 |                 | -  **STARTING**: The job is starting.      |
+   |                 |                 |                 | -  **NORMAL**: The job is normal.          |
+   |                 |                 |                 | -  **EXCEPTION**: The job is abnormal.     |
+   |                 |                 |                 | -  **STOPPING**: The job is being stopped. |
+   |                 |                 |                 | -  **STOPPED**: The job is stopped.        |
+   +-----------------+-----------------+-----------------+--------------------------------------------+
+   | startTime       | Yes             | Date            | Start time                                 |
+   +-----------------+-----------------+-----------------+--------------------------------------------+
+   | endTime         | No              | Date            | End time                                   |
+   +-----------------+-----------------+-----------------+--------------------------------------------+
+   | lastUpdateTime  | No              | Date            | Last update time                           |
+   +-----------------+-----------------+-----------------+--------------------------------------------+
 
 .. table:: **Table 4** Data structure description of **nodes**
 
    +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------+
    | Parameter       | Mandatory       | Type            | Description                                                                                   |
    +=================+=================+=================+===============================================================================================+
-   | name            | Yes             | String          | Node name.                                                                                    |
+   | name            | Yes             | String          | Node name                                                                                     |
    +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------+
    | status          | No              | String          | Node status.                                                                                  |
    |                 |                 |                 |                                                                                               |
-   |                 |                 |                 | -  STARTING                                                                                   |
-   |                 |                 |                 | -  NORMAL                                                                                     |
-   |                 |                 |                 | -  EXCEPTION                                                                                  |
-   |                 |                 |                 | -  STOPPING                                                                                   |
-   |                 |                 |                 | -  STOPPED                                                                                    |
+   |                 |                 |                 | -  **STARTING**: The node is starting.                                                        |
+   |                 |                 |                 | -  **NORMAL**: The node is normal.                                                            |
+   |                 |                 |                 | -  **EXCEPTION**: The node is abnormal.                                                       |
+   |                 |                 |                 | -  **STOPPING**: The node is being stopped.                                                   |
+   |                 |                 |                 | -  **STOPPED**: The node is stopped.                                                          |
    +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------+
    | logPath         | No              | String          | Path for storing node run logs.                                                               |
    +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------+
-   | type            | Yes             | String          | Node type.                                                                                    |
+   | type            | Yes             | String          | Node type                                                                                     |
    |                 |                 |                 |                                                                                               |
-   |                 |                 |                 | -  **Hive SQL**: Runs Hive SQL scripts.                                                       |
-   |                 |                 |                 | -  **Spark SQL**: Runs Spark SQL scripts.                                                     |
-   |                 |                 |                 | -  **DWS SQL**: Runs DWS SQL scripts.                                                         |
-   |                 |                 |                 | -  **DLI SQL**: Runs DLI SQL scripts.                                                         |
-   |                 |                 |                 | -  **Shell**: Runs shell SQL scripts.                                                         |
-   |                 |                 |                 | -  **CDM Job**: Runs CDM jobs.                                                                |
-   |                 |                 |                 | -  **DIS Transfer Task:** Creates DIS dump tasks.                                             |
-   |                 |                 |                 | -  **CS Job**: Creates and starts CloudStream jobs.                                           |
-   |                 |                 |                 | -  **CloudTable Manager**: Manages CloudTable tables, including creating and deleting tables. |
-   |                 |                 |                 | -  **OBS Manager**: Manages OBS paths, including creating and deleting paths.                 |
-   |                 |                 |                 | -  **RESTAPI:** Sends REST API requests.                                                      |
-   |                 |                 |                 | -  **SMN**: Sends short messages or emails.                                                   |
-   |                 |                 |                 | -  **MRS Spark**: Runs Spark jobs of MRS.                                                     |
-   |                 |                 |                 | -  **MapReduce**: Runs MapReduce jobs of MRS.                                                 |
+   |                 |                 |                 | -  **Hive SQL**: runs Hive SQL scripts.                                                       |
+   |                 |                 |                 | -  **Spark SQL**: runs Spark SQL scripts.                                                     |
+   |                 |                 |                 | -  **DWS SQL**: runs DWS SQL scripts.                                                         |
+   |                 |                 |                 | -  **DLI SQL**: runs DLI SQL scripts.                                                         |
+   |                 |                 |                 | -  **Shell**: runs shell SQL scripts.                                                         |
+   |                 |                 |                 | -  **CDM Job**: runs CDM jobs.                                                                |
+   |                 |                 |                 | -  **DIS Transfer Task**: creates DIS dump tasks.                                             |
+   |                 |                 |                 | -  **CS Job**: creates and starts CloudStream jobs.                                           |
+   |                 |                 |                 | -  **CloudTable Manager**: manages CloudTable tables, including creating and deleting tables. |
+   |                 |                 |                 | -  **OBS Manager**: manages OBS paths, including creating and deleting paths.                 |
+   |                 |                 |                 | -  **RESTAPI**: sends REST API requests.                                                      |
+   |                 |                 |                 | -  **SMN**: sends short messages or emails.                                                   |
+   |                 |                 |                 | -  **MRS Spark**: runs Spark jobs of MRS.                                                     |
+   |                 |                 |                 | -  **MapReduce**: runs MapReduce jobs of MRS.                                                 |
    +-----------------+-----------------+-----------------+-----------------------------------------------------------------------------------------------+
 
 Example Request

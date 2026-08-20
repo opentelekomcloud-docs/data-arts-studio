@@ -26,7 +26,7 @@ URI
       +============+===========+========+=======================================================================================================================+
       | project_id | Yes       | String | Project ID. For details about how to obtain a project ID, see :ref:`Project ID and Account ID <projectid_accountid>`. |
       +------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-      | job_name   | Yes       | String | Job name.                                                                                                             |
+      | job_name   | Yes       | String | Job name                                                                                                              |
       +------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
 
 Request Parameters
@@ -34,22 +34,31 @@ Request Parameters
 
 .. table:: **Table 2** Request header parameter
 
-   +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------+
-   | Parameter       | Mandatory       | Type            | Description                                                                               |
-   +=================+=================+=================+===========================================================================================+
-   | workspace       | No              | String          | Workspace ID.                                                                             |
-   |                 |                 |                 |                                                                                           |
-   |                 |                 |                 | -  If this parameter is not set, data in the **default** workspace is queried by default. |
-   |                 |                 |                 | -  To query data in other workspaces, this header must be carried.                        |
-   +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------+
+   +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------+
+   | Parameter       | Mandatory       | Type            | Description                                                                                                            |
+   +=================+=================+=================+========================================================================================================================+
+   | workspace       | No              | String          | Workspace ID.                                                                                                          |
+   |                 |                 |                 |                                                                                                                        |
+   |                 |                 |                 | -  If this parameter is not set, data in the **default** workspace is queried by default.                              |
+   |                 |                 |                 | -  To query data in other workspaces, this header must be carried.                                                     |
+   |                 |                 |                 |                                                                                                                        |
+   |                 |                 |                 |    .. note::                                                                                                           |
+   |                 |                 |                 |                                                                                                                        |
+   |                 |                 |                 |       -  You need to specify a workspace for multiple DataArts Studio instances.                                       |
+   |                 |                 |                 |       -  This parameter is mandatory if no default workspace is available. If you do not set it, an error is reported. |
+   +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------+
 
 .. table:: **Table 3** Parameters
 
-   ========= ========= ============== ==============================
-   Parameter Mandatory Type           Description
-   ========= ========= ============== ==============================
-   jobParams No        List<JobParam> Parameter for starting the job
-   ========= ========= ============== ==============================
+   +-----------------------+-----------+----------------+---------------------------------------------+
+   | Parameter             | Mandatory | Type           | Description                                 |
+   +=======================+===========+================+=============================================+
+   | jobParams             | No        | List<JobParam> | Parameter for starting the job              |
+   +-----------------------+-----------+----------------+---------------------------------------------+
+   | start_date            | No        | Long           | Start date, for example, **20241030**       |
+   +-----------------------+-----------+----------------+---------------------------------------------+
+   | ignore_first_self_dep | No        | boolean        | Whether to ignore first-day self-dependency |
+   +-----------------------+-----------+----------------+---------------------------------------------+
 
 .. table:: **Table 4** JobParam data structure description
 
@@ -79,6 +88,15 @@ Start job **myJob**.
 .. code-block:: text
 
    POST /v1/b384b9e9ab9b4ee8994c8633aabc9505/jobs/myJob/start
+   {
+     "jobParams": [
+       {
+         "name": "string",
+         "value": "string",
+         "paramType": "variable"
+       }
+     ]
+   }
 
 Example Response
 ----------------
