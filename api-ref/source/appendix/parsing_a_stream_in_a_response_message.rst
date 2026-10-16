@@ -5,7 +5,9 @@
 Parsing a Stream in a Response Message
 ======================================
 
-The response messages of the job export API and connection export API are streams that need to be converted to files. For details, see the following sample code:
+The response messages of the job export API and connection export API are streams that need to be converted to files.
+
+For details, see the following sample code:
 
 .. code-block::
 

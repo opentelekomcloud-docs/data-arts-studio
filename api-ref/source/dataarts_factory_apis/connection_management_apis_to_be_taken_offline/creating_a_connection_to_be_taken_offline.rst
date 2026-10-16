@@ -7,7 +7,7 @@ Creating a Connection (to Be Taken Offline)
 
 .. note::
 
-   The connection management capability is provided by Management Center. APIs of Management Center are recommended.
+   The connection management capability is provided by Management Center. This API is no longer maintained.
 
 Function
 --------

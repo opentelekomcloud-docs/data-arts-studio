@@ -7,6 +7,8 @@ Constraints
 
 -  An IAM user can pass the authentication and access DataArts Studio through an API or SDK only if **Programmatic access** is selected for **Access Type** during the creation of the IAM user.
 
+-  For details about the API request throttling limit of each component, see :ref:`API Overview <apioverview_cdm>`.
+
 -  The restrictions on DataArts Catalog APIs are as follows:
 
    -  CDM jobs carry large volumes of data, which increases the database load. You are advised to periodically delete unused jobs.

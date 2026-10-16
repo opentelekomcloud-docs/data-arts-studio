@@ -36,14 +36,19 @@ Request Parameters
 
 .. table:: **Table 2** Request header parameter
 
-   +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------+
-   | Parameter       | Mandatory       | Type            | Description                                                                               |
-   +=================+=================+=================+===========================================================================================+
-   | workspace       | No              | String          | Workspace ID.                                                                             |
-   |                 |                 |                 |                                                                                           |
-   |                 |                 |                 | -  If this parameter is not set, data in the **default** workspace is queried by default. |
-   |                 |                 |                 | -  To query data in other workspaces, this header must be carried.                        |
-   +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------+
+   +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------+
+   | Parameter       | Mandatory       | Type            | Description                                                                                                            |
+   +=================+=================+=================+========================================================================================================================+
+   | workspace       | No              | String          | Workspace ID.                                                                                                          |
+   |                 |                 |                 |                                                                                                                        |
+   |                 |                 |                 | -  If this parameter is not set, data in the **default** workspace is queried by default.                              |
+   |                 |                 |                 | -  To query data in other workspaces, this header must be carried.                                                     |
+   |                 |                 |                 |                                                                                                                        |
+   |                 |                 |                 |    .. note::                                                                                                           |
+   |                 |                 |                 |                                                                                                                        |
+   |                 |                 |                 |       -  You need to specify a workspace for multiple DataArts Studio instances.                                       |
+   |                 |                 |                 |       -  This parameter is mandatory if no default workspace is available. If you do not set it, an error is reported. |
+   +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------+
 
 Response Parameters
 -------------------

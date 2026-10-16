@@ -26,7 +26,7 @@ URI
       +============+===========+========+=======================================================================================================================+
       | project_id | Yes       | String | Project ID. For details about how to obtain a project ID, see :ref:`Project ID and Account ID <projectid_accountid>`. |
       +------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
-      | job_name   | Yes       | String | Job name.                                                                                                             |
+      | job_name   | Yes       | String | Job name                                                                                                              |
       +------------+-----------+--------+-----------------------------------------------------------------------------------------------------------------------+
 
 Request Parameters
@@ -34,14 +34,19 @@ Request Parameters
 
 .. table:: **Table 2** Request header parameter
 
-   +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------+
-   | Parameter       | Mandatory       | Type            | Description                                                                               |
-   +=================+=================+=================+===========================================================================================+
-   | workspace       | No              | String          | Workspace ID.                                                                             |
-   |                 |                 |                 |                                                                                           |
-   |                 |                 |                 | -  If this parameter is not set, data in the **default** workspace is queried by default. |
-   |                 |                 |                 | -  To query data in other workspaces, this header must be carried.                        |
-   +-----------------+-----------------+-----------------+-------------------------------------------------------------------------------------------+
+   +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------+
+   | Parameter       | Mandatory       | Type            | Description                                                                                                            |
+   +=================+=================+=================+========================================================================================================================+
+   | workspace       | No              | String          | Workspace ID.                                                                                                          |
+   |                 |                 |                 |                                                                                                                        |
+   |                 |                 |                 | -  If this parameter is not set, data in the **default** workspace is queried by default.                              |
+   |                 |                 |                 | -  To query data in other workspaces, this header must be carried.                                                     |
+   |                 |                 |                 |                                                                                                                        |
+   |                 |                 |                 |    .. note::                                                                                                           |
+   |                 |                 |                 |                                                                                                                        |
+   |                 |                 |                 |       -  You need to specify a workspace for multiple DataArts Studio instances.                                       |
+   |                 |                 |                 |       -  This parameter is mandatory if no default workspace is available. If you do not set it, an error is reported. |
+   +-----------------+-----------------+-----------------+------------------------------------------------------------------------------------------------------------------------+
 
 .. table:: **Table 3** Parameter
 
@@ -60,7 +65,7 @@ Request Parameters
    +-----------------+-----------------+-----------------+------------------------------------------------------------+
    | value           | Yes             | String          | Value of the parameter. It cannot exceed 1,024 characters. |
    +-----------------+-----------------+-----------------+------------------------------------------------------------+
-   | paramType       | No              | String          | Parameter type                                             |
+   | type            | No              | String          | Parameter type                                             |
    |                 |                 |                 |                                                            |
    |                 |                 |                 | -  variable                                                |
    |                 |                 |                 | -  constants                                               |
@@ -71,11 +76,11 @@ Response Parameters
 
 .. table:: **Table 5** Response parameter
 
-   ========== ========= ==== ================
+   ========== ========= ==== ===============
    Parameter  Mandatory Type Description
-   ========== ========= ==== ================
-   instanceId Yes       Long Job instance ID.
-   ========== ========= ==== ================
+   ========== ========= ==== ===============
+   instanceId Yes       Long Job instance ID
+   ========== ========= ==== ===============
 
 Example Request
 ---------------

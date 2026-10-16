@@ -1,0 +1,164 @@
+:original_name: DebugDataconnection.html
+
+.. _DebugDataconnection:
+
+Testing Data Connection Creation
+================================
+
+Function
+--------
+
+This API is used to test data connection creation.
+
+Calling Method
+--------------
+
+For details, see :ref:`Calling APIs <making_request>`.
+
+URI
+---
+
+POST /v1/{project_id}/data-connections/validation
+
+.. table:: **Table 1** Path Parameters
+
+   +------------+-----------+--------+------------------------------------------------------------------------------------------------------------+
+   | Parameter  | Mandatory | Type   | Description                                                                                                |
+   +============+===========+========+============================================================================================================+
+   | project_id | Yes       | String | Project ID. For details about how to obtain it, see :ref:`Project ID and Account ID <projectid_accountid>` |
+   +------------+-----------+--------+------------------------------------------------------------------------------------------------------------+
+
+Request Parameters
+------------------
+
+.. table:: **Table 2** Request header parameters
+
+   +--------------+-----------+--------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter    | Mandatory | Type   | Description                                                                                                                                                                                                         |
+   +==============+===========+========+=====================================================================================================================================================================================================================+
+   | X-Auth-Token | Yes       | String | User token. This parameter is mandatory for :ref:`token authentication <dataartsstudio_02_0010>`. Call the "Obtaining the User Token" API of IAM to obtain the value of **X-Subject-Token** in the response header. |
+   +--------------+-----------+--------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | workspace    | Yes       | String | Workspace ID. For details about how to obtain it, see :ref:`Instance ID and Workspace ID <dataartsstudio_02_0350>`.                                                                                                 |
+   +--------------+-----------+--------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+.. table:: **Table 3** Request body parameters
+
+   +----------------+-----------+---------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | Parameter      | Mandatory | Type    | Description                                                                                                                                                                                                |
+   +================+===========+=========+============================================================================================================================================================================================================+
+   | dw_name        | Yes       | String  | Data connection type, which is customized during connection creation and obtained from :ref:`Querying the Data Connection List <listdataconnections>` during connection editting.                          |
+   +----------------+-----------+---------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | dw_type        | Yes       | String  | Data connection type, for example, DWS, DLI, Hive, RDS, or SparkSQL. You can view all data connection types on the console and obtain data connections from :ref:`Data Connections <listdataconnections>`. |
+   +----------------+-----------+---------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | dw_config      | Yes       | Object  | Configuration items for the data connection. They vary depending on the connection type. You are advised to debug them on the console.                                                                     |
+   +----------------+-----------+---------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | agent_id       | No        | String  | CDM cluster ID. For details about how to obtain it, see :ref:`Querying the Cluster List <listclusters>`.                                                                                                   |
+   +----------------+-----------+---------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | agent_name     | No        | String  | Agent cluster name. For details about how to obtain it, see :ref:`Querying the Cluster List <listclusters>`                                                                                                |
+   +----------------+-----------+---------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | env_type       | No        | Integer | Environment type. Value **0** indicates the development environment, and **1** indicates the production environment.                                                                                       |
+   +----------------+-----------+---------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | qualified_name | No        | String  | Qualified data connection name                                                                                                                                                                             |
+   +----------------+-----------+---------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | dw_id          | No        | String  | Data connection ID, which can be obtained from ListDataconnections.xml.                                                                                                                                    |
+   +----------------+-----------+---------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | create_user    | No        | String  | Data connection creator                                                                                                                                                                                    |
+   +----------------+-----------+---------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+   | create_time    | No        | Number  | Data connection creation time, which is a timestamp                                                                                                                                                        |
+   +----------------+-----------+---------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Response Parameters
+-------------------
+
+**Status code: 400**
+
+.. table:: **Table 4** Response body parameters
+
+   ========== ====== ===========================
+   Parameter  Type   Description
+   ========== ====== ===========================
+   error_msg  String Returned error information.
+   error_code String Returned error code.
+   ========== ====== ===========================
+
+**Status code: 500**
+
+.. table:: **Table 5** Response body parameters
+
+   ========== ====== ===========================
+   Parameter  Type   Description
+   ========== ====== ===========================
+   error_msg  String Returned error information.
+   error_code String Returned error code.
+   ========== ====== ===========================
+
+Example Requests
+----------------
+
+.. code-block::
+
+   {
+     "dw_config" : {
+       "clusterId" : "353ff458-a560-413e-9b84-33f930cb8057",
+       "clusterName" : "mrs_3x_autotest_do_not_del",
+       "nsUserName" : "xxxx",
+       "nsPassword" : "xxxx",
+       "kmsId" : "a721616c-9a12-47b1-a805-3cfcd3e63cd7",
+       "kmsName" : "KMS-1111"
+     },
+     "dw_type" : "HBASE",
+     "dw_name" : "test_hbase_01",
+     "agent_id" : "91f81a12-75c5-43ce-aab8-7149ecef3b17",
+     "agent_name" : "cdm-4autotest-nodelete",
+     "create_user" : "",
+     "create_time" : 1606879861750,
+     "dw_id" : "8a94805876212c6201762180f5750003",
+     "qualified_name" : "hive@192.168.0.4-username1.62099355b894428e8916573ae635f1f9-workspace-e96e2cddce4340acb61591f8f570059d"
+   }
+
+Example Responses
+-----------------
+
+**Status code: 200**
+
+The data connection is created.
+
+.. code-block::
+
+   {
+     "message" : null,
+     "is_success" : true
+   }
+
+**Status code: 400**
+
+Bad request.
+
+.. code-block::
+
+   {
+     "error_code" : "DAYU.4402",
+     "error_msg" : "The operation failed, detail msg {0}."
+   }
+
+**Status code: 500**
+
+Internal server error.
+
+.. code-block::
+
+   {
+     "error_code" : "DAYU.3531",
+     "error_msg" : "Internal server error: {0}"
+   }
+
+Status Codes
+------------
+
+=========== ===============================
+Status Code Description
+=========== ===============================
+200         The data connection is created.
+400         Bad request.
+500         Internal server error.
+=========== ===============================

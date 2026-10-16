@@ -9,4 +9,4 @@ Welcome to DataArts Studio. DataArts Studio is a one-stop operations platform th
 
 This document describes how to use APIs to perform operations on DataArts Studio components, such as creating clusters and connections. For details about all supported operations, see :ref:`API Overview <dataartsstudio_02_0007>`.
 
-Before calling a DataArts Studio API, ensure that you have fully understood the concepts related to DataArts Studio. For details, see "Overview" in .
+Before calling a DataArts Studio API, ensure that you have fully understood the concepts related to DataArts Studio. For details, see "Overview" in *DataArts Studio User Guide*.

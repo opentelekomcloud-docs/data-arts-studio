@@ -7,26 +7,26 @@ Example of Using DataArts Migration APIs
 
 This section describes how to use cURL to call CDM APIs to migrate data from a local MySQL database to DWS in the cloud.
 
-#. :ref:`Obtaining a Token <dataartsstudio_02_0013__en-us_topic_0000001716156281_en-us_topic_0108272822_s80117f7397924f1eaaa579614623e6ba>`
+#. :ref:`Obtaining a Token <dataartsstudio_02_0013__en-us_topic_0108272822_s80117f7397924f1eaaa579614623e6ba>`
 
    Call the API to obtain the user token, which will be put into the request header for authentication in a subsequent request.
 
-#. :ref:`Creating a CDM Cluster <dataartsstudio_02_0013__en-us_topic_0000001716156281_en-us_topic_0108272822_section858213116488>`
+#. :ref:`Creating a CDM Cluster <dataartsstudio_02_0013__en-us_topic_0108272822_section858213116488>`
 
    -  If you have created a CDM cluster, skip this step and directly use the ID of the created cluster.
-   -  If you want to use a new cluster for migration, call the API in :ref:`Creating a Cluster <createcluster_0>` to create a CDM cluster.
+   -  If you want to use a new cluster for migration, call the API in :ref:`Creating a Cluster <createcluster>` to create a CDM cluster.
 
-#. :ref:`Creating Links <dataartsstudio_02_0013__en-us_topic_0000001716156281_en-us_topic_0108272822_section1543119195119>`
+#. :ref:`Creating Links <dataartsstudio_02_0013__en-us_topic_0108272822_section1543119195119>`
 
-   Call the API in :ref:`Creating a Link <createlink_0>` to create the MySQL and DWS links.
+   Call the API in :ref:`Creating a Link <createlink>` to create the MySQL and DWS links.
 
-#. :ref:`Creating a Migration Job <dataartsstudio_02_0013__en-us_topic_0000001716156281_en-us_topic_0108272822_section07183115314>`
+#. :ref:`Creating a Migration Job <dataartsstudio_02_0013__en-us_topic_0108272822_section07183115314>`
 
-   Call the API in :ref:`Creating a Job in a Specified Cluster <createjob_0>` to create a job for migrating data from MySQL to DWS.
+   Call the API in :ref:`Creating a Job in a Specified Cluster <createjob>` to create a job for migrating data from MySQL to DWS.
 
-#. :ref:`Viewing Job Result <dataartsstudio_02_0013__en-us_topic_0000001716156281_en-us_topic_0108272822_section179778188581>`
+#. :ref:`Viewing Job Result <dataartsstudio_02_0013__en-us_topic_0108272822_section179778188581>`
 
-   Call the API in :ref:`Starting a Job <startjob_0>` to execute the job.
+   Call the API in :ref:`Starting a Job <startjob>` to execute the job.
 
 Preparing Data
 --------------
@@ -79,7 +79,7 @@ Before calling an API, prepare the following data.
    |                     | Password          | Password for accessing the DWS database                                                                                                                                                                                                         | dws_password                         |
    +---------------------+-------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------------------------+
 
-.. _dataartsstudio_02_0013__en-us_topic_0000001716156281_en-us_topic_0108272822_s80117f7397924f1eaaa579614623e6ba:
+.. _dataartsstudio_02_0013__en-us_topic_0108272822_s80117f7397924f1eaaa579614623e6ba:
 
 Obtaining a Token
 -----------------
@@ -126,12 +126,12 @@ Obtaining a Token
 
       export Token = MIIDkgYJKoZIhvcNAQcCoIIDgzCCA38CAQExDTALBglghkgBZQMEAgEwgXXXXX...
 
-.. _dataartsstudio_02_0013__en-us_topic_0000001716156281_en-us_topic_0108272822_section858213116488:
+.. _dataartsstudio_02_0013__en-us_topic_0108272822_section858213116488:
 
 Creating a CDM Cluster
 ----------------------
 
-#. Call the API in :ref:`Creating a Cluster <createcluster_0>` to create a cluster. The following values are examples:
+#. Call the API in :ref:`Creating a Cluster <createcluster>` to create a cluster. The following values are examples:
 
    -  Cluster name: **cdm-ab82**
    -  Cluster flavor: **cdm.medium**
@@ -174,7 +174,7 @@ Creating a CDM Cluster
       }'
       https://{cdm_endpoint}/v1.1/1551c7f6c808414d8e9f3c514a170f2e/clusters -v -k
 
-#. Call the API in :ref:`Querying the Cluster List <listclusters_0>` to query cluster information, obtain the cluster ID, and set the cluster ID to a global variable.
+#. Call the API in :ref:`Querying the Cluster List <listclusters>` to query cluster information, obtain the cluster ID, and set the cluster ID to a global variable.
 
    .. code-block::
 
@@ -207,12 +207,12 @@ Creating a CDM Cluster
 
       export ID = bae65496-643e-47ca-84af-948672de7eeb
 
-.. _dataartsstudio_02_0013__en-us_topic_0000001716156281_en-us_topic_0108272822_section1543119195119:
+.. _dataartsstudio_02_0013__en-us_topic_0108272822_section1543119195119:
 
 Creating Links
 --------------
 
-#. Call the API in :ref:`Creating a Link <createlink_0>` to create the MySQL link **mysql_link**. The following values are examples:
+#. Call the API in :ref:`Creating a Link <createlink>` to create the MySQL link **mysql_link**. The following values are examples:
 
    -  IP address: **1**\ *xx*\ **.120.85.24**
    -  Port number: **3306**
@@ -278,7 +278,7 @@ Creating Links
       }'
       https://{cdm_endpoint}/v1.1/1551c7f6c808414d8e9f3c514a170f2e/clusters/bae65496-643e-47ca-84af-948672de7eeb/cdm/link -k -v
 
-#. Call the API in :ref:`Creating a Link <createlink_0>` to create the DWS link **dws_link**. The following values are examples:
+#. Call the API in :ref:`Creating a Link <createlink>` to create the DWS link **dws_link**. The following values are examples:
 
    -  IP address of the database: **10.120.85.24**
    -  Port number: **3306**
@@ -342,12 +342,12 @@ Creating Links
       }'
       https://{cdm_endpoint}/v1.1/1551c7f6c808414d8e9f3c514a170f2e/clusters/bae65496-643e-47ca-84af-948672de7eeb/cdm/link -k -v
 
-.. _dataartsstudio_02_0013__en-us_topic_0000001716156281_en-us_topic_0108272822_section07183115314:
+.. _dataartsstudio_02_0013__en-us_topic_0108272822_section07183115314:
 
 Creating a Migration Job
 ------------------------
 
-#. After the links are created, call the API in :ref:`Creating a Job in a Specified Cluster <createjob_0>` to create a migration job. The following is a sample job:
+#. After the links are created, call the API in :ref:`Creating a Job in a Specified Cluster <createjob>` to create a migration job. The following is a sample job:
 
    -  The job name is **mysql2dws**.
    -  The name of the MySQL database from which data is exported is **default**, and the name of the exported table is **mysql_tbl**. The job is split into multiple tasks by **id** and the tasks are executed concurrently.
@@ -426,7 +426,7 @@ Creating a Migration Job
         }]
       }' https://{cdm_endpoint}/v1.1/1551c7f6c808414d8e9f3c514a170f2e/clusters/bae65496-643e-47ca-84af-948672de7eeb/cdm/job -k -v
 
-#. Call the API in :ref:`Starting a Job <startjob_0>` to execute the job.
+#. Call the API in :ref:`Starting a Job <startjob>` to execute the job.
 
    .. code-block::
 
@@ -446,12 +446,12 @@ Creating a Migration Job
         }]
       }
 
-.. _dataartsstudio_02_0013__en-us_topic_0000001716156281_en-us_topic_0108272822_section179778188581:
+.. _dataartsstudio_02_0013__en-us_topic_0108272822_section179778188581:
 
 Viewing Job Result
 ------------------
 
-#. Call the API in :ref:`Querying Job Status <showjobstatus_0>` to query the job status.
+#. Call the API in :ref:`Querying Job Status <showjobstatus>` to query the job status.
 
    .. code-block::
 
